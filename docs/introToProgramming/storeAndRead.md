@@ -62,9 +62,7 @@ The funny pairs of curly braces is our way to indicate that *itemsInCart* is a v
 </script>
 </html>
 ```
-::: warning 🙇‍
-create a “Try it out” link this example on CodePen or similar
-:::
+[View on JSFiddle](https://jsfiddle.net/andgordy/Lm12gtv0)
 
 ## Self-practice
 

@@ -5,6 +5,9 @@ module.exports = {
     lineNumbers: false
   },
   themeConfig: {
+    nav: [
+      { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
+    ],
     sidebar: [
       {
         title: 'Interaction',

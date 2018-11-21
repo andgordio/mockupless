@@ -87,9 +87,7 @@ addToCart () {
 </script>
 </html>
 ```
-::: warning 🙇‍
-create a “Try it out” link this example on CodePen or similar
-:::
+[Open on JSFiddle](https://jsfiddle.net/andgordy/xyw5n4vu/)
 
 ## Self-practice
 

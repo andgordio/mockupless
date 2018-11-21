@@ -38,4 +38,4 @@ doShowConfirmationDialog: true
 ```js
 listOfItems: null
 ```
-- means emptyness, the absence of value
+- means emptiness, the absence of value
