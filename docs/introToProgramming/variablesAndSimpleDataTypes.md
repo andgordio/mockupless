@@ -1,5 +1,7 @@
 # Simple data types
 
+<!-- TODO: Write a proper intro -->
+
 ## Numbers
 
 ```js
@@ -7,7 +9,7 @@ itemsInCart: 2
 pocketMoney: 3.5
 degreesOutside: -15
 ```
-- Positive, negative or 0
+- Can be [almost](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#Properties) any positive number, negative or 0
 
 ## Strings
 
@@ -16,13 +18,9 @@ firstLetter: 'a'
 userName: 'Sam Smith'
 productDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eius eum enim ab doloremque quaerat quibusdam. Dolorum sint dolores rerum!'
 ```
-- in single quotes
-- any length
-
-::: warning 🙇‍
-write a proper reasoning for using escape characters
-- put backslash if you need an apostrophy `\'`
-:::
+- put in single quotation marks
+- can by empty, just quotation marks without content: `''`
+- when you need to have single quotation marks inside your string, you have to add backslash before every one of them. For example: `I\'m`
 
 ## Boolean
 
@@ -30,8 +28,8 @@ write a proper reasoning for using escape characters
 isUserLoggedIn: false
 doShowConfirmationDialog: true
 ```
-- only **true** or **false**
-- no quotes
+- can be only **true** or **false**
+- written without quotation marks
 
 ## null
 

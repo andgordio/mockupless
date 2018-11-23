@@ -9,15 +9,21 @@ module.exports = {
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
     ],
     sidebar: [
+      '/introToProgramming/',
       {
-        title: 'Interaction',
+        title: 'Intro to programming',
         collapsable: false,
         children: [
-          '/introToProgramming/',
           '/introToProgramming/setup',
           '/introToProgramming/storeAndRead',
-          '/introToProgramming/variablesAndSimpleDataTypes',
           '/introToProgramming/listenAndChange'
+        ]
+      },
+      {
+        title: 'Dictionary',
+        collapsable: false,
+        children: [
+          '/introToProgramming/variablesAndSimpleDataTypes',
         ]
       }
     ]

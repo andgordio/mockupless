@@ -1,44 +1,44 @@
 # Listen to actions and react
 
-<!-- ## Listen & Write
-
-Also, this value is not static. For example, it increases when a user clicks on “Purchase” on an item page. To change the data you need to apply different value to the variable. To make it possible you need to do two things:
-1. Create a set of instructions describing what should happen to variable. These set are called **methods**.
-2. Track clicks on a button so you can launch set of instructions. **Listeners** are responsible for tracking events. -->
-
 ## The task
 
-::: warning 🙇‍
-write a description of the task
-:::
+In [Store and display data](./storeAndRead.md) you've created a variable to store number of items in a shopping cart and displayed its value in your layout. Your next task is to increase this number each time a user presses Purchase button:
 
 ![cart](./img/img-purchase.png)
 
-## Listen
+To make this happen you need to do two things:
+1. Make a button react to clicks — this is called adding a [listener](#listener) to an element
+2. Create a set of instructions to be executed when click happens — they are called [functions](#functions)
 
-Also, this value is not static — it increases when a user clicks on “Purchase” on an item page. For this to happen you need to be able to track clicks on a button. It's also called **listening** to events on a page:
+## Listener
 
-<!-- ![listen](./img-listen.png) -->
+Click is called an **event**. Event is something that happens on the page, quite often due to a user’s action.
+
+To make an element on a page listens to an event, you need to specify what event you want it to listen to and what’s the name of the function you want to be executed:
+
 ```vue
 <button @click="addToCart()">Purchase</button>
 ```
-* **@click** indicates what event we want to react to. It can be a click/tap, a hover, an input, etc.
-* **addToCart()** is a call of a method, a set of instructions we want to be executed when the event takes place. 
+- `@click` is an event we want our UI to react to
+- `addToCart()` is the name of a function we want to be executed
+- You can add a listener to virtually any container like div and span
 
-## React
+## Functions
 
-At some point of time, you might want to increase the number. A set of instructions describing what should happen to variable is called **methods**.
+Function is a named container for your instructions:
 
-<!-- ![write](./img-write.png) -->
 ```js
 addToCart () {
   this.itemsInCart++
 }
 ```
-- **addToCart** is the name of a method
-- **this.itemsInCart++** is the instruction — your way of describing of what is supposed to happen 
+- `addToCart` is the name of a function
+- `this.itemsInCart++` is the instruction — your way to describe what is supposed to happen.
+- functions are placed in `methods: { }` part of vue code
+- instruction can be quite complex, consist of multiple lines of code
+Multiple types of instructions and ways to write them will be explore further in the course. This paritcular one adds 1 to an existing value of the variable.
 
-## Final result
+## Task solution
 
 ```vue{26,39-41}
 <!DOCTYPE html>
@@ -91,6 +91,19 @@ addToCart () {
 
 ## Self-practice
 
-::: warning 🙇‍
-create a self-practice task
-:::
+Update the design of your welcome card from [Store and display self-practice](./storeAndRead.html#task-solution) to display **'user'** by default and change to this value to **'Steve Allen'** when a user clicks on **Login** button.
+
+![Welcome card](./img/img-self-listen-and-react.png)
+
+* the instruction of assigning a different value to a variable in a function is `this.nameOfYourVariable = 'New Value'`. You have to replace `nameOfYourVariable` with the actual name of the variable you are changing, and replace `'New Value'` with the value you want to assign to it.
+
+
+<!-- ARCHIVE AND MISC BELOW -->
+
+<!--Later you will learn other events, like hovering a container and pressing keyboard keys inside-->
+
+<!-- ## Listen & Write
+
+Also, this value is not static. For example, it increases when a user clicks on “Purchase” on an item page. To change the data you need to apply different value to the variable. To make it possible you need to do two things:
+1. Create a set of instructions describing what should happen to variable. These set are called **methods**.
+2. Track clicks on a button so you can launch set of instructions. **Listeners** are responsible for tracking events. -->

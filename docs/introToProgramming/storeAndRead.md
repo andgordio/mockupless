@@ -8,14 +8,14 @@ Imagine you are designing an online store and you want to prototype the checkout
 
 ## Store
 
-For you to display the number of items in cart, you need to **store** that number in your code. The containers you use to store data are called **variables**.
+For you to display the number of items in cart, you need to save that number in your code. The containers you use to store data are called **variables**.
 
 ```js
 itemsInCart: 2
 ```
-* itemsInCart is variable's **name**. It's common to write name in camel case.
-* 2 is its **value**. Simple types of values are discussed in next article.
-* variables are stored in `data: { }` section of vue code.
+* itemsInCart is variable's **name**. It's common to write a name in [camel case](https://en.wikipedia.org/wiki/Camel_case)
+* 2 is its **value**. See [Simple data types](./variablesAndSimpleDataTypes.md) for information about what basic kinds of values there are
+* variables are stored in `data: { }` section of vue code
 
 ## Display
 
@@ -24,9 +24,9 @@ Once the data is stored in a variable, you can display its value in your html:
 ```vue
 <div>{{itemsInCart}}</div>
 ```
-The funny pairs of curly braces is our way to indicate that *itemsInCart* is a variable and you want its value placed in your html content.
+The two pairs of curly braces is your way to indicate that *itemsInCart* is a variable and you want its value placed in your html content.
 
-## Final result
+## Task solution
 
 ```vue{16,25}
 <!DOCTYPE html>
@@ -66,6 +66,8 @@ The funny pairs of curly braces is our way to indicate that *itemsInCart* is a v
 
 ## Self-practice
 
-::: warning 🙇‍
-create a self-practice task
-:::
+Design a card that welcomes a user. Store user's name as a variable and display it on the card:
+
+![Welcome card](./img/img-self-store-and-display.png)
+
+* the card looks weird and almost pointless now, but you'll add more content to it soon, and will start to make more sense then

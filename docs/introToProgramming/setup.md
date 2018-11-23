@@ -44,7 +44,7 @@ Create a new div container inside your `<body>` container:
 
 ## 4. Add script container
 
-Add a container for your Vue code between the closing `</body>` and `</html>` containers:
+Add a container for your Vue code between the closing `</body>` and `</html>` tags:
 
 ```html
 <script>
