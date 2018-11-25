@@ -2,7 +2,7 @@
 home: true
 # heroImage: /image.png
 actionText: Let's go
-actionLink: /introToProgramming/
+actionLink: /Guide/
 features:
 - title: Ultimate power
   details: Start with simple layouts. Continue with responsiveness and basic interactions. End up with fully interactive, meticulously thought-through prototypes.
