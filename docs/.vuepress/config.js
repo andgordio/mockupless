@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Mockupless course',
-  description: 'Learn to build limitless prototypes with code',
+  title: 'Mockupless',
+  description: 'Create testable designs with code',
   markdown: {
     lineNumbers: false
   },

@@ -4,11 +4,11 @@ home: true
 actionText: Let's go
 actionLink: /introToProgramming/
 features:
+- title: Ultimate power
+  details: Start with simple layouts. Continue with responsiveness and basic interactions. End up with fully interactive, meticulously thought-through prototypes.
 - title: Learn quickly
-  # details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Lean-friendly
-  # details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-- title: Up up and away
-  # details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
+  details: Imagine all HTML, CSS, JavaScript and Vue.js knowledge it takes to become a great front-end engineer and devide it by 20. That's enough to build almost any prototype you can imagine. 
+- title: In line with lean
+  details: Create prototypes that allow to test your assumptions. Use techniques that make your prototypes scalable and ready for pivoting from the start.
 footer: 2018 © And Gordy
 ---
