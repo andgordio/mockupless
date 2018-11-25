@@ -15,9 +15,6 @@ module.exports = {
     ],
     sidebarDepth: 0,
     sidebar: {
-      '/Guide/': [
-        ''
-      ],
       '/Courses/IntroToProgramming/': [
         '',
         {

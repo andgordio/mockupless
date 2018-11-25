@@ -1,6 +1,6 @@
 # Foreword
 
-HTML and CSS are markup languages, they are used to give instructions about content, position in space, the look and the very basic interactions of the elements. To make your prototypes truly interactive you need a scripting (programming) language — JavaScript.
+HTML and CSS are markup languages and they are used to give instructions about content, position in space, the look and the very basic interactions of the elements. To make your prototypes truly interactive you need a scripting (programming) language — JavaScript.
 
 JavaScript is a powerful language, and it allows you to create logic for almost everything on the web: from a small button in UI to a very complex server. And we all know that *with great power comes great responsibility* 🤟🕸.
 

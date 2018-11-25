@@ -1,4 +1,4 @@
-# Setup template
+# Template
 
 <!-- > TODO:
 We are starting to work with vue.js and it requires a setup. -->
