@@ -24,9 +24,9 @@ data () {
 * Variables are stored in `data: { }` section of vue code
 * Variables should be separated with a coma and a new line
 
-## Simple data types
+## Primitive data types
 
-All data can be separated into two groups of simple and complex data. Simple data is as simple as the name suggests, and its types are described below. Complex data types are basically collections of simple data types (Arrays and Objects) and are described later in the course.
+All data can be separated into two groups of primitive and complex data. Simple data is as simple as the name suggests, and its types are described below. Complex data types are basically collections of simple data types and are described later in the course (Arrays and Objects to name a few).
 
 ### Numbers
 
@@ -36,27 +36,27 @@ pocketMoney: 3.5,
 degreesOutside: -15
 ```
 - Can be positive, negative or zero
-- Can be an integer or neceloye chislo
-- Do not include any symbols
+- Can be an integer or non-integer (float)
+- Do not include any symbols like % and $ in value even if a percent or currency
 
 ### Strings
-::: warning todo
-write an intro about strings
-:::
+
+String is a name for text in programming world.
+
 ```js
 firstLetter: '',
 userName: 'Sam Smith',
 productDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eius eum enim ab doloremque quaerat quibusdam. Dolorum sint dolores rerum!'
 ```
-- put in single quotation marks
-- when you need to have single quotation marks inside your string, you have to add backslash before every one of them. For example: `I\'m`
+- Put in single quotation marks
+- when you need to have single quotation marks inside your string, you have to add backslash before every one of them. For example: `'I\'m going to Spain!'`. When used after backslash, the single quotation mark doesn't indicate end of the string, but an apostrophe instead.
 
 ### Boolean
-::: warning todo
-write an intro about boolean
-:::
+
+It is very common to save states when prototyping UI, and quite often the state is either of two: *on* or *off*. Did a user log in? Should you show a dialog box? An appropriate way to store this type of data is in a form of a boolean varibale that can have only one of two values. Later, you will learn how booleans play a crucial role when defining conditions. 
+
 ```js
-isUserLoggedIn: false
+isUserLoggedIn: false,
 doShowConfirmationDialog: true
 ```
 - can be only **true** or **false**
