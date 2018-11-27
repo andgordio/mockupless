@@ -18,7 +18,7 @@ Mockupless utlizes web technologies like:
 - JavaScript and Vue.js for scripting interactions
 
 #### “But it takes a lot of time to learn to code!”
-It does — if you want to become an engineer. And to be able to prototype interfaces you will only need a small portion of knowledge of technologies you will use. You are not required to learn how to create code that is secure, fast, optimized for older browsers and prone to bugs. You will learn 
+It does — if you want to become an engineer. And to be able to prototype interfaces you will only need a small portion of knowledge of technologies you will use. You are not required to learn how to create code that is secure, fast, optimized for older browsers and prone to bugs. 
 
 #### “Coding is slow compared to creating images!”
 It is — if you have only a couple of views in your design and the amount of states is small. Once you have 20+ screens you spend more time maintaining changes and updating interaction layers than it takes to implement a change in code and let it handle the states.

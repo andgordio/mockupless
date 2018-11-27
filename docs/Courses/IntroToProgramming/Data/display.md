@@ -1,6 +1,8 @@
-# Displaying data
+# Connecting data
 
 ## Displaying in containers
+
+![illustration of data connection](./images/data-connecting.png)
 
 Once the data is stored in a variable, you can display its value in your html:
 
@@ -19,6 +21,9 @@ The two pairs of curly braces is your way to indicate that *itemsInCart* is a va
 There's so much more than just displaying data in a container. Another common case is to use variables to save input from forms.
 
 ### Text
+::: warning todo
+write an intro about text. examples: email, task
+:::
 
 ```html
 <input v-model="email"> 
@@ -30,6 +35,9 @@ data () {
 ```
 
 ### Checkbox
+::: warning todo
+write an intro about text. boolean. examples: disable button if policy not accepted
+:::
 
 ```html
 <input type="checkbox" v-model="didAgreeToPolicy"> I agree with Privacy Policy
@@ -41,6 +49,9 @@ data () {
 ```
 
 ### Radio buttons
+::: warning todo
+write an intro about text. each separately to one data source.
+:::
 
 ```html
 <div>
@@ -60,6 +71,9 @@ data () {
 ```
 
 ### Select / Dropdown
+::: warning todo
+write an intro about text.
+:::
 
 ```html
 <select v-model="plan" multiple>

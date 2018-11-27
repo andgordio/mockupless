@@ -3,7 +3,7 @@
 <!-- > TODO:
 We are starting to work with vue.js and it requires a setup. -->
 
-## 1. Create from HTML template
+## 1. Start with HTML template
 
 1. Create a new document in VSCode
 2. Save it with **.html** extension
@@ -38,7 +38,7 @@ Create a new div container inside your `<body>` container:
 
 ```html
 <div id="app">
-
+  <!-- layout with content go here -->
 </div>
 ```
 
@@ -50,8 +50,12 @@ Add a container for your Vue code between the closing `</body>` and `</html>` ta
 <script>
   var app = new Vue({
     el: '#app',
-    data: {},
-    methods: {}
+    data: {
+      // variables go here
+    },
+    methods: {
+      // functions go here
+    }
   })
 </script>
 ```
@@ -60,7 +64,7 @@ Don't worry if you don't understand what happens inside this script container. C
 
 ## Final template
 
-```html{8,11,15-25}
+```html{8,11-13,15-25}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,17 +76,17 @@ Don't worry if you don't understand what happens inside this script container. C
 </head>
 <body>
   <div id="app">
-
+    <!-- layout with content go here -->
   </div>
 </body>
 <script>
   var app = new Vue({
     el: '#app',
     data: {
-
+      // variables go here
     },
     methods: {
-
+      // functions go here
     }
   })
 </script>

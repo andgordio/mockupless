@@ -4,6 +4,9 @@ module.exports = {
   markdown: {
     lineNumbers: false
   },
+  head: [
+    ['link', { rel: "icon", href: "favicon.png" }] // https://forestry.io/blog/using-json-configuration-with-vuepress/
+  ],
   themeConfig: {
     nav: [
       { text: 'Guide', link: '/Guide/' },
