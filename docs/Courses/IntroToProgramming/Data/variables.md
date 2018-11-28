@@ -49,7 +49,7 @@ userName: 'Sam Smith',
 productDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eius eum enim ab doloremque quaerat quibusdam. Dolorum sint dolores rerum!'
 ```
 - Put in single quotation marks
-- when you need to have single quotation marks inside your string, you have to add backslash before every one of them. For example: `'I\'m going to Spain!'`. When used after backslash, the single quotation mark doesn't indicate end of the string, but an apostrophe instead.
+- When you need to have single quotation marks inside your string, you have to add backslash before every one of them. For example: `'I\'m going to Spain!'`. When used after backslash, the single quotation mark doesn't indicate end of the string, but an apostrophe instead.
 
 ### Boolean
 
@@ -59,14 +59,15 @@ It is very common to save states when prototyping UI, and quite often the state 
 isUserLoggedIn: false,
 doShowConfirmationDialog: true
 ```
-- can be only **true** or **false**
-- written without quotation marks
+- Can be only **true** or **false**
+- Written without quotation marks
 
 ### null
-::: warning todo
-write an intro about null
-:::
+
+Sometimes it's useful to indicate that a variable doesn't have any value (yet). If you store a list of items a user has added to the shopping cart, for example, you need a way to indicate that there is nothing in it initially.
+
 ```js
 listOfItems: null
 ```
-- means emptiness, the absence of value
+- Written without quotation marks
+- Do not confuse with zero `0` which is a number and is used for counting, and not an indication of absence of value

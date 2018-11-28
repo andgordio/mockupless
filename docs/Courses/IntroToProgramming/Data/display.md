@@ -76,7 +76,7 @@ write an intro about text.
 :::
 
 ```html
-<select v-model="plan" multiple>
+<select v-model="plan">
   <option>Free</option>
   <option>Pro</option>
   <option>Business</option>
