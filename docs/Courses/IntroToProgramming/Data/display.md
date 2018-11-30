@@ -4,7 +4,7 @@
 
 ![illustration of data connection](./images/data-connecting.png)
 
-Once the data is stored in a variable, you can display its value in your html:
+Once the data is stored in a variable, you can display its value in your layout:
 
 ```html
 <div>{{itemsInCart}}</div>
@@ -14,30 +14,31 @@ data () {
   itemsInCart: 2
 }
 ```
-The two pairs of curly braces is your way to indicate that *itemsInCart* is a variable and you want its value placed in your html content.
+- The two pairs of curly braces is your way to indicate that *itemsInCart* is a variable and you want to display its value inside a container.
 
 ## Connecting to form inputs
 
-There's so much more than just displaying data in a container. Another common case is to use variables to save input from forms.
+As mentioned previously, variables are commonly used to save information inputed by users. Below are the basic form input controls and the ways you can connect them to your data storage. 
 
 ### Text
-::: warning todo
-write an intro about text. examples: email, task
-:::
+
+There’s an attribute in Vue that allows to bind a form control with a variable: `v-model`. It’s placed inside a control and is followed by the name of the variable you want to connect. Now everything a user types into the input will be stored in specified variable. 
 
 ```html
-<input v-model="email"> 
+<input v-model="userEmail"> 
 ```
 ```js
 data () {
-  email: 'support@mockupless.com'
+  userEmail: 'support@mockupless.com'
 }
 ```
+- Inputs of types *email* and *password* are connected the same way
+- Pro note. By binding a control and a variable, you connect them both ways. If the variable is changed, the value of control is changed
+
 
 ### Checkbox
-::: warning todo
-write an intro about text. boolean. examples: disable button if policy not accepted
-:::
+
+Value of a checkbox is always binary: it’s either on or off, so it makes sense to connect it to a variable with a Boolean value. Clicking on a checkbox input toggles the variable’s value between true and false.
 
 ```html
 <input type="checkbox" v-model="didAgreeToPolicy"> I agree with Privacy Policy
@@ -49,9 +50,10 @@ data () {
 ```
 
 ### Radio buttons
-::: warning todo
-write an intro about text. each separately to one data source.
-:::
+
+A set of radio button controls should be connected to a single variable to control which one is currently selected. So each input from a group should have the same variable name in its v-model attribute.
+
+Radio buttons require another attribute: **value**. In it you specify what should be stored in a variable when the radio button is selected. 
 
 ```html
 <div>
@@ -69,11 +71,11 @@ data () {
   emailsDaily: 'One'
 }
 ```
+- The value of a radio button doesn’t have to be the same as its label, but it’s easier to keep track of them when they are the same
 
 ### Select / Dropdown
-::: warning todo
-write an intro about text.
-:::
+
+To connect a dropdown to your data you need to add v-model to ‘select’ control. The value inside the selected ‘option’ container will be stored in your data.
 
 ```html
 <select v-model="plan">
@@ -87,3 +89,5 @@ data () {
   plan: 'Free'
 }
 ```
+
+- Similarly to radio buttons, you can specify ‘value’ for each option if you want it to be different from the actual content between ‘option’ tags. As with radio buttons, it’s recommended to have them the same. 
