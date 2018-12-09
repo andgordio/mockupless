@@ -38,13 +38,19 @@ module.exports = {
           ]
         },
         {
-          title: 'Events and functions',
+          title: 'Events',
           collapsable: false,
           children: [
-            'Functions/arithmetics',
-            'Functions/events',
+            'Events/arithmetics',
+            'Events/events',
+            'Events/practice'
+          ]
+        },
+        {
+          title: 'Functions',
+          collapsable: false,
+          children: [
             'Functions/functions',
-            'Functions/practice'
           ]
         },
         {

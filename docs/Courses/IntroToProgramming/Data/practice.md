@@ -14,6 +14,8 @@
 
 ![vue dev tools](./images/self-practice-devtools.png)
 
+! ! ! ! keypress.enter
+
 ## Task #2
 
 1. Start from the blank prototyping [template](./../Setup/template.html#final-template)

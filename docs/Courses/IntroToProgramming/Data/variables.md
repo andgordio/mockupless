@@ -5,7 +5,7 @@
 ![illustration of variables](./images/data-storing.png)
 
 There are mainly three reasons to store data:
-1. Make some content dynamic — one that may change when interacting with UI. Think numbers that increase, lists that get populated with new items, button labels that change from Save to Loading, etc
+1. Make some content dynamic — one that may change when interacting with UI. Think numbers that increase, lists that get populated with new items, button labels that change from Save to Loading, etc.
 2. Save data inputed by a user.
 3. Keep track of states to show the appropriate parts of UI. Is user logged in? Ok, show dashboard. Which tab is currently selected, Profile? Ok, show the html code for Profile then and hide the others. Did turned wi-fi on? Ok, show available networks. 
 
@@ -20,9 +20,9 @@ data () {
   isUserLoggedIn: true
 }
 ```
-* It's common to write names in [camel case](https://en.wikipedia.org/wiki/Camel_case)
-* Variables are stored in `data: { }` section of vue code
-* Variables should be separated with a coma and a new line
+* It's common to write names in [camel case](https://en.wikipedia.org/wiki/Camel_case).
+* Variables are stored in `data: { }` section of vue code.
+* Variables should be separated with a coma and a new line.
 
 ## Primitive data types
 
@@ -35,9 +35,9 @@ itemsInCart: 2,
 pocketMoney: 3.5,
 degreesOutside: -15
 ```
-- Can be positive, negative or zero
-- Can be an integer or non-integer (float)
-- Do not include any symbols like % and $ in value even if a percent or currency
+- Can be positive, negative or zero.
+- Can be an integer or decimal.
+- Do not include any symbols like % and $ in value even if a percent or currency.
 
 ### Strings
 
@@ -48,7 +48,7 @@ firstLetter: '',
 userName: 'Sam Smith',
 productDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eius eum enim ab doloremque quaerat quibusdam. Dolorum sint dolores rerum!'
 ```
-- Put in single quotation marks
+- Put in single quotation marks.
 - When you need to have single quotation marks inside your string, you have to add backslash before every one of them. For example: `'I\'m going to Spain!'`. When used after backslash, the single quotation mark doesn't indicate end of the string, but an apostrophe instead.
 
 ### Boolean
