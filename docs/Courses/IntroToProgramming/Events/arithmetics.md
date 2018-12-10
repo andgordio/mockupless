@@ -8,7 +8,7 @@ When reading this article for the first time, scan through the content quickly a
 
 ## Assign
 
-As you may recall from the [Data](./../Data/variables.md) chapter, in order to define variables you need to put them inside data container with a name and a default value separated by colon:
+As you may recall from the [Data](./../Data/variables.md) chapter, in order to define variables you need to put them inside data container with a name, a default value and a colon in between:
 
 ```js
 data: {
@@ -21,7 +21,9 @@ To change the default value — usually as a response to users' actions — you 
 ```js
 itemsInCart = 2
 ```
-- You will also use this sytax to create variables inside functions, but that comes later.
+
+<!-- todo: explain why the expression above lacks context -->
+<!-- - You will also use this sytax to create variables inside functions, but that comes later. -->
 
 
 ## Add, subtract, multiply and devide
@@ -41,7 +43,7 @@ As in real life (pen-and-paper style) you should use parentheses to define the o
 
 ```js
 sumOne = 2 + 2 * 3     //  8, because multiplication happens before addition be default
-sumTwo = (2 + 2) * 3   //  12, because now adding happens first
+sumTwo = (2 + 2) * 3   //  12, because now addition happens first
 ```
 
 ### Strings

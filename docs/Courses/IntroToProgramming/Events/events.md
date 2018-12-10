@@ -20,7 +20,7 @@ Here's a button that adds 1 to the variable `items` when clicked:
 
 - `@` tells Vue you are specifying an event listener.
 - `click` is the name of the event you want to listen to.
-- The instructions you want to be executed when the event happens are specified whithin the double quotes. 
+- `items = items + 1` is the instruction you want to be executed when the event is detected.
 - Taps are also recognized by this listener if users interact with the prototype on touch screen devices.
 
 ### Creative freedom
