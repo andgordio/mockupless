@@ -1,4 +1,4 @@
-# Self-practice
+# Practice
 
 ## Task #1
 

@@ -2,40 +2,31 @@
 
 ![operators](./images/functions-arithmetics.png)
 
-learn basic operations
-
 :::tip Tip
-When reading this article for the first time, quickly scan through the content and go to the [Events](./events.md) article — it allows you to try out the knowledge from this chapter, and practice is the king.
+When reading this article for the first time, scan through the content quickly and proceed to the [next](./events.md) article — there you will find first applications of arithmetics. Come back to this article later to recap, especially when working on self-practice [tasks](./practice.md).
 :::
 
 ## Assign
 
-Rmember how you define variables? You put them in `data` section with the name, colon and the default value:
+As you may recall from the [Data](./../Data/variables.md) chapter, in order to define variables you need to put them inside data container with a name and a default value separated by colon:
 
 ```js
 data: {
-  itemsInCart: 2
+  itemsInCart: 0
 }
 ```
-At some point you will want to change this value by assigning another one.
-You will use functions to change the values later to react to users' actions. You do it with equal sign
 
-<!-- ```js
-methods: {
-  setToTwo () {
-    this.itemsInCart = 2
-  }
-}
-```
-- you'll learn what's happening here soon.   -->
+To change the default value — usually as a response to users' actions — you need to **assign** a different value to the variable. The syntax is similar, but you need to use equal sign instead of a colon:
+
 ```js
 itemsInCart = 2
 ```
+- You will also use this sytax to create variables inside functions, but that comes later.
 
 
 ## Add, subtract, multiply and devide
 
-It's very common to perform basic math operations on the variable
+Even though prototyping doesn't involve a lot of math, it's hard to imagine working with code without having to add or multiple a couple of things here and there. In JavaScript all basic operators are availble to you, and they should be easy to remember if you did your homework in school:
 
 ```js
 sum = 2 + 2     // 4
@@ -44,34 +35,55 @@ mult = 14 * 5   // 70
 div = 21 / 7    // 3
 ```
 
-not only numbers, but other variables
+### Groupping
+
+As in real life (pen-and-paper style) you should use parentheses to define the order in which operations will be performed:
+
+```js
+sumOne = 2 + 2 * 3     //  8, because multiplication happens before addition be default
+sumTwo = (2 + 2) * 3   //  12, because now adding happens first
+```
+
+### Strings
+
+Addition also works for combining strings. This is called **concatenation**:
+
+```js
+fullName = 'Steve' + ' ' + 'Allen'   // 'Steve Allen'
+```
+
+If you add a number or a boolean to a string, they will be concatenated:
+
+```js
+weirdSum = 2 + false + 'vegetarians' // '2falsevegetarians'
+```
+
+### Using existing values
+
+Often you'll need to use values of other variables when doing your math:
 
 ```js
 data: {
-  one: 1,
-  two: null
+  numberOne: 1,
+  numberTwo: 2,
+  sum: null
 }
 ```
 ```js
-two = one + 2   //  3
+sum = numberOne + numberTwo  // 3
 ```
 
-group with ~~parenthasis~~
-
-## Changing the existing value
-
-More often you would need not to just assign a sum of two numbers to a variable, but to change the existing value of a variable. For this you'd need to assign the va...
-
-Take a look at this example below. First, we 
+Even more often, you'll need to use the existing value of a variable for your math. The way you increase, for example, the value of a variable by 1 may look weird the first time you see it:
 
 ```js
-data: {
-  itemsInCart: 0
-}
-``` 
-```js
-itemsInCart = itemsInCart + 1
+sum = sum + 1  // 4
 ```
+
+It should make more sense when you know the order in which the operations are performed. The key here is that **assignment always happens last**. Here's what happens in the example above:
+1. `sum + 1` — the existing value of the varible `sum` is added to `1`. The result of this operation is `4`.
+2. `sum = 4` - the result of addition performed on the previous step is assigned to the variable `sum`.
+
+Operations like this may look confusing for quite some time. Just remember to read assignment last and you'll get used to it.
 
 
 <!--

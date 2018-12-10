@@ -46,40 +46,40 @@ module.exports = {
             'Events/practice'
           ]
         },
-        {
-          title: 'Functions',
-          collapsable: false,
-          children: [
-            'Functions/functions',
-          ]
-        },
-        {
-          title: 'Conditions and boolean',
-          collapsable: false,
-          children: [
-            'Conditionals/boolean',
-            'Conditionals/conditionalContainers',
-            'Conditionals/conditionalInstructions',
-            'Conditionals/practice'
-          ]
-        },
-        {
-          title: 'Arrays and Loops',
-          collapsable: false,
-          children: [
-            'Loops/arrays',
-            'Loops/lists',
-            'Loops/loops',
-            'Loops/practice'
-          ]
-        },
-        {
-          title: 'Advanced',
-          collapsable: false,
-          children: [
-            'Advanced/objects'
-          ]
-        }
+        // {
+        //   title: 'Functions',
+        //   collapsable: false,
+        //   children: [
+        //     'Functions/functions',
+        //   ]
+        // },
+        // {
+        //   title: 'Conditions and boolean',
+        //   collapsable: false,
+        //   children: [
+        //     'Conditionals/boolean',
+        //     'Conditionals/conditionalContainers',
+        //     'Conditionals/conditionalInstructions',
+        //     'Conditionals/practice'
+        //   ]
+        // },
+        // {
+        //   title: 'Arrays and Loops',
+        //   collapsable: false,
+        //   children: [
+        //     'Loops/arrays',
+        //     'Loops/lists',
+        //     'Loops/loops',
+        //     'Loops/practice'
+        //   ]
+        // },
+        // {
+        //   title: 'Advanced',
+        //   collapsable: false,
+        //   children: [
+        //     'Advanced/objects'
+        //   ]
+        // }
       ]
     }
   }
