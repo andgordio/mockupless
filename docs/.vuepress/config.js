@@ -53,16 +53,13 @@ module.exports = {
         //     'Functions/functions',
         //   ]
         // },
-        // {
-        //   title: 'Conditions and boolean',
-        //   collapsable: false,
-        //   children: [
-        //     'Conditionals/boolean',
-        //     'Conditionals/conditionalContainers',
-        //     'Conditionals/conditionalInstructions',
-        //     'Conditionals/practice'
-        //   ]
-        // },
+        {
+          title: 'Conditions',
+          collapsable: false,
+          children: [
+            'Conditionals/rendering'
+          ]
+        },
         // {
         //   title: 'Arrays and Loops',
         //   collapsable: false,

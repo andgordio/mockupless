@@ -6,6 +6,7 @@
 
 Once the data is stored in a variable, you can display its value in your layout:
 
+<!-- todo: add screenshot of the UI to connect with the result  -->
 ```html
 <div>{{itemsInCart}}</div>
 ```
@@ -40,6 +41,7 @@ data () {
 
 Value of a checkbox is always binary: it’s either on or off, so it makes sense to connect it to a variable with a Boolean value. Clicking on a checkbox input toggles the variable’s value between true and false.
 
+<!-- todo: add screenshot of the UI to connect with the result  -->
 ```html
 <input type="checkbox" v-model="didAgreeToPolicy"> I agree with Privacy Policy
 ```
@@ -55,6 +57,7 @@ A set of radio button controls should be connected to a single variable to contr
 
 Radio buttons require another attribute: **value**. In it you specify what should be stored in a variable when the radio button is selected. 
 
+<!-- todo: add screenshot of the UI to connect with the result  -->
 ```html
 <div>
   <input type="radio" v-model="emailsDaily" value="One"> Just one
@@ -77,6 +80,7 @@ data () {
 
 To connect a dropdown to your data you need to add v-model to ‘select’ control. The value inside the selected ‘option’ container will be stored in your data.
 
+<!-- todo: add screenshot of the UI to connect with the result  -->
 ```html
 <select v-model="plan">
   <option>Free</option>
