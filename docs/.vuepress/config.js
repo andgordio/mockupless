@@ -1,12 +1,14 @@
 module.exports = {
   title: 'Mockupless',
   description: 'Create testable designs with code',
+  plugins: ['@vuepress/google-analytics'],
   markdown: {
     lineNumbers: false
   },
   head: [
-    ['link', { rel: "icon", href: "favicon.png" }] // https://forestry.io/blog/using-json-configuration-with-vuepress/
+    ['link', { rel: "icon", href: "favicon.png" }], // https://forestry.io/blog/using-json-configuration-with-vuepress/
   ],
+  ga: 'UA-131076924-1',
   themeConfig: {
     nav: [
       { text: 'Guide', link: '/Guide/' },
@@ -57,7 +59,8 @@ module.exports = {
           title: 'Conditions',
           collapsable: false,
           children: [
-            'Conditionals/rendering'
+            'Conditionals/rendering',
+            'Conditionals/equality'
           ]
         },
         // {

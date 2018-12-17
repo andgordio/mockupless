@@ -1,9 +1,49 @@
 $accentColor = #27B7B7
 
+// general
+
+body
+  font-size 18px !important
+
+.content:not(.custom) > h2
+  padding-top 6.6rem !important
+  padding-bottom 1rem
+
+p, ul, ol
+  line-height 1.5 !important
+  margin-bottom: 1.4rem
+
+ul
+  margin-top -0.75rem
+
+li
+  margin: 0.25rem 0
+
+.content:not(.custom)
+  max-width 800px !important
+
+// custom blocks
+
+.custom-block.tip
+  border-color $accentColor
+  border-width 0.25rem
+  padding 0rem 1.25rem
+  margin 2rem 0
+  background-color transparent
+  // font-size 16px
+  // max-width 600px
+
+.custom-block .custom-block-title
+  text-transform: uppercase
+
+// custom
+
 .jsfiddle-link
-  text-align: right;
-  font-size: 14px;
-  margin-top: -4px;
+  text-align right
+  font-size 14px
+  margin-top -4px
+
+// code blocks
 
 div.language-js.extra-class, div.language-html.extra-class, div.language-vue.extra-class
   background-color #f3f5f7
@@ -21,7 +61,7 @@ div[class*="language-"] .highlight-lines .highlighted
   color #30AAAA
 
 .token.tag, .token.attr-name, .token.namespace, .token.deleted
-  color #97a5a5
+  color #000
 
 .token.string, .token.char, .token.attr-value, .token.regex, .token.variable
   color #30AAAA

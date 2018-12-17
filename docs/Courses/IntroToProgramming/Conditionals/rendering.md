@@ -4,13 +4,13 @@
 
 Let's say you are creating a prototype with two views:
 
-![lo-fi wireframes of two screens: login and newsweed](./images/cond-1.png)
+![lo-fi wireframes of two screens: welcome and newsweed](./images/cond-1.png)
 
-The task is as simple as showing the Login view if users are not authenticated, and showing the Newsfeed if they are. So you need to have both layouts in your prototype, but only one of them is shown at a time.
+The task is as simple as showing the Welcome view if users are not authenticated, and showing the Newsfeed if they are. So you need to have both layouts in your prototype, but only one of them is shown at a time.
 
 To make a container appear conditionally you start with creating a variable you will base your decision on. In the example above the condition is the state of authentication. It is binary — a user is either logged in or is not. This is where Boolean variables, being binary by nature, come in handy:
 
-```js
+```js 
 data: {
 	isUserLoggedIn: false,
 }
@@ -30,7 +30,7 @@ To test this, download the [file](https://firebasestorage.googleapis.com/v0/b/mo
 
 ![screenshot with vue devtools open](./images/cond-2.png)
 
-### Hands-on
+#### Hands-on
 
 Open the same file in VSCode and change the name of the variable from `isUserLoggedIn` to `doShowNewsfeed` and change the default value to `true`. Test it in browser. You should see the word Dashboard on screen. If you don't, go back to code and make sure that you've changed the name of the variable in the `v-if` attribute as well.
 
@@ -40,11 +40,11 @@ When you change the name of the variable you have to change it everywhere in you
 
 ## Not
 
-Opposite to the Dashboard's condition, the Login view is shown to *not* authenticated users. There's a special operator that allows you to check for a *not* condition. It's conveniently called **not** and it's written as an exclamation mark before the variable:
+Contrarily to the Dashboard's condition, the Login view is shown when the use is *not* authenticated. There's a special operator that allows you to check for a *not* condition. It's conveniently called **not** and it's written as an exclamation mark in front of a variable:
 
 ```html
 <div v-if="!isUserLoggedIn">
-	<!-- Login view content -->
+	<!-- Welcome view content -->
 </div>
 ```
 
@@ -58,7 +58,7 @@ With both containers being conditional your layout should look similar to this:
 
 ```html
 <div v-if="!isUserLoggedIn">
-	<!-- Login view content -->
+	<!-- Welcome view content -->
 </div>
 <div v-if="isUserLoggedIn">
 	<!-- Dashboard view content -->
@@ -71,21 +71,22 @@ Try it yourself: download the [file](https://firebasestorage.googleapis.com/v0/b
 
 ## Self-practice: basic 
 
-Create a lo-fi prototype of a messaging app with two views — a list of chats and a chat:
+Create a lo-fi prototype of a messaging app with two views — Recent and Chat:
 
 ![lo-fi wireframes of two UIs: recent chats and a conversation](./images/cond-3.png)
 
-1. Create a Boolean variable to use as a condition.
-2. Add `v-if` to each of the two views so only one of them is shown, depending on the value of the variable.
-3. Test your prototype by changing the value in Vue devtools in Chrome.
-
-:::tip Pro tip
-When you design the layout, use the power of conditional rendering to hide things you don't need at the moment. Let's say you've created the layout for List view. Now you want to create Chat view, but as soon as you start working on it and preview it in Chrome, you realize that the List view is in your way. To focus on developing the Chat view layout add `v-if` attribute to List container and make sure the variable it uses as a condition is `false`. This will hide the List container and allow you to focus on Chat layout.
-:::
+1. Create the Recent page layout.
+2. Create a Boolean variable to use as a condition.
+3. Add `v-if` to Recent container and use the condition to hide it by default.
+4. With Recent view out of your way create Chat layout.
+5. Add `v-if` to Chat container and now use the condition to hide Chat by default.
+6. Test your prototype by changing the value in Vue devtools in Chrome.
 
 ## Self-practice: pro
 
-Conditional rendering is not limited to showing and hiding pages in your prototype. Quite often smaller containers *within* a view also must be hidden unless some conditions are met.
+<!-- todo: split pro task into two: advanced and pro. Advanced has accordion-ish UI: expand/collapse details — v-if on details content and also two arrows: up and down, depending on the state. Pro remains the same but with maybe a more complex UI -->
+
+Conditional rendering is not limited to showing and hiding pages. Quite often smaller containers *within* a view also must be hidden unless some conditions are met.
 
 Practice this by creating a simple subscription form that initially shows only one checkbox, and it's off by default. If the user checks it, show  another 2 checkboxes, as seen on a sketch below:
 
