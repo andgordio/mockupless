@@ -16,17 +16,17 @@ data: {
 }
 ``` 
 
-Now in your `v-if` attributes for each view container you check whether the variable **equals** to a particular value:
+Now in your `v-if` attributes you check whether the variable **equals** to a particular value for each container:
 
 ```html
 <div v-if="currentScreen === 'newsfeed'">
   <!-- Newsfeed content -->
 </div>
 <div v-if="currentScreen === 'explore'">
-  <!-- Newsfeed content -->
+  <!-- Explore content -->
 </div>
 <div v-if="currentScreen === 'profile'">
-  <!-- Newsfeed content -->
+  <!-- Profile content -->
 </div>
 ```
 
@@ -37,7 +37,7 @@ Using 3 equal signs for equality may look like an overkill, but single equal sig
 just don't look fancy enough (and may lead to some unexpected behavior).
 :::
 
-To test this, download the [file](https://firebasestorage.googleapis.com/v0/b/mockupless.appspot.com/o/conditions%2Fequality-1.html.zip?alt=media&token=a97ad90b-f3e5-451e-8dd6-38b2fec4441c), open it in Chrome, use Vue devtools to change the value of `currentScreen` to `"explore"` or`"profile"`. Note, that devtools expect you to use double quotes when you change the value in browser:
+To test this, download the [file](https://firebasestorage.googleapis.com/v0/b/mockupless.appspot.com/o/conditions%2Fequality-1.html.zip?alt=media&token=a97ad90b-f3e5-451e-8dd6-38b2fec4441c), open it in Chrome, use Vue devtools to change the value of `currentScreen` to `"explore"` or `"profile"`. Note, that devtools expect you to use double quotes when you change the value in browser:
 
 ![Changing value in Vue devtools](./images/equality-1.gif)
 
@@ -67,7 +67,7 @@ Test this by downloading the sample [file](https://firebasestorage.googleapis.co
 
 ## Self-practice: basic
 
-Use the latest sample file from inequality section and make the title in the navbar conditional, so it shows Newsfeed when `currentScreen` equals `'newsfeed'`, and Explore when it's equal to `'explore'`:
+Use the prototype from inequality section and make the title in the navbar conditional, so it shows Newsfeed when `currentScreen` equals `'newsfeed'`, and Explore when it's equal to `'explore'`:
 
 ![lo-fi wireframe with a two pages: newsfeed and explore and focus on a navbar with different titles](./images/condition-equal-wireframes-3.png)
 
@@ -78,5 +78,5 @@ Use the latest sample file from inequality section and make the title in the nav
 5. Test in Chrome by changing value to `'explore'`.
 
 :::tip Note
-You are wrapping titles in span containers and not divs, because you don't want to change the layout, but you need something to apple `v-if` attribute to, and span is just perfect for that.
+You are wrapping titles in span containers and not divs, because you don't want to change the layout, but you need something to attach `v-if` attribute to, and span is just perfect for job.
 :::
