@@ -29,7 +29,7 @@ Interaction designers, UX and UI designers, product teams.
 
 ## How do I start?
 
-If you are new to web technologies, start with Intro to layout (to be added) and [Intro to programming](./../Courses/IntroToProgramming/) (work in progress) courses. Even if you feel comfortable with your knowledge, it is still highly recommended to become familiar with courses' materials to learn the techniques and patterns aimed at achieving Mockupless goals.
+If you are new to web technologies, start with Intro to layout (to be added) and [Intro to programming](./../Courses/INteractionBasics/) (work in progress) courses. Even if you feel comfortable with your knowledge, it is still highly recommended to become familiar with courses' materials to learn the techniques and patterns aimed at achieving Mockupless goals.
 
 ## Am I alone?
 

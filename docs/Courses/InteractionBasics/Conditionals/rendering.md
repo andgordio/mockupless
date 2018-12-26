@@ -1,10 +1,10 @@
 # Hiding containers
 
-## Conditional rendering
+## v-if
 
 Let's say you are creating a prototype with two views:
 
-![lo-fi wireframes of two screens: welcome and newsweed](./images/cond-1.png)
+![lo-fi wireframes of two screens: welcome and newsweed](./images/condition-render-wireframes-1.png)
 
 The task is as simple as showing the Welcome view if users are not authenticated, and showing the Newsfeed if they are. So you need to have both layouts in your prototype, but only one of them is shown at a time.
 
@@ -38,7 +38,7 @@ Open the same file in VSCode and change the name of the variable from `isUserLog
 When you change the name of the variable you have to change it everywhere in your code. In VSCode press `command + f` to open Find menu to look for instances. You can also press `command + option + f` to open Replace menu to quickly find and replace all instances.
 :::
 
-## Not
+## ! (not)
 
 Contrarily to the Dashboard's condition, the Login view is shown when the use is *not* authenticated. There's a special operator that allows you to check for a *not* condition. It's conveniently called **not** and it's written as an exclamation mark in front of a variable:
 
@@ -73,7 +73,7 @@ Try it yourself: download the [file](https://firebasestorage.googleapis.com/v0/b
 
 Create a lo-fi prototype of a messaging app with two views — Recent and Chat:
 
-![lo-fi wireframes of two UIs: recent chats and a conversation](./images/cond-3.png)
+![lo-fi wireframes of two UIs: recent chats and a conversation](./images/condition-render-wireframes-2.png)
 
 1. Create the Recent page layout.
 2. Create a Boolean variable to use as a condition.

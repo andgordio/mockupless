@@ -33,8 +33,7 @@ Now in your `v-if` attributes you check whether the variable **equals** to a par
 The expressions above can be read as “show the container only if the value of `currentScreen` equals to this”. Since the default value for `currentScreen` is `newsfeed`, only the first container will be shown in a browser.
 
 :::tip Note
-Using 3 equal signs for equality may look like an overkill, but single equal sign has a very different meaning in javascript, and two equal signs
-just don't look fancy enough (and may lead to some unexpected behavior).
+Using 3 equal signs for equality may look like an overkill, but single equal sign has a very different meaning in javascript, and two equal signs just don't look fancy enough (and may lead to some unexpected behavior).
 :::
 
 To test this, download the [file](https://firebasestorage.googleapis.com/v0/b/mockupless.appspot.com/o/conditions%2Fequality-1.html.zip?alt=media&token=a97ad90b-f3e5-451e-8dd6-38b2fec4441c), open it in Chrome, use Vue devtools to change the value of `currentScreen` to `"explore"` or `"profile"`. Note, that devtools expect you to use double quotes when you change the value in browser:

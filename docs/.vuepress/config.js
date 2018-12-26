@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Mockupless',
-  description: 'Create testable designs with code',
+  description: 'Create testable prototypes with code',
   plugins: ['@vuepress/google-analytics'],
   markdown: {
     lineNumbers: false
@@ -11,16 +11,21 @@ module.exports = {
   ga: 'UA-131076924-1',
   themeConfig: {
     nav: [
-      { text: 'Guide', link: '/Guide/' },
+      { text: 'About', link: '/About/' },
       { text: 'Courses', items: [
-        { text: 'Intro to programming', link: '/Courses/IntroToProgramming/' }
+        { text: 'Layout basics', link: '/Courses/LayoutBasics/' },
+        { text: 'Interaction basics', link: '/Courses/InteractionBasics/' },
       ]},
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
     ],
     sidebarDepth: 0,
     sidebar: {
-      '/Courses/IntroToProgramming/': [
+      '/Courses/LayoutBasics/': [
+        '',
+        'background'
+      ],
+      '/Courses/InteractionBasics/': [
         '',
         {
           title: 'Setup',
@@ -48,19 +53,15 @@ module.exports = {
             'Events/practice'
           ]
         },
-        // {
-        //   title: 'Functions',
-        //   collapsable: false,
-        //   children: [
-        //     'Functions/functions',
-        //   ]
-        // },
         {
           title: 'Conditions',
           collapsable: false,
           children: [
             'Conditionals/rendering',
-            'Conditionals/equality'
+            'Conditionals/equality',
+            'Conditionals/styles',
+            'Conditionals/complex',
+            // 'Conditionals/course-project',
           ]
         },
         // {
@@ -71,6 +72,14 @@ module.exports = {
         //     'Loops/lists',
         //     'Loops/loops',
         //     'Loops/practice'
+        //   ]
+        // },
+        // {
+        //   title: 'Functions',
+        //   collapsable: false,
+        //   children: [
+        //     'Functions/functions',
+        //     ....
         //   ]
         // },
         // {

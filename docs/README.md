@@ -2,7 +2,7 @@
 home: true
 # heroImage: /image.png
 actionText: Let's go
-actionLink: /Guide/
+actionLink: /About/
 features:
 - title: Ultimate power
   details: Start with a simple layout. Continue with responsiveness and basic interactions. End up with a fully interactive, meticulously thought-through prototype.
