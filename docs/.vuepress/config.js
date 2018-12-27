@@ -79,7 +79,7 @@ module.exports = {
         //   collapsable: false,
         //   children: [
         //     'Functions/functions',
-        //     ....
+        //     ...
         //   ]
         // },
         // {
