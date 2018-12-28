@@ -36,7 +36,9 @@ The expressions above can be read as “show the container only if the value of 
 Using 3 equal signs for equality may look like an overkill, but single equal sign has a very different meaning in javascript, and two equal signs just don't look fancy enough (and may lead to some unexpected behavior).
 :::
 
-To test this, download the [file](https://firebasestorage.googleapis.com/v0/b/mockupless.appspot.com/o/conditions%2Fequality-1.html.zip?alt=media&token=a97ad90b-f3e5-451e-8dd6-38b2fec4441c), open it in Chrome, use Vue devtools to change the value of `currentScreen` to `"explore"` or `"profile"`. Note, that devtools expect you to use double quotes when you change the value in browser:
+#### 👐 Hands-on
+
+To test this, download the [sample file](./../../../course-files/interaction-basics/conditionals-equality-1.html.zip), open it in Chrome, use Vue devtools to change the value of `currentScreen` to `"explore"` or `"profile"`. Note, that devtools expect you to use double quotes when you change the value in browser:
 
 ![Changing value in Vue devtools](./images/equality-1.gif)
 
@@ -60,17 +62,19 @@ The way you check for inequality is actually a symbiosis of the two: [equality](
 
 The expressions above can be read as “show the container only if the value of `currentScreen` is not `profile`”. As a result the navbar will be shown with any other value assigned to `currentScreen` including `'newsfeed'`, `'explore'` and anything you may come up with later.
 
-Test this by downloading the sample [file](https://firebasestorage.googleapis.com/v0/b/mockupless.appspot.com/o/conditions%2Fequality-2.html.zip?alt=media&token=7e901b74-1062-4011-8669-0c87bc0295b0) and changing the value in Vue devtools to `'profile'` and then to anything else.
+#### 👐 Hands-on
+
+Test this by downloading the [sample file](./../../../course-files/interaction-basics/conditionals-equality-2.html.zip) and changing the value in Vue devtools to `'profile'` and then to anything else.
 
 ![Changing value in Vue devtools](./images/equality-2.gif)
 
-## Self-practice: basic
+## 👶 Self-practice: basic
 
-Use the prototype from inequality section and make the title in the navbar conditional, so it shows Newsfeed when `currentScreen` equals `'newsfeed'`, and Explore when it's equal to `'explore'`:
+Use the prototype from inequality's [hands-on section](#%F0%9F%91%90-hands-on-2) and make the title in the navbar conditional, so it shows Newsfeed when `currentScreen` equals `'newsfeed'`, and Explore when it's equal to `'explore'`:
 
 ![lo-fi wireframe with a two pages: newsfeed and explore and focus on a navbar with different titles](./images/condition-equal-wireframes-3.png)
 
-1. Download the sample file [file](https://firebasestorage.googleapis.com/v0/b/mockupless.appspot.com/o/conditions%2Fequality-2.html.zip?alt=media&token=7e901b74-1062-4011-8669-0c87bc0295b0).
+1. Download the [sample file](./../../../course-files/interaction-basics/conditionals-equality-2.html.zip) from latest section.
 2. Locate the navbar section.
 3. Put the `Newsfeed` text into `span` container and add `v-if` attribute to it, that shows the container only if `currentScreen` is `'newsfeed'`.
 4. Create another `span` container next to it with text `Explore` and `v-if` attribute , that shows the container only if `currentScreen` is `'explore'`.
