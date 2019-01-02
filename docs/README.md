@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: /image.png
+heroImage: /title-image.png
 actionText: Let's go
 actionLink: /About/
 features:

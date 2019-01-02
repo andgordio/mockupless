@@ -75,7 +75,7 @@ Use the prototype from inequality's [hands-on section](#%F0%9F%91%90-hands-on-2)
 ![lo-fi wireframe with a two pages: newsfeed and explore and focus on a navbar with different titles](./images/condition-equal-wireframes-3.png)
 
 1. Download the [sample file](./../../../course-files/interaction-basics/conditionals-equality-2.html.zip) from latest section.
-2. Locate the navbar section.
+2. Locate the navbar section in layout.
 3. Put the `Newsfeed` text into `span` container and add `v-if` attribute to it, that shows the container only if `currentScreen` is `'newsfeed'`.
 4. Create another `span` container next to it with text `Explore` and `v-if` attribute , that shows the container only if `currentScreen` is `'explore'`.
 5. Test in Chrome by changing value to `'explore'`.
