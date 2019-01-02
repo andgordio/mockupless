@@ -1,4 +1,4 @@
-# Background styles
+# Background
 
 ## Color
 
@@ -8,16 +8,16 @@ background-color: #FF4949;
 ```
 Alternative values:
 ```css
-background-color: rgba(255, 73, 73, 1);   // rgba value
-background-color: red;                    // named value
-background-color: transparent;            // no background
+background-color: rgba(255, 73, 73, 1);   /* rgba value */
+background-color: red;                    /* named value */
+background-color: transparent;            /* no background */
 ```
 
 #### Tailwind classes
 A combination of `bg-` prefix and a color:
 ```html
-<div class="bg-pink-lightest"></div>      // named value
-<div class="bg-pink-transparent"></div>   // no background
+<div class="bg-pink-lightest"></div>      <!-- named value -->
+<div class="bg-pink-transparent"></div>   <!-- no background -->
 ```
 
 See Tailwind [Colors](https://tailwindcss.com/docs/colors) and [Background Color](https://tailwindcss.com/docs/background-color) for reference

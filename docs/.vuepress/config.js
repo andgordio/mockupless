@@ -23,7 +23,21 @@ module.exports = {
     sidebar: {
       '/Courses/LayoutBasics/': [
         '',
-        'background'
+        {
+          title: 'Flex',
+          collapsable: false,
+          children: [
+            'Flex/direction-and-wrap',
+            'Flex/alignment',
+          ]
+        },
+        {
+          title: 'Decoration',
+          collapsable: false,
+          children: [
+            'Decoration/background',
+          ]
+        },
       ],
       '/Courses/InteractionBasics/': [
         '',
