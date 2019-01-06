@@ -21,7 +21,6 @@ align-items: stretch;  /* default */
 justify-content: flex-start; /* default */
 justify-content: center;
 justify-content: flex-end;
-/* justify-content: space-evenly;   */
 ```
 
 ![...](./media/flex-align-3.png)

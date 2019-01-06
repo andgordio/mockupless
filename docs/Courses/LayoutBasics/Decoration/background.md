@@ -1,5 +1,11 @@
 # Background
 
+| -color        | -image                                | -position         | -repeat       | -size       |
+|:--------------|:--------------------------------------|:------------------|:--------------|:------------|
+| #000          | url('http://site.com/img.jpg')        | top center        | repeat        | 200px       |
+| rgba(0,0,0,1) | url('img.jpg')                        | top 25% right 25% | repeat-x      | cover       |
+| black         |                                       |                   | repeat-y      |             |
+|               |                                       |                   | no-repeat     |             |
 ## Color
 
 Basic value:
@@ -13,12 +19,12 @@ background-color: red;                    /* named value */
 background-color: transparent;            /* no background */
 ```
 
-#### Tailwind classes
+<!-- #### Tailwind classes
 A combination of `bg-` prefix and a color:
 ```html
-<div class="bg-pink-lightest"></div>      <!-- named value -->
-<div class="bg-pink-transparent"></div>   <!-- no background -->
-```
+<div class="bg-pink-lightest"></div>      named value
+<div class="bg-pink-transparent"></div>   no background
+``` -->
 
 See Tailwind [Colors](https://tailwindcss.com/docs/colors) and [Background Color](https://tailwindcss.com/docs/background-color) for reference
 

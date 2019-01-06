@@ -27,8 +27,11 @@ module.exports = {
           title: 'Flex',
           collapsable: false,
           children: [
+            'Flex/intro-to-flex',
             'Flex/direction-and-wrap',
             'Flex/alignment',
+            'Flex/flex1',
+            'Flex/practice.md',
           ]
         },
         {
@@ -36,6 +39,10 @@ module.exports = {
           collapsable: false,
           children: [
             'Decoration/background',
+            'Decoration/border',
+            'Decoration/corner-radius',
+            'Decoration/opacity',
+            'Decoration/shadow',
           ]
         },
       ],
@@ -58,15 +65,15 @@ module.exports = {
             'Data/practice'
           ]
         },
-        {
-          title: 'Events',
-          collapsable: false,
-          children: [
-            'Events/arithmetics',
-            'Events/events',
-            'Events/practice'
-          ]
-        },
+        // {
+        //   title: 'Events',
+        //   collapsable: false,
+        //   children: [
+        //     'Events/arithmetics',
+        //     'Events/events',
+        //     'Events/practice'
+        //   ]
+        // },
         {
           title: 'Conditions',
           collapsable: false,
@@ -78,16 +85,13 @@ module.exports = {
             // 'Conditionals/course-project',
           ]
         },
-        // {
-        //   title: 'Arrays and Loops',
-        //   collapsable: false,
-        //   children: [
-        //     'Loops/arrays',
-        //     'Loops/lists',
-        //     'Loops/loops',
-        //     'Loops/practice'
-        //   ]
-        // },
+        {
+          title: 'Lists and Objects',
+          collapsable: false,
+          children: [
+            'Lists-and-loops/lists',
+          ]
+        },
         // {
         //   title: 'Functions',
         //   collapsable: false,

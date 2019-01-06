@@ -83,3 +83,5 @@ Use the prototype from inequality's [hands-on section](#%F0%9F%91%90-hands-on-2)
 :::tip Note
 You are wrapping titles in span containers and not divs, because you don't want to change the layout, but you need something to attach `v-if` attribute to, and span is just perfect for job.
 :::
+
+<!-- PRO: radio buttons! -->
