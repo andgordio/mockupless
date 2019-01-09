@@ -91,6 +91,7 @@ module.exports = {
           children: [
             'Lists-and-loops/lists',
             'Lists-and-loops/indexes',
+            'Lists-and-loops/objects',
           ]
         },
         // {

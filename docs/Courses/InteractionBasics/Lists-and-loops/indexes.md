@@ -1,8 +1,16 @@
 # Selecting from a list
 
+:::danger
+current version of the article expects the knowledge of listeners and click event
+:::
+
 Let's extand the prototype from the previous article with the details view that shows the name of the selected contact.
 
 ![hey](./media/indexes-wireframes-1.png)
+<!--
+the above could be a nice Principle animation maybe? Smooth, but may be far from the expected result
+Maybe screencasts of actual prototype? Harder to make look smooth, but the actual result is shown
+-->
 
 The task is fairly simple: you need a variable to store the name of the selected item and display the value of the variable in details view. The problem with arrays is that we don't see any names of the items, only values separated by commas:
 
