@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /title-image.png
-actionText: Let's go
+actionText: Learn more
 actionLink: /About/
 features:
 - title: Ultimate power

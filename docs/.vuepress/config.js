@@ -90,6 +90,7 @@ module.exports = {
           collapsable: false,
           children: [
             'Lists-and-loops/lists',
+            'Lists-and-loops/indexes',
           ]
         },
         // {

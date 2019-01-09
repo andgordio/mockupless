@@ -2,9 +2,11 @@
 
 often you need to show repetative items: lists, grids, etc. A number of items that have same layout but different content — a component.
 
+> maybe, some UI examples? maybe animated?
+
 let's say your prototype has a list of contacts:
 
-> UI
+![hey](./media/lists-wireframes-1.png)
 
 to render it without having to create a container for every single contact, you need two things: a variable that can store lists — it's called an array — and an attribute that turns a container into a repeated component. First thing first.
 
@@ -40,7 +42,7 @@ first, create a layout for one item:
 </div>
 ```
 
-Now you can repeat this layout for every item in an array. For this you need to add `v-for` attribute and use a value from an array as a content
+Now you can repeat this layout for every item in an array. For this you need to add `v-for` attribute and use a value from an array as a content. <!--mention maybe that it's called loop? -->
 
 ```html
 <div v-for="contact in contacts" class="border-b border-grey py-4">
@@ -54,10 +56,20 @@ The attribute can be read as “Repeat the container for each value in `contacts
 
 #### 👐 Hands-on
 
-download the [sample file], add new items to the list, see results.
+download the [sample file](./../../../course-files/interaction-basics/lists-contacts-1.html.zip), add new items to the list, see results.
 
-# 👶 Self-practice: basic
+![hey](./media/tobegif1.png)
+
+## 👶 Self-practice: basic
 
 Use template with one letter on the right (like iOS contacts app)
 Create an array with all alphabet letters <!--todo: maybe suggest a good way to do this-->
 Make the block repeat to show indexes
+
+![hey](./media/lists-wireframes-2.png)
+
+```js
+['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+```
+
+[solution](./../../../course-files/interaction-basics/lists-contacts-2.html.zip)
