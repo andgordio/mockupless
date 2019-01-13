@@ -3,10 +3,32 @@
 As [official documentation](https://tailwindcss.com/docs/what-is-tailwind) puts it: Tailwind is a utility-first CSS framework for rapidly building custom user interfaces. Let's clarify some particularly important parts of this definition.
 
 #### CSS framework
-Tailwind is a collection of classes someone created for you. This means you need less time and less code compared to creating your own classes and writing plain CSS.
+Tailwind is a stylesheet with a bunch of classes someone created for you. This means you need less time and less code compared to creating your own classes and writing plain CSS.
 
 #### Utility-first
-Tailwind doesn't have components classes like `button` or `sidebar`. As a result you are not bound to look and behaviour of any UI kit, so you design freely.
+Tailwind doesn't have abstract component classes like `button`, `sidebar` or `column`. As a result you are not bound to look and behaviour of any UI kit, so you design freely.
+
+### In a nutshell
+
+Tailwind's classes usually have one, rarely two or more CSS properties wrapped in a short, yet readable name. As a result, the process is very similar to writing styles on the go, but instead you write classes:
+
+```html
+<div class="flex flex-col items-center">
+```
+
+With Tailwind in place, the container above becomes flex container, receives vertical direction and center-aligns its children horizontally. Here're Tailwind classes used by this layout:
+
+```css
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+```
 
 ## Demo
 
