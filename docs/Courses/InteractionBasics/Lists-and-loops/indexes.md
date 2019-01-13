@@ -6,7 +6,12 @@ current version of the article expects the knowledge of listeners and click even
 
 Let's extand the prototype from the previous article with the details view that shows the name of the selected contact.
 
-![hey](./media/indexes-wireframes-1.png)
+<!-- ![hey](./media/indexes-wireframes-1.png) -->
+
+<video width="100%" controls loop autoplay muted>
+<source src="./media/selecting-from-list.mp4" type="video/mp4">
+</video>
+
 <!--
 the above could be a nice Principle animation maybe? Smooth, but may be far from the expected result
 Maybe screencasts of actual prototype? Harder to make look smooth, but the actual result is shown

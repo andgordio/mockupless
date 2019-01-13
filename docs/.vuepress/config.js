@@ -24,14 +24,22 @@ module.exports = {
       '/Courses/LayoutBasics/': [
         '',
         {
+          title: 'Core',
+          collapsable: false,
+          children: [
+            'Core/units',
+            'Core/color',
+          ]
+        },
+        {
           title: 'Flex',
           collapsable: false,
           children: [
-            'Flex/intro-to-flex',
+            // 'Flex/intro-to-flex',
             'Flex/direction-and-wrap',
             'Flex/alignment',
             'Flex/flex1',
-            'Flex/practice.md',
+            // 'Flex/practice.md',
           ]
         },
         {
@@ -43,6 +51,17 @@ module.exports = {
             'Decoration/corner-radius',
             'Decoration/opacity',
             'Decoration/shadow',
+          ]
+        },
+        {
+          title: 'Tailwind',
+          collapsable: false,
+          children: [
+            'Tailwind/whats',
+            'Tailwind/usage',
+            'Tailwind/core',
+            'Tailwind/flex',
+            'Tailwind/decoration',
           ]
         },
       ],

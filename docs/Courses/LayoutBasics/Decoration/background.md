@@ -1,12 +1,12 @@
 # Background
 
-| -color        | -image                                | -position         | -repeat       | -size       |
+<!-- | -color        | -image                                | -position         | -repeat       | -size       |
 |:--------------|:--------------------------------------|:------------------|:--------------|:------------|
 | #000          | url('http://site.com/img.jpg')        | top center        | repeat        | 200px       |
 | rgba(0,0,0,1) | url('img.jpg')                        | top 25% right 25% | repeat-x      | cover       |
 | black         |                                       |                   | repeat-y      |             |
-|               |                                       |                   | no-repeat     |             |
-## Color
+|               |                                       |                   | no-repeat     |             | -->
+## background-color
 
 Basic value:
 ```css
@@ -26,9 +26,9 @@ A combination of `bg-` prefix and a color:
 <div class="bg-pink-transparent"></div>   no background
 ``` -->
 
-See Tailwind [Colors](https://tailwindcss.com/docs/colors) and [Background Color](https://tailwindcss.com/docs/background-color) for reference
+<!-- See Tailwind [Colors](https://tailwindcss.com/docs/colors) and [Background Color](https://tailwindcss.com/docs/background-color) for reference -->
 
-## Image
+## -image
 
 ### Location
 Basic value

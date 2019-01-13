@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Complex conditions — OR</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    input::placeholder { color: #dae1e7; opacity: 1; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="flex flex-col h-screen px-4">
+      <div class="flex-1"></div>
+      <div class="text-4xl font-bold py-4">Sign up</div>
+      <div class="mt-8 mb-5 flex items-center">
+        <div class="w-16">
+          <button class="text-teal" v-if="currentPage === 2 || currentPage === 3">Previous</button>
+        </div>
+        <div class="flex-1"></div>
+        <div class="mx-1 w-2 h-2 bg-grey-light rounded-full" :class="{'bg-teal': currentPage === 1}"></div>
+        <div class="mx-1 w-2 h-2 bg-grey-light rounded-full" :class="{'bg-teal': currentPage === 2}"></div>
+        <div class="mx-1 w-2 h-2 bg-grey-light rounded-full" :class="{'bg-teal': currentPage === 3}"></div>
+        <div class="flex-1"></div>
+        <div class="w-16 flex flex-col-reverse">
+          <button class="text-teal" v-if="currentPage === 1 || currentPage === 2">Next</button>
+          <button class="text-teal" v-if="currentPage === 3">Finish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      currentPage: 1,
+    },
+  })
+</script>
+</html>
