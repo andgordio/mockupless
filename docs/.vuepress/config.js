@@ -22,15 +22,15 @@ module.exports = {
     sidebarDepth: 0,
     sidebar: {
       '/Courses/LayoutBasics/': [
-        '',
-        {
-          title: 'Core',
-          collapsable: false,
-          children: [
-            'Core/units',
-            'Core/color',
-          ]
-        },
+        // '',
+        // {
+        //   title: 'Core',
+        //   collapsable: false,
+        //   children: [
+        //     'Core/units',
+        //     'Core/color',
+        //   ]
+        // },
         {
           title: 'Flex',
           collapsable: false,
@@ -48,9 +48,9 @@ module.exports = {
           children: [
             'Decoration/background',
             'Decoration/border',
-            'Decoration/corner-radius',
-            'Decoration/opacity',
-            'Decoration/shadow',
+            // 'Decoration/corner-radius',
+            // 'Decoration/opacity',
+            // 'Decoration/shadow',
           ]
         },
         {
@@ -59,9 +59,10 @@ module.exports = {
           children: [
             'Tailwind/whats',
             'Tailwind/usage',
-            'Tailwind/core',
-            'Tailwind/flex',
-            'Tailwind/decoration',
+            // 'Tailwind/core',
+            // 'Tailwind/flex',
+            // 'Tailwind/decoration',
+            'Tailwind/practice',
           ]
         },
       ],
@@ -99,35 +100,20 @@ module.exports = {
           children: [
             'Conditionals/rendering',
             'Conditionals/equality',
-            'Conditionals/styles',
-            'Conditionals/complex',
+            // 'Conditionals/styles',
+            // 'Conditionals/complex',
             // 'Conditionals/course-project',
           ]
         },
-        {
-          title: 'Lists and Objects',
-          collapsable: false,
-          children: [
-            'Lists-and-loops/lists',
-            'Lists-and-loops/indexes',
-            'Lists-and-loops/objects',
-          ]
-        },
         // {
-        //   title: 'Functions',
+        //   title: 'Lists and Objects',
         //   collapsable: false,
         //   children: [
-        //     'Functions/functions',
-        //     ...
+        //     'Lists-and-loops/lists',
+        //     'Lists-and-loops/indexes',
+        //     'Lists-and-loops/objects',
         //   ]
         // },
-        // {
-        //   title: 'Advanced',
-        //   collapsable: false,
-        //   children: [
-        //     'Advanced/objects'
-        //   ]
-        // }
       ]
     }
   }

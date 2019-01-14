@@ -6,7 +6,7 @@
 | rgba(0,0,0,1) | url('img.jpg')                        | top 25% right 25% | repeat-x      | cover       |
 | black         |                                       |                   | repeat-y      |             |
 |               |                                       |                   | no-repeat     |             | -->
-## background-color
+## -color
 
 Basic value:
 ```css
@@ -40,13 +40,13 @@ Relative value. Should not be a popular choice when prototyping be
 background-image: url('beach.jpg');
 ```
 
-### Position
+### -position
 ```css
 background-position: top center;
 background-position: top 25% right 25%;
 ```
 
-### Repeat
+### -repeat
 ```css
 background-repeat: repeat;
 background-repeat: repeat-x;
@@ -54,7 +54,7 @@ background-repeat: repeat-y;
 background-repeat: no-repeat;
 ```
 
-### Size
+### -size
 ```css
 background-size: 200px;
 background-size: cover;
