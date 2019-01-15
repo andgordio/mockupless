@@ -49,6 +49,7 @@ For this you need a variable to store the index of the selected item:
 
 ```js
 data: {
+  contacts: ['Adam', 'Annabelle', 'Bruce', 'Christine', 'Dambo'],
   selectedContact: 0
 }
 ```

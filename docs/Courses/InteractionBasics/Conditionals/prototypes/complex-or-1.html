@@ -7,16 +7,28 @@
   <title>Complex conditions — OR</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    input::placeholder { color: #dae1e7; opacity: 1; }
-  </style>
 </head>
 <body>
   <div id="app">
-    <div class="flex flex-col h-screen px-4">
-      <div class="flex-1"></div>
-      <div class="text-4xl font-bold py-4">Sign up</div>
-      <div class="mt-8 mb-5 flex items-center">
+    <div class="flex flex-col h-screen">
+      <div class="flex-1 bg-grey-lighter"></div>
+      <!-- content 1 -->
+      <div class="px-4 pt-8 pb-6" v-if="currentPage === 1">
+        <div class="text-4xl font-bold py-4">Learn A</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa dolorum soluta.</div>
+      </div>
+      <!-- content 2 -->
+      <div class="px-4 pt-8 pb-6" v-if="currentPage === 2">
+        <div class="text-4xl font-bold py-4">Learn B</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa dolorum soluta.</div>
+      </div>
+      <!-- content 3 -->
+      <div class="px-4 pt-8 pb-6" v-if="currentPage === 3">
+        <div class="text-4xl font-bold py-4">Learn C</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa dolorum soluta.</div>
+      </div>
+      <!-- footer -->
+      <div class="mt-8 mb-5 flex items-center px-4">
         <div class="w-16">
           <button class="text-teal" v-if="currentPage === 2 || currentPage === 3">Previous</button>
         </div>
