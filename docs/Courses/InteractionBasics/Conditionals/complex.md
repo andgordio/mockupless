@@ -63,10 +63,6 @@ You can combine two conditions, that **both** have to be satisfied, with **AND**
 
 ## Either of conditions — OR
 
-<!-- Another case of conditional rendering you'll meet when prototyping is when there are two or more conditions required to display an element, and you need just one of them, not all. Below is the example of onboarding with 3 pages: -->
-
-<!-- There's another case that requires to use two conditions — when  -->
-
 In some cases you want an element to be rendered if **either** of two conditions is met, not both of them. Take a look at a very basic onboarding with pagination:
 
 ![3 onboarding screens with Previous and Next buttons](./images/condition-complex-wireframes-2.png)
@@ -80,6 +76,10 @@ Notice that “Next” button, for example, appears on the first and the second 
 ```
 
 This condition can be read as “show the container if `currentPage` equals to 1 OR if `currentPage` equals to 2”. Now when either of those conditions is satisfied, the container will be rendered. 
+
+:::tip Good eye
+If you take your time with [inequality](./equality.md#inequality) you might suggest that `currentPage === 1 || currentPage === 2` can be written simply as `currentPage !== 3`, and you'd be absolutely correct. Sometimes there's more than one approach to defining conditions.
+:::
 
 #### 👐 Hands-on
 
@@ -107,7 +107,9 @@ You can combine as many conditions as you want, but you need to keep in mind tha
 </button>
 ```
 
-Since AND operator has higher precedence than OR, for admins the button will be rendered on all screens: `userRole === 'superadmin' && currentScreen === 'users'` will be executed first and result in false, then `userRole === 'admin' || false` will result in true no matter what value currentScreen has.
+Since AND operator has higher precedence than OR, for admins the button will be rendered on all screens:
+- `userRole === 'superadmin' && currentScreen === 'users'` will be executed first and result in false
+- then `userRole === 'admin' || false` will result in true no matter what value currentScreen has.
  <!-- `userRole === 'superadmin' && currentScreen === 'users'` will be executed first and the button will be rendered for admins on all screens. -->
 
 You can use **parenthasis** to control the order of operations, because groupping has the highest precedence and an operation inside group will be always performed first. 
@@ -118,4 +120,10 @@ You can use **parenthasis** to control the order of operations, because grouppin
 </button>
 ```
 
-## 👶 Self-practice: basic
+## Self-practice: basic
+
+> will be here soon. Stay tuned
+
+## Self-practice: pro
+
+> will be here soon. Stay tuned

@@ -6,7 +6,7 @@ Let's go back to the example from the previous lesson, but this time focus on th
 
 ![lo-fi wireframes of three screens: newsfeed, explore and profile](./images/condition-style-wireframes-1.png)
 
-By default tabs' icons and labels are colored in grey. Your task is to change the color of an element to teal when the corresponding tab is selected.
+By default tabs' icons and labels are colored in grey. The task is to have the style of elements changed to teal when the corresponding tab is selected.
 
 First, create containers and apply default styles. Here's a very simplified version with just one tab and without an icon:
 
@@ -35,7 +35,7 @@ Lastly, you need to add conditional class attribute to the container together wi
 `:class` attribute can be read as “add this class to the container if the following condition is true”. Since the default value for `currentTab` is `newsfeed` the `text-teal` class will be applied.
 
 :::tip Note
-The syntax of `:class` attribute looks complex at first. It *is* complex for sure, but it will make way more sense when you become familiar with Objects. For now, it's easier to read if you break it down into smaller pieces:
+The syntax of `:class` attribute looks complex at first. It *is* complex for sure, but it will make way more sense when you become familiar with Objects, beacuse it is one. For now, it's easier to read if you break it down into smaller pieces:
 - class name is written in single quotes
 - a class name and a condition are separated by colon
 - the value is surrounded by curly braces
@@ -45,6 +45,7 @@ The syntax of `:class` attribute looks complex at first. It *is* complex for sur
 
 1. Download the [sample file](./../../../course-files/interaction-basics/conditionals-style-1.html.zip) and open it in Chrome.
 2. In vue devtools change the value of `currentTab` to `'explore'` and then to `'profile'`.
+3. Open the file in VSCode and see the structure used to achieve the result. 
 
 ![Changing value in Vue devtools to see tab classes changing](./images/class-1.gif)
 
@@ -60,7 +61,7 @@ Sometimes you may want to add multiple conditional classes to a container. Let's
 </div>
 ```
 
-You can add as many classes as you wish with a single condition. Note, that they all are placed inside single quotes.
+You can add as many classes as you wish for a single condition, separated by whitespace, inside a pair of single quotes.
 
 ### Multiple conditions
 
@@ -80,6 +81,7 @@ To implement this kind of behavior, you define multiple classes separated by com
 
 1. Download the [sample file](./../../../course-files/interaction-basics/conditionals-style-2.html.zip) and open it in Chrome.
 2. In Vue devtools change values of `isDataLoading` and `isFormComplete` to `true`. You can do so by checking the box that appears when hovering a variable — it's a nice shortcut in devtools to change boolean value to the opposite one, so you don't have to type in `true` or `false`.
+3. Open the file in VSCode and see the structure used to achieve the result. 
 
 ![Changing multiple values in Vue devtools to see multiple classes changing](./images/class-2.gif)
 

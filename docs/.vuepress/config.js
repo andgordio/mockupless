@@ -100,20 +100,20 @@ module.exports = {
           children: [
             'Conditionals/rendering',
             'Conditionals/equality',
-            'Conditionals/styles',
             'Conditionals/complex',
+            'Conditionals/styles',
             // 'Conditionals/course-project',
           ]
         },
-        {
-          title: 'Lists and Objects',
-          collapsable: false,
-          children: [
-            'Lists-and-loops/lists',
-            'Lists-and-loops/indexes',
-            'Lists-and-loops/objects',
-          ]
-        },
+        // {
+        //   title: 'Lists and Objects',
+        //   collapsable: false,
+        //   children: [
+        //     'Lists-and-loops/lists',
+        //     'Lists-and-loops/indexes',
+        //     'Lists-and-loops/objects',
+        //   ]
+        // },
       ]
     }
   }
