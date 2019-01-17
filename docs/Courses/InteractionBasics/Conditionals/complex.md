@@ -41,7 +41,7 @@ You can combine two conditions, that **both** have to be satisfied, with **AND**
 <!-- In our example you need to check whether two conditions are satisfied for welcome screens, use AND written as &&: -->
 
 ```html
-<div v-if="isUserLoggedIn">
+<div v-if="!isUserLoggedIn">
   Sign up
 </div>
 <div v-if="isUserLoggedIn && userRole === 'shopper'">

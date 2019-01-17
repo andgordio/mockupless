@@ -76,7 +76,7 @@ data () {
 ```
 - The value of a radio button doesn’t have to be the same as its label, but it’s easier to keep track of them when they are the same
 
-### Select / Dropdown
+### Dropdown / Select
 
 To connect a dropdown to your data you need to add v-model to ‘select’ control. The value inside the selected ‘option’ container will be stored in your data.
 

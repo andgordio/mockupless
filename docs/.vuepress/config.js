@@ -23,14 +23,15 @@ module.exports = {
     sidebar: {
       '/Courses/LayoutBasics/': [
         // '',
-        // {
-        //   title: 'Core',
-        //   collapsable: false,
-        //   children: [
-        //     'Core/units',
-        //     'Core/color',
-        //   ]
-        // },
+        {
+          title: 'Core',
+          collapsable: false,
+          children: [
+            // 'Core/units',
+            // 'Core/color',
+            'Core/form',
+          ]
+        },
         {
           title: 'Flex',
           collapsable: false,
