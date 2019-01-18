@@ -120,10 +120,36 @@ You can use **parenthasis** to control the order of operations, because grouppin
 </button>
 ```
 
-## Self-practice: basic
+## Self-practice
 
-> will be here soon. Stay tuned
+### Part I
 
-## Self-practice: pro
+Create a prototype with 3 views: Events list, Event creation and Introduction modal view.
 
-> will be here soon. Stay tuned
+![todo:description](./images/condition-task-wireframes-1.png)
+
+The workflow for this prototype is the following:
+
+1. When users are not creating a new event, they see the Events list.
+2. When new uses are creating a new event, they see an Introduction view.
+3. When users who have already seen an Introduction view are creating a new event, they see Event creation view
+
+Here's a userflow for the logic described above:
+
+![todo:description](./images/condition-task-chart-1.png)
+
+Create 3 containers (one for each view), 2 variables (one for each condition) and apply proper conditions to containers to implement the suggested workflow. Don't forget to use Vue devtools in Chrome to check your results.
+
+### Part II
+
+![todo:description](./images/condition-task-wireframes-2.png)
+
+Instead of having 2 top navigation headers — one in Events list and one in Event creation view — create a universal header with following conditions:
+
+- The container itself is shown if the users are not creating a new event, or if users who have already seen an Introduction view are creating a new event
+- Create button is shown only if users are not creating a new event
+- Cancel and Save buttons are shown only if users are creating an event
+- The title of the screen changes from ‘Events’ to ‘New event’ when users are creating an event
+
+### Solution
+If you have any problems completing the task, dowload and review the [complete prototype](./../../../course-files/interaction-basics/conditionals-complex-task-1-end.html.zip).

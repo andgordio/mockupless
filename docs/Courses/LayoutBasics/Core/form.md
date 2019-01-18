@@ -3,27 +3,37 @@
 ## Text input
 
 ```html
-<input>
-<input type="text">
-<input type="text" placeholder="Enter your name here..">
+<input placeholder="Enter your name here...">
+```
+
+- `input` does not have a closing tag
+- `placeholder` is optional attribute
+
+#### Variations
+
+You can define `type` attribute to specify the kind of input.
+
+```html
 <input type="email">
 <input type="password">
 ```
 
-- no closing tag
-- placeholder is optional attribute
+- `email` enables email-friendly keyboard on most mobile devices
+- `password` hides the input's content
 
 ## Textarea
 ```html
 <textarea placeholder="Enter description..."></textarea>
 ```
 
-- nothing goes between the tags
+- Has a closing tag, but you don't have to put anything between the tags
 
 ## Checkbox
 ```html
 <input type="checkbox"> I agree with Privacy Policy
 ```
+
+- same tag as for simple text input, but has a `checkbox` value in `type` attribute
 
 ## Radio button
 ```html
@@ -38,6 +48,7 @@
 </div>
 ```
 
+- same tag as for simple text input and checkbox with `radio` value in `type` attribute
 - radio buttons from one group must have same value in the `name` attribute to make radio buttons bound
 
 ## Dropdown / Select
