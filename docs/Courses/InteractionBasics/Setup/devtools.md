@@ -1,4 +1,4 @@
-# Developer tools
+# Vue dev tools
 
 ## Install and setup
 ![vue.js devtools in Chrome toolbar](./images/devtools-1.png)

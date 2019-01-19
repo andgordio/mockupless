@@ -1,15 +1,45 @@
-# Prototyping template
+# HTML template
 
-<!-- > TODO:
-We are starting to work with vue.js and it requires a setup. -->
+When creating a new prototype you don't have to start with an empty document every time. It is a good practice to define your initial setup for work and create a template that includes basic structure you'll probably need for prototyping. Here's a very basic template that has everything you need to start a new prototype:
 
-## 1. Start with HTML template
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototype</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
 
-1. Create a new document in VSCode
-2. Save it with **.html** extension
-3. Start typing **html** and select `html:5` boilerplate
+<body>
+  <div id="app">
+    <!-- layout with content go here -->
+  </div>
+</body>
 
-You will have the following code populated for you:
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      // variables go here
+    },
+    methods: {
+      // functions go here
+    }
+  })
+</script>
+</html>
+```
+
+You may copy the code into your newly created `.html` file or [download]() one pre-filled with the code for you.
+
+## What's in it
+
+The template starts with a basic HTML5 template VSCode creates for you with `html:5` shortcut:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -24,27 +54,27 @@ You will have the following code populated for you:
 </body>
 </html>
 ```
-## 2. Import Vue.js into your code
 
-Insert this line anywhere in your `<head>` container:
+Next, two core frameworks are imported into the template:
+- [Tailwind](./../../LayoutBasics/Tailwind/whats.md) for creating layouts rapidly.
+- [Vue](./../README.md) to enable simple and powerful interactivity.
+
+Importing them is a matter of adding two lines of code into the `head` container:
 
 ```html
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 ```
 
-## 3. Create app container
-
-Create a new div container inside your `<body>` container:
+Now Vue itself requires some setup to work properly. First, you create a container with `id="app"` inside `body`. This tells Vue to look for Vue code inside this container, and it makes sense to place your whole prototype inside this container:
 
 ```html
 <div id="app">
-  <!-- layout with content go here -->
+  <!-- layout with content goes here -->
 </div>
 ```
 
-## 4. Add script container
-
-Add a container for your Vue code between the closing `</body>` and `</html>` tags:
+Second, you need a special container to store your Vue data and functions
 
 ```html
 <script>
@@ -60,60 +90,8 @@ Add a container for your Vue code between the closing `</body>` and `</html>` ta
 </script>
 ```
 
-Don't worry if you don't understand what happens inside this script container. Chances are you will never trully know what it is, and it's perfectly fine.
+It can placed between closing `</body>` and `</html>` tags. Don't worry if you don't understand what happens inside this `script` container. Chances are you will never trully know what it is, and it's perfectly fine. During this course you will filling up `data` and `methods` containers with your code.
 
-## Final template
+## Customization
 
-```html{8,11-13,15-25}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
-<body>
-  <div id="app">
-    <!-- layout with content go here -->
-  </div>
-</body>
-<script>
-  var app = new Vue({
-    el: '#app',
-    data: {
-      // variables go here
-    },
-    methods: {
-      // functions go here
-    }
-  })
-</script>
-</html>
-```
-
-
-
-
-
-<!--## Sample case
-Imagine you are designing an online store and you want to prototype the checkout experience. One of the essential UI elements you need is a shopping cart icon that indicates how many items a user currently has prepared for checkout:
-
-![cart](./img/img-cart.png)
-
-For this UI to display correct number of items in cart and react to user's actions you need to:
-1. **Store** the number in your code
-2. **Display** the number in your UI
-3. **Track** user's actions to initiate the change
-4. **Change** the number depending on user's actions -->
-
-<!-- ## Variables
-
-Variable is a container with value and a name. You define the name yourself and use it then to access the value. -->
-
-<!-- This section covers the very of programming: data — what you do with it and what types there are.
-* programming is reading and writing data essentially.
-* to read and write you need to store it somewhere
-* data is stored as a container with a name and a value
-* with the name you read the value, and with name you change it  -->
+> Once you progress with prototyping you'll create your own template on top of this one: Add fonts, frameworks, UI Kits

@@ -68,11 +68,11 @@ module.exports = {
         },
       ],
       '/Courses/InteractionBasics/': [
-        '',
         {
-          title: 'Setup',
+          title: 'Intro to Interaction basics',
           collapsable: false,
           children: [
+            '',
             'Setup/template',
             'Setup/devtools',
           ]
@@ -86,15 +86,6 @@ module.exports = {
             'Data/practice'
           ]
         },
-        // {
-        //   title: 'Events',
-        //   collapsable: false,
-        //   children: [
-        //     'Events/arithmetics',
-        //     'Events/events',
-        //     'Events/practice'
-        //   ]
-        // },
         {
           title: 'Conditions',
           collapsable: false,
@@ -106,15 +97,25 @@ module.exports = {
             // 'Conditionals/course-project',
           ]
         },
-        // {
-        //   title: 'Lists and Objects',
-        //   collapsable: false,
-        //   children: [
-        //     'Lists-and-loops/lists',
-        //     'Lists-and-loops/indexes',
-        //     'Lists-and-loops/objects',
-        //   ]
-        // },
+        {
+          title: 'Events',
+          collapsable: false,
+          children: [
+            // 'Events/arithmetics',
+            'Events/click',
+            'Events/other',
+            // 'Events/practice'
+          ]
+        },
+        {
+          title: 'Lists and Objects',
+          collapsable: false,
+          children: [
+            'Lists-and-loops/lists',
+            'Lists-and-loops/indexes',
+            'Lists-and-loops/objects',
+          ]
+        },
       ]
     }
   }

@@ -71,3 +71,25 @@ listOfItems: null
 ```
 - Written without quotation marks
 - Do not confuse with zero `0` which is a number and is used for counting, and not an indication of absence of value
+
+
+<!--## Sample case
+Imagine you are designing an online store and you want to prototype the checkout experience. One of the essential UI elements you need is a shopping cart icon that indicates how many items a user currently has prepared for checkout:
+
+![cart](./img/img-cart.png)
+
+For this UI to display correct number of items in cart and react to user's actions you need to:
+1. **Store** the number in your code
+2. **Display** the number in your UI
+3. **Track** user's actions to initiate the change
+4. **Change** the number depending on user's actions -->
+
+<!-- ## Variables
+
+Variable is a container with value and a name. You define the name yourself and use it then to access the value. -->
+
+<!-- This section covers the very of programming: data — what you do with it and what types there are.
+* programming is reading and writing data essentially.
+* to read and write you need to store it somewhere
+* data is stored as a container with a name and a value
+* with the name you read the value, and with name you change it  -->

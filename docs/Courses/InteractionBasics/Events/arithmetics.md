@@ -1,9 +1,9 @@
 # Arithmetics
 
-![operators](./images/functions-arithmetics.png)
+![operators](./media/functions-arithmetics.png)
 
 :::tip Tip
-When reading this article for the first time, scan through the content quickly and proceed to the [next](./events.md) article — there you will find first applications of arithmetics. Come back to this article later to recap, especially when working on self-practice [tasks](./practice.md).
+When reading this article for the first time, scan through the content quickly and proceed to the [next](./click.md) article — there you will find first applications of arithmetics. Come back to this article later to recap, especially when working on self-practice [tasks](./practice.md).
 :::
 
 ## Assign

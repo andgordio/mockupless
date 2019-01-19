@@ -1,8 +1,6 @@
-# Events
+# Click
 
-## Click
-
-![clicks illustration](./images/events-events.png)
+![clicks illustration](./media/events-events.png)
 
 Click is the father of interactivity. Upon click, items are added and removed, containers are shown and hidden, pages are opened and animations are played. 
 
@@ -23,7 +21,7 @@ Here's a button that adds 1 to the variable `items` when clicked:
 - `items = items + 1` is the instruction you want to be executed when the event is detected.
 - Taps are also recognized by this listener if users interact with the prototype on touch screen devices.
 
-### Creative freedom
+### Beyond buttons
 
 You can add click listeners to any container, not only a button. This means that you can create your layouts freely, without having to use any specific containers for your elements.
 
@@ -45,29 +43,6 @@ In this exapmle a click listener is added to a complex flex container with multi
 
 This way `+` and `Add an item` are in different containers each with a unique style, but both will respond to a click, because the listener is added to their parent. 
 
-## Key press
+## Self-practice
 
-Let's say you are prototyping a simple subscription form as a part of your interface:
-
-![newsletter subscription interface](./images/events-subscription.png)
-
-You know what to do: you create a variable and connect it to the input, and you add an event listener to the Subscribe button:
-
-```html
-<input v-model="userEmail">
-<button @click="subscriber = userEmail">Subscribe</button>
-```
-
-Yet chances are high, that when you start testing this interface, you'll learn that some people are used to being able to hit Return on their keyboard instead of clicking a button to submit a form.
-
-To react to users pressing Return when the input field is focused, you need to add `@keypress.enter` event listener to the input field:
-
-```html
-<input v-model="userEmail" @keypress.enter="subscriber = userEmail">
-<button @click="subscriber = userEmail">Subscribe</button>
-```
-<div class="jsfiddle-link"><a href="https://jsfiddle.net/andgordy/eywraw8t/498871/" target="_blank">JSFiddle</a></div>
-
-- If you want the same results as a button click has, you use same instructions you used for @click
-- `.enter` is a modifier for `@keypress` event listener. It specifies which particular button press you want to react to. If you remove a modifier `@keypress` will react to all button presses, which is rarely the desired outcome.
-- Other modifiers include `.tab` and `.esc` if you want to change the default behaviour of the corresponding buttons for particular input fields.
+### name of the task

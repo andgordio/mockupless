@@ -1,4 +1,4 @@
-# Foreword
+# About the course
 
 HTML and CSS are markup languages and they are used to give instructions about content, position in space, the look and the very basic interactions of the elements. To make your prototypes truly interactive you need a scripting (programming) language — JavaScript.
 
@@ -10,3 +10,9 @@ Targeting this complexity is where frameworks come to play. Frameworks can be se
 <!-- todo: strive to make this explanation better, shorter, clearer -->
 
 Vue is a framework you will use to prototype.
+
+## Prerequisites
+
+
+
+## What you will learn
