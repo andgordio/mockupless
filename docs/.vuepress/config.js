@@ -83,7 +83,7 @@ module.exports = {
           children: [
             'Data/variables',
             'Data/display',
-            'Data/practice'
+            // 'Data/practice'
           ]
         },
         {
