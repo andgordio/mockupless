@@ -11,7 +11,7 @@ Once the data is stored in a variable, you can display its value in your layout:
 <div>{{itemsInCart}}</div>
 ```
 ```js
-data () {
+data: {
   itemsInCart: 2
 }
 ```
@@ -29,7 +29,7 @@ There’s an attribute in Vue that allows to bind a form control with a variable
 <input v-model="userEmail"> 
 ```
 ```js
-data () {
+data: {
   userEmail: 'support@mockupless.com'
 }
 ```
@@ -46,7 +46,7 @@ Value of a checkbox is always binary: it’s either on or off, so it makes sense
 <input type="checkbox" v-model="didAgreeToPolicy"> I agree with Privacy Policy
 ```
 ```js
-data () {
+data: {
   didAgreeToPrivacyPolicy: false
 }
 ```
@@ -70,7 +70,7 @@ Radio buttons require another attribute: **value**. In it you specify what shoul
 </div>
 ```
 ```js
-data () {
+data: {
   emailsDaily: 'One'
 }
 ```
@@ -89,7 +89,7 @@ To connect a dropdown to your data you need to add v-model to ‘select’ contr
 </select>
 ```
 ```js
-data () {
+data: {
   plan: 'Free'
 }
 ```

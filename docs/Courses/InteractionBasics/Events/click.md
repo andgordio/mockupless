@@ -2,47 +2,84 @@
 
 ![clicks illustration](./media/events-events.png)
 
-Click is the father of interactivity. Upon click, items are added and removed, containers are shown and hidden, pages are opened and animations are played. 
+<!-- todo: better illustration / animation of click changing everything -->
 
-You need to do 2 things to make your prototype respond to a users' click:
+Click (or tap, depending on the device) is the father of interactivity. Upon click items are added and removed, containers are shown and hidden, pages are opened and animations are played. 
+
+To make your prototype respond to a user’s click you need to do 2 things:
 
 1. Add a **click listener** to a container you expect users to interact with.
 2. Specify **instructions** that you want to be executed when the click is detected.
 
-Here's a button that adds 1 to the variable `items` when clicked:
+Here's a button that changes authentication status of a user, when clicked:
 
 ```html
-<button @click="items = items + 1">Add an item</button>
+<button @click="isUserLoggedIn = true">
+  Login
+</button>
 ```
-<div class="jsfiddle-link"><a href="https://jsfiddle.net/andgordy/eywraw8t/498829/" target="_blank">JSFiddle</a></div>
 
-- `@` tells Vue you are specifying an event listener.
-- `click` is the name of the event you want to listen to.
-- `items = items + 1` is the instruction you want to be executed when the event is detected.
-- Taps are also recognized by this listener if users interact with the prototype on touch screen devices.
+This attribute can be read as “when users click on the button, assign the value of `true` to `isUserLoggedIn` variable”. `@click` is **the event** you want to listen to. `isUserLoggedIn = true` is the **instruction** you want to be executed when the event is detected.
+
+<!-- todo: assigning a value -->
+
+:::tip Assigning values
+One equal sign
+:::
 
 ### Beyond buttons
 
-You can add click listeners to any container, not only a button. This means that you can create your layouts freely, without having to use any specific containers for your elements.
+You can add click listeners to any container, not only to a `<button>`. This means that you can create your layouts freely, without having to use any specific containers for your components. What's even more important, the click is detected not only on a container you've added it to, but also on all of its **children**.
 
-Also, the click is detected not only on an element you've added it to, but also on all of its **children**.
-
-In this exapmle a click listener is added to a complex flex container with multiple containers inside:
+In this exapmle a `@click` listener is added to a complex flex container with multiple containers inside it:
 
 ```html
-<div @click="items = items + 1" class="button">
-  <div class="icon">
-    +
-  </div>
-  <div class="text">
-    Add an item
+<div @click="doShowDetailsView = true" class="flex">
+  <div class="w-16 h-16 rounded-full bg-grey-lighter mr-6">SA</div>
+  <div class="flex-1">
+    <div class="font-bold">Steve Allen</div>
+    <div class="text-grey">This is an amazing opportunity!</div>
   </div>
 </div>
 ```
-<div class="jsfiddle-link"><a href="https://jsfiddle.net/andgordy/mqhb2v30/46/" target="_blank">JSFiddle</a></div>
 
-This way `+` and `Add an item` are in different containers each with a unique style, but both will respond to a click, because the listener is added to their parent. 
+This way there are multiple containers with different layouts and style, but all will respond to a click, because the listener is added to their parent container. 
+
+#### 👐 Hands-on
+<!-- todo: hands-on section, maybe. maybe not because the article is short and has a lot of self-practice -->
+
 
 ## Self-practice
+<!-- todo: self-practice -->
 
-### name of the task
+### basic 1
+
+///
+
+#### Solution
+
+///
+
+### basic 2
+
+///
+
+#### Solution
+
+///
+
+### pro 1
+
+///
+
+#### Solution
+
+///
+
+### pro 2
+
+///
+
+#### Solution
+
+///

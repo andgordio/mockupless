@@ -1,10 +1,34 @@
 # Other events
 
-## Focus and unfocus (blur)
+## Focus and unfocus
 
-## Hover (mouseover)
+<!-- todo: video example -->
 
-## Keypress
+Click is not the only type of interaction you might expect from a user. When designing a form or a search bar, for example, you may want to know when the input field was focused and when it lost its focus to change styles, show and hide elements, etc. You can do that with `@focus` and `@blur` event listeners:
+
+```vue
+<input @focus="doShowEmailHelp = true" @blur="doShowEmailHelp = false" placeholder="Enter your email...">
+<div v-if="doShowEmailHelp">Make sure you input your work email, not a personal one</div>
+```
+
+The code above will make the div visible when the input is focused, and hide the div when the focus is lost. This is achieved with applying different values to `doShowEmailHelp` variable based on `@focus` and `@blur` events, and making the div a conditional container based on the value of the same variable.
+
+## Hover
+
+<!-- todo: proper intro -->
+
+Track when the cursor started hovering above the element with `@mouseover`, and when the cursor left the element's area with `@mouseleave`
+
+```vue
+<div @mouseover="doShowArrow = true" @mouseleave="doShowArrow = false">
+  <span>All discussions</span>
+  <span v-if="doShowArrow">→</span>
+</div>
+```
+
+## Key press
+
+<!-- todo: proper intro -->
 
 Let's say you are prototyping a simple subscription form as a part of your interface:
 
@@ -25,7 +49,7 @@ To react to users pressing Return when the input field is focused, you need to a
 <input v-model="userEmail" @keypress.enter="subscriber = userEmail">
 <button @click="subscriber = userEmail">Subscribe</button>
 ```
-<div class="jsfiddle-link"><a href="https://jsfiddle.net/andgordy/eywraw8t/498871/" target="_blank">JSFiddle</a></div>
+<!-- <div class="jsfiddle-link"><a href="https://jsfiddle.net/andgordy/eywraw8t/498871/" target="_blank">JSFiddle</a></div> -->
 
 - If you want the same results as a button click has, you use same instructions you used for @click
 - `.enter` is a modifier for `@keypress` event listener. It specifies which particular button press you want to react to. If you remove a modifier `@keypress` will react to all button presses, which is rarely the desired outcome.

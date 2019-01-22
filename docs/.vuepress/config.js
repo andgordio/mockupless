@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Mockupless',
-  description: 'Create testable prototypes with code',
+  description: 'Design testable prototypes with code',
   plugins: ['@vuepress/google-analytics'],
   markdown: {
     lineNumbers: false
@@ -17,6 +17,7 @@ module.exports = {
         { text: 'Interaction basics', link: '/Courses/InteractionBasics/' },
       ]},
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
+      { text: 'Forum', link: 'https://forum.mockupless.com' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
     ],
     sidebarDepth: 0,

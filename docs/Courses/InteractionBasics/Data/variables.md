@@ -14,13 +14,13 @@ There are mainly three reasons to store data:
 Data is stored in variables. A variable is a container with a name and a value. Value is the actual content you wish to store, and the name is a key to accessing this content.
 
 ```js
-data () {
+data: {
   userName: 'Steve Allen',
   itemsInCart: 2,
   isUserLoggedIn: true
 }
 ```
-* It's common to write names in [camel case](https://en.wikipedia.org/wiki/Camel_case).
+* It's common to write variables' names in [camel case](https://en.wikipedia.org/wiki/Camel_case).
 * Variables are stored in `data: { }` section of vue code.
 * Variables should be separated with a coma and a new line.
 

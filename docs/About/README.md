@@ -33,7 +33,7 @@ If you are new to web technologies, start with Intro to layout (to be added) and
 
 ## Am I alone?
 
-There's a [Slack](https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg) community for providing support, discussing ideas, sharing progress and shaping the methodology. 
+There's a [Forum](https://forum.mockupless.com) for providing support, discussing ideas, sharing progress and shaping the methodology. 
 
 ## Can I contribute?
 
