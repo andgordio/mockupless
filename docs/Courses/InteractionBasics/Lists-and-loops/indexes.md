@@ -1,9 +1,5 @@
 # Selecting from a list
 
-:::danger
-current version of the article expects the knowledge of listeners and click event
-:::
-
 Let's extand the prototype from the previous article with the details view that shows the name of the selected contact.
 
 <!-- ![hey](./media/indexes-wireframes-1.png) -->

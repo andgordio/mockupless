@@ -1,8 +1,8 @@
 # HTML template
 
-When creating a new prototype you don't have to start with an empty document every time. It is a good practice to define your initial setup for work and create a template that includes basic structure you need for prototyping.
+You don't have to start with an empty document every time you create a new prototype. It is a common practice to define your initial setup and create a template that includes everything you need to start prototyping.
 
-Here's a very basic template that has everything you need to start a new prototype:
+Here's a basic template we recommend using during the course:
 
 ```html
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ Here's a very basic template that has everything you need to start a new prototy
 </html>
 ```
 
-You may copy the code into your newly created `.html` file or [download]() one pre-filled with the code for you.
+You may copy the code into your newly created `.html` file or just [download](./../../../course-files/interaction-basics/template.html.zip) the template.
 
 ## What's in it
 
@@ -66,8 +66,9 @@ Next, two core frameworks are imported into the template by adding two lines of 
 
 - [Tailwind](./../../LayoutBasics/Tailwind/whats.md) for creating layouts rapidly.
 - [Vue](./../README.md) to enable simple and powerful interactivity.
+<!-- todo: need a better link to explain what is vue and why it's used -->
 
-Now Vue itself requires some setup to work properly. First, you create a container with `id="app"` inside `body`:
+Now Vue also requires some setup to work properly. First, you create a container with `id="app"` inside `body`:
 
 ```html
 <div id="app">
@@ -75,7 +76,7 @@ Now Vue itself requires some setup to work properly. First, you create a contain
 </div>
 ```
 
-* This tells Vue to look for Vue code inside this container, and it makes sense to place your whole prototype inside this container
+This tells Vue to look for Vue code inside this container, so all your layout code for a prototype should be placed inside this container.
 
 Second, you need a special container to store your Vue data and functions:
 
@@ -95,6 +96,6 @@ Second, you need a special container to store your Vue data and functions:
 
 It can placed between closing `</body>` and `</html>` tags. Don't worry if you don't understand what happens inside this `script` container. Chances are you will never trully know what it is, and it's perfectly fine. During this course you will be filling up `data` and `methods` containers with your code.
 
-## Customization
-
-> Once you progress with prototyping you'll create your own template on top of this one: Add fonts, frameworks, UI Kits
+<!-- ## Customization
+Once you progress with prototyping you'll create your own template on top of this one: Add fonts, frameworks, UI Kits -->
+<!-- todo: write this part of the article -->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tabs</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="bg-grey-lighter h-screen">
+    <div class="border-b border-grey-light px-8 bg-white">
+      <div class="flex items-center">
+        <div class="text-lg py-3 font-semibold">
+          <span class="text-pink">Cherry</span> Music
+        </div>
+        <div class="flex-1"></div>
+        <div class="border-b-4 border-white mx-4 font-semibold pt-5 pb-4" :class="{'border-pink': currentTab === 'library', 'opacity-25': currentTab !== 'library'}">
+          Library
+        </div>
+        <div class="border-b-4 border-white mx-4 font-semibold pt-5 pb-4" :class="{'border-pink': currentTab === 'for you', 'opacity-25': currentTab !== 'for you'}">
+          For you
+        </div>
+        <div class="border-b-4 border-white mx-4 font-semibold pt-5 pb-4" :class="{'border-pink': currentTab === 'browse', 'opacity-25': currentTab !== 'browse'}">
+          Browse
+        </div>
+        <div class="border-b-4 border-white mx-4 font-semibold pt-5 pb-4" :class="{'border-pink': currentTab === 'radio', 'opacity-25': currentTab !== 'radio'}">
+          Radio
+        </div>
+        <div class="border-b-4 border-white mx-4 font-semibold pt-5 pb-4" :class="{'border-pink': currentTab === 'search', 'opacity-25': currentTab !== 'search'}">
+          Search
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      currentTab: 'library'
+      // variable to save state goes here
+    }
+  })
+</script>
+</html>
