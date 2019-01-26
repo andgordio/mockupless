@@ -1,28 +1,34 @@
 # Lists
 
-often you need to show repetative items: lists, grids, etc. A number of items that have same layout but different content — a component.
+<!-- todo: a nice illustration with a list and a grid / maybe real-world examples, but probably no -->
 
-> maybe, some UI examples? maybe animated?
-
-let's say your prototype has a list of contacts:
+Quite often you need to show repeating components in lists, grids, etc. They should have similar look and behaviour, but the content should be different. Let's take a simple list of contacts for example:
 
 ![hey](./media/lists-wireframes-1.png)
 
-to render it without having to create a container for every single contact, you need two things: a variable that can store lists — it's called an array — and an attribute that turns a container into a repeated component. First thing first.
+The most straight-forward way to prototype this is to create a container for every single item, add styles and populate each one of them with content. The donwside to this approach becomes obvious pretty fast: you need to write **a lot of repetative code** and every change to their layout has to be implemented for every container.
+
+Vue provides an alternative way of rendering repeating items that allows to create item layout only once. To achieve this, you will have to do 2 things:
+
+1. Store the content of your list as a special type of variable — **an array**.
+2. Add **loop attribute** to a container to render it multiple times.
+
+Let's go through these concepts one by one.
 
 ## Array
 
-You are familiar now with primitive data types: numbers, strings, booleans. An array is a variable that can store a list of values of any kind:
+You are familiar with [primitive data types](./../Data/variables.md#variables): numbers, strings and booleans. An array is a variable used to store a list of values of any kind:
 
 ```js
 data: {
-  contacts: [null, 1, 2, true, 'hello']
+  contacts: [null, 1, 'hello', true]
 }
 ```
 
-syntax: square brackets, values separated by coma. It's a list of variables that don't have names. Kinda, but will get to that in the next lesson.
+The content of an array is placed within square brackets and its items are separated by comas. Think of an array as a list of variables that don't have names.
+<!-- todo: maybe say: Kinda, but will get to that in the next lesson. -->
 
-for contact's list prototype:
+Going back to the contacts list prototype, here's an array with contact names:
 
 ```js
 data: {
@@ -30,7 +36,8 @@ data: {
 }
 ```
 
-Now let's move on to the layout.
+With data stored properly, you are ready to create a repeating container.
+
 
 ## Loop
 

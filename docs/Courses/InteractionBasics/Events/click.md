@@ -19,17 +19,20 @@ Here's a button that changes authentication status of a user, when clicked:
 </button>
 ```
 
-This attribute can be read as “when users click on the button, assign the value of `true` to `isUserLoggedIn` variable”. `@click` is **the event** you want to listen to. `isUserLoggedIn = true` is the **instruction** you want to be executed when the event is detected.
+This attribute can be read as “when users click on the button, assign the value of `true` to `isUserLoggedIn` variable”.
+- `@` indicates an **event listener** and `click` specifies **the event** you want to listen to.
+- `isUserLoggedIn = true` is the **instruction** you want to be executed when the interaction happens.
 
 :::tip Assigning a value
 When you define a variable inside your `data` container you specify a name and a default value: `doShowDetails: false`. The sole purpose of storing something inside a variable is to enable changing its value in the future. You see it being done in the example above. So to change the value, or as it’s also called, to assign a new value, you put a single equal sign between a variable name and a new value in your instructions: `doShowDetails = true`.
 :::
+<!-- todo: edit to make the message simpler and clear -->
 
 ### Beyond buttons
 
 You can add click listeners to any container, not only to a `<button>`. This means that you can create your layouts freely, without having to use any specific containers for your components. What's even more important, the click is detected not only on a container you've added it to, but also on all of its **children**.
 
-In this exapmle a `@click` listener is added to a flex container with multiple child-containers:
+In this example a `@click` listener is added to a flex container with multiple child-containers:
 
 ```html
 <div @click="doShowDetailsView = true" class="flex">
@@ -42,6 +45,7 @@ In this exapmle a `@click` listener is added to a flex container with multiple c
 ```
 
 This way there are multiple containers with different layouts and styles, but all will respond to a click, because the listener is added to their parent container. 
+<!-- todo: the whole “click is detected on children” concept should be explainer simpler and more clearly -->
 
 <!-- #### 👐 Hands-on -->
 <!-- todo: hands-on section, maybe. maybe not because the article is short and has a lot of self-practice -->
@@ -49,7 +53,7 @@ This way there are multiple containers with different layouts and styles, but al
 
 ## Self-practice
 
-The power of click allows you to add real interactivity to all prototypes you've created in Conditions section. Now you can go back to your recent designs and click events so you don't have to change values in Vue dev tools.
+The power of click allows you to add real interactivity to all prototypes you've created in Conditions articles. Now you can revisit your recent designs and add click events so you don't have to change values in Vue dev tools.
 
 ### Event creation
 
@@ -58,7 +62,7 @@ The power of click allows you to add real interactivity to all prototypes you've
 </video>
 
 1. Start with the prototype you created in [Complex conditions' self-practice](./../Conditionals/styles.html#self-practice-basic). If you don't have your prototype, download the [starting file](./../../../course-files/interaction-basics/events-click-task-events-start.html.zip).
-2. Add four event listener for buttons:
+2. Add 4 event listeners to buttons:
 - “Create” shows the event creation
 - “Save” and “Cancel” hide the event creation
 - “Continue” on Features page marks intro as seen, so Features page is shown only once

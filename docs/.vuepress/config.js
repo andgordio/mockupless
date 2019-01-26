@@ -6,7 +6,7 @@ module.exports = {
     lineNumbers: false
   },
   head: [
-    ['link', { rel: "icon", href: "favicon.png" }], // https://forestry.io/blog/using-json-configuration-with-vuepress/
+    ['link', { rel: "icon", href: "favicon.png" }], // note: https://forestry.io/blog/using-json-configuration-with-vuepress/
   ],
   ga: 'UA-131076924-1',
   themeConfig: {

@@ -1,3 +1,0 @@
-# Self-practice
-
-loops

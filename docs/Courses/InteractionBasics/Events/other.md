@@ -4,7 +4,7 @@
 
 <!-- todo: video example -->
 
-Click is not the only type of interaction you might expect from a user. When designing a form or a search bar, for example, you may want to know when the input field was focused and when it lost its focus to change styles, show and hide elements, etc. You can do that with `@focus` and `@blur` event listeners:
+Click is not the only type of interaction you might expect from a user. When designing a form or a search bar, for example, you may want to know when the input field was focused and when it lost its focus to change styles, show and hide elements, etc. You can do that with `@focus` and `@blur`(unfocus) event listeners:
 
 ```vue
 <input @focus="doShowEmailHelp = true" @blur="doShowEmailHelp = false" placeholder="Enter your email...">
