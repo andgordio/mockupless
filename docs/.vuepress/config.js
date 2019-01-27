@@ -16,6 +16,7 @@ module.exports = {
         { text: 'Layout basics', link: '/Courses/LayoutBasics/' },
         { text: 'Interaction basics', link: '/Courses/InteractionBasics/' },
       ]},
+      { text: 'Cookbook', link: '/Cookbook/' },
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
       { text: 'Forum', link: 'https://forum.mockupless.com' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
@@ -23,13 +24,22 @@ module.exports = {
     sidebarDepth: 0,
     sidebar: {
       '/Courses/LayoutBasics/': [
-        // '',
+        {
+          title: 'Intro to Layout basics',
+          collapsable: false,
+          children: [
+            '',
+            'Intro/html-and-css',
+            'Intro/template',
+          ]
+        },
         {
           title: 'Core',
           collapsable: false,
           children: [
             // 'Core/units',
             // 'Core/color',
+            'Core/containers',
             'Core/form',
           ]
         },
@@ -117,6 +127,13 @@ module.exports = {
             'Lists-and-loops/objects',
           ]
         },
+      ],
+      '/Cookbook/': [
+        '',
+        'switch',
+        'responsive-header',
+        'drag-n-drop',
+        'timeout',
       ]
     }
   }

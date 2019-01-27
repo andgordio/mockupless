@@ -35,6 +35,10 @@ You can define `type` attribute to specify the kind of input.
 
 - same tag as for simple text input, but has a `checkbox` value in `type` attribute
 
+## Number
+
+## Date
+
 ## Radio button
 ```html
 <div>
