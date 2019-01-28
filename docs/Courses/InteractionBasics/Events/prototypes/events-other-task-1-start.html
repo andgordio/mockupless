@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search with suggestions</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    input, button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="flex justify-center antialiased">
+    <div class="w-full max-w-sm">
+      <!-- 🕵️‍ SEARCH BAR -->
+      <div class="flex mt-4 border border-grey rounded-lg items-center">
+        <input class="flex-1 px-4 bg-transparent py-3" type="text" placeholder="Search...">
+        <button><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" class="w-4 pt-1 opacity-25 mx-4"></button>
+      </div>
+      <!-- 🤔 SUGGESTIONS -->
+      <div class="mt-2 border border-grey rounded-lg py-1">
+        <div class="text-grey px-4 py-3 text-center text-sm" >Start inputing query to see results</div>
+        <div class="">
+          <div class="py-2 px-4 hover:bg-grey-lighter">lorem</div>
+          <div class="py-2 px-4 hover:bg-grey-lighter">lorem ipsum</div>
+          <div class="py-2 px-4 hover:bg-grey-lighter">lorem ipsum dolorem sit</div>
+          <div class="py-2 px-4 hover:bg-grey-lighter">lorem ipsum dolorem sit amet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+    },
+  })
+</script>
+</html>

@@ -48,6 +48,28 @@ Other modifiers include `.tab`, `.esc` and [a couple of others](https://vuejs.or
 
 ## Self-practice
 
+#### Task
+
+Create a prototype of search input field with multiple interactive features:
+
+<video width="100%" controls loop autoplay muted style="margin-top: 0px; margin-bottom: 24px;">
+  <source src="./media/search-task-demo.mp4" type="video/mp4">
+</video>
+
+- when focused, the suggestions box is shown;
+- if the search input is empty, the message is shown in the suggestion box: “Start inputing query to see results”;
+- if the search input is not empty, the suggestions are shown;
+- if the search input is not empty, the clear (x) button is shown;
+- pressing return/enter hides suggestions box;
+- clicking clear (x) button clears input and hides suggestions box;
+- clicking on a suggestion puts the suggestion into input and hides suggestions box.
+
+Download the [starting layout](./../../../course-files/interaction-basics/events-other-task-1-start.html.zip) or feel free to create your own.
+
+#### Solution
+
+If you have any problems completing the task, dowload and review the [complete prototype](./../../../course-files/interaction-basics/events-other-task-1-end.html.zip)
+
 <!-- ### Search results
 
 Add appropriate variables and events to the template to display users' input and clear the input field when they press Enter/Return:

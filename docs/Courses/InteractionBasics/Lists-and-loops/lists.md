@@ -118,7 +118,9 @@ download the [sample file](./../../../course-files/interaction-basics/lists-cont
 
 ![hey](./media/tobegif1.png)
 
-## 👶 Self-practice: basic
+## 👶 Self-practice
+
+### Basic
 
 Use template with one letter on the right (like iOS contacts app)
 Create an array with all alphabet letters <!--todo: maybe suggest a good way to do this-->
@@ -131,3 +133,8 @@ Make the block repeat to show indexes
 ```
 
 [solution](./../../../course-files/interaction-basics/lists-contacts-2.html.zip)
+
+
+### Pro
+
+Design a grid
