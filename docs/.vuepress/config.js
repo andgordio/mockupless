@@ -16,7 +16,7 @@ module.exports = {
         { text: 'Layout basics', link: '/Courses/LayoutBasics/' },
         { text: 'Interaction basics', link: '/Courses/InteractionBasics/' },
       ]},
-      // { text: 'Cookbook', link: '/Cookbook/' },
+      { text: 'Cookbook', link: '/Cookbook/' },
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
       { text: 'Forum', link: 'https://forum.mockupless.com' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
@@ -118,18 +118,19 @@ module.exports = {
             // 'Events/practice'
           ]
         },
-        // {
-        //   title: 'Lists and Objects',
-        //   collapsable: false,
-        //   children: [
-        //     'Lists-and-loops/lists',
-        //     'Lists-and-loops/indexes',
-        //     'Lists-and-loops/objects',
-        //   ]
-        // },
+        {
+          title: 'Lists and Objects',
+          collapsable: false,
+          children: [
+            'Lists-and-loops/lists',
+            'Lists-and-loops/indexes',
+            'Lists-and-loops/objects',
+          ]
+        },
       ],
       '/Cookbook/': [
         '',
+        'layout-color-boxes',
         'switch',
         'responsive-header',
         'drag-n-drop',

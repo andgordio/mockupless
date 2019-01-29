@@ -3,7 +3,7 @@
 ![hey](./media/lists-diagram-1.png)
 <!-- todo: a nice illustration with a list and a grid / maybe real-world examples, but probably no -->
 
-Quite often you need to show repeating components in lists, grids, etc. They should have similar look and behaviour, but the content is probably different. In this chapter you will learn how to generate lists and grids from one item only. As you may have guessed, it's a huge timesaver. 
+Quite often you need to show repeating components in lists, grids, etc. They should have similar look and behaviour, but the content is probably different. In this chapter you will learn how to generate lists and grids from a single container. As you may have guessed, it's a huge timesaver. 
 
 Let's start with a simple list of contacts:
 
@@ -11,7 +11,7 @@ Let's start with a simple list of contacts:
 
 The most straight-forward way to prototype this is to create a container for every single item with identical styles and populate each one of them with content:
 
-```vue
+```html
 <div class="border-b border-grey-lighter py-4 ml-2">
   Adam
 </div>
@@ -24,7 +24,9 @@ The most straight-forward way to prototype this is to create a container for eve
 <div class="border-b border-grey-lighter py-4 ml-2">
   Christine
 </div>
-<!-- many similar containers more here -->
+<div class="border-b border-grey-lighter py-4 ml-2">
+  Dambo
+</div>
 ```
 
 The donwside of this approach is pretty obvious — you need to write **a lot of repetative code** and every change of style has to be applied to multiple containers.
@@ -49,7 +51,7 @@ data: {
 The content of an array is placed within square brackets and its items are separated by commas. Think of an array as a list of variables that don't have names.
 <!-- todo: maybe say: Kinda, but will get to that in the next lesson. -->
 
-An array is a perfect fit for items you have to display as a list in the UI:
+An array is a perfect fit for items you have to display as a list in the UI. Here's one for the contacts list example:
 
 ```js
 data: {
@@ -57,7 +59,7 @@ data: {
 }
 ```
 
-With contacts stored in a variable, you are ready to create a repeating container. This where a loop comes into play.
+With contacts stored in a variable, you are ready to create a repeating container. This is where a loop comes into play.
 
 
 ## Loop
@@ -96,7 +98,7 @@ As mentioned earlier `v-for="item in contacts"` stands for "render a container f
 </div>
 ```
 
-So each item in the array is used to render a copy of the container, and its value is used to populate the copy with content:
+As a result, not only each item in the array is used to render a copy of the container, its value is also used to populate the copy with content:
 
 ![hey](./media/lists-wireframes-1.png)
 
@@ -112,29 +114,50 @@ So each item in the array is used to render a copy of the container, and its val
 
 <!-- todo: maybe an animation of how rendering works (see notepad) -->
 
-#### 👐 Hands-on
+### 👐 Hands-on
 
-download the [sample file](./../../../course-files/interaction-basics/lists-contacts-1.html.zip), add new items to the list, see results.
+Download the [sample file](./../../../course-files/interaction-basics/lists-contacts-1.html.zip), preview it in Chrome and open it in VSCode to study the code. Locate `contacts` array, add another name or two, remove one. Preview the results in the browser.
 
-![hey](./media/tobegif1.png)
+<video width="100%" controls autoplay muted style="margin-top: 0px; margin-bottom: 24px;">
+  <source src="./media/list-loop-1.mp4" type="video/mp4">
+</video>
 
-## 👶 Self-practice
+## Self-practice
 
-### Basic
+### Alphabet
 
-Use template with one letter on the right (like iOS contacts app)
-Create an array with all alphabet letters <!--todo: maybe suggest a good way to do this-->
-Make the block repeat to show indexes
+Use the prototype from hands-on section above and extend it with an alphabet on the right:
 
-<!-- ![hey](./media/lists-wireframes-2.png) -->
+<!-- Use template with one letter on the right (like iOS contacts app)
+Create an array with all alphabet letters
+Make the block repeat to show indexes -->
 
+![hey](./media/lists-wireframes-3.png)
+
+1. Download the [starting prototype](./../../../course-files/interaction-basics/lists-contacts-1.html.zip).
+2. Create a new variable — an array of letter in alphabetical order: 
 ```js
 ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 ```
+3. Change the content area layout to fit two columns: contacts and alphabet.
+4. Create a `v-for` loop for alphabet navigation.
 
-[solution](./../../../course-files/interaction-basics/lists-contacts-2.html.zip)
+#### Solution
+
+If you have any problems completing the task, dowload and review the [solution](./../../../course-files/interaction-basics/lists-contacts-2.html.zip)
 
 
-### Pro
+### Grid
 
-Design a grid
+Create a simple 3x3 grid using a single container and an array:
+
+![hey](./media/lists-wireframes-4.png)
+
+1. Create an array with nine items.
+2. Create a parent flex container for the grid and don't forget to [wrap content](./../../LayoutBasics/Flex/direction-and-wrap.html#flex-wrap).
+3. Create a template container for car with width set to 1/3.
+4. Apply `v-for` loop to the template.
+
+#### Solution
+
+If you have problems creating a layout, use [a prototype with all container set up](./../../../course-files/interaction-basics/lists-task-2-start.html.zip). If you have any problems completing the array/loop task, dowload and review the [solution](./../../../course-files/interaction-basics/lists-task-2-end.html.zip).

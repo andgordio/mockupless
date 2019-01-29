@@ -1,6 +1,6 @@
 # Selecting from a list
 
-Let's extand the prototype from the previous article with the details view that shows the name of the selected contact.
+Let's extend the prototype from the previous article with the details view that shows the name of the selected contact.
 
 <!-- ![hey](./media/indexes-wireframes-1.png) -->
 
