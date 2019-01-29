@@ -102,21 +102,11 @@ As a result, not only each item in the array is used to render a copy of the con
 
 ![hey](./media/lists-wireframes-1.png)
 
-<!-- todo: continue from here -->
-
-
-<!-- `v-for` creates a loop, and 3 amazing things happen when you add it:
-- You reference `contacts` array so the loop renders a copy of the container for every item in the array.
-- You define a temporary name `contact` for a variable in the array. As mentioned above, a copy is created for every variable in the array, and the name gives you access to the variable when its copy is being rendered.
-- You use the temporary name inside a container to render the value of the variable that was used to create the  -->
-
-<!-- The attribute can be read as “Repeat the container for each value in `contacts` array. For each repetition allow me to access the value by the name of `contact`”. `contact` is a temporary name you give to an item in an array when it's being rendered. -->
-
 <!-- todo: maybe an animation of how rendering works (see notepad) -->
 
 ### 👐 Hands-on
 
-Download the [sample file](./../../../course-files/interaction-basics/lists-contacts-1.html.zip), preview it in Chrome and open it in VSCode to study the code. Locate `contacts` array, add another name or two, remove one. Preview the results in the browser.
+Download the [sample file](./../../../course-files/interaction-basics/lists-contacts-1.html.zip), preview it in Chrome and open it in VSCode to study the code. Locate `contacts` array, add another name or two, remove one. Preview results in the browser.
 
 <video width="100%" controls autoplay muted style="margin-top: 0px; margin-bottom: 24px;">
   <source src="./media/list-loop-1.mp4" type="video/mp4">

@@ -1,19 +1,12 @@
 # Selecting from a list
 
-Let's extend the prototype from the previous article with the details view that shows the name of the selected contact.
-
-<!-- ![hey](./media/indexes-wireframes-1.png) -->
+Let's extend the prototype from the previous article with the ability to select a contact and see its name in the details view:
 
 <video width="100%" controls loop autoplay muted>
 <source src="./media/selecting-from-list.mp4" type="video/mp4">
 </video>
 
-<!--
-the above could be a nice Principle animation maybe? Smooth, but may be far from the expected result
-Maybe screencasts of actual prototype? Harder to make look smooth, but the actual result is shown
--->
-
-The task is fairly simple: you need a variable to store the name of the selected item and display the value of the variable in details view. The problem with arrays is that we don't see any names of the items, only values separated by commas:
+The solution should be fairly simple — you need a variable to store the name of the selected item and display the value of this variable in details view. The question is how does one store the selected item if items in the arrays don't have names, they are just values separated by commas:
 
 ```js
 data: {
@@ -21,13 +14,13 @@ data: {
 }
 ```
 
-let's see how this can be solved
+For the lack of names, items in the array have something even more convenient — indexes.
 
 ## Indexes
 
-Even though items don't have names, we can still access them because they are numbered starting with 0. You can think of the first item in the array as a variable `0: 'Adam'`, the second one `1: 'Annabelle'` and so on. The number is called **an index**.
+Even though we can't see it with a naked eye, every item in the array has a serial number called **index**. Indexing **starts with zero**. You can think of the first item in the array as a variable `0: 'Adam'`, the second item `1: 'Annabelle'` and so on. This shifted ordering where third item has an index of 2 may confuse at first, but later you will learn that having first item indexed as zero makes sense and provides you with some neat capabilities.
 
-To access variables inside an array in your layout you put square brackets with the index next to the name of the array variable:
+In the layout, to access one of the array's items you need to put square brackets with its index next to the name of the array:
 
 ```vue
 <div>
@@ -35,13 +28,11 @@ To access variables inside an array in your layout you put square brackets with 
 </div>
 ```
 
-This reads as “show the value of `contacts` array's variable at index 0”. This container will display `Adam` as its content.
+This reads as “show the value of `contacts` array's item at index 0”. This container will display `Adam` from the array shown above.
 
 ## Variable as index
 
-In your prototype, you don't want to just display the first item from the array. You want to display the selected item.
-
-For this you need a variable to store the index of the selected item:
+The task we defined in the beginning of the article suggests that we display value not of a particular item, but of any item that becomes selected. To achieve that, you need to make the index a variable first:
 
 ```js
 data: {
@@ -50,7 +41,7 @@ data: {
 }
 ```
 
-In your layout you can now use this variable as an index to display the selected item:
+Now in the layout you can use the name of this variable instead of defining a static index:
 
 ```vue
 <div>
@@ -58,32 +49,57 @@ In your layout you can now use this variable as an index to display the selected
 </div>
 ```
 
-The syntax and the idea is the same: “show me the value from an array at a particular index”, but instead of a particular number you specify a variable, so it can be changed when interacting with prototype.
+The syntax and the idea is the same: “show me the value from an array at a particular index”, but instead of a particular number you put a variable, value of which can be changed when interacting with a prototype.
 
 ## Index in v-for attribute
 
-Now that you have a list of contacts on the left rendered with a `v-for` loop, and the value of the selected item redered on the right with `selectedContact` variable used as an index, the question remains: when an item is selected from a list, how do you know its index?
+The last question you need to answer to solve the case is “how do you store the value of a selected item?” Thankfully `v-for` provides you with all the necessary tools.
 
-When creating your loop [initially](./lists.md#loop) you created a temporary variable `contact` to refer to the value in your layout. Similarly, you can create a temporary variable for the index of this variable:
+It [previous article](./lists.md#loop) you've learnt that when creating a loop, you create a temporary name that you use to access the value of an item in an array. Similarly, you can define second name to access the index of the item:
 
 ```vue
-<div v-for="(contact, index) in contacts" class="border-b border-grey py-4">
+<div v-for="(contact, index) in contacts">
+  {{contact}} at index {{index}}
+</div>
+```
+
+![hey](./media/indexes-wireframes-1.png)
+
+As with a name for an item's value, you can put any name to access the index — for example, `v-for="(contact, i) in contacts"` works the same. Note that when you cannot access index with accessing the value, because index is always accessed through the second name. Also, note that when you define two names, you separate them with commma and put them in parentheses.
+
+### Click
+
+Now that a container is created for each item in the array, and access to the items' values and indexes is provided, you can now add click event listener, that will assign the index of the clicked container to `selectedContact`:
+
+```vue
+<div v-for="(contact, index) in contacts" @click="selectedContact = index">
   {{contact}}
 </div>
 ```
 
-<!-- The syntax? As with the `contact`, the name of the temporary variable you use for the index is up to you.  -->
-
-Now for each item in the array the container is created, and each container has access to the item's value and index. This means that you can now add click event listener to the container, that will assign the index of the clicked container to `selectedContact`:
+The task is complete since this part of code will now show the value of the selected item:
 
 ```vue
-<div v-for="(contact, index) in contacts" @click="selectedContact = index" class="border-b border-grey py-4">
-  {{contact}}
+<div>
+  {{contacts[selectedContact]}}
 </div>
 ```
+
 
 #### 👐 Hands-on
 
-Download the [sample file](./../../../course-files/interaction-basics/lists-contacts-3.html.zip)
+<video width="100%" controls autoplay muted style="margin: 24px 0;">
+<source src="./media/selecting-from-list-2.mp4" type="video/mp4">
+</video>
 
-## 👶 Self-practice: basic
+- Download the [prototype](./../../../course-files/interaction-basics/lists-contacts-3.html.zip)
+- Preview it in Chrome, click on items on the left and see values change on the right
+- Open it in VSCode and study the code.
+- Locate `contacts` array, add another name or two, remove one. Preview results in the browser.
+- Study the conditional class attribute attached to the item. Can you tell how its value applies the style only to the selected item?
+
+## Self-practice
+
+<!-- todo: create -->
+
+> will be available soon
