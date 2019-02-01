@@ -13,7 +13,7 @@
 
 ## Use
 <!-- todo: create images for (probably) every step with key areas highlighted -->
-1. Open .html file with Vue.js imported into it — for example, the template from the [previous step](./template.md). The Vue icon is supposed to become green, indicating that Vue.js is detected on the page.
+1. Open .html file with Vue.js imported into it — for example, the template from the [previous step](./README.md). The Vue icon is supposed to become green, indicating that Vue.js is detected on the page.
 2. Open developer tools: *option+command+I* or *Menu → More Tools → Developer Tools*
 3. Find a tab called Vue and select it. If the Vue tab is not visible, check the **»** menu
 

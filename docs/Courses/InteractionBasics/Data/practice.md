@@ -18,7 +18,7 @@
 
 ## Task #2
 
-1. Start from the blank prototyping [template](./../Setup/template.html#final-template)
+1. Start from the blank prototyping [template](./../Setup/README.md)
 2. Create a layout similar to the shown but with your own styles:
 
 ![sign up form](./images/self-practice-checkout.png)

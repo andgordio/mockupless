@@ -8,7 +8,7 @@ Design a prototype with appropriate variables and events to allow users increase
 
 ![Order demo](./media/order.gif)
 
-1. Start from the blank prototyping [template](./../Setup/template.md#final-template).
+1. Start from the blank prototyping [template](./../Setup/README.md).
 2. Create a layout similar to the shown above but with your own styles.
 3. Store all prices, quantities and a total as [variables](./../Data/variables.md#variables) and [display](./../Data/display.md#displaying-in-containers) them in the layout.
 4. Create [click events](./click.md) for each '-', '+' and 'Calculate' buttons.

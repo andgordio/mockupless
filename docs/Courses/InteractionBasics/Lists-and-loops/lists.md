@@ -114,13 +114,9 @@ Download the [sample file](./../../../course-files/interaction-basics/lists-cont
 
 ## Self-practice
 
-### Alphabet
+### Task 1: Alphabet
 
 Use the prototype from hands-on section above and extend it with an alphabet on the right:
-
-<!-- Use template with one letter on the right (like iOS contacts app)
-Create an array with all alphabet letters
-Make the block repeat to show indexes -->
 
 ![hey](./media/lists-wireframes-3.png)
 
@@ -137,7 +133,7 @@ Make the block repeat to show indexes -->
 If you have any problems completing the task, dowload and review the [solution](./../../../course-files/interaction-basics/lists-contacts-2.html.zip)
 
 
-### Grid
+### Task 2: Grid
 
 Create a simple 3x3 grid using a single container and an array:
 
