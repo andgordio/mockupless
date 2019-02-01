@@ -92,7 +92,7 @@ module.exports = {
           title: 'Data',
           collapsable: false,
           children: [
-            'Data/variables',
+            'Data/',
             'Data/display',
             // 'Data/practice'
           ]

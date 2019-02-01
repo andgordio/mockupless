@@ -104,7 +104,7 @@ data: {
 
 ![sign up form](./images/self-practice-signup.png)
 
-2. Come up with the name of the app, save it as a [variable](./variables.html#variables) and [display](./display.html#displaying-in-containers) it in the title after “Welcome to”
+2. Come up with the name of the app, save it as a [variable](./README.md) and [display](./display.html#displaying-in-containers) it in the title after “Welcome to”
 
 3. Create a variable for each form input and [connect](./display.html#connecting-to-form-inputs) all variables to inputs in your html
 
@@ -119,6 +119,6 @@ data: {
 
 ![sign up form](./images/self-practice-checkout.png)
 
-2. Store username as a [variable](./variables.html#variables) and [display](./display.html#displaying-in-containers) it in the layout
+2. Store username as a [variable](./README.md) and [display](./display.html#displaying-in-containers) it in the layout
 3. Create a variable for each form input and [connect](./display.html#connecting-to-form-inputs) all variables to inputs in your html. Good luck with [radio buttons](./display.html#radio-buttons) 😉
 4. Make sure everything works properly using [Vue devtools](./../Setup/devtools.html)

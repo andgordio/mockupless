@@ -40,7 +40,7 @@ Let's go through these concepts one by one.
 
 ## Array
 
-You are already familiar with [primitive data types](./../Data/variables.md#variables): numbers, strings and booleans. Array is the first non-primitive data type introduced in this course, and it is used to store **a list of values of any kind**:
+You are already familiar with [primitive data types](./../Data/README.md): numbers, strings and booleans. Array is the first non-primitive data type introduced in this course, and it is used to store **a list of values of any kind**:
 
 ```js
 data: {

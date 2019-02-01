@@ -53,5 +53,5 @@ implement avatar
 ## Maybe also
 
 :::tip 🤯 mind blown
-take a closer look at `data` container you've been using to [store variables](./../Data/variables.md#variables) all this time. Notice anything? It's an object. But Vue treats it a little differently so you don't have to use dot notation to reference its values in your layout, so instead of `data.userName` you just write `userName`.
+take a closer look at `data` container you've been using to [store variables](./../Data/README.md) all this time. Notice anything? It's an object. But Vue treats it a little differently so you don't have to use dot notation to reference its values in your layout, so instead of `data.userName` you just write `userName`.
 :::

@@ -8,7 +8,7 @@ When reading this article for the first time, scan through the content quickly a
 
 ## Assign
 
-As you may recall from the [Data](./../Data/variables.md) chapter, in order to define variables you need to put them inside data container with a name, a default value and a colon in between:
+As you may recall from the [Data](./../Data/README.md) chapter, in order to define variables you need to put them inside data container with a name, a default value and a colon in between:
 
 ```js
 data: {
