@@ -124,8 +124,9 @@ module.exports = {
           children: [
             'Lists-and-loops/lists',
             'Lists-and-loops/indexes',
-            'Lists-and-loops/objects',
             'Lists-and-loops/arrays-methods',
+            'Lists-and-loops/objects',
+            'Lists-and-loops/objects-pro',
           ]
         },
         {
@@ -134,6 +135,15 @@ module.exports = {
           children: [
             'Functions/',
             'Functions/parameters',
+          ]
+        },
+        {
+          title: 'Course project',
+          collapsable: false,
+          children: [
+            'course-project/',
+            'course-project/guide',
+            'course-project/whats-next',
           ]
         },
       ],

@@ -40,6 +40,8 @@ You may copy the code into your newly created `.html` file or just [download](./
 
 ## What's in it
 
+### HTML5 template
+
 At its core the template has a basic HTML5 template VSCode creates for you with `html:5` shortcut:
 
 ```html
@@ -57,6 +59,8 @@ At its core the template has a basic HTML5 template VSCode creates for you with 
 </html>
 ```
 
+### Frameworks
+
 Next, two core frameworks are imported into the template by adding two lines of code into the `head` container:
 
 ```html
@@ -68,6 +72,8 @@ Next, two core frameworks are imported into the template by adding two lines of 
 - [Vue](./../README.md) to enable simple and powerful interactivity.
 <!-- todo: need a better link to explain what is vue and why it's used -->
 
+### App container
+
 Now Vue also requires some setup to work properly. First, you create a container with `id="app"` inside `body`:
 
 ```html
@@ -78,7 +84,9 @@ Now Vue also requires some setup to work properly. First, you create a container
 
 This tells Vue to look for Vue code inside this container, so all your layout code for a prototype should be placed inside this container.
 
-Second, you need a special container to store your Vue data and functions:
+### Vue stuff
+
+Finally, you need a special container to store your Vue data and functions:
 
 ```html
 <script>

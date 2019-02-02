@@ -2,7 +2,7 @@
 
 In the Managing lists sections you’ve seen examples of having multiple instructions assigned to one event listener. You’ve also seen the same set of instruction may be set to different listeners:
 
-(code: input with keypress.enter and button with click both having same items.push(); input = ‘’ instructions)
+(code: input with keypress.enter and button with click both having same items.push(); input = '' instructions)
 
 So having containers for our content in layout in form divs and containers for our data in a form of variables, do you think we could wrap up interaction basics without getting to know containers for instructions as well?)
 
@@ -14,7 +14,7 @@ First, you need to create a function you’ll can reference later:
 methods: {
   addItem () {
     this.items.push(this.input)
-    this.input = ‘’
+    this.input = ''
   }
 }
 ```
@@ -30,7 +30,7 @@ There’s a lot to note here, so let’s deconstruct:
 With this function in place, all you have to do is to reference it in your event listeners:
 
 ```js
-@keypress.enter, @click=“addItem()”
+@keypress.enter, @click="addItem()"
 ```
 
 Exercise 1: ?

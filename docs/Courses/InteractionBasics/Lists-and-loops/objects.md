@@ -1,10 +1,12 @@
 # Objects
 
-Let's say you need a list, and not contacts that only have name, but chats, that have lot of stuff
+You've created a basic list of contacts in [Lists](./lists.md) section using an array of names and a `v-for` loop. But in real-life prototyping lists are usually a little more complex. For example, in a list of recent conversation each item may contain not only a name, but also a picture, a message and unread indicator:
 
 ![hey](./media/chats-wireframes-1.png)
 
-Each item on this list has: a, b, c, d. There's a special variable type to store this — Object
+When you need to store an item that has multiple types of data in it, you create an **Object**. Objects are similar to arrays in a way they contain multiple variables, but unlike in arrays, variables are not given indexes, but you define **names** for them instead.
+
+Take a look at the object that we can use for **one** of the items in our Recent conversations UI:
 
 ```js
 data: {
@@ -18,40 +20,72 @@ data: {
 }
 ```
 
-You can think of an object as a list of variables separated by commas and surrounded with curly braces.
+The content of an object is place within curly braces and its items are separated by commas. Each item is a variable with a name and a value separated by colon. 
 
-:::warning to do
-show array of objects, implement first name, last name and message
+:::tip Good eye
+Does this syntax look familiar? This is exactly the way **data** container you use to store all your [variables](./../Data/#variables) is build. This is not a coincidence — data container is in fact an object.
 :::
 
-## Conditions
+<!-- Similarly to the way you use arrays' [indexes](./indexes.html#indexes) to access their items in your layout, you use names to access your objects' items: -->
 
-`v-if="object.key"`
+To access items stored inside an object you reference the object by its name followed by a dot and followed by the name of a parameter:
 
-:::warning to do
-implement unread indicator
-:::
+```html
+<div>
+  {{contact.firstName}} {{contact.lastName}} 
+</div>
+<div>
+  {{contact.latestMessage}}
+</div>
+```
 
-## Conditional style
+The layout above will use `contact` object to render its parameters: `firstName` and `lastName` in the first containers, and `lastestMessage` in the second. 
 
-`:class="{'text-bold': object.key}"`
+## Array of objects
 
-:::warning to do
-implement names and message conditional classes
-:::
+The task suggests we need not one but many objects. As you've learned from previous section, you to render a list, you need to store items in the array, and an a array is a list of variables of **any** type. This means if you need a list of complex items, you need an array of objects. 
 
-## Image and background
+This type of an array does look small in code, but doesn't introduce anything new, just a combination of what you've learnt previousely:
 
-`:src` with object.key instead of `src`
+```js
+data: {
+  contacts: [
+    {
+      firstName: 'Steve',
+      lastName: 'Allen',
+      latestMessage: 'Lorem ipsum dolor sit.',
+      unread: 0,
+      avatar: 'http://image.com'
+    },
+    {
+      firstName: 'Steve',
+      lastName: 'Allen',
+      latestMessage: 'Lorem ipsum dolor sit.',
+      unread: 0,
+      avatar: 'http://image.com'
+    },
+    {
+      firstName: 'Steve',
+      lastName: 'Allen',
+      latestMessage: 'Lorem ipsum dolor sit.',
+      unread: 0,
+      avatar: 'http://image.com'
+    }
+  ]
+}
+```
 
-`:style` with 'url(' + object.key + ')' — but this stuff may be just a little too confusing at this point
+...
 
-:::warning to do
-implement avatar
-:::
+```html
+<div v-for="contact in contacts">
+  <div>
+    {{contact.firstName}} {{contact.lastName}} 
+  </div>
+  <div>
+    {{contact.latestMessage}}
+  </div>
+</div>
+```
 
-## Maybe also
-
-:::tip 🤯 mind blown
-take a closer look at `data` container you've been using to [store variables](./../Data/README.md) all this time. Notice anything? It's an object. But Vue treats it a little differently so you don't have to use dot notation to reference its values in your layout, so instead of `data.userName` you just write `userName`.
-:::
+...
