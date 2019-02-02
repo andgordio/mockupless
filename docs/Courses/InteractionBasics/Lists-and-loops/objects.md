@@ -28,6 +28,8 @@ Does this syntax look familiar? This is exactly the way **data** container you u
 
 <!-- Similarly to the way you use arrays' [indexes](./indexes.html#indexes) to access their items in your layout, you use names to access your objects' items: -->
 
+### Accessing object's variables
+
 To access items stored inside an object you reference the object by its name followed by a dot and followed by the name of a parameter:
 
 ```html
@@ -41,7 +43,7 @@ To access items stored inside an object you reference the object by its name fol
 
 The layout above will use `contact` object to render its parameters: `firstName` and `lastName` in the first containers, and `lastestMessage` in the second. 
 
-## Array of objects
+### Array of objects
 
 The task suggests we need not one but many objects. As you've learned from previous section, you to render a list, you need to store items in the array, and an a array is a list of variables of **any** type. This means if you need a list of complex items, you need an array of objects. 
 
@@ -75,7 +77,13 @@ data: {
 }
 ```
 
-...
+This block looks busy, but it's still a array — a list of items wrapped in square brackets and separated by commas. And each items is an object: a list of varibles wrapped in curly braces and separated by commas.
+
+With an array of objects in place, you are all set to render it.
+
+### Rendering lists of objects
+
+Displaying a list of objects is no different from rendering other types of lists you've seen so far. You create a container, repeat with `v-for` loop and use the temporary name to access items in the array:
 
 ```html
 <div v-for="contact in contacts">
@@ -88,4 +96,29 @@ data: {
 </div>
 ```
 
-...
+Note, that since you are dealing with an array of objects, `contact` is an object, so you access its variables as shown in the [beginning of this article](#accessing-object-s-variables) — with a dot followed by the variable's name.
+
+### 👐 Hands-on
+
+<!-- todo: a video -->
+
+<!-- todo: a prototype, a guide -->
+
+## Self-practice
+
+### Task 1: Complex grid
+
+<!-- todo: a 3x3 grid of articles -->
+
+```vue
+________________ border
+bg-grey-light
+{{title}}
+{{subtitle}}
+{{author}}
+________________ 
+```
+
+### Task 2: Tab bar
+
+<!-- todo: each tab is an object with a name and number of new items, this can be used in the next article to add “if 0 don't show” logic behind it -->

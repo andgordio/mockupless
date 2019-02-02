@@ -15,6 +15,12 @@ module.exports = {
       { text: 'Courses', items: [
         { text: 'Layout basics', link: '/Courses/LayoutBasics/' },
         { text: 'Interaction basics', link: '/Courses/InteractionBasics/' },
+        // responsive
+        // advanced positioning: fixed, absolute
+        // git
+        // animations
+        // conditions in functions
+        // loops in functions
       ]},
       { text: 'Cookbook', link: '/Cookbook/' },
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
@@ -154,6 +160,7 @@ module.exports = {
         'responsive-header',
         'drag-n-drop',
         'timeout',
+        'fake-data',
       ]
     }
   }
