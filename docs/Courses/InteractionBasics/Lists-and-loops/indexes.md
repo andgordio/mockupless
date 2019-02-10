@@ -89,7 +89,7 @@ The task is complete since this part of code will now show the value of the sele
 #### 👐 Hands-on
 
 <video width="100%" controls autoplay muted style="margin: 24px 0;">
-<source src="./media/selecting-from-list-2.mp4" type="video/mp4">
+  <source src="./media/selecting-from-list-2.mp4" type="video/mp4">
 </video>
 
 - Download the [prototype](./../../../course-files/interaction-basics/lists-contacts-3.html.zip)
@@ -100,6 +100,20 @@ The task is complete since this part of code will now show the value of the sele
 
 ## Self-practice
 
-<!-- todo: create -->
+### Task 1: Color grid
 
-> will be available soon
+Create a 3x3 grid with a different background color for a selected item:
+
+<video width="100%" loop controls autoplay muted style="margin: 12px 0;">
+  <source src="./media/color-grid.mp4" type="video/mp4">
+</video>
+
+1. Create an array with 9 items and variable to store the selected item's index.
+2. Create a grid with flex and a template-container with `v-for` attribute.
+3. Make sure you track both: value and index for each item in the loop.
+4. Attach click event listener to the template-container to save the index of the clicked item.
+5. Add a conditional class attribute to template-container that applies `bg-pink` when the selected item's attribute is equeal to the item's index.
+
+If you have any problems completing the task, dowload and review the [solution](./../../../course-files/interaction-basics/color-grid.html.zip)
+
+<!-- todo: task 2: ? -->

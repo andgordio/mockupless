@@ -1,62 +1,96 @@
 # Managing lists
 
+<video width="100%" controls autoplay muted style="margin-top: 24px; margin-bottom: -24px;">
+  <source src="./media/list-managing-1.mp4" type="video/mp4">
+</video>
+
 ## Methods
 
-The beauty of arrays is how powerful they are when you need to change them. They come with a toolset of operations you can perform on them, that are called **methods**. Two methods are explored in this article: **adding** an item to an array and **removing** one from it. These two are the ones you will find yourself using most often when prototyping, but there are many, many more, that allow you to sort, filter, map, etc.
+The beauty of arrays is how powerful they are when you need to change their content. They come with a toolset of operations you can perform on them. These operations are called **methods**.
+
+Two methods are explored in this article: **adding** an item to an array and **removing** one from it. You will find yourself using these two methods most often when prototyping, but there are many, many more, that allow you to sort items, filter them, etc.
 
 ## Adding to a list
 
-You may have a default set of items in your prototype, but you may also allow users to add items themselves. Adding items to an array takes two steps:
+When prototyping a task list, or a chat for example, it is essential to allow users to add items to an array. It takes two steps to add a new item to an array:
 
-1. Saving user's input.
-2. Adding it to an array.
+1. You need to store user's input that you want to become an item in an array.
+2. As with most interactions, you need an event listener with instructions to add user's input to an array.
 
-First steps requires one or more form controls [connected to variables](./../Data/display.md#text) with `v-model` attribute:
+First step is nothing new—you create a form control [connected to a variable](./../Data/display.md#text) with `v-model` attribute:
 ```html
-<input v-model="newContact" placeholder="Enter new contact name...">
+<div v-for="task in tasks">
+  {{task}}
+</div>
+<input v-model="newTask" placeholder="Add a task...">
 ```
 ```js
 data: {
-  newContact: ''
+  newTask: '',
+  tasks: ['Take a breath', 'Buy lettuce', 'Make smoothie']
 }
 ```
 
-Now you need to use an event listener, `@click` for example, to add this variable as a new item to an array. There's a special methods for adding to an array — `push`:
+Next you need to add an event listener—for example, `@keypress.enter` on the very same input—to add the variable's value to the array. There's a special method for adding items to an array called `push`:
 
 ```html
-<button @click="contacts.push(newContact)">
-  Add
-</button>
+<input v-model="newTask" @keypress.enter="tasks.push(newTask)"  placeholder="New task">
 ```
 
-This instruction can be read as “take an array `contacts` and add the value of `newContact` to it”. A method is separated from an array with a dot, and followed by the parentheses with a value inside.
+This instruction can be read as “take the `tasks` array and add the value of `newTask` to it”.
+
+Now let's take a closer look to the syntax:
+
+- You a method's name to an array's name.
+- You separate them with a dot.
+- You put parentheses after the method's name.
+- You put a value, if a method expects any, inside parentheses.
+
+As a result, now every time a user presses enter inside the input, the value of the input is added to the array.
 
 ### Hands-on
 
-<!-- todo: proto, download -->
+> video: show adding, show adding code to clear the input too
+
+<!-- todo: tell to download, try, add code to clear the input themselves -->
 
 ##  Removing from a list
 
-Taking an item from a list is another command you give to an array. The name of the method is `splice` and unlike `push` it takes two parameters, not one. With first parameter you specify at which index you want to start taking items out, and with the second one you tell how many items you want to remove. The latter parameter in our example is 1, because you need to remove one item at a time. And the starting index depends on which item a user wants to be deleted. Good thing you know from the [previous article](./indexes.md#index-in-v-for-attribute) that you can keep track of indexes in containers repeated with `v-for`:
+Taking an item from a list is yet another command you can give to an array. This can be done with the method `splice`  and unlike `push` it takes two parameters, not one:
+
+- With first parameter you specify at which **index** you want to start taking items out. Where `push` doesn't care much about the number of items and their indexes in an array—it just adds another item to an array—when it comes to removing things you need to know which item to remove, and indexes are the right tool to track that.
+- With the second parameter you tell how many items you want to remove. Quite often the value is `1`, because most of the time you allow users to delete one item at a time, but it may as well be another number or even a variable.
+
+Continuing with the task list example, you have a list generated from an array with a `v-for` attribute and you track both value and index of each item with `(item, i)` syntax. Now let's add a button to the template, and add `click` event listener with instructions to delete an item it was pressed on:
+
+<!-- Good thing you already know from the [previous article](./indexes.md#index-in-v-for-attribute) that you can keep track of indexes in containers repeated with `v-for` -->
+
+<!-- TAnd the starting index depends on which item a user wants to delete. Good thing you know from the [previous article](./indexes.md#index-in-v-for-attribute) that you can keep track of indexes in containers repeated with `v-for`: -->
 
 ```html
-<div v-for="(contact, i) in contacts">
-  <div>{{contact}}</div>
-  <button @click="contacts.splice(i, 1)">Remove</button>
+<div v-for="(task, i) in tasks">
+  <button @click="tasks.splice(i, 1)"></button>
+  <div>{{task}}</div>
 </div>
 ```
 
-The value of `@click` can be read as “take `contacts` array and remove one item from it at the index the button was clicked”. Understanding this concept can be challenging at first, so let's review what's going on here in details:
+The value of `@click` can be read as “take the `contacts` array and remove one item from it at the index the button was clicked”. Understanding this concept can be challenging at first, so let's review what's going on here in details:
 
-- Let's say you have an array with three items `contacts: ['Adam', 'Annabelle', 'Bruce']`.
+- Let's say you have an array with three items — `tasks: ['A', 'B', 'C']`.
 - You create a template container with `v-for` attribure that uses the array as its source. 
-- You track not only the value of an item for each repeatition, but also its index with `(contact, i)`.
+- You track not only the value of an item for each repetition, but also its index with `(task, i)`.
+- At this point you have 3 containers in your layout. You display the value from an array by using temporary variable `task` and you **track index** of each item with temporary variable `i` without using it anywhere just yet.
+- You add a button that applies `splice` method to the array and uses the value of `i` for the starting index.
+- Now, for example, when you click Remove on the second item in the list, splice method takes the item's index, which is 1 (remember, indexes start from 0 in arrays) and deletes one item starting from index 1, which happens to be the item you pressed Remove on.
 
-At this point you have 3 containers in your layout, each displays a value of an item from an array thanks to `{{contact}}` inside
+### Hands-on
 
+> video: show adding, show adding code to clear the input too
 
+<!-- todo: tell to download, try, ? -->
 
-- You create a template container with `v-for` attribure that uses the array to generate a copy of the container for each item on the array.
-- You track not only the value of an item for each repeatition, but also its index with `(contact, i)`.
-- You also add a button with click event listener that reacts to it with splice method to the array, using the index of an item the event was tracked upon
+## Self-practice
 
+<!-- todo: task 1: ? -->
+
+<!-- todo: task 2: ? -->
