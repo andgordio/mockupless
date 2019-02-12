@@ -41,7 +41,7 @@ This instruction can be read as “take the `tasks` array and add the value of `
 
 Now let's take a closer look to the syntax:
 
-- You a method's name to an array's name.
+- You attach the method's name to the array's name.
 - You separate them with a dot.
 - You put parentheses after the method's name.
 - You put a value, if a method expects any, inside parentheses.
@@ -50,9 +50,14 @@ As a result, now every time a user presses enter inside the input, the value of 
 
 ### Hands-on
 
-> video: show adding, show adding code to clear the input too
+<video width="100%" controls autoplay muted style="margin-top: 24px; margin-bottom: 8px;">
+  <source src="./media/list-managing-1.mp4" type="video/mp4">
+</video>
 
-<!-- todo: tell to download, try, add code to clear the input themselves -->
+1. Download the [prototype](./../../../course-files/interaction-basics/manage-list-adding.html.zip).
+2. Open it in Chrome and try adding items to the list by entering a value into the input and pressing return/enter.
+3. You should see the item being added to the list and staying in the input too.
+4. To fix this open open the prototype in VSCode and add another instruction to `keypress.enter` event listener to clean the variable connected to the input. Instructions must be separated with a semicolon and a space `; `. See this being done in the video above.
 
 ##  Removing from a list
 
@@ -77,7 +82,7 @@ Continuing with the task list example, you have a list generated from an array w
 The value of `@click` can be read as “take the `contacts` array and remove one item from it at the index the button was clicked”. Understanding this concept can be challenging at first, so let's review what's going on here in details:
 
 - Let's say you have an array with three items — `tasks: ['A', 'B', 'C']`.
-- You create a template container with `v-for` attribure that uses the array as its source. 
+- You create a template container with `v-for` attribure connected to the array. 
 - You track not only the value of an item for each repetition, but also its index with `(task, i)`.
 - At this point you have 3 containers in your layout. You display the value from an array by using temporary variable `task` and you **track index** of each item with temporary variable `i` without using it anywhere just yet.
 - You add a button that applies `splice` method to the array and uses the value of `i` for the starting index.
@@ -85,12 +90,30 @@ The value of `@click` can be read as “take the `contacts` array and remove one
 
 ### Hands-on
 
-> video: show adding, show adding code to clear the input too
+<video width="100%" controls autoplay muted style="margin-top: 24px; margin-bottom: 8px;">
+  <source src="./media/list-managing-3.mp4" type="video/mp4">
+</video>
 
-<!-- todo: tell to download, try, ? -->
+1. Download the [prototype](./../../../course-files/interaction-basics/manage-list-removing.html.zip).
+2. Open it in Chrome and try removing items by clicking circles to the left of items' texts.
+3. Open the prototype in VSCode and find the `splice` method in `click` event listener. Try changing `i` to `index` in `v-for`  and `click`. Save and preview in Chrome—it should work as before. This is just a reminder, that `i` is just a name you choose in `v-for` to reference it elsewhere.
+
 
 ## Self-practice
 
 <!-- todo: task 1: ? -->
 
-<!-- todo: task 2: ? -->
+### Note-taking app
+
+Create an app that allows to create notes and delete notes, and saves the content:
+
+<video width="100%" controls autoplay loop muted style="margin-bottom: 8px;">
+  <source src="./media/array-methods-task-1.mp4" type="video/mp4">
+</video>
+
+1. Download the [starting file](./../../../course-files/interaction-basics/note-taking-start.html.zip).
+2. Connect textareas to items in the `notes` array. As a result you will see values from the array in the UI. Also open Vue dev tools and try adding some text to the first note—you should see the value of the item change as you type. Hint 1: connecting textareas is done the same way it's done for [inputs](./../Data/display.html#text). Hint 2: you need to use item's index to connect it.
+3. Add a click event listener to the “+” container that adds an item to an array. The value should be an empty string.
+4. Add a click event listener to the “x” container inside template-container. It should remove an item from the container using the index of the item.
+
+If you have any problems completing the task, dowload and review the [solution](./../../../course-files/interaction-basics/note-taking-end.html.zip).
