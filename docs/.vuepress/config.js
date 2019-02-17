@@ -23,7 +23,7 @@ module.exports = {
         // loops in functions
       ]},
       { text: 'Cookbook', link: '/Cookbook/' },
-      { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
+      // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
       { text: 'Forum', link: 'https://forum.mockupless.com' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
     ],

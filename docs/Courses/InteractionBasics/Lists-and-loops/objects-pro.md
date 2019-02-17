@@ -104,4 +104,20 @@ An object’s variable isUnread is used as a condition, and as a result items wi
 
 ## Self-practice
 
-> Coming soon
+### Filtered list
+
+Create a list with an option to filter it by one of the parameters:
+
+<video width="100%" controls autoplay loop muted style="margin-bottom: 8px;">
+  <source src="./media/objects-pro-practice-filter.mp4" type="video/mp4">
+</video>
+
+1. Download the starting [prototype](./../../../course-files/interaction-basics/practice-objects-pro-filtered-list-start.html.zip).
+2. Connect the item container to `cars` array with `v-for` attribute.
+3. Display make, model, description and year for each item.
+4. Create a variable `selectedFilter` to store the state of the filter, and [connect](./../Data/display.md#dropdown-select) it to the `select` control in the footer.
+5. Add a [complext condition](./../Conditionals/complex.md) to the item template to enable filtering. Each item is rendered if:
+  - `All` selected in the filters list, or
+  - The selected filter name equals to the item's `make` value.
+
+If you have any problems completing the task, dowload and review the [solution](./../../../course-files/interaction-basics/practice-objects-pro-filtered-list-end.html.zip).

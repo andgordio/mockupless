@@ -1,6 +1,7 @@
 # Objects
 
 ![hey](./media/object-diagram-1.png)
+<!-- todo: this illustration must be fixed 🙈 -->
 
 You've created a basic list of contacts in [Lists](./lists.md) section using an array of names and a `v-for` loop. But in real-life prototyping lists are usually a little more complex. For example, in a list of recent conversation each item may contain not only a name, but also a picture, a message and unread indicator:
 
@@ -112,21 +113,22 @@ In the next article you'll implement images together with conditional styles and
 
 ## Self-practice
 
-> Coming soon
+### Cars catalog
 
-<!-- ### Reading list -->
+Create a grid of cards with an array of objects: 
 
-<!-- todo: a 3x3 grid of articles -->
+![hey](./media/objects-wireframes-1.png)
 
-<!-- ```vue
-________________ border
-bg-grey-light
-{{title}}
-{{subtitle}}
-{{author}}
-________________ 
-``` -->
+1. Download [starting prototype](./../../../course-files/interaction-basics/practice-objects-grid-start.html.zip).
+2. Connect the card container to `cars` array with `v-for` attribute.
+3. Display make, model, description and year for each item.
+4. Add a couple of items to an array to have 6 in total.
+5. Fix card layout so all cards have the same height. 
+
+If you have any problems completing the task, dowload and review the [solution](./../../../course-files/interaction-basics/practice-objects-grid-end.html.zip).
 
 <!-- ### Task 2: Tab bar -->
 
 <!-- todo: each tab is an object with a name and number of new items, this can be used in the next article to add “if 0 don't show” logic behind it -->
+
+<!-- todo: make sure the second task is more complex and includes adding/deleting -->
