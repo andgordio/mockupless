@@ -19,10 +19,11 @@ module.exports = {
         // advanced positioning: fixed, absolute
         // git
         // animations
+        // functions pro: multiple parameters, etc
         // conditions in functions
         // loops in functions
       ]},
-      { text: 'Cookbook', link: '/Cookbook/' },
+      // { text: 'Cookbook', link: '/Cookbook/' },
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
       { text: 'Forum', link: 'https://forum.mockupless.com' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
@@ -143,15 +144,15 @@ module.exports = {
             'Functions/parameters',
           ]
         },
-        {
-          title: 'Course project',
-          collapsable: false,
-          children: [
-            'course-project/',
-            'course-project/guide',
-            'course-project/whats-next',
-          ]
-        },
+        // {
+        //   title: 'Course project',
+        //   collapsable: false,
+        //   children: [
+        //     'course-project/',
+        //     'course-project/guide',
+        //     'course-project/whats-next',
+        //   ]
+        // },
       ],
       '/Cookbook/': [
         '',
