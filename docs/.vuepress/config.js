@@ -25,7 +25,7 @@ module.exports = {
       ]},
       // { text: 'Cookbook', link: '/Cookbook/' },
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
-      { text: 'Forum', link: 'https://forum.mockupless.com' },
+      { text: 'Forum', link: 'https://spectrum.chat/mockupless' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
     ],
     sidebarDepth: 0,
@@ -105,6 +105,16 @@ module.exports = {
           ]
         },
         {
+          title: 'Events',
+          collapsable: false,
+          children: [
+            'Events/click',
+            'Events/arithmetics', 
+            'Events/other',
+            // 'Events/practice'
+          ]
+        },
+        {
           title: 'Conditions',
           collapsable: false,
           children: [
@@ -113,16 +123,6 @@ module.exports = {
             'Conditionals/complex',
             'Conditionals/styles',
             // 'Conditionals/course-project',
-          ]
-        },
-        {
-          title: 'Events',
-          collapsable: false,
-          children: [
-            // todo: paste somewhere, it's necessary! 'Events/arithmetics', 
-            'Events/click',
-            'Events/other',
-            // 'Events/practice'
           ]
         },
         {

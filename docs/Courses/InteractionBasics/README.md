@@ -1,58 +1,41 @@
 # About the course
 
-<!-- todo: one-line desctiption of the course -->
+![illustration that welcomes users to the course](./Setup/media/il-about.png)
+<!-- todo: illustration: welcoming to interaction -->
 
-<!-- todo: an illustration welcoming to interaction -->
+Welcome to Interaction basics! In this course you will explore the power of JavaScript and Vue.js to create truly interactive and testable prototypes. You will start small and finish the course creating your own multi-page prototype with dynamic components and collections that respond to users' actions.
+<!-- todo: link: maybe to About section explaining why particular technologies have been chosen -->
 
-## Prerequisites / Requirements
-
-This course doesn't require any prior knowledge of JavaScript or any other programming languages.
-
-If you have experience with programming, some concepts may be familiar to you and you may move at a faster pace. Yet we recommend to go through all articles to understand the mockupless approach to those concepts, which often differs from the way programming is usually tought.
-<!-- todo: a link to About section where approach is described and reasoning is provided -->
-
-This is a complete list of things you need to start with the course:
-
-- Understanding [Layout basics](./../LayoutBasics/)
-- [Chrome](https://www.google.com/chrome/) browser
-- [VSCode](https://code.visualstudio.com/download) editor
-
-You can use Firefox as your browser and any code editor of your choice for this course. Yet Chrome and VSCode are used in all examples and demos, so by using them you lower the risk of spending time looking for some functionality in a different piece of software.
-<!-- todo: edit the last sentence to make it simple and clear -->
 
 ## What you'll learn
 
-This course teaches you the very basic concepts of creating prototypes with JavaScript and Vue. 
+This course teaches you the basic concepts of creating prototypes with JavaScript and Vue:
 
-- **Store data, change it and display in UI**. This will give you the ability to change content when interacting with a prototype.
-- **Save users' input**. This will allow you to use it in different parts of you prototype and modify your UI based on user's input.
-- **Show and hide containers**. This gives an ability to display elements, components and view conditionally.
-- **React to clicks** and other users' interactions.
-- **Display lists and grids** without creating containers for each item.
+- **Storing and changing data**. A shift from static layouts to interactive prototypes starts with saving all the content you want to become dynamic in special containers — variables.
 
-In the end of the course you will create a multi-screen prototype for ...
-<!-- todo: input the type of the final project: (hotel || plane tickets booking process) || online store checkout -->
+- **Managing users' input**. Learn to save data from all kinds of form controls and use it in your prototypes. 
+
+- **Reacting to clicks** and some other users' actions. Learn to create instructions for what should happen in response to users’ actions.
+
+- **Showing and hiding UI elements**. Display elements, components and pages on demand with the help of conditions.
+
+- **Displaying dynamic lists and grids**. Learn how to create a collection of components from a single container and a special data container — array.
+
+In end of the course you will use a set of sketches and assumptions to create an interactive multi-page prototype and test it.
+
+## Prerequisites / Requirements
+
+This course doesn't require prior knowledge of JavaScript or other programming languages. If you have experience with coding, some concepts will be familiar to you and you may learn at a faster pace. Yet going through all articles of the course is recommended to understand the mockupless approach, which sometimes differs from the way programming is usually tought.
+<!-- todo: link: maybe to About section where approach is described and reasoning is provided -->
+
+Knowledge of the [Layout basics](./../LayoutBasics/) is required to understand HTML and CSS code used in the examples so you focus solely on interactivity.
+
+[Chrome](https://www.google.com/chrome/) and [VSCode](https://code.visualstudio.com/download) are used in this course to view and edit prototypes. You are free to use Firefox and a code editor of your choice instead—just make sure you are familiar with their UI so you won't spend too much time finding required functionality.
 
 ## Practice
 
-Almost every article in the course has self-practice tasks that are designed to help you understand the material by trying to apply the knowledge yourself. Completing these tasks is *highly recommended* as it is almost impossible to understand most of the concepts without attempting to use them and to combine one with another, facing problems and finding your way out.
-<!-- todo: edit to make the though more clear and the message way simpler -->
+Most articles in this course have self-practice tasks that are designed to help you learn the material better by applying the knowledge yourself. Completing these tasks is highly recommended as it is almost impossible to understand most of the concepts without practicing them and combining them to solve complex tasks. Facing problems and finding your way out is the key to mastering new skills. 
 
 ## Community
 
-Mockupless comes with an open community of designers who share your path, your struggles and your desire to create better digital products. Enter Mockupless forum's [General](https://forum.mockupless.com/t/general) thread to discuss core prototyping concepts and [Interaction basics](https://forum.mockupless.com/t/interaction-basics) thread to ask question about the course, provide help to others and share your progress.
-
-<!--
-
-HTML and CSS are markup languages and they are used to give instructions about content, position in space, the look and the very basic interactions of the elements. To make your prototypes truly interactive you need a scripting (programming) language — JavaScript.
-
-JavaScript is a powerful language, and it allows you to create logic for almost everything on the web: from a small button in UI to a very complex server. And we all know that *with great power comes great responsibility* 🤟🕸.
-
-This means that you have to know, understand and be able to properly combine a decent set of rules and patterns to start speaking this language. 
-
-Targeting this complexity is where frameworks come to play. Frameworks can be seen as interpreters. If you talk directly to browser in JavaScript and ask it to make a container clickable, you would have to take him through multiple steps to tell which button, what’s clickable, etc. If you use framework, you talk to it, not to a browser, and you just say “make button clickable” and the framework understands and gives all the instructions to browser. 
-
-Vue is a framework you will use to prototype.
-
--->
-<!-- todo: strive to make this explanation better, shorter, clearer -->
+Mockupless comes with an open community of designers who share ideas, struggles and desire to create better digital products. Visit [General](https://spectrum.chat/mockupless/general) Spectrum channel to discuss core prototyping concepts and [Interaction basics](https://spectrum.chat/mockupless/interactions-basics) channel to ask question about this course, provide help to others and share your progress.

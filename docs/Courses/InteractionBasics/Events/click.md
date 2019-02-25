@@ -51,7 +51,9 @@ This way there are multiple containers with different layouts and styles, but al
 <!-- todo: hands-on section, maybe. maybe not because the article is short and has a lot of self-practice -->
 
 
-## Self-practice
+<!-- todo: self-practice is not applicable anymore -->
+
+<!-- ## Self-practice
 
 The power of click allows you to add real interactivity to all prototypes you've created in Conditions articles. Now you can revisit your recent designs and add click events so you don't have to change values in Vue dev tools.
 
@@ -84,4 +86,4 @@ If you have any problems completing the task, dowload and review the [complete p
 
 #### Solution
 
-If you have any problems completing the task, dowload and review the [complete prototype](./../../../course-files/interaction-basics/events-click-task-1-end.html.zip)
+If you have any problems completing the task, dowload and review the [complete prototype](./../../../course-files/interaction-basics/events-click-task-1-end.html.zip) -->

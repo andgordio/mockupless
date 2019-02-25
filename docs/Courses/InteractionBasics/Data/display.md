@@ -36,6 +36,8 @@ data: {
 - Inputs of types *email* and *password* are connected the same way
 - Pro note. By binding a control and a variable, you connect them both ways. If the variable is changed, the value of control is changed
 
+<!-- todo: textarea is missing -->
+
 
 ### Checkbox
 

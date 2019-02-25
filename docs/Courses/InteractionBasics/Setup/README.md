@@ -1,48 +1,15 @@
-# HTML template
+# Prototyping template
 
-You don't have to start with an empty document every time you create a new prototype. It is a common practice to define your initial setup and create a template that includes everything you need to start prototyping.
+You are going to create prototypes as standalone HTML files throughout the course. Creating an empty file, importing required frameworks and setting up the contents for every new prototype is neither fun nor time-efficient. After prototyping for a while, you’ll be able to define your default set of tools and create a **template**—a file without content but with a particular setup—and start new projects with it instead of an empty file.
 
-Here's a basic template we recommend using during the course:
+Before you create your own template, feel free to use the one below. It was used to create all examples in the course, and has everything you need to practice what you learn:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Prototype</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
+<a href="./../../../course-files/interaction-basics/template.html.zip" class="ghost-button">Download the template</a>
 
-<body>
-  <div id="app">
-    <!-- layout with content go here -->
-  </div>
-</body>
+## What's inside
 
-<script>
-  var app = new Vue({
-    el: '#app',
-    data: {
-      // variables go here
-    },
-    methods: {
-      // functions go here
-    }
-  })
-</script>
-</html>
-```
-
-You may copy the code into your newly created `.html` file or just [download](./../../../course-files/interaction-basics/template.html.zip) the template.
-
-## What's in it
-
-### HTML5 template
-
-At its core the template has a basic HTML5 template VSCode creates for you with `html:5` shortcut:
+The prototyping template is based on HTML5 template that VSCode creates for you with `html:5` shortcut:
+<!-- todo: link: to Layout basics article explaining -->
 
 ```html
 <!DOCTYPE html>
@@ -59,34 +26,32 @@ At its core the template has a basic HTML5 template VSCode creates for you with 
 </html>
 ```
 
-### Frameworks
-
-Next, two core frameworks are imported into the template by adding two lines of code into the `head` container:
+Next, Vue.js is added to the `head` container together with [Tailwind](./../../LayoutBasics/Tailwind/whats.md) and Ionicons:
+<!-- todo: link: to a Layout basics section about ionicons  -->
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://unpkg.com/ionicons/dist/css/ionicons.min.css" rel="stylesheet">
 ```
 
-- [Tailwind](./../../LayoutBasics/Tailwind/whats.md) for creating layouts rapidly.
-- [Vue](./../README.md) to enable simple and powerful interactivity.
-<!-- todo: need a better link to explain what is vue and why it's used -->
-
-### App container
-
-Now Vue also requires some setup to work properly. First, you create a container with `id="app"` inside `body`:
+With vue.js imported in your template there are two other pieces you need to setup for the framework to function properly. First piece is a container with `id="app"` attribute inside `body` container:
 
 ```html
-<div id="app">
-  <!-- layout with content goes here -->
-</div>
+<body>
+  <div id="app">
+    <!-- layout with content goes here -->
+  </div>
+</body>
 ```
 
-This tells Vue to look for Vue code inside this container, so all your layout code for a prototype should be placed inside this container.
+This tells Vue.js where to look for Vue.js-related code in your layout. 
 
-### Vue stuff
+::: tip Important
+Make sure you place all contents of your prototypes inside this container. Everything you put outside will not be recognized by Vue.js and may produce errors. 
+:::
 
-Finally, you need a special container to store your Vue data and functions:
+The second part of Vue.js setup is the `script` container:
 
 ```html
 <script>
@@ -102,8 +67,10 @@ Finally, you need a special container to store your Vue data and functions:
 </script>
 ```
 
-It can placed between closing `</body>` and `</html>` tags. Don't worry if you don't understand what happens inside this `script` container. Chances are you will never trully know what it is, and it's perfectly fine. During this course you will be filling up `data` and `methods` containers with your code.
+`script` container is placed between `</body>` and `</html>` closing tags in this template.
 
-<!-- ## Customization
-Once you progress with prototyping you'll create your own template on top of this one: Add fonts, frameworks, UI Kits -->
-<!-- todo: write this part of the article -->
+Also, don't be confused by the syntax and contents of this code. It looks complex, but you will use it to simply store some of your code in `data` and `methods` containers. Everything else is there for Vue.js to work, and it does its job flawlessly without us understanding how it functions.
+
+## Customization
+
+The template above includes the just-enough setup, but it doesn’t mean your own template has to be basic too when you decide to create one. You are free to include multiple custom fonts, icon and style libraries and JavaScript frameworks of your choice. When the time comes you can start creating a template tailor-fit for your needs from scratch or use the template from this course as a foundation.
