@@ -1,95 +1,32 @@
-# Variables and simple data types
+# Storing data
 
-## Storing data
+![illustration for variables and data](./media/il-data.png)
+<!-- todo: illustration: storing in containers. Idea: instead of using old-fashioned analogies like construction site, design something more futuristic.  -->
 
-![illustration of variables](./images/data-storing.png)
+When prototyping interactive experiences you have to decide whether you should place some parts of your content directly into the layout or store it separately as **data**. To make these decisions quickly and efficiently you need to understand *why* you should store some content apart from the layout in the first place. Two main reasons—making content dynamic and saving users' input—are explored in this article.
 
-There are mainly three reasons to store data:
-1. Make some content dynamic — one that may change when interacting with UI. Think numbers that increase, lists that get populated with new items, button labels that change from Save to Loading, etc.
-2. Save data inputed by a user.
-3. Keep track of states to show the appropriate parts of UI. Is user logged in? Ok, show dashboard. Which tab is currently selected, Profile? Ok, show the html code for Profile then and hide the others. Did turned wi-fi on? Ok, show available networks. 
+### Dynamic content
 
-## Variables
+All texts, images and styles you add to your HTML are **hard-coded** by default. This means you cannot change them as soon as the prototype is launched in a browser. But interactivity implies that some things *have* to change when users interact with an interface. Take an example of a user tapping on Explore tab in a basic UI:
 
-Data is stored in variables. A variable is a container with a name and a value. Value is the actual content you wish to store, and the name is a key to accessing this content.
+![two wireframes demoing the changes when moving from Newsfeed tab to Explore](./media/dynamic-content.png)
 
-```js
-data: {
-  userName: 'Steve Allen',
-  itemsInCart: 2,
-  isUserLoggedIn: true
-}
-```
-* It's common to write variables' names in [camel case](https://en.wikipedia.org/wiki/Camel_case).
-* Variables are stored in `data: { }` section of vue code.
-* Variables should be separated with a coma and a new line.
+A single action requires multiple transformations:
 
-## Primitive data types
+- The title in the header changes from “Newsfeed” to “Explore”.
+- The contents of the prototype change entirely.
+- The style of the Newsfeed button in the tab bar changes to unselected grey, and Explore becomes selected teal.
+- The badge that indicates updates under Explore tab vanishes.
 
-All data can be separated into two groups of primitive and complex data. Simple data is as simple as the name suggests, and its types are described below. Complex data types are basically collections of simple data types and are described later in the course (Arrays and Objects to name a few).
+To enable all these transformations you will store selected content and information about states of components separately from layout, together with information provided by users.
 
-### Numbers
+### Users' input
 
-```js
-itemsInCart: 2,
-pocketMoney: 3.5,
-degreesOutside: -15
-```
-- Can be positive, negative or zero.
-- Can be an integer or decimal.
-- Do not include any symbols like % and $ in value even if a percent or currency.
+With all kinds of form controls available to you in HTML, you may want to save users’ input and use it somewhere in the prototype. For example, a list may be populated with events created by a user:
+<!-- todo: link: to Layout basics with form controls -->
 
-### Strings
+![wireframes of event creation view and events list populated with created event](./media/user-input.png)
 
-String is a name for text in programming world.
+The name and the calendar inputs become a list item, and the date is used to create the group header. To prototype this kind of experience you need to save information taken from a user in one view and display it in another one.
 
-```js
-firstLetter: '',
-userName: 'Sam Smith',
-productDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eius eum enim ab doloremque quaerat quibusdam. Dolorum sint dolores rerum!'
-```
-- Put in single quotation marks.
-- When you need to have single quotation marks inside your string, you have to add backslash before every one of them. For example: `'I\'m going to Spain!'`. When used after backslash, the single quotation mark doesn't indicate end of the string, but an apostrophe instead.
-
-### Boolean
-
-It is very common to save states when prototyping UI, and quite often the state is either of two: *on* or *off*. Did a user log in? Should you show a dialog box? An appropriate way to store this type of data is in a form of a boolean varibale that can have only one of two values. Later, you will learn how booleans play a crucial role when defining conditions. 
-
-```js
-isUserLoggedIn: false,
-doShowConfirmationDialog: true
-```
-- Can be only **true** or **false**
-- Written without quotation marks
-
-### null
-
-Sometimes it's useful to indicate that a variable doesn't have any value (yet). If you store a list of items a user has added to the shopping cart, for example, you need a way to indicate that there is nothing in it initially.
-
-```js
-listOfItems: null
-```
-- Written without quotation marks
-- Do not confuse with zero `0` which is a number and is used for counting, and not an indication of absence of value
-
-
-<!--## Sample case
-Imagine you are designing an online store and you want to prototype the checkout experience. One of the essential UI elements you need is a shopping cart icon that indicates how many items a user currently has prepared for checkout:
-
-![cart](./img/img-cart.png)
-
-For this UI to display correct number of items in cart and react to user's actions you need to:
-1. **Store** the number in your code
-2. **Display** the number in your UI
-3. **Track** user's actions to initiate the change
-4. **Change** the number depending on user's actions -->
-
-<!-- ## Variables
-
-Variable is a container with value and a name. You define the name yourself and use it then to access the value. -->
-
-<!-- This section covers the very of programming: data — what you do with it and what types there are.
-* programming is reading and writing data essentially.
-* to read and write you need to store it somewhere
-* data is stored as a container with a name and a value
-* with the name you read the value, and with name you change it  -->
+There are special containers called **variables** that allow you to store contents, states and users’ input separately from layout to enable updating them when interacting with a prototype. Variables and their data types are explored in the next article. 

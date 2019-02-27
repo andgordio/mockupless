@@ -46,7 +46,7 @@ module.exports = {
           children: [
             // 'Core/units',
             // 'Core/color',
-            'Core/containers',
+            // 'Core/containers',
             'Core/form',
           ]
         },
@@ -100,6 +100,7 @@ module.exports = {
           collapsable: false,
           children: [
             'Data/',
+            'Data/variables',
             'Data/display',
             // 'Data/practice'
           ]
