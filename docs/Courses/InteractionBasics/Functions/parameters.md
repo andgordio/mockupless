@@ -83,7 +83,7 @@ When the function is called, not `i` but **its value**, `2` for example, is pass
   <source src="./../Lists-and-loops/media/list-managing-3.mp4" type="video/mp4">
 </video>
 
-1. Download the [prototype](./../../../course-files/interaction-basics/function-parameters-1.html.zip).
+1. Download the [prototype](./../../../course-files/interaction-basics/functions-parameters-1.html.zip)
 2. Preview it in Chrome.
 3. Open it in VSCode to study methods section and layout.
 4. In `removeItem` function rename the expected parameter from `index` to `itemToDelete`, also rename inside the function in splice method. Preview it in Chrome—the prototype should work as before.

@@ -1,126 +1,100 @@
-# Connecting data
+# Displaying data
 
-## Displaying in containers
+## Text
 
-![illustration of data connection](./images/data-connecting.png)
+Data stored in a variable can be rendered in layout as plain text:
 
-Once the data is stored in a variable, you can display its value in your layout:
+![2 in the middle of the screen](./media/connect-text.png)
 
-<!-- todo: add screenshot of the UI to connect with the result  -->
+To display a variable’s value you place its name in the layout surrounded by two pairs of curly braces:
+
 ```html
-<div>{{itemsInCart}}</div>
+<div id="app">
+  <div>{{itemsInCart}}</div>
+<div>
 ```
 ```js
 data: {
   itemsInCart: 2
 }
 ```
-- The two pairs of curly braces is your way to indicate that *itemsInCart* is a variable and you want to display its value inside a container.
 
-## Connecting to form inputs
+This syntax indicates that `itemsInCart` is a variable and its value should be rendered. Remember, all dynamic contents must be placed inside the container with `id="app"` found in the [template](./../Setup/).
 
-As mentioned previously, variables are commonly used to save information inputed by users. Below are the basic form input controls and the ways you can connect them to your data storage. 
+A variable doesn't have to take up the whole div container. You can put it next to a static text or next to another variable: 
 
-### Text
-
-There’s an attribute in Vue that allows to bind a form control with a variable: `v-model`. It’s placed inside a control and is followed by the name of the variable you want to connect. Now everything a user types into the input will be stored in specified variable. 
+![Steve Allen, 2 pieces, $50 in the middle of the screen](./media/connect-text-2.png)
 
 ```html
-<input v-model="userEmail"> 
-```
-```js
-data: {
-  userEmail: 'support@mockupless.com'
-}
-```
-- Inputs of types *email* and *password* are connected the same way
-- Pro note. By binding a control and a variable, you connect them both ways. If the variable is changed, the value of control is changed
-
-<!-- todo: textarea is missing -->
-
-
-### Checkbox
-
-Value of a checkbox is always binary: it’s either on or off, so it makes sense to connect it to a variable with a Boolean value. Clicking on a checkbox input toggles the variable’s value between true and false.
-
-<!-- todo: add screenshot of the UI to connect with the result  -->
-```html
-<input type="checkbox" v-model="didAgreeToPolicy"> I agree with Privacy Policy
-```
-```js
-data: {
-  didAgreeToPrivacyPolicy: false
-}
-```
-
-### Radio buttons
-
-A set of radio button controls should be connected to a single variable to control which one is currently selected. So each input from a group should have the same variable name in its v-model attribute.
-
-Radio buttons require another attribute: **value**. In it you specify what should be stored in a variable when the radio button is selected. 
-
-<!-- todo: add screenshot of the UI to connect with the result  -->
-```html
+<div id="app">
+  <div>{{firstName}} {{lastName}}</div>
+  <div>{{itemsInCart}} pieces</div>
+  <div>${{total}}</div>
 <div>
-  <input type="radio" v-model="emailsDaily" value="One"> Just one
-</div>
-<div>
-  <input type="radio" v-model="emailsDaily" value="Two"> Twice a day
-</div>
-<div>
-  <input type="radio" v-model="emailsDaily" value="Three"> All three
-</div>
 ```
 ```js
 data: {
-  emailsDaily: 'One'
+  firstName: 'Steve',
+  lastName: 'Allen',
+  itemsInCart: 2,
+  total: 50
 }
 ```
-- The value of a radio button doesn’t have to be the same as its label, but it’s easier to keep track of them when they are the same
 
-### Dropdown / Select
+This way you can store variable `total` as a number `50`, without the $ sign, and add the sign in the layout.
 
-To connect a dropdown to your data you need to add v-model to ‘select’ control. The value inside the selected ‘option’ container will be stored in your data.
+## Images
 
-<!-- todo: add screenshot of the UI to connect with the result  -->
+Together with data that can be rendered in a prototype you can store an image url in a variable, if you want it to be dynamic:
+
+![a picture of a duck](./media/connect-image.png)
+
+A special kind of `src` attribute is applied to img tag to achieve this:
+
 ```html
-<select v-model="plan">
-  <option>Free</option>
-  <option>Pro</option>
-  <option>Business</option>
-</select>
+<div id="app">
+  <img :src="imageUrl">
+<div>
 ```
 ```js
 data: {
-  plan: 'Free'
+  imageUrl: 'https://images.unsplash.com/photo-1543949790-0f66d1f34270?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80'
 }
 ```
 
-- Similarly to radio buttons, you can specify ‘value’ for each option if you want it to be different from the actual content between ‘option’ tags. As with radio buttons, it’s recommended to have them the same. 
+A colon in front of `src` means that the content of this attribute should not be treated as a url, like in regular src. <!-- todo: link: to Layout basics about images and src --> Instead, you place a name of a variable there, and its value will be taken for a url. 
+
+Next section—[Events](./../Events/click.md)—explains how values in variables can be changed with interactions so rendered texts and images change too. But first, another way of connecting layout and data is explored in the next article: [Forms](./forms.md). 
+
+<!-- todo: links? :href="linkUrl" -->
 
 ## Self-practice
 
-### Task #1
+Use data to render image and texts on a card:
 
-1. [Download](https://firebasestorage.googleapis.com/v0/b/mockupless.appspot.com/o/self-practice%2Fdata%2Fsignup.html.zip?alt=media&token=26cc5f40-aa94-4328-80e4-786676bd382d) the template which already includes the layout:
+<!-- referfence: https://www.allmodern.com/furniture/pdp/gus-modern-elk-wingback-chair-gus1423.html?piid=28413244 -->
+![a card with a photo of a chair, its name, producer and price](./media/connect-practice-1.png)
 
-![sign up form](./images/self-practice-signup.png)
+1. Download [starting file](./../../../course-files/interaction-basics/data/data-text-and-image-practice-start.html.zip) and open it VSCode.
+2. The layout is already included into this file together with required data. Study the code to locate the card container and variables.
+3. Use the value of `imageUrl` to render an image and other variables to render texts.
+4. Open the prototype in Chrome and preview the results.
+5. Open Vue dev tools and try changing values. You should be able to see changes in UI as soon as you apply them in dev tools.
 
-2. Come up with the name of the app, save it as a [variable](./README.md) and [display](./display.html#displaying-in-containers) it in the title after “Welcome to”
+If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/data/data-text-and-image-practice-end.html.zip).
 
-3. Create a variable for each form input and [connect](./display.html#connecting-to-form-inputs) all variables to inputs in your html
 
-4. Make sure everything works properly. Open [Vue devtools](./../Setup/devtools.html), click on `<Root>` in the upper panel, and see if data you input in your form appears in the lower panel next to the appropriate variables:
 
-![vue dev tools](./images/self-practice-devtools.png)
+<!-- too early
+## Background
 
-### Task #2
-
-1. Start from the blank prototyping [template](./../Setup/README.md)
-2. Create a layout similar to the shown but with your own styles:
-
-![sign up form](./images/self-practice-checkout.png)
-
-2. Store username as a [variable](./README.md) and [display](./display.html#displaying-in-containers) it in the layout
-3. Create a variable for each form input and [connect](./display.html#connecting-to-form-inputs) all variables to inputs in your html. Good luck with [radio buttons](./display.html#radio-buttons) 😉
-4. Make sure everything works properly using [Vue devtools](./../Setup/devtools.html)
+```html
+<div id="app">
+  <div :style=""></div>
+<div>
+```
+```js
+data: {
+  bgUrl: 'https://images.unsplash.com/photo-1543949790-0f66d1f34270?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80'
+}
+```-->

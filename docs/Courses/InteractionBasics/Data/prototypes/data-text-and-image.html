@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototype1</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+</head>
+
+<body>
+  <div id="app" class="h-screen flex items-center justify-center antialiased">
+    <!-- <div>
+      <div class="text-xl">{{firstName}} {{lastName}}</div>
+      <div class="text-lg text-grey-dark pt-2">{{itemsInCart}} pieces</div>
+      <div class="text-5xl pt-2">${{total}}</div>
+    </div> -->
+    <img :src="imageUrl" style="width: 400px;">
+  </div>
+</body>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      // itemsInCart: 2
+      // firstName: 'Steve',
+      // lastName: 'Allen',
+      // itemsInCart: 2,
+      // total: 50
+      imageUrl: 'https://images.unsplash.com/photo-1543949790-0f66d1f34270?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=100'
+    },
+    methods: {
+      // functions go here
+    }
+  })
+</script>
+</html>

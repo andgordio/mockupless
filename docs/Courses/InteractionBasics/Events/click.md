@@ -53,6 +53,8 @@ This way there are multiple containers with different layouts and styles, but al
 
 <!-- todo: self-practice is not applicable anymore -->
 
+<!-- todo: self-practice 1: click to change a label, self-practice 2: click to change an image, self-practice 3: click to load data from a form -->
+
 <!-- ## Self-practice
 
 The power of click allows you to add real interactivity to all prototypes you've created in Conditions articles. Now you can revisit your recent designs and add click events so you don't have to change values in Vue dev tools.

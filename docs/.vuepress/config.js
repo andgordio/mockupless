@@ -102,7 +102,7 @@ module.exports = {
             'Data/',
             'Data/variables',
             'Data/display',
-            // 'Data/practice'
+            'Data/forms'
           ]
         },
         {
