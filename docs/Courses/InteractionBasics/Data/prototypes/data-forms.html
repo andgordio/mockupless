@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototype</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  <style>
+    input, textarea, select {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="h-screen flex items-center justify-center text-black">
+    <!-- text -->
+    <!-- <div class="w-full max-w-xs">
+      <input v-model="title" placeholder="Enter title" class="border border-grey-light px-3 py-5 text-lg w-full">
+      <textarea v-model="description" placeholder="Enter description" class="w-full h-24 border border-grey-light px-3 py-5 text-lg mt-3"></textarea>
+    </div> -->
+    <!-- radio -->
+    <!-- <div class="w-full max-w-xs">
+      <input type="checkbox" v-model="didAgreeToPolicy" id="policy">
+      <label class="pl-1" for="policy">I agree with Privacy Policy</label>
+    </div> -->
+    <!-- select -->
+    <!-- <div class="w-full max-w-xs">
+      <select v-model="plan" class="w-full">
+        <option>Free</option>
+        <option>Pro</option>
+        <option>Business</option>
+      </select>
+    </div> -->
+    <!-- radio -->
+    <div class="w-full max-w-xs">
+      <div class="py-2">
+        <input type="radio" v-model="emailsDaily" value="One" id="one">
+        <label for="one" class="pl-2">Just one</label>
+      </div>
+      <div class="py-2">
+        <input type="radio" v-model="emailsDaily" value="Two" id="two">
+        <label for="two" class="pl-2">Twice a day</label>
+      </div>
+      <div class="py-2">
+        <input type="radio" v-model="emailsDaily" value="Three" id="three">
+        <label for="three" class="pl-2">All three</label>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      // title: '',
+      // description: '',
+      // didAgreeToPolicy: false,
+      // plan: 'Free',
+      emailsDaily: 'One'
+    },
+    methods: {
+      // functions go here
+    }
+  })
+</script>
+</html>
