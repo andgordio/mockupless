@@ -7,6 +7,7 @@ a
 
 body
   font-size 18px !important
+  color #22292F !important
 
 .content:not(.custom) > h2
   padding-top 6.6rem !important
@@ -44,12 +45,12 @@ tr:nth-child(2n)
 
 .custom-block.tip
   border-color $accentColor
-  border-width 0.25rem
+  border-width 0.2rem
   padding 0rem 1rem
   margin 2rem 0
   background-color transparent
   p
-    margin-top 0.5rem
+    margin-top 0.75rem
   // font-size 16px
   // max-width 600px
 
@@ -79,10 +80,19 @@ tr:nth-child(2n)
   text-decoration none !important
   background-color #F8FDFC
 
+.content code
+  padding 0
+  color #697886
+  background-color transparent
+
+
 // code blocks
 
 div.language-js.extra-class, div.language-html.extra-class, div.language-vue.extra-class, div.language-css.extra-class
-  background-color #F1F5F8
+  // background-color #F1F5F8
+  background-color #ffffff
+  border-left 1px solid #e0e0e0
+  border-radius 0
 
 div[class*="language-"] .highlight-lines .highlighted
   background-color: #e5e9ec

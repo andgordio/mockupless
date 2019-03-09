@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototype1</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+</head>
+
+<body>
+  <div id="app" class="h-screen flex items-center justify-center antialiased">
+    <div class="border border-grey-light w-full max-w-xs rounded pt-2 hover:shadow">
+      <img :src="imageUrl" class="w-full">
+      <div class="flex justify-center mb-2">
+        <div class="flex cursor-pointer px-1" @click="imageUrl = 'https://secure.img1-fg.wfcdn.com/im/41465224/resize-h700-p1-w700%5Ecompr-r85/6677/66771259/Elk+Wingback+Chair.jpg'">
+          <!-- <div class="w-2 h-4 rounded-l-full bg-grey-light"></div>
+            <div class="w-2 h-4 rounded-r-full bg-yellow-lightest"></div> -->
+          <div class="w-3 h-3 rounded-full bg-grey-lighter "></div>
+        </div>
+        <div class="flex cursor-pointer px-1" @click="imageUrl = 'https://secure.img1-fg.wfcdn.com/im/23366032/resize-h800-w800%5Ecompr-r85/6677/66771264/Elk+Wingback+Chair.jpg'">
+          <!-- <div class="w-2 h-4 rounded-l-full bg-grey-light"></div>
+          <div class="w-2 h-4 rounded-r-full bg-grey-lighter"></div> -->
+          <div class="w-3 h-3 rounded-full bg-grey "></div>
+        </div>
+        <div class="flex cursor-pointer px-1" @click="imageUrl = 'https://secure.img1-fg.wfcdn.com/im/10686707/resize-h800-w800%5Ecompr-r85/6677/66771261/Elk+Wingback+Chair.jpg'">
+          <!-- <div class="w-2 h-4 rounded-l-full bg-grey-light"></div>
+          <div class="w-2 h-4 rounded-r-full bg-grey-lighter"></div> -->
+          <div class="w-3 h-3 rounded-full bg-grey-darker "></div>
+        </div>
+      </div>
+      <div class="mx-6 text-2xl font-bold pt-2">{{title}}</div>
+      <div class="mx-6 pt-1">by {{producer}}</div>
+      <div class="mx-6 pt-4 pb-5 text-grey-dark">${{price}}</div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      imageUrl: 'https://secure.img1-fg.wfcdn.com/im/41465224/resize-h700-p1-w700%5Ecompr-r85/6677/66771259/Elk+Wingback+Chair.jpg',
+      title: 'Elk Wingback Chair',
+      producer: 'Gus* Modern',
+      price: 1200
+    },
+    methods: {
+      // functions go here
+    }
+  })
+</script>
+</html>

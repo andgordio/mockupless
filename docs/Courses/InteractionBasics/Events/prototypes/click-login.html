@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototype</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  <style>
+    button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="h-screen flex justify-center items-center antialiased">
+    <div class="w-full max-w-xs">
+      <div class="text-3xl">{{isUserLoggedIn}}</div>
+      <div class="mt-5">
+        <button class="px-5 py-3 bg-teal rounded hover:bg-teal-dark text-white" @click="isUserLoggedIn = true">
+          Log in
+        </button>
+        <button class="px-5 py-3 bg-grey-lighter rounded hover:bg-grey-light text-grey-darker" @click="isUserLoggedIn = false">
+          Log out
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      isUserLoggedIn: false
+    },
+    methods: {
+      // functions go here
+    }
+  })
+</script>
+</html>

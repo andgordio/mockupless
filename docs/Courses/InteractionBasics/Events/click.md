@@ -1,38 +1,106 @@
 # Click
 
-![clicks illustration](./media/events-events.png)
+![clicks illustration](./media/il-click.png)
 
-<!-- todo: better illustration / animation of click changing everything -->
+Click (or tap, depending on the device) is the mother of interactivity. With clicks, components are added and removed, data is saved and deleted, pages are opened and animations are played.
+<!-- todo: write: maybe a better variety of examples -->
 
-Click (or tap, depending on the device) is the father of interactivity. Upon click items are added and removed, containers are shown and hidden, pages are opened and animations are played. 
+To make your prototypes react to users’ clicks you need to do 2 things:
 
-To make your prototype respond to a user’s click you need to do 2 things:
-
-1. Add a **click listener** to a container you expect users to interact with.
+1. Add an **event listener** to a container you expect users to interact with.
 2. Specify **instructions** that you want to be executed when the click is detected.
 
-Here's a button that changes authentication status of a user, when clicked:
+## Events and instructions
+
+Let's start with a pair of buttons that change the value of the variable `isUserLoggedIn` when clicked:
+
+<video width="100%" controls muted class="">
+  <source src="./media/click-login.mp4" type="video/mp4">
+</video>
 
 ```html
 <button @click="isUserLoggedIn = true">
-  Login
+  Log in
+</button>
+<button @click="isUserLoggedIn = false">
+  Log out
 </button>
 ```
 
-This attribute can be read as “when users click on the button, assign the value of `true` to `isUserLoggedIn` variable”.
-- `@` indicates an **event listener** and `click` specifies **the event** you want to listen to.
-- `isUserLoggedIn = true` is the **instruction** you want to be executed when the interaction happens.
+`@click` in the first button, for example, can be read as “when users click the button, assign the value of `true` to `isUserLoggedIn` variable”. Here's the breakdown of the syntax:
+- `@` indicates an event listener.
+- `click` specifies the event you want to respond to.
+- `isUserLoggedIn = true` and `isUserLoggedIn = false` are the instructions you want to be executed when the events are triggered.
 
-:::tip Assigning a value
-When you define a variable inside your `data` container you specify a name and a default value: `doShowDetails: false`. The sole purpose of storing something inside a variable is to enable changing its value in the future. You see it being done in the example above. So to change the value, or as it’s also called, to assign a new value, you put a single equal sign between a variable name and a new value in your instructions: `doShowDetails = true`.
+:::tip OK, but why change values in the first place?
+Being able to render `true` or `false` on click doesn't hold much value. However, in the next section of this course you will learn how to conditionally show components and pages based on a value of a variable. For example, a login screen will be shown when `isUserLoggedIn` is `false` and a newsfeed screen will be shown when it’s `true`. This means that by changing a value of a variable clicks will be able to change screens.
 :::
-<!-- todo: edit to make the message simpler and clear -->
 
-### Beyond buttons
+<!-- todo: allow to download the example -->
 
-You can add click listeners to any container, not only to a `<button>`. This means that you can create your layouts freely, without having to use any specific containers for your components. What's even more important, the click is detected not only on a container you've added it to, but also on all of its **children**.
+## Assigning a value
+As described in [Variables](./../Data/variables.md) article, when you add a variable to `data` container you specify a name and a default value:
 
-In this example a `@click` listener is added to a flex container with multiple child-containers:
+```js
+data: {
+  doShowDetails: false,
+}
+```
+
+To change the default value, you need to assign a new one. A **single equals sign** assigns a value on its right to a variable on its left:
+
+```html
+<button @click="isUserLoggedIn = true">
+```
+
+Spaces around equals sign are optional. Subjectively they improve readability of your code.
+
+### From variable to variable and multiple instructions
+
+Consider another example—a user fills out a form, presses Submit button and then information gets saved and displayed elsewhere:
+
+<video width="100%" controls muted class="">
+  <source src="./media/click-var-to-var.mp4" type="video/mp4">
+</video>
+
+To achieve this you need:
+- A variable `emailInput` connected to the input form control with `v-model`.
+- Another variable `emailSubmitted` to store and display the *submitted* information.
+- An event listener to move data from one variable to another on click.
+
+The latter can be done by assigning a value of one variable to another. The following button will assign the value of `emailInput` to `emailSubmitted` when clicked:
+
+```html
+<input v-model="emailInput">
+<button @click="emailSubmitted = emailInput">
+  Sign up
+</button>
+<!-- -->
+<div>Submitted email: {{emailSubmitted}}</div>
+```
+
+To complete the prototype you would also need to clean up the input form control when the button is pressed. You are able to define multiple instructions for one event separating them with a semicolon. The full-feature button also assigns empty string to `emailInput` right after saving its value in `emailSubmitted`:
+
+```html
+<input v-model="emailInput">
+<button @click="emailSubmitted = emailInput; emailInput = ''">
+  Sign up
+</button>
+<!-- -->
+<div>Submitted email: {{emailSubmitted}}</div>
+```
+
+As a result when users input their data it's being immediately stored in `emailInput`. When the button is clicked the data is copied to `emailSubmitted` so you can use it anywhere in the UI, and `emailInput` is cleaned up so the form is returned to its initial state.
+
+<!-- todo: download example file -->
+
+## Beyond button
+
+You can add a click event listener to any container, not only to a `<button>`. This means that you can design your components freely with `<div>`s and still allow for interactivity. What's even more important, clicking on child elements of the container with an event listener will also trigger an event:
+
+<video width="100%" controls muted class="">
+  <source src="./media/click-details.mp4" type="video/mp4">
+</video>
 
 ```html
 <div @click="doShowDetailsView = true" class="flex">
@@ -44,16 +112,44 @@ In this example a `@click` listener is added to a flex container with multiple c
 </div>
 ```
 
-This way there are multiple containers with different layouts and styles, but all will respond to a click, because the listener is added to their parent container. 
-<!-- todo: the whole “click is detected on children” concept should be explainer simpler and more clearly -->
+In this example a `@click` listener is added to a flex container with multiple containers inside. Clicking anywhere on this container and its children triggers the event.
 
-<!-- #### 👐 Hands-on -->
-<!-- todo: hands-on section, maybe. maybe not because the article is short and has a lot of self-practice -->
+## Self-practice
 
+### Task 1
 
-<!-- todo: self-practice is not applicable anymore -->
+Allow users to switch between different photos:
+
+<video width="100%" controls muted class="">
+  <source src="./media/click-practice-1.mp4" type="video/mp4">
+</video>
+
+1. Use the result of the [task in Displaying data](./../Data/display.md#self-practice) article as a starting file.
+2. Add three buttons with click event listeners below the image.
+3. On click assign different URLs to `imageUrl`. The following images are used in the demo: [1](https://secure.img1-fg.wfcdn.com/im/76790410/resize-h800-w800%5Ecompr-r85/6677/66771259/Elk+Wingback+Chair.jpg), [2](https://secure.img1-fg.wfcdn.com/im/23366032/resize-h800-w800%5Ecompr-r85/6677/66771264/Elk+Wingback+Chair.jpg), [3](https://secure.img1-fg.wfcdn.com/im/10686707/resize-h800-w800%5Ecompr-r85/6677/66771261/Elk+Wingback+Chair.jpg).
+4. As a result a different images should be rendered depending on which button users click.
+
+If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/events/event-click-practice-1-end.html.zip).
+
+### Task 2
+
+Display information a user submits:
+
+<video width="100%" controls muted class="">
+  <source src="./media/click-practice-2.mp4" type="video/mp4">
+</video>
+
+1. Use the result of [Task 2 in Connecting to forms](./../Data/forms.md#task-2) article as a starting file.
+2. Create another set of variables to store submitted data and display their values in the right column intead of displaying the values of variables that are connected to the form.
+3. Add Submit button with a click event listener. On click assign values from variables connected to form controls to variables used for storing data and clear the form. Hint: you will have a total of six instructions in the click event listener.
+
+If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/events/event-click-practice-2-end.html.zip).
+
+<!-- todo: allow to download the example -->
 
 <!-- todo: self-practice 1: click to change a label, self-practice 2: click to change an image, self-practice 3: click to load data from a form -->
+
+<!-- todo: probably the practice below should be moved to conditions section -->
 
 <!-- ## Self-practice
 

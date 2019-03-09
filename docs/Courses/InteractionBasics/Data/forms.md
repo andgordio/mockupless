@@ -131,13 +131,13 @@ Connect form controls to variables:
 1. Download the [starting file](./../../../course-files/interaction-basics/data/data-forms-practice-1-start.html.zip), open in it Chrome and study the layout.
 2. Open it in VSCode, find form controls in the layout and variables in the data section.
 3. Use `v-model` and `value` where necessary to connect form controls to corresponding variables.
-4. Check you progress in Chrome. Open Vue dev tools, select `<Root> ` in the upper section and see if the values are changed when you interact with the form. 
+4. Check your progress in Chrome. Open Vue dev tools, select `<Root> ` in the upper section and see if the values are changed when you interact with the form. 
 
 If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/data/data-forms-practice-1-end.html.zip).
 
 ### Task 2
 
-Display information inputted by a user:
+Display information a user inputs:
 
 <video width="100%" controls muted class="video afterh2">
   <source src="./media/data-form-practice-2.mp4" type="video/mp4">
