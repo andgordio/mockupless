@@ -109,9 +109,9 @@ module.exports = {
           title: 'Events',
           collapsable: false,
           children: [
-            'Events/click',
-            'Events/arithmetics', 
+            'Events/',
             'Events/other',
+            // 'Events/arithmetics', 
             // 'Events/practice'
           ]
         },

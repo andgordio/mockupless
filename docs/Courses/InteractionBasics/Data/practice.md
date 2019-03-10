@@ -1,4 +1,4 @@
-# Practice
+<!-- # Practice
 
 ## Task #1
 
@@ -25,4 +25,4 @@
 
 2. Store username as a [variable](./README.md#variables) and [display](./display.html#displaying-in-containers) it in the layout
 3. Create a variable for each form input and [connect](./display.html#connecting-to-form-inputs) all variables to inputs in your html. Good luck with [radio buttons](./display.html#radio-buttons) 😉
-4. Make sure everything works properly using [Vue devtools](./../Setup/devtools.html)
+4. Make sure everything works properly using [Vue devtools](./../Setup/devtools.html) -->

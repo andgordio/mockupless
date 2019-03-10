@@ -1,54 +1,98 @@
 # Other events
 
+Click is probably the most popular interaction, but there’s a number of other events that allow for richer UX and are expected by users. Three interactions are explored in this article: focus, hover and key press.
+
 ## Focus and unfocus
 
-<!-- todo: video example -->
+When designing a form you may want to know when the input field was focused and when it lost its focus. This information can be used to change styles, show suggestion, validate inputs, etc. 
 
-Click is not the only type of interaction you might expect from a user. When designing a form or a search bar, for example, you may want to know when the input field was focused and when it lost its focus to change styles, show and hide elements, etc. You can do that with `@focus` and `@blur`(unfocus) event listeners:
+<video width="100%" controls muted class="">
+  <source src="./media/other-focus.mp4" type="video/mp4">
+</video>
 
-```vue
-<input @focus="doShowEmailHelp = true" @blur="doShowEmailHelp = false" placeholder="Enter your email...">
-<div v-if="doShowEmailHelp">Make sure you input your work email</div>
+Event listeners `@focus` and `@blur` are responsible for catching these interactions: 
+
+```html
+<input @focus="didFocusInput = true" @blur="didFocusInput = false">
+<div>Did focus input: {{didFocusInput}}</div>
 ```
-
-The code above will make the help text container visible when the input is focused, and hide the container when the focus is lost. This is achieved with applying different values to `doShowEmailHelp` variable based on `@focus` and `@blur` events, and making the div a conditional container based on the value of the same variable.
 
 ## Hover
 
-<!-- todo: video example -->
+Another common interaction on desktop computers is hovering over elements with the mouse cursor. `@mouseover` event listener tracks when a cursor *enters* the area of the element. Its counterpart `@mouseleave` reacts to a cursor *leaving* the area of an element:
 
-Another common interaction on desktop is hovering over elements with mouse cursor. Similarly to how focus is tracked, you need to add two event listeners: `@mouseover` will execute your instructions when the cursor appears over the element, and `@mouseleave` will fire when the cursor leaves the area of the element:
+<video width="100%" controls muted class="">
+  <source src="./media/other-hover.mp4" type="video/mp4">
+</video>
 
-```vue
-<div @mouseover="doShowArrow = true" @mouseleave="doShowArrow = false">
-  <span>All discussions</span>
-  <span v-if="doShowArrow">→</span>
+```html
+<div @mouseover="didHoverCalendar = true" @mouseleave="didHoverCalendar = false">
+  Calendar
+</div>
+<div @mouseover="didHoverChat = true" @mouseleave="didHoverChat = false">
+  Chat
+</div>
+<div @mouseover="didHoverPeople = true" @mouseleave="didHoverPeople = false">
+  People
 </div>
 ```
 
-Hovering the container will assign `true` to `doShowArrow` thanks to `@mouseover` event, and the second - conditional - `<span>` will appear. `@mouseleave` turns value back to `false` so the second `<span>` is hidden when not hovered.
+Note the difference between CSS `:hover` selector and `@mouseover` event listener. `:hover` applies specified styles when the cursor enters the area of an element and also discards them when the cursor leaves. With the event listeners you provide two separate (sets of) instructions: one for cursor entering the area, and one for when it leaves. This is particularly useful when, for example, your design doesn't require anything to happen when the mouse leaves. [Self-practice Task 1](#task-1) is a good example of this type of UX.
+<!-- todo: link: to Layout basics explaining hovers -->
 
-## Key press (enter)
+## Key press
 
-<!-- todo: proper intro -->
+You already know how you can [connect text input](./../Data/display.md#text) to a variable with `v-model`, so everything a user enters is stored in data. You don't need an event listener to achieve that. However sometimes you want to track key presses inside the input field to provide instructions when particular keys are pressed.
 
-You already know how you can [connect input](./../Data/display.md#text) to a variable with `v-model`, so whatever a user puts into it is saved and can be accessed later. You don't need to listen and react to every press of a key to achieve that. However, there are special keys you might want to track.
+`@keypress` event listener reacts to every key press inside an input field but you rarely need to track this type of interaction. In addition, `@keypress` has modifiers that specify which particular key you want to respond to. For example, a commonly expected behavior when interacting with a search bar or a simple form is the ability to submit by hitting return/enter key. Adding `.enter` modifier  to `@keypress` event listener  allows you to react to this particular key being pressed:
 
-For example, if you are prototyping a search bar, users will probably expect that they can just hit return/enter instead of clicking Search button. This interaction can be tracked with `@keypress` event and `.enter` modifier which specifies the key you want to listen to being pressed:
+<video width="100%" controls muted class="">
+  <source src="./media/other-keypress.mp4" type="video/mp4">
+</video>
 
-```vue
-<input v-model="userEmail" @keypress.enter="doShowSearchResults = true">
-<button @click="doShowSearchResults = true">Search</button>
+```html
+<input v-model="emailInput" @keypress.enter="emailSubmitted = emailInput; emailInput = ''">
+<button @click="emailSubmitted = emailInput; emailInput = ''">Subscribe</button>
+...
+<div>Submitted email: {{emailSubmitted}}</div>
 ```
 
-In this example you see how `@click` event listener attached to a button is changing the value of `doShowSearchResults` variable. Since you want the exact same instructions to happen when user presses return/enter inside search input, you provide the same instructions for `@keypress.enter` event attached to the input.
+Modifiers are placed right after the name of the event listener. Usually, the instructions in this type of cases are the same as for `@click` on a Submit button as shown in the example above. 
 
-Other modifiers include `.tab`, `.esc` and [a couple of others](https://vuejs.org/v2/guide/events.html#Key-Modifiers).
+Modifiers include `.tab`, `.esc` and a number of others. You can learn more about them in [Vue.js official guide](https://vuejs.org/v2/guide/events.html#Key-Modifiers).
 
 
 ## Self-practice
 
-#### Task
+### Task 1
+
+Allow users to switch between different photos by hovering controls:
+
+<video width="100%" controls muted class="">
+  <source src="./media/other-practice-1.mp4" type="video/mp4">
+</video>
+
+1. Use the result of [Task 1 in Click](./#task-1) article as a starting file.
+2. Replace `@click` event listeners with `@mouseover` event listeners.
+3. As a result different images should be rendered depending on which circle users hover over.
+
+If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/events/event-other-practice-1-end.html.zip).
+
+### Task 2
+
+Allow users to send a search query without providing a Search button at all:
+
+<video width="100%" controls muted class="">
+  <source src="./media/other-practice-2.mp4" type="video/mp4">
+</video>
+
+1. Create a simple layout with a search bar and a heading.
+2. Add `@keypress.enter` event listener to the text input.
+3. Display users’ query in the heading when they press return/enter.
+
+If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/events/event-other-practice-2-end.html.zip).
+
+<!-- #### Task
 
 Create a prototype of search input field with multiple interactive features:
 
@@ -68,43 +112,4 @@ Download the [starting layout](./../../../course-files/interaction-basics/events
 
 #### Solution
 
-If you have any problems completing the task, dowload and review the [complete prototype](./../../../course-files/interaction-basics/events-other-task-1-end.html.zip)
-
-<!-- ### Search results
-
-Add appropriate variables and events to the template to display users' input and clear the input field when they press Enter/Return:
-
-![Search results demo](./media/search-results.gif)
-
-1. Download the [template](https://firebasestorage.googleapis.com/v0/b/mockupless.appspot.com/o/self-practice%2Fdata%2Fsearch-results.html.zip?alt=media&token=c5166645-7005-456a-a9b1-e30d7957cd63) with the built-in layout.
-2. Create a variable and [connect](./../Data/display.md#connecting-to-form-inputs) it to the search input field.
-3. Create another variable and [display](./../Data/display.html#displaying-in-containers) it after “Search results for ”
-4. Add a [keypress.enter](./other.md#keypress) event to the input field that adds search query to the title and clears the input field. Separate your operations within one event with a semicolon, e.g. `sum = 1 + 1; diff = 4 - 2` -->
-
-
-<!-- OLD -->
-
-
-<!-- Let's say you are prototyping a simple subscription form as a part of your interface:
-
-![newsletter subscription interface](./media/events-subscription.png)
-
-You know what to do: you create a variable and connect it to the input, and you add an event listener to the Subscribe button:
-
-```html
-<input v-model="userEmail">
-<button @click="subscriber = userEmail">Subscribe</button>
-```
-
-Yet chances are high, that when you start testing this interface, you'll learn that some people are used to being able to hit Return on their keyboard instead of clicking a button to submit a form.
-
-To react to users pressing Return when the input field is focused, you need to add `@keypress.enter` event listener to the input field:
-
-```html
-<input v-model="userEmail" @keypress.enter="subscriber = userEmail">
-<button @click="subscriber = userEmail">Subscribe</button>
-```
-
-- If you want the same results as a button click has, you use same instructions you used for @click
-- `.enter` is a modifier for `@keypress` event listener. It specifies which particular button press you want to react to. If you remove a modifier `@keypress` will react to all button presses, which is rarely the desired outcome.
-- Other modifiers include `.tab` and `.esc` if you want to change the default behaviour of the corresponding buttons for particular input fields. -->
+If you have any problems completing the task, dowload and review the [complete prototype](./../../../course-files/interaction-basics/events-other-task-1-end.html.zip) -->

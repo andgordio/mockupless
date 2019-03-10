@@ -127,7 +127,7 @@ Allow users to switch between different photos:
 1. Use the result of the [task in Displaying data](./../Data/display.md#self-practice) article as a starting file.
 2. Add three buttons with click event listeners below the image.
 3. On click assign different URLs to `imageUrl`. The following images are used in the demo: [1](https://secure.img1-fg.wfcdn.com/im/76790410/resize-h800-w800%5Ecompr-r85/6677/66771259/Elk+Wingback+Chair.jpg), [2](https://secure.img1-fg.wfcdn.com/im/23366032/resize-h800-w800%5Ecompr-r85/6677/66771264/Elk+Wingback+Chair.jpg), [3](https://secure.img1-fg.wfcdn.com/im/10686707/resize-h800-w800%5Ecompr-r85/6677/66771261/Elk+Wingback+Chair.jpg).
-4. As a result a different images should be rendered depending on which button users click.
+4. As a result different images should be rendered depending on which button users click.
 
 If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/events/event-click-practice-1-end.html.zip).
 

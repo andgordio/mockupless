@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototype</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  <style>
+    button:focus, input {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body class="text-black">
+  <div id="app" class="h-screen flex justify-center items-center antialiased">
+    <div class="w-full max-w-xs mb-8">
+      <div>
+        <input type="text" @focus="didFocusInput = true" @blur="didFocusInput = false" class="w-full border border-grey-light px-3 py-4 rounded">
+      </div>
+      <div class="text-grey-dark mt-3">did focus input: <span class="text-black">{{didFocusInput}}</span></div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      didFocusInput: false
+    },
+    methods: {
+      // functions go here
+    }
+  })
+</script>
+</html>
