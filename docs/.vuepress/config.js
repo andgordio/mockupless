@@ -119,6 +119,9 @@ module.exports = {
           title: 'Conditions',
           collapsable: false,
           children: [
+            'Conditionals/',
+            'Conditionals/not',
+            'Conditionals/booleans',
             'Conditionals/rendering',
             'Conditionals/equality',
             'Conditionals/complex',

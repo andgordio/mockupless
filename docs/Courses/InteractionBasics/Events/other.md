@@ -1,10 +1,10 @@
 # Other events
 
-Click is probably the most popular interaction, but there’s a number of other events that allow for richer UX and are expected by users. Three interactions are explored in this article: focus, hover and key press.
+Click is probably the most popular interaction, but there are other events too that allow for richer UX. Three interactions are explored in this article: focus, hover and key press.
 
 ## Focus and unfocus
 
-When designing a form you may want to know when the input field was focused and when it lost its focus. This information can be used to change styles, show suggestion, validate inputs, etc. 
+When designing a form you may want to know when the input field was focused and when it lost its focus. This information can be used to change styles, show suggestion, validate inputs, etc: 
 
 <video width="100%" controls muted class="">
   <source src="./media/other-focus.mp4" type="video/mp4">
@@ -37,14 +37,14 @@ Another common interaction on desktop computers is hovering over elements with t
 </div>
 ```
 
-Note the difference between CSS `:hover` selector and `@mouseover` event listener. `:hover` applies specified styles when the cursor enters the area of an element and also discards them when the cursor leaves. With the event listeners you provide two separate (sets of) instructions: one for cursor entering the area, and one for when it leaves. This is particularly useful when, for example, your design doesn't require anything to happen when the mouse leaves. [Self-practice Task 1](#task-1) is a good example of this type of UX.
+Note the difference between CSS `:hover` selector and `@mouseover` event listener. `:hover` applies specified styles when the cursor enters the area of an element and also discards them when the cursor leaves. With the event listeners you provide two separate (sets of) instructions: one for cursor entering the area, and one for when it leaves. This is particularly useful when, for example, your design doesn't require anything to happen when the mouse leaves. [Self-practice Task 1](#task-1) is a good example of this UX.
 <!-- todo: link: to Layout basics explaining hovers -->
 
 ## Key press
 
-You already know how you can [connect text input](./../Data/display.md#text) to a variable with `v-model`, so everything a user enters is stored in data. You don't need an event listener to achieve that. However sometimes you want to track key presses inside the input field to provide instructions when particular keys are pressed.
+You already know how to [connect text input](./../Data/display.md#text) to a variable with `v-model`, so everything a user enters is stored in data. You don't need an event listener to achieve that. However sometimes you want to track *particular* key presses inside the input field to provide instructions explicitly for those events.
 
-`@keypress` event listener reacts to every key press inside an input field but you rarely need to track this type of interaction. In addition, `@keypress` has modifiers that specify which particular key you want to respond to. For example, a commonly expected behavior when interacting with a search bar or a simple form is the ability to submit by hitting return/enter key. Adding `.enter` modifier  to `@keypress` event listener  allows you to react to this particular key being pressed:
+`@keypress` event listener reacts to every key press inside an input field but you rarely need to track this type of interaction. In addition, `@keypress` has modifiers that specify which particular key you want to respond to. For example, a commonly expected behavior when interacting with a search bar or a simple form is the ability to submit by hitting return/enter key. Adding modifier `.enter`  to `@keypress` event listener  allows you to react to this particular key being pressed:
 
 <video width="100%" controls muted class="">
   <source src="./media/other-keypress.mp4" type="video/mp4">
@@ -57,16 +57,15 @@ You already know how you can [connect text input](./../Data/display.md#text) to 
 <div>Submitted email: {{emailSubmitted}}</div>
 ```
 
-Modifiers are placed right after the name of the event listener. Usually, the instructions in this type of cases are the same as for `@click` on a Submit button as shown in the example above. 
-
-Modifiers include `.tab`, `.esc` and a number of others. You can learn more about them in [Vue.js official guide](https://vuejs.org/v2/guide/events.html#Key-Modifiers).
+Modifiers are placed right after the name of the event listener. List of modifiers includes `.tab`, `.esc` and many others. You can learn more about them in [Vue.js official guide](https://vuejs.org/v2/guide/events.html#Key-Modifiers).
+<!-- Usually, the instructions in this type of cases are the same as for `@click` on a Submit button as shown in the example above.  -->
 
 
 ## Self-practice
 
 ### Task 1
 
-Allow users to switch between different photos by hovering controls:
+Allow users to switch between different photos by hovering the controls:
 
 <video width="100%" controls muted class="">
   <source src="./media/other-practice-1.mp4" type="video/mp4">
@@ -74,13 +73,13 @@ Allow users to switch between different photos by hovering controls:
 
 1. Use the result of [Task 1 in Click](./#task-1) article as a starting file.
 2. Replace `@click` event listeners with `@mouseover` event listeners.
-3. As a result different images should be rendered depending on which circle users hover over.
+3. As a result, different images should be rendered depending on which circle users hover over.
 
 If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/events/event-other-practice-1-end.html.zip).
 
 ### Task 2
 
-Allow users to send a search query without providing a Search button at all:
+Allow users to submit a search query without providing a Search button at all:
 
 <video width="100%" controls muted class="">
   <source src="./media/other-practice-2.mp4" type="video/mp4">
