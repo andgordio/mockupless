@@ -102,10 +102,11 @@ Create a simple color pallete with an ability to select a color and see its Hex 
   <source src="./media/cond-practice-1.mp4" type="video/mp4">
 </video>
 
-1. Create a variable to store the state of the selected color.
-2. Create colored buttons that change the value of the variable on click.
-3. Create colored containers with Hex values inside. Start with two or three of them.
-4. Apply `v-if` to the colored containers so they each of them is rendered only if a particular value is assigned to the variable.
+1. Create a new prototype from the [template](./../Setup/).
+2. Create a variable to store the state of the selected color.
+3. Create colored buttons that change the value of the variable on click.
+4. Create colored containers with Hex values inside. Start with two or three of them.
+5. Apply `v-if` to the colored containers so they each of them is rendered only if a particular value is assigned to the variable.
 
 If you have problems with steps 1–3, download the [starting file](./../../../course-files/interaction-basics/conditionals/cond-rend-practice-1-start.html.zip). It inludes the layout, the variable and the event listeners. Complete step 4 and try adding more color options to the palette.
 

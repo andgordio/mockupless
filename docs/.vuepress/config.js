@@ -122,9 +122,9 @@ module.exports = {
             'Conditionals/',
             'Conditionals/not',
             'Conditionals/booleans',
-            'Conditionals/rendering',
-            'Conditionals/equality',
-            'Conditionals/complex',
+            // 'Conditionals/rendering',
+            // 'Conditionals/equality',
+            // 'Conditionals/complex',
             'Conditionals/styles',
             // 'Conditionals/course-project',
           ]

@@ -1,5 +1,7 @@
 # Complex conditions
 
+<!-- todo: MAYBE remove this article from this course: a little too complex. The only time it is used later is Objects Pro self-practice task-->
+
 ## Multiple conditions — AND
 
 Quite often checking for a single condition is not enough. Let's say your prototype has two kinds of welcome screens — each for a role users choose when signing up:
