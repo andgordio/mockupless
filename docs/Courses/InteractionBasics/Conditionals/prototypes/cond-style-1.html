@@ -175,21 +175,21 @@
       </div>
       <!-- TABBAR -->
       <div class="py-2 bg-white border-t border-grey-light flex items-center justify-around">
-        <div class="flex flex-col items-center w-16" @click="currentTab = 'Newsfeed'">
-          <ion-icon name="list-box" class="text-3xl text-grey"></ion-icon>
-          <div class="text-xs text-grey pt-1">Newsfeed</div>
+        <div class="flex flex-col text-grey items-center w-16" :class="{'text-teal': currentTab === 'Newsfeed'}" @click="currentTab = 'Newsfeed'">
+          <ion-icon name="list-box" class="text-3xl"></ion-icon>
+          <div class="text-xs pt-1">Newsfeed</div>
         </div>
-        <div class="flex flex-col items-center w-16" @click="currentTab = 'Explore'">
-          <ion-icon name="compass" class="text-3xl text-grey"></ion-icon>
-          <div class="text-xs text-grey pt-1">Explore</div>
+        <div class="flex flex-col text-grey items-center w-16" :class="{'text-teal': currentTab === 'Explore'}" @click="currentTab = 'Explore'">
+          <ion-icon name="compass" class="text-3xl"></ion-icon>
+          <div class="text-xs pt-1">Explore</div>
         </div>
-        <div class="flex flex-col items-center w-16" @click="currentTab = 'Notifications'">
-          <ion-icon name="notifications" class="text-3xl text-grey"></ion-icon>
-          <div class="text-xs text-grey pt-1">Notifications</div>
+        <div class="flex flex-col text-grey items-center w-16" :class="{'text-teal': currentTab === 'Notifications'}" @click="currentTab = 'Notifications'">
+          <ion-icon name="notifications" class="text-3xl"></ion-icon>
+          <div class="text-xs pt-1">Notifications</div>
         </div>
-        <div class="flex flex-col items-center w-16" @click="currentTab = 'Profile'">
-          <ion-icon name="person" class="text-3xl text-grey"></ion-icon>
-          <div class="text-xs text-grey pt-1">Profile</div>
+        <div class="flex flex-col text-grey items-center w-16" :class="{'text-teal': currentTab === 'Profile'}" @click="currentTab = 'Profile'">
+          <ion-icon name="person" class="text-3xl"></ion-icon>
+          <div class="text-xs pt-1">Profile</div>
         </div>
       </div>
     </div>

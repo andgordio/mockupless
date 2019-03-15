@@ -17,11 +17,11 @@ module.exports = {
         { text: 'Interaction basics', link: '/Courses/InteractionBasics/' },
         // responsive
         // advanced positioning: fixed, absolute
-        // git
         // animations
         // functions pro: multiple parameters, etc
-        // conditions in functions
+        // complex conditions (and in functions)
         // loops in functions
+        // git
       ]},
       // { text: 'Cookbook', link: '/Cookbook/' },
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
@@ -126,7 +126,6 @@ module.exports = {
             // 'Conditionals/equality',
             // 'Conditionals/complex',
             'Conditionals/styles',
-            // 'Conditionals/course-project',
           ]
         },
         {
