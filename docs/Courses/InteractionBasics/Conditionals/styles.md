@@ -95,7 +95,7 @@ If you have any problems completing the task, dowload and review the [complete p
 
 Design a task list with editable items that change style when checked:
 
-<iframe height="388" style="width: 100%;" scrolling="no" title="Conditional styles—Practice—To Do" src="//codepen.io/andgordy/embed/WmMKBY/?height=388&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="430" style="width: 100%;" scrolling="no" title="Conditional styles—Practice—To Do" src="//codepen.io/andgordy/embed/WmMKBY/?height=430&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/WmMKBY/'>Conditional styles—Practice—To Do</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>

@@ -132,7 +132,7 @@ module.exports = {
           title: 'Lists and Objects',
           collapsable: false,
           children: [
-            'Lists-and-loops/lists',
+            'Lists-and-loops/',
             'Lists-and-loops/indexes',
             'Lists-and-loops/arrays-methods',
             'Lists-and-loops/objects',
