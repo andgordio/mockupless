@@ -1,115 +1,116 @@
 # Managing lists
 
-<video width="100%" controls autoplay muted style="margin-top: 24px; margin-bottom: -24px;">
-  <source src="./media/list-managing-1.mp4" type="video/mp4">
-</video>
+Array is a powerful data type that comes with a number of built-in methods—commands you can give to change its contents. 
 
-## Methods
+Two popular methods are explored in this article: **push** that adds an item to an array, and **splice** that allows to remove items form it. 
 
-The beauty of arrays is how powerful they are when you need to change their content. They come with a toolset of operations you can perform on them. These operations are called **methods**.
+## push
 
-Two methods are explored in this article: **adding** an item to an array and **removing** one from it. You will find yourself using these two methods most often when prototyping, but there are many, many more, that allow you to sort items, filter them, etc.
+When prototyping a productivity app, for example, it is essential to allow users to add items to their agenda or a task list:
 
-## Adding to a list
+! Prototype
 
-When prototyping a task list, or a chat for example, it is essential to allow users to add items to an array. It takes two steps to add a new item to an array:
+If the task list is stored in an array, the goal would be to allow adding items to this array. It takes three pieces of code to achieve this:
 
-1. You need to store user's input that you want to become an item in an array.
-2. As with most interactions, you need an event listener with instructions to add user's input to an array.
+1. An array to render the list
+2. A variable to store users’ input.
+3. An event listener to add users’ input to the array on click.
 
-First step is nothing new—you create a form control [connected to a variable](./../Data/display.md#text) with `v-model` attribute:
+Creating and rendering an array should be the easiest part by now. You create a variable with a couple of items stored by default and render a list from a template-container with v-for directive:
+
+! Html code with v-for and js Code for array
+
+Storing users’ input isn’t new for you either. You create a text input form control [connected](./../Data/forms.md#text) to an empty variable with `v-model` attribute:
+
 ```html
-<div v-for="task in tasks">
-  {{task}}
-</div>
 <input v-model="newTask" placeholder="Add a task...">
 ```
 ```js
 data: {
-  newTask: '',
-  tasks: ['Take a breath', 'Buy lettuce', 'Make smoothie']
+  newTask: ''
 }
 ```
 
-Next you need to add an event listener—for example, `@keypress.enter` on the very same input—to add the variable's value to the array. There's a special method for adding items to an array called `push`:
+Finally you need to add an event listener with instructions to add the value of `newTask` to the `tasks` array. Here’s where method `push` comes into play:
 
 ```html
-<input v-model="newTask" @keypress.enter="tasks.push(newTask)"  placeholder="New task">
+<button @click="tasks.push(newTask)">
+  Add
+</button>
 ```
 
-This instruction can be read as “take the `tasks` array and add the value of `newTask` to it”.
+This instruction can be read as “take the `tasks` array and add the value of `newTask` to it as a new item”.
 
-Now let's take a closer look to the syntax:
+Let's take a closer look to the syntax:
 
-- You attach the method's name to the array's name.
-- You separate them with a dot.
-- You put parentheses after the method's name.
-- You put a value, if a method expects any, inside parentheses.
+- Method's name is separated from the array's name with a dot: `tasks.push`
+- Method's name is followed by parentheses. A value (if a method expects any) is placed within them: `tasks.push(newTask)`
+
+! Rewrite to Click:
 
 As a result, now every time a user presses enter inside the input, the value of the input is added to the array.
 
-### Hands-on
-
-<video width="100%" controls autoplay muted style="margin-top: 24px; margin-bottom: 8px;">
-  <source src="./media/list-managing-1.mp4" type="video/mp4">
-</video>
-
-1. Download the [prototype](./../../../course-files/interaction-basics/manage-list-adding.html.zip).
-2. Open it in Chrome and try adding items to the list by entering a value into the input and pressing return/enter.
-3. You should see the item being added to the list and staying in the input too.
-4. To fix this open open the prototype in VSCode and add another instruction to `keypress.enter` event listener to clean the variable connected to the input. Instructions must be separated with a semicolon and a space `; `. See this being done in the video above.
+! A prototype with adding only
 
 ##  Removing from a list
 
-Taking an item from a list is yet another command you can give to an array. This can be done with the method `splice`  and unlike `push` it takes two parameters, not one:
+Deleting an item from an array can be done with `splice` method. Unlike `push` it takes two parameters, not one. Let’s review a simple example first:
 
-- With first parameter you specify at which **index** you want to start taking items out. Where `push` doesn't care much about the number of items and their indexes in an array—it just adds another item to an array—when it comes to removing things you need to know which item to remove, and indexes are the right tool to track that.
-- With the second parameter you tell how many items you want to remove. Quite often the value is `1`, because most of the time you allow users to delete one item at a time, but it may as well be another number or even a variable.
+! Code with splice command: items.splice(2, 1), also show array with four letters
 
-Continuing with the task list example, you have a list generated from an array with a `v-for` attribute and you track both value and index of each item with `(item, i)` syntax. Now let's add a button to the template, and add `click` event listener with instructions to delete an item it was pressed on:
+- First parameter specifies at which **index** you want to start taking items out. 
+- Second parameter indicates how many items you want to remove from an array. 
 
-<!-- Good thing you already know from the [previous article](./indexes.md#index-in-v-for-attribute) that you can keep track of indexes in containers repeated with `v-for` -->
+The code above reads: “Remove one item from `items` array at index 2”. This means that when this command is applied, C is taken out and the updated array has only three items:
 
-<!-- TAnd the starting index depends on which item a user wants to delete. Good thing you know from the [previous article](./indexes.md#index-in-v-for-attribute) that you can keep track of indexes in containers repeated with `v-for`: -->
+! Code of updated array
 
-```html
-<div v-for="(task, i) in tasks">
-  <button @click="tasks.splice(i, 1)"></button>
-  <div>{{task}}</div>
-</div>
-```
+Going back to the task list example: you have a list generated from an array with a `v-for` attribute:
 
-The value of `@click` can be read as “take the `contacts` array and remove one item from it at the index the button was clicked”. Understanding this concept can be challenging at first, so let's review what's going on here in details:
+! Template container task in tasks
 
-- Let's say you have an array with three items — `tasks: ['A', 'B', 'C']`.
-- You create a template container with `v-for` attribure connected to the array. 
-- You track not only the value of an item for each repetition, but also its index with `(task, i)`.
-- At this point you have 3 containers in your layout. You display the value from an array by using temporary variable `task` and you **track index** of each item with temporary variable `i` without using it anywhere just yet.
-- You add a button that applies `splice` method to the array and uses the value of `i` for the starting index.
-- Now, for example, when you click Remove on the second item in the list, splice method takes the item's index, which is 1 (remember, indexes start from 0 in arrays) and deletes one item starting from index 1, which happens to be the item you pressed Remove on.
+Now you want to add a delete button to every element with an event listener that removes this item on click. `splice` requires the index of the item so we need to track it too:
 
-### Hands-on
+! Template container task, i in tasks
 
-<video width="100%" controls autoplay muted style="margin-top: 24px; margin-bottom: 8px;">
-  <source src="./media/list-managing-3.mp4" type="video/mp4">
-</video>
+Similarly to the way you used index’s temporary name to track which item was selected in the [previous article](./indexes.md), you can now use this name to inform `splice` at which index you want to delete an item:
 
-1. Download the [prototype](./../../../course-files/interaction-basics/manage-list-removing.html.zip).
-2. Open it in Chrome and try removing items by clicking circles to the left of items' texts.
-3. Open the prototype in VSCode and find the `splice` method in `click` event listener. Try changing `i` to `index` in `v-for`  and `click`. Save and preview in Chrome—it should work as before. This is just a reminder, that `i` is just a name you choose in `v-for` to reference it elsewhere.
+! Template with @click splice
+
+Since each item generated from the template knows its index by the name i, when users click delete button on an item with index 2 for example, 2 is passed to splice and the item at index 2 is deleted, which is the item that the button was pressed at.
+
+<!-- todo: As in previous, think about meaningful summary, taking it all back to the very high level, maybe in general, abstract terms. The of the article must make user comfortable with this piece of knowledge.  -->
 
 
-## Self-practice
+## Practice
 
-<!-- todo: task 1: ? -->
+Working with arrays is a complex subject and it’s worth practicing it for a while. Below you can find X exercises ranging from simple to quite complex. Each of them explores different applications of lists and their combination with other features. Take your time to complete all of them—this will make your progress further more comfortable, because lists are present in most prototypes you find further in the course. 
+! Edit last sentences
 
-### Note-taking app
+### Task 1: messages UI
 
-Create an app that allows to create notes and delete notes, and saves the content:
+enter message and keypress.enter to send. See them in the conversation history
+- no delete
+- flex-1 to push down
+
+### Task 2: from one list to another
+ 
+see items in the Catalog column and add them to the Cart column with a click, remove from Cart with Delete. 
+- Taking from one array using index
+- Deleting
+
+### Task 3: note-taking app
+
+Create an app that allows to add, edit and delete notes:
 
 <video width="100%" controls autoplay loop muted style="margin-bottom: 8px;">
   <source src="./media/array-methods-task-1.mp4" type="video/mp4">
 </video>
+
+1. Fork the [starting file]() that has the layout created for you together with the array.
+2. [Connect]() textarea in the template-container to the items in the `notes` array. As a result you will see values from the array in the UI, and all changes you apply to them will be saved in the array. 
+
+! Check if it works without using an index. If it doesn’t, use another task. This is too early to introduce these kinds of problems to people. But why wouldn’t it? It should!
 
 1. Download the [starting file](./../../../course-files/interaction-basics/note-taking-start.html.zip).
 2. Connect textareas to items in the `notes` array. As a result you will see values from the array in the UI. Also open Vue dev tools and try adding some text to the first note—you should see the value of the item change as you type. Hint 1: connecting textareas is done the same way it's done for [inputs](./../Data/display.html#text). Hint 2: you need to use item's index to connect it.
