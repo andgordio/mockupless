@@ -3,7 +3,7 @@
 ![hey](./media/object-diagram-1.png)
 <!-- todo: this illustration must be fixed 🙈 -->
 
-You've created a basic list of contacts in [Lists](./lists.md) section using an array of names and a `v-for` loop. But in real-life prototyping lists are usually a little more complex. For example, in a list of recent conversation each item may contain not only a name, but also a picture, a message and unread indicator:
+You've created a basic list of contacts in [Lists](./) section using an array of names and a `v-for` loop. But in real-life prototyping lists are usually a little more complex. For example, in a list of recent conversation each item may contain not only a name, but also a picture, a message and unread indicator:
 
 ![hey](./media/chats-wireframes-1.png)
 
