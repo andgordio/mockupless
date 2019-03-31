@@ -40,7 +40,7 @@ According to the task you need to display the value of the **selected** item, so
 
 ```js
 data: {
-  contacts: ['Adam', 'Annabelle', 'Bruce', 'Christine', 'Dambo'],
+  contacts: ['Joe Cole', 'Michael B. Jordan', 'Linnea Berthelsen', 'Veronika Ngo', 'Zack Ward'],
   selectedContact: 0
 }
 ```
