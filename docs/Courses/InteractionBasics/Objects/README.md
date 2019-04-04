@@ -26,7 +26,7 @@ Does the syntax of objects look familiar? This is exactly the way `data` contain
 
 ## Accessing object's variables
 
-To access items stored inside an object you use object’s name followed by a dot, followed by the name of a parameter:
+To access items stored inside an object you use object’s name followed by a dot, followed by the name of a variable:
 
 <iframe height="360" style="width: 100%;" scrolling="no" title="Objects—Recent single" src="//codepen.io/andgordy/embed/XGvoRB/?height=360&theme-id=36403&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/XGvoRB/'>Objects—Recent single</a> by And Gordy
