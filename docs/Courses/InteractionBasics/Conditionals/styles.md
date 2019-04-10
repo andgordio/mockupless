@@ -1,15 +1,16 @@
 # Conditional styles
 
-You can use conditions not only to show and hide containers but also to apply different styles to components. In the [Conditional rendering](./) article a prototype with 3 tabs was used as an example. One important feature it was missing is an indication of the selected tab in the bottom bar:
+You can use conditions not only to show and hide containers but also to apply different styles to components. In the [Conditional rendering](./) article a prototype with 3 tabs was used as an example. It was missing one important feature: an indication of the selected tab in the tab bar:
 
-<video width="100%" controls muted class="">
-  <source src="./media/cond-style-1.mp4" type="video/mp4">
-</video>
+<iframe height="662" style="width: 100%;" scrolling="no" title="Conditional rendering—Tabs—Init" src="//codepen.io/andgordy/embed/Lvxeqa/?height=662&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/Lvxeqa/'>Conditional rendering—Tabs—Init</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 This can be achieved with a special **coniditional class** attribute:
 
 ```html
-<div class="text-grey" :class="{'text-teal': currentTab === 'Newsfeed'}">
+<div :class="{'text-teal-500': currentTab === 'Newsfeed'}">
   Newsfeed
 </div>
 ```
@@ -21,33 +22,37 @@ The syntax *is* heavy, but it should be easier to get used to it if you break it
 - Class name and condition pair is surrounded by curly braces.
 - As with other attributes, like regular `class` and `:img` for [dynamic images](./../Data/display.md#images), the value of the attribute is wrapped into double quotation marks.
 
+<!-- todo: write: say it can live together with regular class attribute and show and example -->
+
 ### Many classes, one condition
 
-In the example above only one class was applied conditionally. But let's say the selected tab must not only be colored in teal, but also the font must become bold. Same as with regular `class` attribute you can specify multiple conditional classes:
+In the example above only one class was applied conditionally. But let's say the selected tab must not only be colored in teal, but the bottom border too. Just like with regular `class` attribute you can specify multiple conditional classes:
 
 ```html
-<div class="text-grey" :class="{'text-teal font-bold': currentTab === 'Newsfeed'}">
+<div :class="{'text-teal-500 border-teal-500': currentTab === 'Newsfeed'}">
   Newsfeed
 </div>
 ```
 
-Both classes `text-teal` and `font-bold` will be applied to the container if the condition is satisfied. You can add as many classes as you wish for a single condition inside single quotes. As with regular `class` attribute you separate classes with white spaces.
+Both classes `text-teal-500` and `border-teal-500` will be applied to the container if the condition is satisfied. You can add as many classes as you wish for a single condition by placing them inside single quotes. As with regular `class` attribute you separate class names with white spaces.
 
 ### Many classes, many conditions
 
-Another option you have when styling your components is to provide different classes for different conditions. For example, a Submit button:
-- is greyed-out by default;
-- becomes colored when a user agrees to Privacy Policy;
-- becomes when a users clicks it and the data is uploaded to server.
+Another option you have when styling your components is to provide different classes for different conditions. For example, a Submit button with multiple states:
+- greyed-out by default,
+- colored when users agree to Privacy Policy,
+- half-transparent when users click it and the data is uploaded to server.
 
-<video width="100%" controls muted class="">
-  <source src="./media/cond-style-2.mp4" type="video/mp4">
-</video>
+<iframe height="593" style="width: 100%;" scrolling="no" title="Conditionals—Styles—Form" src="//codepen.io/andgordy/embed/xegjPz/?height=593&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/xegjPz/'>Conditionals—Styles—Form</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 To achieve this you would need two variables and a pair of conditional styles:
 
 ```html
-<div class="bg-grey" :class="{'bg-teal': didAgreeToPrivacy, 'opacity-50': isDataLoading}">
+<div class="bg-gray-400"
+     :class="{'bg-teal-500': didAgreeToPrivacy, 'opacity-50': isDataLoading}">
   Submit
 </div>
 ```
@@ -65,7 +70,7 @@ Design a navigation bar with different styles for inactive and active tabs:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Create a new pen from the template.
+1. Create a new pen by forking the template. <!-- todo: make links to the pen-template itself, not the article! -->
 2. Create a variable to store the state of the currently selected tab, set the default value to `'Library'`.
 3. Design a quick layout for the top navigation bar with 4 tabs.
 4. Add 2 conditional style groups to each tab:

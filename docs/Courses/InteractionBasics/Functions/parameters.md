@@ -1,26 +1,31 @@
 # Parameters
 
-<!-- To finish moving all instructions to functions in the tasks prototype, you need one for removing an item from an array. This instruction is different from the one for adding an item because it needs an index of the item to work properly: -->
+In [Managing lists](./../Lists-and-loops/arrays-methods.html#splice) you learnt to remove an item from a list with `splice` method:
 
-<video width="100%" controls autoplay muted style="margin-top: 24px; margin-bottom: 8px;">
-  <source src="./../Lists-and-loops/media/list-managing-3.mp4" type="video/mp4">
-</video>
+<iframe height="441" style="width: 100%;" scrolling="no" title="Functions—Parameters—List" src="//codepen.io/andgordy/embed/dLvyjV/?height=441&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/dLvyjV/'>Functions—Parameters—List</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-Another type of instructions was reviewed in [Removing from a list](./../Lists-and-loops/arrays-methods.md#removing-from-a-list)—the one that requires an index of an item:
+This is achieved by passing an index of an item into the method:
 
-```html
+```html{3}
 <div v-for="(task, i) in tasks">
-  <button @click="tasks.splice(i, 1)"></button>
   <div>{{task}}</div>
+  <button @click="tasks.splice(i, 1)">
+    X
+  </button>
 </div>
 ```
 
-If you create a function and move the instruction to it the code won't work:
+If you decide to move instructions from click event listener into a function as it was done in the previous article the prototype won’t work:
 
-```html
+```html{3}
 <div v-for="(task, i) in tasks">
-  <button @click="removeItem()"></button>
   <div>{{task}}</div>
+  <button @click="removeItem()">
+    X
+  </button>
 </div>
 ```
 ```js
@@ -31,17 +36,19 @@ methods: {
 }
 ```
 
-We use `i` inside the function but currently the function has no idea what `i` stands for. Anyone can call it from anywhere and by default a function doesn’t know who called it, it doesn't care about the context, **it just executes what's inside**. There's no indication of what the value of `i` is inside the function. <!--, but it's good news, because you don't need _a_ value for i, you need _the_ value of particular item in the list -->
+`i` is used inside the function but currently the function has no idea what `i` stands for. This function can be called from anywhere and it doesn’t know where it was called from. **It just executes the instructions inside**. There's no indication of what the value of `i` is inside the function.
 
-To fix this, the event listener must not only call a function but also provide the required values a function needs to work properly. This is called passing parameters to a function:
+To address this issue the event listener must not only call a function but also provide the required values a function needs to work properly. This is called passing parameters to a function:
 
-```html
+```html{3}
 <div v-for="(task, i) in tasks">
-  <button @click="removeItem(i)"></button>
   <div>{{task}}</div>
+  <button @click="removeItem(i)">
+    X
+  </button>
 </div>
 ```
-```js
+```js{2}
 methods: {
   removeItem (i) {
     this.tasks.splice(i, 1)
@@ -49,23 +56,25 @@ methods: {
 }
 ```
 
-- A value you want to pass to a function is written inside parentheses right after the name of function.
-- When creating a function in methods section, you specify a _name_ for a value a function is expected to get, also inside parentheses. 
-- Now inside a function you can use that _name_ to pass it to `splice` method so it knows which item to delete. 
+- In the `@click` listener you call a function and also pass the the value of `i` to it by placing it inside parentheses.
+- In the function itself in `methods` section you specify a _name_ for a value a function is expected to get, also inside parentheses.
+- Then in function’s instructions this _name_ is used in `splice` method so it knows which item to delete.
 
 ### Naming parameters
 
-When you are passing something into a function, you are actually not passing a variable, which is a name *and* a value. You are only passing a value. This means when you define a function `removeItem (i)` inside methods section you don't mean “expect `i` to be passed to this function”. Instead you mean “expect *a* value and name it `i`, so I can access this value using this name inside the function”.
+When you are passing something into a function, you are actually not passing a variable, which is a name *and* a value. You are only passing a value. This means when you define a function `removeItem (i) {...}` inside methods section you don't mean “expect `i` to be passed to this function”. In fact you mean “expect **a value** and name it `i`, so it can be accessed by this name inside the function”.
 
-As a result, you can give any name to a parameter and use it inside a function. This code works absolutely the same as the one shown above with `i`'s used everywhere:
+This means you can give any name to a parameter and use it inside a function. The following code works the same as the one shown above with `i`'s used everywhere:
 
-```html
+```html{3}
 <div v-for="(task, i) in tasks">
-  <button @click="removeItem(i)"></button>
   <div>{{task}}</div>
+  <button @click="removeItem(i)">
+    X
+  </button>
 </div>
 ```
-```js
+```js{2}
 methods: {
   removeItem (index) {
     this.tasks.splice(index, 1)
@@ -73,23 +82,13 @@ methods: {
 }
 ```
 
-When the function is called, not `i` but **its value**, `2` for example, is passed into a function. And the function gives this value the name `index`, and then the name is used to pass `2` into `splice` method. 
+When the function is called, not `i` but **its value**, `2` for example, is passed into a function. The function gives the name `index` to this value. The name `index` is then used to pass `2` into `splice` method. 
 
-<!-- todo: explain why this is important: This nature allows functions to be very  -->
+This is an important feature even though its value is not too obvious in this simple example. In complex prototypes a function may be called from multiple places, each using different names to pass a value. The ability of functions to accept value and name it as you wish makes them a universal tool. 
 
-### Hands on
+<!-- todo: write: functions are separated with commas -->
 
-<video width="100%" controls autoplay muted style="margin-top: 24px; margin-bottom: 8px;">
-  <source src="./../Lists-and-loops/media/list-managing-3.mp4" type="video/mp4">
-</video>
+## Practice
 
-1. Download the [prototype](./../../../course-files/interaction-basics/functions-parameters-1.html.zip)
-2. Preview it in Chrome.
-3. Open it in VSCode to study methods section and layout.
-4. In `removeItem` function rename the expected parameter from `index` to `itemToDelete`, also rename inside the function in splice method. Preview it in Chrome—the prototype should work as before.
+> prototypes with indexes from previous articles.
 
-<!-- ## multiple values ? -->
-
-## Self-practice
-
-> coming soon

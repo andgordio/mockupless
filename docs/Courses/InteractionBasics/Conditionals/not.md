@@ -2,13 +2,14 @@
 
 `v-if` asks a questions “Should I render the component I am assigned to?” and when its condition returns `true` the component is shown. Checking for equality in the previous article worked well for components designed for a particular state of UI. For example: Newsfeed container is shown only when `currentScreen` is equal to `'Newsfeed'`.
 
-Yet sometimes you need a component to be shown everywhere **except** for a particular state. For example, if you need to hide the top bar when Profile is selected, the condition should read “when `currentScreen` is not equal to `'Profile'`”:
+Yet sometimes you need a component to be shown everywhere **except** for a particular state. For example, you need to hide the header that shows the title of the current view when Profile is selected:
 
-<video width="100%" controls muted loop class="">
-  <source src="./media/cond-ineq-1.mp4" type="video/mp4">
-</video>
+<iframe height="660" style="width: 100%;" scrolling="no" title="Conditionals—Inequality—Tabs" src="//codepen.io/andgordy/embed/LvRrmx/?height=660&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/LvRrmx/'>Conditionals—Inequality—Tabs</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-To achieve this you need to render the top bar conditionally and check for inequality:
+In this case the condition is “when `currentScreen` is not equal to `'Profile'`”. To achieve this you need to render the header conditionally checking for **inequality**:
 
 ```html
 <div v-if="currentTab !== 'Profile'">{{currentTab}}</div>
@@ -20,52 +21,31 @@ The syntax can be read as: show the container only if the value of `currentTab` 
 
 ## Self-practice
 
-### Task 1
+### Color palette 2
 
 Add indication of the selected color by showing a hole in all non-selected buttons: 
 
-<video width="100%" controls muted loop class="">
-  <source src="./media/cond-ineq-practice-1.mp4" type="video/mp4">
-</video>
+<iframe height="453" style="width: 100%;" scrolling="no" title="Conditionals—Inequality—Task: Palette, full" src="//codepen.io/andgordy/embed/yraEMw/?height=453&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/yraEMw/'>Conditionals—Inequality—Task: Palette, full</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-1. Use the result of Task 1 in [Conditional rendering](./#task-1) article as a starting file.
-2. Add holes to all color picker buttons. A hole is basically a smaller rounded container inside the button with white background. 
-3. Add conditions to all holes, so they appear if the selected color is **not** the one they are placed in.
+1. Use your result of Color palette task in [Conditional rendering](./#color-palette) article as a starting file. You can also fork the [one from the article](https://codepen.io/andgordy/pen/XQKZEK?editors=1000).
+2. Add holes to all color picker buttons. A hole is essentially a smaller rounded container with white background centered inside the button. 
+3. Add conditions to all holes so they appear if the selected color is **not** the one they are placed in.
 4. As a result all non-selected buttons must look outlined and the selected one should look filled.
 
-If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/conditionals/cond-ineq-practice-1-end.html.zip).
+### Tabs 2
 
-### Task 2
+Recreate the prototype from this article and add another tab:
 
-Recreate and extend the prototype from this article:
+<iframe height="665" style="width: 100%;" scrolling="no" title="Conditionals—Inequality—Tabs, Extended" src="//codepen.io/andgordy/embed/NmRzmJ/?height=665&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/NmRzmJ/'>Conditionals—Inequality—Tabs, Extended</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-<video width="100%" controls muted loop class="">
-  <source src="./media/cond-ineq-practice-2.mp4" type="video/mp4">
-</video>
-
-1. Use the result of Task 2 in [Conditional rendering](./#task-2) article as a starting file.
-2. Add `v-if` to top bar container with a condition to be shown when `currentTab` is **not** `'Profile'`.
-3. Add a new item to the bottom tab bar with click event listener that changes the value of `currentTab` to `'Notifications'`.
+1. Use your result of Tabs task in [Conditional rendering](./#tabs ) article as a starting file. You can also fork the [one from the article](https://codepen.io/andgordy/pen/dLXppP?editors=1000).
+2. Add `v-if` to header that shows the title of the current view. The condition is condition to render it when `currentTab` is **not** `'Profile'`.
+3. Add a new item to the nav bar with click event listener that changes the value of `currentTab` to `'Notifications'`.
 4. Add new content container between Explore and Profile with conditional rendering if Notitications is selected in the bottom bar. The content of this view is up to you—feel free to copy and paste parts from other views.
 5. As a result you should have a prototype with 4 tabs. The top bar must be hidden when the Profile view is shown. 
-
-If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/conditionals/cond-ineq-practice-2-end.html.zip).
-
-<!-- In this case you would have to check whether a  -->
-
-<!-- In this case the component should be rendered if  -->
-
-<!-- Yet sometimes you need a component to be *hidden* in a particular state and there’s no way of asking “Should this component be hidden?” with `v-if`.  -->
-
-<!-- `v-if` renders a container when its condition returns `true`. This worked well for components designed for a particular state of UI. For example: Newsfeed container is shown only when `'Newsfeed'` is assigned to `current screen`. Yet sometimes you need a component to be *hidden* in a particular state. 
-show everywhere **except** for a particular view. -->
-
-<!-- Sometimes you specify rules, but sometimes how the rules are broken
-
-Some elements of UI break the rules
-
-Similarly to the way you check for equality in `v-if` conditions with `===` operator you can also check for inequality.  -->
-
-<!-- ## Not equal -->
-
-

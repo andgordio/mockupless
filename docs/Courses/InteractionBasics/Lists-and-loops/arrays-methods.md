@@ -133,7 +133,7 @@ Similarly to the way you used index’s temporary name to track which item was s
 
 ```html{1,3}
 <div v-for="(task, i) in tasks">
-  {{task}}
+  <div>{{task}}</div>
   <button @click="tasks.splice(i, 1)">
     X
   </button>
