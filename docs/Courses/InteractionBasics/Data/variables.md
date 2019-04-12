@@ -117,15 +117,25 @@ Just like boolean values, `null` is a reserved word, so it is written without qu
 
 <!-- The difference between an empty string and null, or 0 and null is almost non-existent until you start , and null is not used in this course at all. However, when you start going into details of functions and  -->
 
-## Self-practice
+<!-- todo: this task is not particularly useful -->
 
-<video width="100%" controls muted class="video afterh2">
+<!-- ## Practice
+
+<iframe height="320" style="width: 100%;" scrolling="no" title="Variables—Task" src="//codepen.io/andgordy/embed/XQRdKE/?height=320&theme-id=36403&default-tab=js" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/XQRdKE/'>Variables—Task</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe> -->
+
+<!-- <video width="100%" controls muted class="video afterh2">
   <source src="./media/data-types-practice.mp4" type="video/mp4">
-</video>
+</video> -->
 
-1. Create a new prototype from the [template](./../Setup/`) and open it in VSCode.
+<!-- 1. Create a new prototype from the [template](./../Setup/`).
+2. Add one variable for each type of data explored in this article: a string, a number, a boolean and a null. Remember, variables belong to `data` section, and naming variables is up to you. -->
+
+<!-- 1. Create a new prototype from the [template](./../Setup/`) and open it in VSCode.
 2. Add one variable for each type of data explored in this article: a string, a number, a boolean and a null. Remember, variables belong to `data` section, and naming variables is up to you.
 3. Save the prototype and open it in Chrome. Open [Vue developer tools](./../Setup/devtools.md#use) and select `<Root>` element in the upper section. You should be able to see the variables you added to the prototype in the lower section.
-4. Double-click on a variable's value or click on a pencil icon when hovering a variable. This way you enter the edit mode that allows to change the name and the value of a variable. Press return/enter to save changes. You may also use a checkbox control for booleans to switch between values, and - / + buttons to decrease and increase number values. Similarly to [editing CSS in Chrome dev tools]() <!-- todo: link: editing CSS with devtools --> this allows you to quickly try minor tweaks without going to VSCode, editing, saving, going back to a browser and reloading a prototype.  
+4. Double-click on a variable's value or click on a pencil icon when hovering a variable. This way you enter the edit mode that allows to change the name and the value of a variable. Press return/enter to save changes. You may also use a checkbox control for booleans to switch between values, and - / + buttons to decrease and increase number values. Similarly to [editing CSS in Chrome dev tools]() this allows you to quickly try minor tweaks without going to VSCode, editing, saving, going back to a browser and reloading a prototype.  
 
-If you have problems completing the task [download](./../../../course-files/interaction-basics/data/data-types-practice.html.zip) the final result.
+If you have problems completing the task [download](./../../../course-files/interaction-basics/data/data-types-practice.html.zip) the final result. -->
