@@ -104,7 +104,7 @@ As a result, when an item is selected from a list it’s value is shown on the r
 
 ## Practice
 
-### Task 1: Color grid
+### Color grid
 
 Create a 3x3 grid with a different background color for a selected item:
 

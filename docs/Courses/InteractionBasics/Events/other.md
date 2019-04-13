@@ -6,24 +6,26 @@ Click is probably the most popular interaction, but there are other events too t
 
 When designing a form you may want to know when the input field was focused and when it lost its focus. This information can be used to change styles, show suggestion, validate inputs, etc: 
 
-<video width="100%" controls muted class="">
-  <source src="./media/other-focus.mp4" type="video/mp4">
-</video>
+<iframe height="332" style="width: 100%;" scrolling="no" title="Events—Other—Focus" src="//codepen.io/andgordy/embed/vMJdGa/?height=332&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/vMJdGa/'>Events—Other—Focus</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 Event listeners `@focus` and `@blur` are responsible for catching these interactions: 
 
 ```html
 <input @focus="didFocusInput = true" @blur="didFocusInput = false">
-<div>Did focus input: {{didFocusInput}}</div>
+<div>Did focus: {{didFocusInput}}</div>
 ```
 
 ## Hover
 
 Another common interaction on desktop computers is hovering over elements with the mouse cursor. `@mouseover` event listener tracks when a cursor *enters* the area of the element. Its counterpart `@mouseleave` reacts to a cursor *leaving* the area of an element:
 
-<video width="100%" controls muted class="">
-  <source src="./media/other-hover.mp4" type="video/mp4">
-</video>
+<iframe height="383" style="width: 100%;" scrolling="no" title="Events—Other—Hover" src="//codepen.io/andgordy/embed/JVypbO/?height=383&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/JVypbO/'>Events—Other—Hover</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ```html
 <div @mouseover="didHoverCalendar = true" @mouseleave="didHoverCalendar = false">
@@ -46,69 +48,51 @@ You already know how to [connect text input](./../Data/display.md#text) to a var
 
 `@keypress` event listener reacts to every key press inside an input field but you rarely need to track this type of interaction. In addition, `@keypress` has modifiers that specify which particular key you want to respond to. For example, a commonly expected behavior when interacting with a search bar or a simple form is the ability to submit by hitting return/enter key. Adding modifier `.enter`  to `@keypress` event listener  allows you to react to this particular key being pressed:
 
-<video width="100%" controls muted class="">
-  <source src="./media/other-keypress.mp4" type="video/mp4">
-</video>
+<iframe height="394" style="width: 100%;" scrolling="no" title="Events—Other—Keypress" src="//codepen.io/andgordy/embed/JVypML/?height=394&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/JVypML/'>Events—Other—Keypress</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ```html
-<input v-model="emailInput" @keypress.enter="emailSubmitted = emailInput; emailInput = ''">
-<button @click="emailSubmitted = emailInput; emailInput = ''">Subscribe</button>
-...
-<div>Submitted email: {{emailSubmitted}}</div>
+<input v-model="emailInput"
+       @keypress.enter="emailSubmitted = emailInput; emailInput = ''">
+<button @click="emailSubmitted = emailInput; emailInput = ''">
+  Subscribe
+</button>
+<div>
+  Submitted {{emailSubmitted}}
+</div>
 ```
 
 Modifiers are placed right after the name of the event listener. List of modifiers includes `.tab`, `.esc` and many others. You can learn more about them in [Vue.js official guide](https://vuejs.org/v2/guide/events.html#Key-Modifiers).
 <!-- Usually, the instructions in this type of cases are the same as for `@click` on a Submit button as shown in the example above.  -->
 
 
-## Self-practice
+## Practice
 
-### Task 1
+### Product card
 
 Allow users to switch between different photos by hovering the controls:
 
-<video width="100%" controls muted class="">
-  <source src="./media/other-practice-1.mp4" type="video/mp4">
-</video>
+<iframe height="655" style="width: 100%;" scrolling="no" title="Events—Other—Task: Card" src="//codepen.io/andgordy/embed/wZqyjv/?height=655&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/wZqyjv/'>Events—Other—Task: Card</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-1. Use the result of [Task 1 in Click](./#task-1) article as a starting file.
-2. Replace `@click` event listeners with `@mouseover` event listeners.
+1. Fork the result of [Task 1 in Click](./#product-card) article as a starting file. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/rbzpmB?editors=1000).
+2. Replace `@click` event listeners with `@mouseover` event listeners on colored circles.
 3. As a result, different images should be rendered depending on which circle users hover over.
 
-If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/events/event-other-practice-1-end.html.zip).
-
-### Task 2
+### Search form
 
 Allow users to submit a search query without providing a Search button at all:
 
-<video width="100%" controls muted class="">
-  <source src="./media/other-practice-2.mp4" type="video/mp4">
-</video>
+<iframe height="348" style="width: 100%;" scrolling="no" title="Events—Task—Search" src="//codepen.io/andgordy/embed/gyxvKN/?height=348&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/gyxvKN/'>Events—Task—Search</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. Create a simple layout with a search bar and a heading.
-2. Add `@keypress.enter` event listener to the text input.
-3. Display users’ query in the heading when they press return/enter.
-
-If you have problems completing the task download the [final result](./../../../course-files/interaction-basics/events/event-other-practice-2-end.html.zip).
-
-<!-- #### Task
-
-Create a prototype of search input field with multiple interactive features:
-
-<video width="100%" controls loop autoplay muted style="margin-top: 0px; margin-bottom: 24px;">
-  <source src="./media/search-task-demo.mp4" type="video/mp4">
-</video>
-
-- when focused, the suggestions box is shown;
-- if the search input is empty, the message is shown in the suggestion box: “Start inputing query to see results”;
-- if the search input is not empty, the suggestions are shown;
-- if the search input is not empty, the clear (x) button is shown;
-- pressing return/enter hides suggestions box;
-- clicking clear (x) button clears input and hides suggestions box;
-- clicking on a suggestion puts the suggestion into input and hides suggestions box.
-
-Download the [starting layout](./../../../course-files/interaction-basics/events-other-task-1-start.html.zip) or feel free to create your own.
-
-#### Solution
-
-If you have any problems completing the task, dowload and review the [complete prototype](./../../../course-files/interaction-basics/events-other-task-1-end.html.zip) -->
+2. Create 2 variables: one for storing the input and another one to store the submitted query.
+3. Add `@keypress.enter` event listener to the text input.
+4. Display users’ query in the heading when they press return/enter. Also clear the search input.
