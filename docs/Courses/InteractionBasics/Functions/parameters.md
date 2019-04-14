@@ -90,5 +90,43 @@ This is an important feature even though its value is not too obvious in this si
 
 ## Practice
 
-> prototypes with indexes from previous articles.
+To practice working with properties add them to the prototypes you’ve created previousely that use index in their instructions:
 
+### Channels
+
+<iframe height="379" style="width: 100%; margin-top: 16px;" scrolling="no" title="Functions—Parameters—Task: Channels" src="//codepen.io/andgordy/embed/NmaKmx/?height=379&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/NmaKmx/'>Functions—Parameters—Task: Channels</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+1. Fork the result of [Navigation with counters](./../Objects/#navigation-with-counters) from Objects article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/ywWjdd?editors=1000).
+2. Create a function `selectChannel`. 
+3. Move instructions from click listener to the function. Don’t forget to add `this.` everywhere you reference a variable from `data` section.
+4. Expect a value in the function. Call it `index` and use it in the `push` method.
+5. Use the function in the click listener by placing its name followed by paretheses. Pass index as a parameter.
+
+### From list to list
+
+<iframe height="413" style="width: 100%; margin-top: 16px;" scrolling="no" title="Functions—Parameters—Task: Lists" src="//codepen.io/andgordy/embed/JVrPxv/?height=413&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/JVrPxv/'>Functions—Parameters—Task: Lists</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+1. Fork the result of [From list ot list](./../Lists-and-loops/arrays-methods.html#from-a-list-to-a-list) task from Managing lists article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/EMrRed?editors=1000).
+2. Create two functions: `fromLeftToRight` and `fromRightToLeft`.
+3. Move instructions from click listeners to the functions. Don’t forget to add `this.`
+4. Expect values in the functions. Call them `index` and use them the `push` and `splice` methods.
+5. Use the functions in the click listeners by placing their name followed by paretheses. Pass an index as a parameter to each of them.
+
+### Notes app
+
+<iframe height="564" style="width: 100%; margin-top: 16px;" scrolling="no" title="Functions—Parameters—Task: Notes" src="//codepen.io/andgordy/embed/VNMZOq/?height=564&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/VNMZOq/'>Functions—Parameters—Task: Notes</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+1. Fork the result of [Note-taking app](./../Lists-and-loops/arrays-methods.html#note-taking-app) task from Managing lists article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/ywwOPb?editors=1000).
+2. Create two functions: `addNote` and `deleteNote`.
+3. Move instructions from click listeners to the functions. Don’t forget to add `this.`
+4. Expect a value in the `deleteNote` function. Call it `index` and use it in the `splice` method.
+5. Use the functions in the click listeners by placing their name followed by paretheses. Pass an index as a parameter to `deleteNote`.

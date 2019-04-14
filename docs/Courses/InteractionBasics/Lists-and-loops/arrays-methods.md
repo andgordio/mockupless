@@ -152,7 +152,7 @@ Since each item generated from the template knows its index by the name i, when 
 <!-- Working with arrays is a complex subject and it’s worth practicing it for a while. Below you can find X exercises ranging from simple to quite complex. Each of them explores different applications of lists and their combination with other features. Take your time to complete all of them—this will make your progress further more comfortable, because lists are present in most prototypes you find further in the course. 
 ! Edit last sentences -->
 
-### Task 1: Chat
+### Chat
 
 Create a chat view that allows to send messages:
 
@@ -167,7 +167,7 @@ Create a chat view that allows to send messages:
 4. Add a `@keypress.enter` event listener to the input with `push` method that adds contents of the input to the array.
 5. Add an instruction to clear the input to the same event listener.
 
-### Task 2: From a list to a list
+### From a list to a list
 
 Design a prototype that allows to move items between 2 lists. This task is a litte abstract but it’s good for honing your basic list management skills:
 
@@ -181,7 +181,7 @@ Design a prototype that allows to move items between 2 lists. This task is a lit
 3. Make sure to track indexes in the templates.
 4. Add click listeners to both templates with two instructions. First one adds the selected item to the opposing array with `push`. Second instruction removes the selected item from the array it was selected from with `splice`.
 
-### Task 3: Note-taking app
+### Note-taking app
 
 Create an app that allows to add, edit and delete notes:
 

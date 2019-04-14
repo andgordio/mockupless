@@ -235,24 +235,3 @@ cars: [
 5. Apply conditional styles to text for items that have `isSoldOut` equal to `true`.
 
 <!-- todo: create: Simpler task with conditionals and images -->
-
-<!-- tobad: requires complex conditions
-
-### Filtered list
-
-Create a list with an option to filter it by one of the parameters:
-
-<iframe height="704" style="width: 100%;" scrolling="no" title="Objects—Task: Filters complete" src="//codepen.io/andgordy/embed/mgJbzP/?height=704&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/andgordy/pen/mgJbzP/'>Objects—Task: Filters complete</a> by And Gordy
-  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-1. Fork the the starting [prototype](https://codepen.io/andgordy/full/YMXzpp).
-2. Connect the template-container to the `cars` array with `v-for` directive.
-3. Display `make`, `model`, `description` and `year` for each item.
-4. Create a variable `selectedFilter` to store the state of the filter, and [connect](./../Data/forms.md#dropdown-select) it to the `select` control in the header.
-5. Add a [complext condition](./../Conditionals/complex.md) to the item template to enable filtering. Each item is rendered if:
-  - `All` selected in the filters list, or
-  - The selected filter name equals to the item's `make` value.
-  
-  -->

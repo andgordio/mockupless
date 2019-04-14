@@ -85,14 +85,15 @@ To practice working with functions add them to the prototypes you’ve created t
 
 ### Simple form
 
-[task](./../Events/#task-2)
+<iframe height="555" style="width: 100%; margin-top: 16px;" scrolling="no" title="Functions—Task: Profile info" src="//codepen.io/andgordy/embed/VNzdxE/?height=555&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/VNzdxE/'>Functions—Task: Profile info</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-> todo: return to this when the Events articles are moved to CodePen
-
-1. Fork
-2. Create 3 functions
-3. Move instructions
-4. Don't forget `this.`
+1. Fork the result of [Profile information](./../Events/#profile-information) task in Events article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/wZqpmE?editors=1000)
+2. Create a `submitForm` function in JS section, inside `methods`.
+3. Move instructions from Submit button’s click listener to the function. Don't forget to add `this.` to all references of the variables.
+4. Use the function in the click listener by placing its name followed by paretheses. 
 
 ### Chat
 
@@ -101,19 +102,21 @@ To practice working with functions add them to the prototypes you’ve created t
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Fork your result of [Lists—Task: Messenger](./../Lists-and-loops/arrays-methods.md#task-1-chat) task. Or fork the [one from the article](https://codepen.io/andgordy/full/RdvymE).
+1. Fork your result of [Lists—Task: Messenger](./../Lists-and-loops/arrays-methods.md#task-1-chat) task from Array methods article. Or fork the [one from the article](https://codepen.io/andgordy/full/RdvymE).
 2. Create a `sendMessage` function in `methods` section.
 3. Move the instructions from `@keypress.enter` event listener to the function.
-4. Don’t forget to add `this.` everytime you reference a variable from `data` section within a function.
+4. Don’t forget to add `this.` everywhere you reference a variable from `data` section within a function.
+5. Use the function in the key press listener by placing its name followed by paretheses.
 
-### Image previews
+### Product card
 
-[task](./../Events/other.html#task-1)
+<iframe height="647" style="width: 100%; margin-top: 16px;" scrolling="no" title="Functions—Task: Product card" src="//codepen.io/andgordy/embed/WWEygr/?height=647&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andgordy/pen/WWEygr/'>Functions—Task: Product card</a> by And Gordy
+  (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-> todo: return to this when the Events articles are moved to CodePen
-
-1. Fork
-2. Create 3 functions
-3. Move instructions
-4. Don't forget `this.`
+1. Fork the result of [Product card](./../Events/other.html#product-card) task from Events article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/wZqyjv?editors=1000)
+2. Create 3 functions: `hoverFirst`, `hoverSecond` and `hoverThird`.
+3. Move instructions from hover listeners to the functions. Don't forget to add `this.`
+4. Use the functions in the hover listeners by placing their names followed by paretheses. 
 
