@@ -111,8 +111,6 @@ module.exports = {
           children: [
             'Events/',
             'Events/other',
-            // 'Events/arithmetics', 
-            // 'Events/practice'
           ]
         },
         {
@@ -122,9 +120,6 @@ module.exports = {
             'Conditionals/',
             'Conditionals/not',
             'Conditionals/booleans',
-            // 'Conditionals/rendering',
-            // 'Conditionals/equality',
-            // 'Conditionals/complex',
             'Conditionals/styles',
           ]
         },
@@ -159,8 +154,6 @@ module.exports = {
           children: [
             'Course-project/',
             'Course-project/complications',
-            // 'course-project/guide',
-            // 'course-project/whats-next',
           ]
         },
       ],

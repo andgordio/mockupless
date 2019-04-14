@@ -78,7 +78,8 @@ degreesOutside: '-15°C',   // valid string
 degreesOutside: -15°C      // invalid value
 ```
 
-[Next article](./display.md) explains how to add symbols to numbers that store only digital values in your UI, and [Arithmetics](./../Events/arithmetics.md) article shows how numbers can be used for calculations.
+[Next article](./display.md) explains how to add symbols to numbers that store only digital values in your UI.
+<!-- and [Arithmetics](./../Events/arithmetics.md) article shows how numbers can be used for calculations. -->
 
 
 ### Boolean
