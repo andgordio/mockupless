@@ -87,12 +87,12 @@ module.exports = {
       ],
       '/Courses/InteractionBasics/': [
         {
-          title: 'Intro to Interaction basics',
+          title: 'Intro',
           collapsable: false,
           children: [
             '',
             'Setup/',
-            'Setup/devtools',
+            'Setup/Practice',
           ]
         },
         {
@@ -148,14 +148,14 @@ module.exports = {
             'Functions/parameters',
           ]
         },
-        {
-          title: 'Course project',
-          collapsable: false,
-          children: [
-            'Course-project/',
-            'Course-project/complications',
-          ]
-        },
+        // {
+        //   title: 'Course project',
+        //   collapsable: false,
+        //   children: [
+        //     'Course-project/',
+        //     'Course-project/complications',
+        //   ]
+        // },
       ],
       '/Cookbook/': [
         '',

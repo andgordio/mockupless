@@ -5,9 +5,9 @@ In Layout basics you’ve learnt how to inspect your HTML and CSS code in Chrome
 
 ## Install
 
-<video width="100%" controls muted class="video afterh2">
+<!-- <video width="100%" controls muted class="video afterh2">
   <source src="./media/devtools-1.mp4" type="video/mp4">
-</video>
+</video> -->
 
 1. Install Vue.js dev tools extension from [chrome web store](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd). It’s also available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/).
 2. Right-click Vue icon on the right side of Chrome's toolbar and select **Manage Extensions**. If you don't see the icon, open Chrome menu and find it there.
@@ -16,9 +16,9 @@ In Layout basics you’ve learnt how to inspect your HTML and CSS code in Chrome
 
 ## Use
 
-<video width="100%" controls muted class="video afterh2">
+<!-- <video width="100%" controls muted class="video afterh2">
   <source src="./media/devtools-2.mp4" type="video/mp4">
-</video>
+</video> -->
 
 1. Download the [template](./README.md) and open it in Chrome. The Vue icon is supposed to become green, indicating that Vue.js is detected on the page.
 2. Open developer tools: *option+command+I* or *Menu → More Tools → Developer Tools*

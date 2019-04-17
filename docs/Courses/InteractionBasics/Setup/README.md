@@ -1,76 +1,91 @@
 # Prototyping template
 
-You are going to create prototypes as standalone HTML files throughout the course. Creating an empty file, importing required frameworks and setting up the contents for every new prototype is neither fun nor time-efficient. After prototyping for a while, you’ll be able to define your default set of tools and create a **template**—a file without content but with a particular setup—and start new projects with it instead of an empty file.
+In Layout basics you learnt how to use [CodePen](), create new pens and fork existing ones. In [Tailwind]() and [Ionicons]() sections you also learnt to import libraries into your pens. However, creating a new pen, importing frameworks and setting up the contents for every new prototype is not the most time-efficient workflow.
+<!-- todo: link: to articles-->
 
-Before you create your own template, feel free to use the one below. It was used to create all examples in the course, and has everything you need to practice what you learn:
+After prototyping for a while you’ll be able to define your default set of tools and create **templates**—files with minimal to no content but with a particular setup. You can use templates to kick off new prototypes without having to set everything up from scratch. 
 
-<a href="./../../../course-files/interaction-basics/template.html.zip" class="ghost-button">Download the template</a>
+This course is using the [Mockupless basic](https://codepen.io/andgordy/pen/OqQPNa) template and we recommend to use it too when progressing through the course. This way you can be sure your environment matches the one in the articles. 
 
-## What's inside
+## Fork and use
 
-The prototyping template is based on HTML5 template that VSCode creates for you with `html:5` shortcut:
-<!-- todo: link: to Layout basics article explaining -->
+Open the [Mockupless Basic](https://codepen.io/andgordy/pen/OqQPNa) template and fork it:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
-</html>
-```
+![An arrow pointing to the Fork button in CodePens UI](./media/template-fork.png)
 
-Next, Vue.js is added to the `head` container together with [Tailwind](./../../LayoutBasics/Tailwind/whats.md) and Ionicons:
-<!-- todo: link: to a Layout basics section about ionicons  -->
+Now go to CodePen’s home page and locate *from template* button under the *Create Pen*. When you press it you should be able to see *Mockupless basic* as an option:
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-<link href="https://unpkg.com/ionicons/dist/css/ionicons.min.css" rel="stylesheet">
-```
+![An arrow pointing to the Fork button in CodePens UI](./media/template-create.png)
 
-With vue.js imported in your template there are two other pieces you need to setup for the framework to function properly. First piece is a container with `id="app"` attribute inside `body` container:
+ Choose it and you’re done: a new pen is created from the template.
+
+## What’s inside
+
+### Freameworks
+
+There are three libraries/frameworks imported in the template:
+
+- Tailwind and Ionicons can be found in the CSS settings (gear icon on the left of CSS section header)
+- Vue.js is imported in JS settings (gear icon in the JS header)
+
+### HTML
+
+The HTML code includes a single container with `id="app"` and a couple of default classes:
 
 ```html
-<body>
-  <div id="app">
-    <!-- layout with content goes here -->
-  </div>
-</body>
+<div id="app" class="text-black antialiased">
+  <!-- layout goes here -->
+</div>
 ```
 
-This tells Vue.js where to look for Vue.js-related code in your layout. 
+`antialiased` class makes font rendering closer to what you are used to in design tools, and `text-black` resets the default text color to Tailwind’s black, so your texts fit better into the color palette.
 
-::: tip Important
-Make sure you place all contents of your prototypes inside this container. Everything you put outside will not be recognized by Vue.js and may produce errors. 
-:::
+#### 🚨 Important 
+Make sure you place all contents of your prototypes inside this container. Everything you put outside will not be recognized by Vue.js and may produce errors.
 
-The second part of Vue.js setup is the `script` container:
+### CSS
 
-```html
-<script>
-  var app = new Vue({
-    el: '#app',
-    data: {
-      // variables go here
-    },
-    methods: {
-      // functions go here
-    }
-  })
-</script>
+The CSS block resets some styles of form controls: removes glow from inputs when they are in focus, sets the color of placeholders, and changes the default design of dropdown controls.
+
+### JS
+
+The JS block has a Vue instance:
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    // variables go here
+  },
+  methods: {
+    // functions go here
+  }
+})
 ```
 
-`script` container is placed between `</body>` and `</html>` closing tags in this template.
+Technical details of what Vue instance is and how exactly it works are irrelevant to the interaction basics covered in this course. What's really important is it has two containers:
 
-Also, don't be confused by the syntax and contents of this code. It looks complex, but you will use it to simply store some of your code in `data` and `methods` containers. Everything else is there for Vue.js to work, and it does its job flawlessly without us understanding how it functions.
+- `data` is used to store variables.
+- `methods` is used to store functions.
+
+Variables are covered in the next section, so you will work with `data` container throughout the whole course. Functions are briefly described towards the end of the course so you’ll get a chance to work with `methods` then.
+
+<!-- todo: explain how to work with practice tasks. Maybe in a separate short article.  -->
+
 
 ## Customization
 
-The template above includes the just-enough setup, but it doesn’t mean your own template has to be basic too when you decide to create one. You are free to include multiple custom fonts, icon and style libraries and JavaScript frameworks of your choice. When the time comes you can start creating a template tailor-fit for your needs from scratch or use the template from this course as a foundation.
+The Mockupless basic template includes the just-enough setup, but it doesn’t mean your own template has to be minimalistic too, if you decide to create one. You are free to include multiple custom fonts, icon and style libraries together with JavaScript frameworks of your choice. When the time comes you can create a template from scratch or use Mockupless basic as a foundation.
+
+To create your own template on CodePen, fork an existing pen or create a new one, go to pen’s **Settings** (button in the top right) and switch from Regular Pen to **Template** under the **Pen Details** tab. 
+
+
+
+
+
+ 
+
+
+
+
+
