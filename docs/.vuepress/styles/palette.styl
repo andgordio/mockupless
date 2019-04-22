@@ -113,16 +113,24 @@ div[class*="language-"] .highlight-lines .highlighted
   background-color: #f6f7f9
 
 .content pre.language-js code, .content pre.language-html code, .content pre.language-vue code, .content pre.language-css code
-  color #000
+  // color #000
+  // color #333e44
+  color #223946
 
 .token.punctuation
-  color #AAA
+  color #a4afbf
 
 .token.boolean, .token.number, .token.function
   color #30AAAA
 
-.token.tag, .token.attr-name, .token.namespace, .token.deleted
-  color #8795A1
+.token.tag
+  // color #8795A1
+  color #586e8a
+
+.token.attr-name, .token.namespace, .token.deleted
+  // color #8795A1
+  color #4b8ee4
+  // color #d877a7
 
 .token.string, .token.char, .token.attr-value, .token.regex, .token.variable
   color #30AAAA
@@ -132,6 +140,13 @@ div[class*="language-"] .highlight-lines .highlighted
 
 .token.operator, .token.entity, .token.url
   color #30AAAA
+
+.token.comment, .token.block-comment, .token.prolog, .token.doctype, .token.cdata
+  // color #cc8699
+  // color #cc8746
+  // color #f39943
+  // color #b371a7
+  color #daa06a
 
 div[class*="language-"]::before
   color #CCC

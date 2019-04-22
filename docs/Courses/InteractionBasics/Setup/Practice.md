@@ -2,7 +2,7 @@
 
 Most articles have tasks for you to practice new material. Completing them is optional yet highly recommended. Some tasks aim to be as close as possible to real-world experiences and some are relatively abstract—crafted purely for the sake of you getting a deeper understanding of the technology. 
 
-Each task comes with a complete prototype. If you struggle with a task or you want to compare your prototype’s code to the one from an article, you can view the code of the complete prototype by opening HTML, CSS or JS panels. You can also view it in full screen, edit and fork by pressing Edit on CodePen:
+Each task comes with a complete prototype. If you struggle with a task or you want to compare your prototype’s code to the one from an article, you can view the code of the complete prototype by opening HTML, CSS or JS panels. You can also view it in full screen, edit and fork by pressing Edit on CodePen.
 
 ![callouts pointing to HTML, CSS, JS and Edit on Codepen buttons in the embedded pen below](./media/practice-callouts.png)
 

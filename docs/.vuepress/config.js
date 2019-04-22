@@ -148,14 +148,15 @@ module.exports = {
             'Functions/parameters',
           ]
         },
-        // {
-        //   title: 'Course project',
-        //   collapsable: false,
-        //   children: [
-        //     'Course-project/',
-        //     'Course-project/complications',
-        //   ]
-        // },
+        {
+          title: 'Course project',
+          collapsable: false,
+          children: [
+            'Course-project/',
+            'Course-project/core',
+            'Course-project/more',
+          ]
+        },
       ],
       '/Cookbook/': [
         '',
