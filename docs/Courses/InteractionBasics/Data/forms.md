@@ -132,7 +132,7 @@ Unlike in dropdowns the `value` attribute is mandatory for radio buttons. It car
 
 In Layout basics [you’ve learnt](./../../LayoutBasics/Core/form.md#radio-button) that you have to assign `name` attribute to tie radio buttons into a group. Connecting a radio button to a single variable with `v-model` eliminates that need, because now its state is defined by the value of the variable, not other controls with the same `name`. 
 
-<!-- todo: Maybe a link to how to bind values if number is required, not string — common bug -->
+<!-- todo: Maybe a link to how to bind values if number, not string, is required — common bug -->
 
 ## Practice
 

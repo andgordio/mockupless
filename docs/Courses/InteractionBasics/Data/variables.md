@@ -99,7 +99,7 @@ didAcceptAgreement: true
 
 Even though boolean values look like proper English words they are written without quotation marks. This allows browsers to understand that they are not strings.
 
-[Conditions](./../Conditionals/rendering.md) section of the course goes into details of using boolean data type to show and hide containers, and apply conditional styles.
+[Conditions](./../Conditionals/) section of the course goes into details of using boolean data type to show and hide containers, and apply conditional styles.
 
 ### null
 

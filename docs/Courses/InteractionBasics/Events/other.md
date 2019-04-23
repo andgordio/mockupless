@@ -1,6 +1,6 @@
 # Other events
 
-Click is probably the most popular interaction, but there are other events too that allow for richer UX. Three interactions are explored in this article: focus, hover and key press.
+Click is probably the most popular interaction, but there are other events too that allow for more advanced. Three interactions are explored in this article: focus, hover and key press.
 
 ## Focus and unfocus
 
@@ -39,19 +39,21 @@ Another common interaction on desktop computers is hovering over elements with t
 </div>
 ```
 
-Note the difference between CSS `:hover` selector and `@mouseover` event listener. `:hover` applies specified styles when the cursor enters the area of an element and also discards them when the cursor leaves. With the event listeners you provide two separate (sets of) instructions: one for cursor entering the area, and one for when it leaves. This is particularly useful when, for example, your design doesn't require anything to happen when the mouse leaves. [Self-practice Task 1](#task-1) is a good example of this UX.
+Note the difference between CSS `:hover` selector and `@mouseover` event listener. CSS’s `:hover` applies specified styles when the cursor enters the area of an element and also discards them when the cursor leaves. With the event listeners you provide two separate instructions: one for cursor entering the area, and one for when it leaves. This is particularly useful when, for example, your design doesn't require anything to happen when the mouse leaves. Task 1 in the Practice section below is a good example of this type of interactions.
 <!-- todo: link: to Layout basics explaining hovers -->
 
 ## Key press
 
-You already know how to [connect text input](./../Data/display.md#text) to a variable with `v-model`, so everything a user enters is stored in data. You don't need an event listener to achieve that. However sometimes you want to track *particular* key presses inside the input field to provide instructions explicitly for those events.
+You already know how to [connect text input](./../Data/forms.md#text) to a variable with `v-model`, so everything a user enters is stored in `data`. You don’t need an event listener to achieve that. However, sometimes you want to track *particular* key presses inside the input field to provide instructions explicitly for those events.
 
-`@keypress` event listener reacts to every key press inside an input field but you rarely need to track this type of interaction. In addition, `@keypress` has modifiers that specify which particular key you want to respond to. For example, a commonly expected behavior when interacting with a search bar or a simple form is the ability to submit by hitting return/enter key. Adding modifier `.enter`  to `@keypress` event listener  allows you to react to this particular key being pressed:
+`@keypress` event listener reacts to every key press inside an input field but you rarely need to track this type of interaction. In addition, `@keypress` has modifiers that specify which particular key you want to respond to. For example, a commonly expected behavior when interacting with a search bar or a simple form is the ability to submit by hitting return/enter key:
 
 <iframe height="394" style="width: 100%;" scrolling="no" title="Events—Other—Keypress" src="//codepen.io/andgordy/embed/JVypML/?height=394&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/JVypML/'>Events—Other—Keypress</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+Adding modifier `.enter`  to `@keypress` event listener  allows you to react to this particular key being pressed:
 
 ```html
 <input v-model="emailInput"
@@ -72,14 +74,14 @@ Modifiers are placed right after the name of the event listener. List of modifie
 
 ### Product card
 
-Allow users to switch between different photos by hovering the controls:
+Allow users to switch between different photos by hovering the small circles below the preview:
 
 <iframe height="655" style="width: 100%;" scrolling="no" title="Events—Other—Task: Card" src="//codepen.io/andgordy/embed/wZqyjv/?height=655&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/wZqyjv/'>Events—Other—Task: Card</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Fork the result of [Task 1 in Click](./#product-card) article as a starting file. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/rbzpmB?editors=1000).
+1. Fork your result of [Task 1 in Click](./#product-card) article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/rbzpmB?editors=1000).
 2. Replace `@click` event listeners with `@mouseover` event listeners on colored circles.
 3. As a result, different images should be rendered depending on which circle users hover over.
 
@@ -92,7 +94,7 @@ Allow users to submit a search query without providing a Search button at all:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Create a simple layout with a search bar and a heading.
+1. Create a simple layout with a search bar and a text.
 2. Create 2 variables: one for storing the input and another one to store the submitted query.
 3. Add `@keypress.enter` event listener to the text input.
-4. Display users’ query in the heading when they press return/enter. Also clear the search input.
+4. Display users’ query in the text when they press return/enter. Don’t forget clear the search input too.
