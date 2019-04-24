@@ -1,4 +1,4 @@
-# More flow
+# More
 
 Creating, testing and improving the core flow was just the beginning. When the basics are covered, it’s time to make the experience rich, test additional flows and add details. 
 
@@ -161,7 +161,7 @@ Add a Back button to Details page that takes users to Catalog view if they came 
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Craete variable to store the view user came from to Details page:
+Create a variable to store the view user came from to Details page:
 
 ```js
 data: {
@@ -170,7 +170,7 @@ data: {
 }
 ```
 
-In Catalog add an instruction to template-container to save `catalog` to `backFromDetailsTo`:
+In Catalog add an instruction to template-container to save `'catalog'` to `backFromDetailsTo`:
 
 ```html {4,9}
 <div v-for="(rest, i) in restaurants">
@@ -191,7 +191,7 @@ In Catalog add an instruction to template-container to save `catalog` to `backFr
 </div>
 ```
 
-Similarly, in Favorites add instructions to save `favs` to `backFromDetailsTo`:
+Similarly, in Favorites add instructions to save `'favs'` to `backFromDetailsTo`:
 
 ```html {4,9}
 <div v-for="(rest, i) in restaurants" v-if="rest.isFav">
@@ -212,7 +212,7 @@ Similarly, in Favorites add instructions to save `favs` to `backFromDetailsTo`:
 </div>
 ```
 
-Now add the Back button itself to Details with instructions to change `currentScreen` to the value stored in `backFromDetailsTo`:
+Now add the Back button to Details view with instructions to change `currentScreen` to the value stored in `backFromDetailsTo`:
 
 ```html {3}
 <!-- Details -->
@@ -230,5 +230,6 @@ There are some smaller details that are present in the final version of the prot
 - Tabs in the top navigation are highlighted when their views are selected.
 - Most buttons have hover states.
 - Reservation sidebar has options for each control with some additional effort put into the styling of the elements.
+- Most instructions are moved to functions.
 
-We encourage you to complete the prototype yourself, and even apply your own styles. Alternatively you can [review the code](https://codepen.io/andgordy/pen/oOGbjj?editors=1000) of the prototype and see how the features were implemented.
+We encourage you to complete the prototype yourself and apply your own styles. Alternatively you can [review the code](https://codepen.io/andgordy/pen/oOGbjj?editors=1000) of the original prototype and see how the features were implemented.

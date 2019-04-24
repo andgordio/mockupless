@@ -14,7 +14,7 @@ It makes sense to start with a prototype that allows to place reservations with 
 
 ### Top navigation
 
-Top nav bar is visible at all times, so it makes sense to split the layout of the app at the highest level into two containers, the top bar and the rest:
+Top nav bar is visible at all times, so it makes sense to split the layout of the app at the highest level into two containers—the top bar and the rest:
 
 <iframe height="307" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, step 1" src="//codepen.io/andgordy/embed/rbJpdK/?height=307&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/rbJpdK/'>Interaction basics—Course project, step 1</a> by And Gordy
@@ -36,7 +36,7 @@ It takes a `flex` parent, a header with fixed height, and content container with
 
 ### Main views
 
-Since the prototype includes multiple views that users can navigate around you need to store the state of the selected view and allow switching between three of them from the top nav:
+Since the prototype includes multiple views that users can navigate around, you need to store the state of the selected view and allow switching between three of them from the top nav:
 
 <iframe height="307" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, step 2" src="//codepen.io/andgordy/embed/BEYJMp/?height=307&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/BEYJMp/'>Interaction basics—Course project, step 2</a> by And Gordy
@@ -139,7 +139,7 @@ By design the Sidebar is part of the Details view and it appears upon clicking t
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-create a Boolean variable to store the state of sidebar:
+Create a Boolean variable to store the state of sidebar:
 
 ```js
 data: {
@@ -148,7 +148,7 @@ data: {
 }
 ```
 
-Make the rendering of the sidebar conditional. Add click listener to open and close the sidebar:
+Make the rendering of the sidebar conditional. Add a click listener to open and close the sidebar:
 
 ```html {4,6,8}
 <div v-if="currentScreen === 'details'">
@@ -241,7 +241,7 @@ Call a function on Reserve button click:
 
 Create a function that pushes an object into `reservations` array and closes the sidebar:
 
-```js
+```js {3,9}
 methods: {
   reserve () {
     this.reservations.push({
@@ -259,7 +259,7 @@ The object you push has 4 variables. All of them store existing data:
 - `restaurant` saves the index of the selected restaurant.
 - `party`, `date` and `time` save the selected options from the reservation form.
 
-Now in the Reservations you can create a template-container connected to the `reservations` array and show the information from the object. The index stored in object’s variable `restaurant` is used to access the name of the restaurant from the `restaurants` array:
+Now in the Reservations view you can create a template-container connected to the `reservations` array and show the information from the objects inside. The index stored in object’s variable `restaurant` is used to access the name of the restaurant from the `restaurants` array:
 
 ```html
 <div v-for="reserv in reservations">
@@ -304,6 +304,6 @@ The prototype you’ve created so far is nowhere near the final experience, yet 
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-The prototype already has a number of assumptions to test: are users comfortable navigating forth-and-back around the restaurants’ details pages? are there some parts of the reservation form that users find confusing? do they go to Reservations right after placing one to see the confirmation, etc? This can help you identify some basic patterns, fix some issues that appear at the very basic level and prioritize features you plan to add to the prototype next.
+The prototype already has a number of assumptions to test: are users comfortable navigating forth-and-back around the restaurants’ details pages? Are there some parts of the reservation form that users find confusing? Do they go to Reservations right after placing one to see the confirmation, etc? This can help you identify some basic patterns, fix some issues that appear at the very basic level and prioritize features you plan to add to the prototype next.
 
 When you feel comfortable with the core flow you can start adding details and secondary flows. Some of those are explore in the next article.
