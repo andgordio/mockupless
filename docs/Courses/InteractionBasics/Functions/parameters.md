@@ -1,6 +1,6 @@
 # Parameters
 
-In [Managing lists](./../Lists-and-loops/arrays-methods.html#splice) you learnt to remove an item from a list with `splice` method:
+In [Managing lists](./../Lists-and-loops/arrays-methods.html#splice) you learned how you can remove an item from a list with `splice` method:
 
 <iframe height="441" style="width: 100%;" scrolling="no" title="Functions—Parameters—List" src="//codepen.io/andgordy/embed/dLvyjV/?height=441&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/dLvyjV/'>Functions—Parameters—List</a> by And Gordy
@@ -36,7 +36,7 @@ methods: {
 }
 ```
 
-`i` is used inside the function but currently the function has no idea what `i` stands for. This function can be called from anywhere and it doesn’t know where it was called from. **It just executes the instructions inside**. There's no indication of what the value of `i` is inside the function.
+`i` is used inside the function but currently the function has no idea what `i` stands for. This function can be called from anywhere and it doesn’t know where it was called from. **It just executes the instructions inside**. Inside the function, there's no indication of what the value of `i` is.
 
 To address this issue the event listener must not only call a function but also provide the required values a function needs to work properly. This is called passing parameters to a function:
 
@@ -48,7 +48,7 @@ To address this issue the event listener must not only call a function but also 
   </button>
 </div>
 ```
-```js{2}
+```js{2,3}
 methods: {
   removeItem (i) {
     this.tasks.splice(i, 1)
@@ -62,7 +62,7 @@ methods: {
 
 ### Naming parameters
 
-When you are passing something into a function, you are actually not passing a variable, which is a name *and* a value. You are only passing a value. This means when you define a function `removeItem (i) {...}` inside methods section you don't mean “expect `i` to be passed to this function”. In fact you mean “expect **a value** and name it `i`, so it can be accessed by this name inside the function”.
+When you are passing something into a function, you are actually not passing a variable, which is a name *and* a value. You are only passing a value. This means when you define a function `removeItem (i) {...}` inside methods section you don't mean “expect `i` to be passed to this function”. In fact, you mean “expect **a value** and name it `i`, so it can be accessed by this name inside the function”.
 
 This means you can give any name to a parameter and use it inside a function. The following code works the same as the one shown above with `i`'s used everywhere:
 
@@ -74,7 +74,7 @@ This means you can give any name to a parameter and use it inside a function. Th
   </button>
 </div>
 ```
-```js{2}
+```js{2,3}
 methods: {
   removeItem (index) {
     this.tasks.splice(index, 1)
@@ -84,7 +84,7 @@ methods: {
 
 When the function is called, not `i` but **its value**, `2` for example, is passed into a function. The function gives the name `index` to this value. The name `index` is then used to pass `2` into `splice` method. 
 
-This is an important feature even though its value is not too obvious in this simple example. In complex prototypes a function may be called from multiple places, each using different names to pass a value. The ability of functions to accept value and name it as you wish makes them a universal tool. 
+This is an important feature even though its value is not too obvious in this simple example. In complex prototypes a function may be called from multiple places, each one using different names to pass a value. The ability of functions to accept a value and name it as you wish makes them a universal tool. 
 
 <!-- todo: write: functions are separated with commas -->
 
@@ -115,7 +115,7 @@ To practice working with properties add them to the prototypes you’ve created 
 1. Fork the result of [From list ot list](./../Lists-and-loops/arrays-methods.html#from-a-list-to-a-list) task from Managing lists article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/EMrRed?editors=1000).
 2. Create two functions: `fromLeftToRight` and `fromRightToLeft`.
 3. Move instructions from click listeners to the functions. Don’t forget to add `this.`
-4. Expect values in the functions. Call them `index` and use them the `push` and `splice` methods.
+4. Expect values in the functions. Call them `index` and use them int `push` and `splice` methods.
 5. Use the functions in the click listeners by placing their name followed by paretheses. Pass an index as a parameter to each of them.
 
 ### Notes app
