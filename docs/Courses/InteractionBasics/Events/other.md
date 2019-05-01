@@ -97,4 +97,4 @@ Allow users to submit a search query without providing a *Search* button at all:
 1. Create a simple layout with a search bar and a text label.
 2. Create 2 variables: one for storing the input and another for storing the submitted query.
 3. Add the `@keypress.enter` event listener to the text input.
-4. Display the user’s query in the text when *Return*/*Enter* key is pressed. Don’t forget to clear the search input.
+4. Display the user’s query below the search bar when *Return*/*Enter* key is pressed. Don’t forget to clear the search input.
