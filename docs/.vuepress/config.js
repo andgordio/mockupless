@@ -67,9 +67,9 @@ module.exports = {
           children: [
             'Decoration/background',
             'Decoration/border',
-            // 'Decoration/corner-radius',
-            // 'Decoration/opacity',
-            // 'Decoration/shadow',
+            // 'Decoration/border-radius',
+            'Decoration/opacity',
+            'Decoration/shadow',
           ]
         },
         {
