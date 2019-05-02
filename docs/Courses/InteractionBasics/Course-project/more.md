@@ -1,17 +1,17 @@
 # More
 
-Creating, testing and improving the core flow was just the beginning. When the basics are covered, it’s time to make the experience rich, test additional flows and add details. 
+Creating, testing, and improving the core flow was just the beginning. When the basics are covered, it’s time to make the experience rich, test additional flows, and add details. 
 
 ### Rich objects
 
-Populate restaurants with information and images:
+Populate restaurants’ cards with information and images:
 
 <iframe height="690" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, More, step 1" src="//codepen.io/andgordy/embed/EJRdjQ/?height=690&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/EJRdjQ/'>Interaction basics—Course project, More, step 1</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Add variables `price`, `photo` and `isFav` to objects in `restaurants` array:
+Add the variables `price`, `photo`, and `isFav` to objects in the `restaurants` array:
 
 ```js
 restaurants: [
@@ -37,7 +37,7 @@ restaurants: [
 ]
 ```
 
-Use them in Catalog in the template-container to display information, render images and stylize Heart/Favorites button:
+Use them in the *Catalog* in the template-container to display information, render images, and style the *Heart*/*Favorites* button:
 
 ```html
 <div v-for="(rest, i) in restaurants">
@@ -54,7 +54,7 @@ Use them in Catalog in the template-container to display information, render ima
 </div>
 ```
 
-Also use object's variables on Details page with the help of an index stored in `selectedRestaurant`:
+Use the object's variables on the *Details* page with an index stored in `selectedRestaurant`:
 
 ```html
 <img :src="restaurants[selectedRestaurant].photo">
@@ -71,14 +71,14 @@ Also use object's variables on Details page with the help of an index stored in 
 
 ### Favorites
 
-Allow to add restaurants to favorites from Catalog and Details. Show the list under Favorites tab:
+Allow users to add restaurants from *Catalog* and *Details* to favorites. Show the list on the *Favorites* tab:
 
 <iframe height="690" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, More, step 2" src="//codepen.io/andgordy/embed/KYeGEZ/?height=690&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/KYeGEZ/'>Interaction basics—Course project, More, step 2</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Turn Favorites buttons in Catalog into switches that change the Boolean value of `isFav` variable to the opposite one:
+Turn the *Favorites* buttons on the *Catalog* tab into switches that change the value of `isFav` boolean variable to the opposite one:
 
 ```html {5}
 <div v-for="(rest, i) in restaurants">
@@ -90,7 +90,7 @@ Turn Favorites buttons in Catalog into switches that change the Boolean value of
 </div>
 ```
 
-Do the same in Details view using the index stored in `selectedRestaurant`:
+Do the same in the *Details* view using the index stored in `selectedRestaurant`:
 
 ```html {4}
 <!-- retaurant details -->
@@ -100,7 +100,7 @@ Do the same in Details view using the index stored in `selectedRestaurant`:
 </button>
 ```
 
-In the Favorites container re-use the template container from the Catalog view with an addition of conditional rendering:
+In the Favorites container, reuse the template container from the *Catalog* view with conditional rendering:
 
 ```html {2}
 <div v-for="(rest, i) in restaurants"
@@ -111,14 +111,14 @@ In the Favorites container re-use the template container from the Catalog view w
 
 ### Confirmation strip
 
-Show confirmation message when users place a reservation:
+Show the confirmation message when users place a reservation:
 
 <iframe height="690" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, More, step 3" src="//codepen.io/andgordy/embed/oOyQYj/?height=690&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/oOyQYj/'>Interaction basics—Course project, More, step 3</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Create a variable to store the state of the strip:
+Create a variable to store the state of the confirmation strip:
 
 ```js
 data: {
@@ -127,7 +127,7 @@ data: {
 }
 ```
 
-Create a container with conditional rendering on the same level with the header and content containers. Add *Dismiss* button that hides the strip by changing the value of `doShowReservConfirmation`. Add *Go to reservations* that also changes view to Reservations:
+Create a container with conditional rendering on the same level as the header and content containers. Add a *Dismiss* button that hides the strip by changing the value of `doShowReservConfirmation`. Add *Go to reservations* button, which also changes the view to *Reservations*:
 
 ```html {1,5,8}
 <div v-if="doShowReservConfirmation">
@@ -143,7 +143,7 @@ Create a container with conditional rendering on the same level with the header 
 </div>
 ```
 
-In `reserve` function add the instruction to change the value of `doShowReservConfirmation` to `true` to reveal the strip when the reservation is placed:
+In the `reserve` function, add an instruction to change the value of `doShowReservConfirmation` to `true` to reveal the strip when the reservation is placed:
 
 ```js
 reserve () {
@@ -154,14 +154,14 @@ reserve () {
 
 ### Back to catalog / favorites
 
-Add a Back button to Details page that takes users to Catalog view if they came from Catalog, or to Favorites if they came from Favorites view:
+Add a *Back* button to the *Details* page. The button should take users to the *Catalog* view if they came from the *Catalog*. It should take them to the *Favorites* if they came from the *Favorites* view:
 
 <iframe height="690" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, More, step 4" src="//codepen.io/andgordy/embed/JVZVvr/?height=690&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/JVZVvr/'>Interaction basics—Course project, More, step 4</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Create a variable to store the view user came from to Details page:
+Create a variable to store the view that the users came to the *Details* from:
 
 ```js
 data: {
@@ -170,7 +170,7 @@ data: {
 }
 ```
 
-In Catalog add an instruction to template-container to save `'catalog'` to `backFromDetailsTo`:
+On the *Catalog* tab, add an instruction to the template-container to save `'catalog'` to `backFromDetailsTo`:
 
 ```html {4,9}
 <div v-for="(rest, i) in restaurants">
@@ -191,7 +191,7 @@ In Catalog add an instruction to template-container to save `'catalog'` to `back
 </div>
 ```
 
-Similarly, in Favorites add instructions to save `'favs'` to `backFromDetailsTo`:
+Similarly, add instructions to cards in the *Favorites* view to save `'favs'` to `backFromDetailsTo`:
 
 ```html {4,9}
 <div v-for="(rest, i) in restaurants" v-if="rest.isFav">
@@ -212,7 +212,7 @@ Similarly, in Favorites add instructions to save `'favs'` to `backFromDetailsTo`
 </div>
 ```
 
-Now add the Back button to Details view with instructions to change `currentScreen` to the value stored in `backFromDetailsTo`:
+Now add the *Back* button to the *Details* view with instructions to change `currentScreen` to the value stored in `backFromDetailsTo`:
 
 ```html {3}
 <!-- Details -->
@@ -222,14 +222,14 @@ Now add the Back button to Details view with instructions to change `currentScre
 </button>
 ```
 
-### Smaller details
+### Minor details
 
-There are some smaller details that are present in the final version of the prototype in [The task](./) that are not covered in these articles. Here are some of them:
+There are some minor details in the final version of the prototype in [The task](./) that are not covered in these articles. Here are some of them:
 
-- In Details, *Place reservation* and *Favorite* buttons are hidden when the sidebar is open. Also the information becomes half-transparent.
-- Tabs in the top navigation are highlighted when their views are selected.
+- In Details, the *Place reservation* and *Favorite* buttons are hidden when the sidebar is open. Also, the restaurant details become half-transparent.
+- The tabs on the top navigation bar are highlighted when their views are selected.
 - Most buttons have hover states.
-- Reservation sidebar has options for each control with some additional effort put into the styling of the elements.
+- The *Reservation* sidebar has options for each control, with some additional effort put into the styling of the elements.
 - Most instructions are moved to functions.
 
-We encourage you to complete the prototype yourself and apply your own styles. Alternatively you can [review the code](https://codepen.io/andgordy/pen/oOGbjj?editors=1000) of the original prototype and see how the features were implemented.
+We encourage you to complete the prototype yourself and apply your own styles. Alternatively, you can [review the code](https://codepen.io/andgordy/pen/oOGbjj?editors=1000) of the original prototype and see how the features were implemented.

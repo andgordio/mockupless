@@ -1,27 +1,27 @@
 # Core flow
 
-The prototype is built with 7 components:
+The prototype is built with seven components:
 
 - Top navigation bar
-- Restaurants view
-- Favorites view
-- Reservations view
-- Details view
-- Reservation sidebar
+- *Restaurants* view
+- *Favorites* view
+- *Reservations* view
+- *Details* view
+- *Reservation* sidebar
 - Confirmation strip
 
-It makes sense to start with a prototype that allows to place reservations with minimal effort, since this is the main interaction in this design. You’ll then use it as a core to build details and additional interactions around it.
+It makes sense to start with a prototype that allows users to make reservations with minimal effort since this is the main interaction for this design. You’ll use the prototype as a foundation for additional details and interactions.
 
 ### Top navigation
 
-Top nav bar is visible at all times, so it makes sense to split the layout of the app at the highest level into two containers—the top bar and the rest:
+The top nav bar is visible at all times, so it makes sense to split the layout of the app into two containers—the top bar and the rest—at the highest level:
 
 <iframe height="307" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, step 1" src="//codepen.io/andgordy/embed/rbJpdK/?height=307&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/rbJpdK/'>Interaction basics—Course project, step 1</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-It takes a `flex` parent, a header with fixed height, and content container with `flex-1` to achieve this:
+It takes a `flex` parent, a header with a fixed height, and a content container with `flex-1` to achieve this:
 
 ```html
 <div id="app" class="flex flex-col h-screen">
@@ -36,7 +36,7 @@ It takes a `flex` parent, a header with fixed height, and content container with
 
 ### Main views
 
-Since the prototype includes multiple views that users can navigate around, you need to store the state of the selected view and allow switching between three of them from the top nav:
+Since the prototype includes multiple views that users can navigate, you need to store the state of the selected view and allow switching between three of the views from the top nav bar:
 
 <iframe height="307" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, step 2" src="//codepen.io/andgordy/embed/BEYJMp/?height=307&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/BEYJMp/'>Interaction basics—Course project, step 2</a> by And Gordy
@@ -51,7 +51,7 @@ data: {
 }
 ```
 
-Change the variable’s value on click and use it as a condition for displaying different content containers:
+Set the variable’s value to change on click and use the value as a condition for displaying different content containers:
 
 ```html
 <!-- top nav -->
@@ -71,14 +71,14 @@ Change the variable’s value on click and use it as a condition for displaying 
 
 ### Details
 
-Next, display a collection of items in Catalog view and allow users to view details on click:
+Next, display a collection of items in the *Catalog* view and allow users to view details on click:
 
 <iframe height="471" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, step 3" src="//codepen.io/andgordy/embed/XQEKjX/?height=471&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/XQEKjX/'>Interaction basics—Course project, step 3</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Store an array of restaurants. Also create a variable to store the index of the selected item:
+Store an array of restaurants, and create a variable to store the index of the selected item:
 
 ```js {3,23}
 data: {
@@ -107,7 +107,7 @@ data: {
 }
 ```
 
-Create a template-container and connect it to the array with `v-for`. Track index and save the it on click to the `selectedRestaurant` variable. Also change the `currentScreen` to `details` to take users to a different view:
+Create a template-container and connect it to the array with `v-for`. Track the index and save it to the `selectedRestaurant` variable on click. Change the `currentScreen` to `details` to take users to a different view:
 
 ```html {2,4}
 <div class="flex flex-wrap px-4 pt-3">
@@ -120,7 +120,7 @@ Create a template-container and connect it to the array with `v-for`. Track inde
 </div>
 ```
 
-Now create the Details container with conditional rendering. Use the index stored in `selectedRestaurant` to display the name of the selected item:
+Create the Details container with conditional rendering. Use the index stored in `selectedRestaurant` to display the name of the selected item:
 
 ```html {1,3}
 <div v-if="currentScreen === 'details'">
@@ -132,14 +132,14 @@ Now create the Details container with conditional rendering. Use the index store
 
 ### New reservation sidebar
 
-By design the Sidebar is part of the Details view and it appears upon clicking the `Make a reservation` button:
+By design, the Sidebar is part of the *Details* view and appears when the `Make a reservation` button is clicked:
 
 <iframe height="443" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, step 4" src="//codepen.io/andgordy/embed/xeWryr/?height=443&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/xeWryr/'>Interaction basics—Course project, step 4</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Create a Boolean variable to store the state of sidebar:
+Create a boolean variable to store the state of sidebar:
 
 ```js
 data: {
@@ -148,7 +148,7 @@ data: {
 }
 ```
 
-Make the rendering of the sidebar conditional. Add a click listener to open and close the sidebar:
+Make the rendering of the sidebar conditional. Add a `@click` listener to open and close the sidebar:
 
 ```html {4,6,8}
 <div v-if="currentScreen === 'details'">
@@ -173,7 +173,7 @@ Reservation is a form with three inputs and a submission button:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-For each form input you need to create a pair of variables—an array of options and the selected option:
+For each form input, create a pair of variables: an array of options and the selected option:
 
 ```js
 data: {
@@ -187,7 +187,7 @@ data: {
 }
 ```
 
-Now connect them to form controls in your layout. Party and time are custom form controls—lists, basically. They are rendered using `v-for` with `@click` listeners. Date is populated with `v-for` and is connected to `selectedDate` with `v-model` like all [regular form controls](./../Data/forms.html):
+Now connect them to the form controls in your layout. Party and time are custom form controls—lists, basically. They are rendered by using `v-for` with `@click` listeners. Date is populated with `v-for` and is connected to `selectedDate` with `v-model` like all [regular form controls](./../Data/forms.html):
 
 ```html {3,10,11,19}
 <div>Party</div>
@@ -215,7 +215,7 @@ Now connect them to form controls in your layout. Party and time are custom form
 ```
 ### Placing and viewing reservations
 
-Save information about the selected restaurant with the chosen reservation options and display all reservations in Reservations view: 
+Save information about the selected restaurant with the chosen reservation options and display all reservations in the *Reservations* view: 
 
 <iframe height="628" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, step 6" src="//codepen.io/andgordy/embed/QPxwye/?height=628&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/QPxwye/'>Interaction basics—Course project, step 6</a> by And Gordy
@@ -231,7 +231,7 @@ data: {
 }
 ```
 
-Call a function on Reserve button click:
+Call the function when the *Reserve* button is clicked:
 
 ```html
 <button @click="reserve()">
@@ -239,7 +239,7 @@ Call a function on Reserve button click:
 </button>
 ```
 
-Create a function that pushes an object into `reservations` array and closes the sidebar:
+Create a function that pushes an object into the `reservations` array and closes the sidebar:
 
 ```js {3,9}
 methods: {
@@ -255,11 +255,11 @@ methods: {
 }
 ```
 
-The object you push has 4 variables. All of them store existing data:
+The object you push has four variables. All of them store existing data:
 - `restaurant` saves the index of the selected restaurant.
-- `party`, `date` and `time` save the selected options from the reservation form.
+- `party`, `date`, and `time` save the selected options from the reservation form.
 
-Now in the Reservations view you can create a template-container connected to the `reservations` array and show the information from the objects inside. The index stored in object’s variable `restaurant` is used to access the name of the restaurant from the `restaurants` array:
+Now, in the *Reservations* view you can create a template-container that is connected to the `reservations` array and show information from the objects inside. The index stored in the object variable `restaurant` is used to access the name of the restaurant, which is in the `restaurants` array:
 
 ```html
 <div v-for="reserv in reservations">
@@ -277,14 +277,14 @@ Now in the Reservations view you can create a template-container connected to th
 
 ### Canceling reservations
 
-Allow to cancel the placed reservations:
+Allow reservation cancelcancellations:
 
 <iframe height="612" style="width: 100%;" scrolling="no" title="Interaction basics—Course project, step 7" src="//codepen.io/andgordy/embed/oOyjqY/?height=612&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/oOyjqY/'>Interaction basics—Course project, step 7</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Track the index of the reservation and use it for `splice` method:
+Track the index of the reservation and use it for the `splice` method:
 
 ```html
 <div v-for="(reserv, i) in reservations">
@@ -304,6 +304,6 @@ The prototype you’ve created so far is nowhere near the final experience, yet 
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-The prototype already has a number of assumptions to test: are users comfortable navigating forth-and-back around the restaurants’ details pages? Are there some parts of the reservation form that users find confusing? Do they go to Reservations right after placing one to see the confirmation, etc? This can help you identify some basic patterns, fix some issues that appear at the very basic level and prioritize features you plan to add to the prototype next.
+The prototype already has a number of assumptions to test: are users comfortable navigating the restaurants’ details pages? Are there parts of the reservation form that users find confusing? Do they go to *Reservations* to see the confirmation right after placing a reservation? Answers to these questions can help you identify basic patterns, fix issues and prioritize features you plan to add to the prototype next.
 
-When you feel comfortable with the core flow you can start adding details and secondary flows. Some of those are explore in the next article.
+When you feel comfortable with the core flow, you can start adding details and secondary flows. Some of those are explored in the next article.
