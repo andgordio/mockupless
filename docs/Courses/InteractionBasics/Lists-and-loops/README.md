@@ -48,7 +48,7 @@ The most straightforward way to lay it out is to create a container for every it
 </div>
 ```
 
-The downsides of having a lot of repetitive code should be clear. First, copying and pasting containers is time-consuming and makes your code bloated. Second, any change to the layout has to be applied to multiple containers. Lastly, maintaining this layout design with twenty items is exhausting.
+The downsides of having a lot of repetitive code should be clear. First, copying and pasting containers is time-consuming and makes your code bloated. Second, any change to the layout has to be applied to multiple containers. Finally, maintaining this layout design with twenty items is exhausting.
 
 Luckily, Vue provides an alternative way of rendering repeated items that allows you to create a single container and duplicate it programmatically. This is done in three steps:
 

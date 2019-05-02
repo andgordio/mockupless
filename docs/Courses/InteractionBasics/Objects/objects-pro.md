@@ -1,8 +1,8 @@
 # Objects pro
 
-An item in an object can be treated as a regular variable in many ways. When you use an array of objects to create a list, you can use object’s variables not only to render their values. You can use them as a source property for images, to render conditional elements and add conditional styles too.
+An item in an object can be treated as a regular variable in many ways. When you use an array of objects to create a list, you can use the object’s variables not only to render their values. You can use them as a source property for images, to render conditional elements, and to add conditional styles too.
 
-Following the example from the previous article, a list of recent chats can be extended to show:
+Following the example from the previous article, a list of recent chats can be extended to show
 - avatars,
 - unread dot indicators,
 - bold darker fonts for unread chats:
@@ -12,7 +12,7 @@ Following the example from the previous article, a list of recent chats can be e
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-To achieve this, every object must have two additional variables—one for storing a link to a photo and another one to store the unread status:
+To achieve this, every object must have two additional variables—one for storing a link to a photo and another for storing the unread status:
 
 ```js {8,9,16,17,24,25}
 data: {
@@ -73,7 +73,7 @@ It’s time to explore other applications.
 
 ## Image source
 
-Variables inside Objects can be used to render images the same way you would use a regular [variable for an image source](./../Data/display.html#images):
+Variables inside objects can be used to render images the same way you would use a regular [variable as an image source](./../Data/display.html#images):
 
 ```html{2}
 <div v-for="contact in contacts">
@@ -81,7 +81,7 @@ Variables inside Objects can be used to render images the same way you would use
 </div>
 ```
 
-This template-container takes values of `photo` variables from each object in the array `contacts` and uses it in `:src` property to provide urls for images:
+This template-container takes values of the `photo` variables from each object in the `contacts` array and uses them in `:src` property to provide URLs for images:
 
 <iframe height="381" style="width: 100%;" scrolling="no" title="Objects—Recent single with photo" src="//codepen.io/andgordy/embed/WWNdbb/?height=381&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/WWNdbb/'>Objects—Recent single with photo</a> by And Gordy
@@ -101,7 +101,7 @@ You can make elements of your template render conditionally the same way you do 
 </div>
 ```
 
-An object’s variable `unread` is used for the condition of rendering the indicator. As a result, objects with `unread` equal to `true` will render a container with a colored dot:
+The object’s variable `unread` is used for the condition that determines the rendering of the indicator. According to this condition, objects with `unread` equal to `true` will render a container with a colored dot:
 
 <iframe height="427" style="width: 100%;" scrolling="no" title="Objects—Recent single with photo and dot" src="//codepen.io/andgordy/embed/GLRygz/?height=427&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/GLRygz/'>Objects—Recent single with photo and dot</a> by And Gordy
@@ -111,7 +111,7 @@ An object’s variable `unread` is used for the condition of rendering the indic
 
 ## Conditional style
 
-Lastly an object’s variable can be used for [conditional styling](./../Conditionals/styles.html#conditional-styles). The code below applies different styles to read and unread items:
+Finally, an object’s variable can be used for [conditional styling](./../Conditionals/styles.html#conditional-styles). The code below applies different styles to read and unread items:
 
 ```html{2,6,9}
 <div v-for="contact in contacts" class="my-3">
@@ -128,7 +128,7 @@ Lastly an object’s variable can be used for [conditional styling](./../Conditi
 </div>
 ```
 
-This template container uses the same variable `unread` as in Conditional rendering above. Here it’s used inside conditional `:class` attribute so `font-bold` will be applied to names if `unread` is `true`, and `text-gray-500` will be applied to a message and a timestamp if it is `false`:
+This template container uses the same variable `unread` that’s used in the conditional rendering above. Here it’s used inside the conditional `:class` attribute so that `font-bold` will be applied to names if `unread` is `true` and `text-gray-500` will be applied to a message and a timestamp if it is `false`:
 
 <iframe height="640" style="width: 100%;" scrolling="no" title="Objects—Recent single with photo, dot and styles" src="//codepen.io/andgordy/embed/YMzYXO/?height=640&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/YMzYXO/'>Objects—Recent single with photo, dot and styles</a> by And Gordy
@@ -136,9 +136,9 @@ This template container uses the same variable `unread` as in Conditional render
 </iframe>
 
 :::tip Color hierarchy in Tailwind
-Another way to manage different text colors for a message and a datestamp would be to apply grey by default with `class="text-gray-500"` and conditionally make it black with `:class="{'black': contact.unread}"`. Unfortunately this will not work. Tailwind, the way we use it, is just a stylesheet and styles for `text-gray-500` class are defined below styles for `text-black` in it. This means that when both classes are applied the `text-gray-500` has higher power and will always overwrite `text-black`.
+Another way to manage different text colors for a message and a date stamp is to apply grey by default with `class="text-gray-500"` and conditionally make them black with `:class="{'black': contact.unread}"`. Unfortunately, this will not work. We use Tailwind as a stylesheet, and the styles for the `text-gray-500` class are defined below the styles for `text-black` on the stylesheet. This means that `text-gray-500` has greater precedence and will always overrule `text-black` when both classes are applied.
 
-Keep in mind that colors are defined in particular order. The way colors are presented in [Tailwind's official docs](https://next.tailwindcss.com/docs/colors) represents their power with black having lowest priority and pink having the hightest one.
+Keep in mind that colors are defined in a particular order. The way colors are presented in [Tailwind's official docs](https://next.tailwindcss.com/docs/colors) represents their precedence with black having the lowest precedence and pink having the hightest.
 :::
 <!-- todo: fix the link when Tailwind 1.0 is officially released -->
 
@@ -153,8 +153,8 @@ Create a grid of cards with images and conditional styles and labels:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Use you results of [Cars catalog](./#cars-catalog) task from previous article as a starting file, or start from scratch.
-2. Extend the existing array with `phone`, `isOnSale` and `isSoldOut` Boolean variables. You can also copy this array:
+1. Use your results from the [Cars catalog](./#cars-catalog) task in the previous article as a starting file, or start from scratch.
+2. Extend the existing array with the `phone`, `isOnSale` and `isSoldOut` boolean variables. You can also copy this array:
 
 ```js
 cars: [
@@ -215,8 +215,8 @@ cars: [
 ]
 ```
 
-3. Inside the template-container connect the `img` container to `photo` variable inside the array's objects with `:src` attribute.
-4. Inside the template-container create two containers: one with ON SALE text and another one with SOLD OUT. Make them conditional based on values of `isOnSale` and `isSoldOut` variables.
-5. Apply conditional styles to text for items that have `isSoldOut` equal to `true`.
+3. Inside the template-container, connect the `img` container to the `photo` variable inside the array's objects with the `:src` attribute.
+4. Inside the template-container, create 2 containers: one with the text “ON SALE” and another with “SOLD OUT”. Make them conditional, based on the values of the variables `isOnSale` and `isSoldOut`.
+5. Apply conditional styles to the text for items that have `isSoldOut` equal to `true`.
 
 <!-- todo: create: Simpler task with conditionals and images -->
