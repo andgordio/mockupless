@@ -9,11 +9,14 @@ module.exports = {
     ['link', { rel: "icon", href: "favicon.png" }], // note: https://forestry.io/blog/using-json-configuration-with-vuepress/
   ],
   ga: 'UA-131076924-1',
+  postcss: {
+    plugins: [require('tailwindcss')('./tailwind.js'), require('autoprefixer')],
+  },
   themeConfig: {
     nav: [
       { text: 'About', link: '/About/' },
       { text: 'Courses', items: [
-        { text: 'Layout basics', link: '/Courses/LayoutBasics/' },
+        { text: 'Layout basics', link: '/Courses/LayoutBasics/Intro/about' },
         { text: 'Interaction basics', link: '/Courses/InteractionBasics/' },
         // responsive
         // advanced positioning: fixed, absolute
@@ -32,62 +35,72 @@ module.exports = {
     sidebar: {
       '/Courses/LayoutBasics/': [
         {
-          title: 'Intro to Layout basics',
+          title: 'Layout basics',
           collapsable: false,
           children: [
-            '',
-            // 'Intro/html-and-css',
-            // 'Intro/template',
+            'Intro/about',
+            'Intro/codepen',
+            'Intro/practice'
           ]
         },
         {
           title: 'Core',
           collapsable: false,
           children: [
-            // 'Core/units',
-            // 'Core/color',
-            // 'Core/containers',
-            'Core/form',
+            'Core/intro-to-html',
+            'Core/nesting',
+            'Core/images',
+            'Core/form-controls',
+            // 'Core/debugging',
           ]
         },
         {
-          title: 'Flex',
+          title: 'Style',
           collapsable: false,
           children: [
-            // 'Flex/intro-to-flex',
-            'Flex/direction-and-wrap',
-            'Flex/alignment',
-            'Flex/flex1',
-            // 'Flex/practice.md',
+            'Style/intro-to-css',
+            'Style/units',
+            'Style/colors',
+            'Style/text',
+            'Style/background',
+            'Style/border',
+            'Style/opacity-and-shadow'
           ]
         },
         {
-          title: 'Decoration',
+          title: 'Positioning',
           collapsable: false,
           children: [
-            'Decoration/background',
-            'Decoration/border',
-            // 'Decoration/border-radius',
-            'Decoration/opacity',
-            'Decoration/shadow',
+            'Positioning/box-model',
+            'Positioning/intro-to-flex',
+            'Positioning/direction-and-wrap',
+            'Positioning/alignment',
+            'Positioning/flex-1',
+            'Positioning/nesting-and-overflow'
           ]
         },
         {
-          title: 'Tailwind',
+          title: 'Frameworks and Libraries',
           collapsable: false,
           children: [
-            'Tailwind/whats',
-            'Tailwind/usage',
-            // 'Tailwind/core',
-            // 'Tailwind/flex',
-            // 'Tailwind/decoration',
-            'Tailwind/practice',
+            'Frameworks/tailwind',
+            'Frameworks/ionicons',
+            'Frameworks/google-fonts'
           ]
         },
+        {
+          title: 'Course project',
+          collapsable: false,
+          children: [
+            'Course-project/task',
+            'Course-project/layout',
+            'Course-project/decoration'
+          ]
+        }
       ],
       '/Courses/InteractionBasics/': [
         {
-          title: 'Intro',
+          title: 'Interaction basics',
           collapsable: false,
           children: [
             '',

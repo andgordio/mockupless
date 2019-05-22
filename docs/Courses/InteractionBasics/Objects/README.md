@@ -1,6 +1,6 @@
 # Objects
 
-![hey](./media/il-objects.png)
+<!-- ![hey](./media/il-objects.png) -->
 
 You created a basic contact list in the previous section by using an array of names and a template-container with the `v-for` attribute. However, most lists and grids you design are a little more complex because each item in the list has multiple elements:
 

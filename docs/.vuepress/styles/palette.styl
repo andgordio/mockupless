@@ -1,5 +1,9 @@
 $accentColor = #27B7B7
 
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
 // general
 
 a
@@ -10,7 +14,7 @@ body
   color #22292F !important
 
 .content:not(.custom) > h2
-  padding-top 6.6rem !important
+  // padding-top 6.6rem !important
   padding-bottom 1rem
 
 p, ul, ol
@@ -18,21 +22,47 @@ p, ul, ol
   margin-bottom 1.4rem
 
 ul
-  margin-top -0.75rem
+  // margin-top -0.75rem
 
 li
   margin 0.25rem 0
 
 h4
-  margin-bottom -1rem !important
+  margin-bottom -1rem !importants
+
+.site-name::after
+  content "v0.1.0"
+  opacity 0.4
+  font-size 0.75rem
+  padding-left 8px
 
 .content:not(.custom)
   max-width 800px !important
 
+.home
+  max-width 1120px
+
+.home .hero img
+  margin 1.5rem auto 0.6rem
+  max-height 240px
+
+.home .hero h1
+  margin 0.6rem auto
+  font-size 2.6rem
+
+.home .hero .description
+  margin 0.6rem auto
+  font-size 1.4rem
+
+.home .hero .action
+  margin 1.6rem auto 1.2rem
+
 .home .hero .action-button
   // border-radius 0
+  font-size 1rem
   border-radius 50px
-  padding 12px 40px
+  padding 10px 32px
+  margin-bottom 1rem
   border-bottom none
 
 .home .hero .action-button:hover
@@ -72,6 +102,15 @@ tr:nth-child(2n)
 
 .afterh2
   margin 12px 0 12px
+
+// .h1-divider
+//   border-bottom 7px solid $accentColor
+//   margin 24px 0 32px
+//   width 42px
+
+// .content:not(.custom) > h1:first-child, .content:not(.custom) > h2:first-child, .content:not(.custom) > h3:first-child, .content:not(.custom) > h4:first-child, .content:not(.custom) > h5:first-child, .content:not(.custom) > h6:first-child
+//   border-bottom 3px solid $accentColor
+//   padding-bottom 24px
 
 // custom
 

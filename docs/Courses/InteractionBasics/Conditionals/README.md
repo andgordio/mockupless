@@ -1,6 +1,6 @@
 # Conditional rendering
 
-![conditionals illustration](./media/il-conditionals.png)
+<!-- ![conditionals illustration](./media/il-conditionals.png) -->
 
 When, for example, you are creating a prototype that has multiple tabs you need to include contents for all the tabs in your code. Each tab will have its own container and proper placement in layout. However, only one tab should be displayed at a time. You also need to allow users to switch between tabs.
 

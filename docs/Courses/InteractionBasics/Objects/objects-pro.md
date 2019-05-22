@@ -138,7 +138,7 @@ This template container uses the same variable `unread` that’s used in the con
 :::tip Color hierarchy in Tailwind
 Another way to manage different text colors for a message and a date stamp is to apply grey by default with `class="text-gray-500"` and conditionally make them black with `:class="{'black': contact.unread}"`. Unfortunately, this will not work. We use Tailwind as a stylesheet, and the styles for the `text-gray-500` class are defined below the styles for `text-black` on the stylesheet. This means that `text-gray-500` has greater precedence and will always overrule `text-black` when both classes are applied.
 
-Keep in mind that colors are defined in a particular order. The way colors are presented in [Tailwind's official docs](https://next.tailwindcss.com/docs/colors) represents their precedence with black having the lowest precedence and pink having the hightest.
+Keep in mind that colors are defined in a particular order. The way colors are presented in [Tailwind's official docs](https://tailwindcss.com/docs/customizing-colors/#default-color-palette) represents their precedence with black having the lowest precedence and pink having the hightest.
 :::
 <!-- todo: fix the link when Tailwind 1.0 is officially released -->
 

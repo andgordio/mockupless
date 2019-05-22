@@ -1,6 +1,6 @@
 # Functions
 
-![illustration for functions](./media/il-functions.png)
+<!-- ![illustration for functions](./media/il-functions.png) -->
 
 You already use containers for content in layout: divs. You also use containers for data: variables. It was only a matter of time before you discovered that there are **containers for instructions** too 💁.
 

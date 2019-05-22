@@ -1,6 +1,6 @@
 # Storing data
 
-![illustration for variables and data](./media/il-data.png)
+<!-- ![illustration for variables and data](./media/il-data.png) -->
 <!-- todo: illustration: storing in containers. Idea: instead of using old-fashioned analogies like construction site, design something more futuristic.  -->
 
 When prototyping interactive experiences, you have to decide whether you should place some of your content directly in the layout or store it separately as **data**. To make this decision quickly and efficiently, you need to understand *why* you should store some content separately from the layout in the first place. Two main reasons—making content dynamic and saving user input—are explored in this article.

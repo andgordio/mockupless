@@ -1,9 +1,9 @@
 # About the course
 
-![illustration that welcomes users to the course](./Setup/media/il-about.png)
+<!-- ![illustration that welcomes users to the course](./Setup/media/il-about.png) -->
 <!-- todo: illustration: welcoming to interaction -->
 
-Welcome to Interaction basics! In this course you will start learning how to create truly interactive and testable prototypes with the power of JavaScript and Vue.js. You will start small and finish the course by creating your own multi-page prototype with dynamic components and collections that respond to user actions.
+Welcome to Interaction basics! In this course you will start learning how to create truly interactive and testable prototypes with the power of JavaScript and Vue.js. You will start small and finish the course by creating your own multi-page prototype with dynamic collections and components that respond to user actions.
 <!-- todo: link: maybe to About section explaining why particular technologies have been chosen -->
 
 

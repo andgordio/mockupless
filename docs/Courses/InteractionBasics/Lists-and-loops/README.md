@@ -1,6 +1,6 @@
 # Lists
 
-![hey](./media/il-lists.png)
+<!-- ![hey](./media/il-lists.png) -->
 
 Creating a collection of components in a list or grid arrangement is almost a routine task for an interface designer. A contacts list, recent conversations, latest tweets, recommended videos, songs in a playlist, and related articles—all consist of items that share a look and behavior but have different content. This section is focused on the efficient ways to render lists with rich content and manage their items.
 
