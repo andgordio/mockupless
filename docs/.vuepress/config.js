@@ -28,6 +28,7 @@ module.exports = {
       ]},
       // { text: 'Cookbook', link: '/Cookbook/' },
       // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
+      { text: 'Showcase', link: '/Showcase/course-project.md' },
       { text: 'Forum', link: 'https://spectrum.chat/mockupless' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
     ],
@@ -179,6 +180,9 @@ module.exports = {
         'drag-n-drop',
         'timeout',
         'fake-data',
+      ],
+      '/Showcase/': [
+        'course-project',
       ]
     }
   }

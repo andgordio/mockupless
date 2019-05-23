@@ -1,40 +1,29 @@
 # Welcome to Mockupless
 
-## What's Mockupless?
+Mockupless is a design methodology that explores how code can be an effective and easy to pick up tool for interaction designers. It is aimed at smoothing the learning curve and providing tools and techniques that allow you to write simple code that is friendly to alterations.
 
-Mockupless is a **design methodology** that explores how interaction designers can reduce the amount of time they spend creating static images. Its purpose is to provide designers with tools and techniques that allow them to:
-- create prototypes quickly to start testing assumptions early in the process
-- create prototypes that are friendly to alterations to update them according to testing results
-- create prototypes that can be as simple as a screen transition, yet can be scaled into simulations of a complex system
+Prototyping brings thoughtfulness to the design workflow by enabling testing, deeper analysis and productive iterations. *Prototyping with code* allows you to test your ideas early, iterate and keep testing throughout the whole design process.
 
-<!-- The ultimate goal of Mockupless is to quickly create testable prototypes in a way that allows for easy adoption of changes and is s -->
+Check out the introductory courses that teach the basics of the Mockupless approach to prototyping:
 
-## Why code?
+[Layout basics →](./../Courses/LayoutBasics/Intro/about.html)
 
-Static images allow for quick testing of a layout. Hotspot-based prototyping tools allow to test simple workflows by combining sets of images. Other prototyping tools allow to create transitions and interactions. With code you can design and test everything listed above and almost anything else.
+[Interaction basics →](./../Courses/InteractionBasics/)
 
-Mockupless utlizes web technologies like:
-- HTML, CSS and Tailwind for creating layouts
-- JavaScript and Vue.js for scripting interactions
+Also, take a look at the prototypes inspired by Mockupless:
 
-#### “But it takes a lot of time to learn to code!”
-It does — if you want to become an engineer. And to be able to prototype interfaces you will only need a small portion of knowledge of technologies you will use. You are not required to learn how to create code that is secure, fast, optimized for older browsers and prone to bugs. 
+[Showcase →](./../Showcase/course-project.md)
 
-#### “Coding is slow compared to creating images!”
-It is — if you have only a couple of views in your design and the amount of states is small. Once you have 20+ screens you spend more time maintaining changes and updating interaction layers than it takes to implement a change in code and let it handle the states.
+## Technologies
 
-## Who is this for?
+Mockupless is built around web technologies. HTML, CSS and JavaScript are at the core, but some modern frameworks and tools play the crucial role in shaping the methodology:
 
-Interaction designers, UX and UI designers, product teams.
+- Flexbox and [Tailwind](https://tailwindcss.com/) are used to quickly create layouts that are easy to alter.
+- [Vue.js](https://vuejs.org/) is used to add interactivity with the smoothest learning curve and minimum effort.
+- [CodePen](https://codepen.io/) is used to create, preview and share prototypes, all in one place.
 
-## How do I start?
+## Beta
 
-If you are new to web technologies, start with Intro to layout (to be added) and [Intro to programming](./../Courses/INteractionBasics/) (work in progress) courses. Even if you feel comfortable with your knowledge, it is still highly recommended to become familiar with courses' materials to learn the techniques and patterns aimed at achieving Mockupless goals.
+The Mockupless website is currently in beta. Here this pseudoscientific term means that with all the effort, passion and editing that’s been put into the website, it’s not complete and may contain some embarrassing mistakes. If you encounter one, please be patient and if you have a minute, send an email to [poorbeta@mockupless.com](poorbeta@mockupless.com).
 
-## Am I alone?
-
-There's a [Forum](https://forum.mockupless.com) for providing support, discussing ideas, sharing progress and shaping the methodology. 
-
-## Can I contribute?
-
-Absolutely. Mockupless is open-source and open-hearted when it comes to your ideas on how to improve the methodology and the coures. All contributions are welcome on [GitHub](https://github.com/andgordio/mockupless).
+This website is designed to constantly improve and evolve, and neither of these causes can be achieved without help from the community. Feel free to address you concerns, ask questions and seek help in the [Gerenal channel](https://spectrum.chat/mockupless/general) of the [Mockupless Spectrum Forum](https://spectrum.chat/mockupless).
