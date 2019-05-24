@@ -239,9 +239,6 @@ Create a low-fidelity design of an article page:
 </iframe>
 
 5. Since you need to center the article, you need to turn the blue container into a flex parent container using `display: flex` and center the content horizontally using `justify-content: center`.
-
 6. In the blue container, create a single child container that takes full width using `width: 100%`, but doesn’t expand beyond the specified width using `max-width: 480px`.
-
 7. Paste the result of the [Text task](./../Style/text.md#practice) in the *Box model* article into the centered container. 
-
 8. Remove the background color from the blue container, and add `overflow: scroll` to it. This way the article area receives its own scroll, and the header always stays on top.
