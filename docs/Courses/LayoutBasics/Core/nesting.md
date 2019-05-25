@@ -32,9 +32,9 @@ The nested structure of the HTML code establishes **parent-child relationships**
 </div>
 ```
 
-As you may notice, *child* and *parent* are relative terms. For example, Container B is a child of Container A, but at the same time it is a parent to other two containers, C and D.
+As you may notice, *child* and *parent* are relative terms. For example, Container B is a child of Container A, but at the same time it is a parent to the other two containers, C and D.
 
-Nesting is an core concept in HTML. By nesting containers you create groups, and grouping allows your to create complex layouts. Take a look at the dialog view below:
+Nesting is a core concept in HTML. By nesting containers you create groups, and grouping allows your to create complex layouts. Take a look at the dialog view below:
 
 <iframe height="366" style="width: 100%;" scrolling="no" title="Nesting-dialog" src="//codepen.io/andgordy/embed/PvbgmK/?height=366&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/PvbgmK/'>Nesting-dialog</a> by And Gordy
@@ -69,7 +69,7 @@ CodePen and most modern code editors allow you to collapse containers by pressin
 
 ![](./../media/collapsing-5811f72a-cf86-4749-b237-a9a8bb28ffb5.png)
 
-Prototypes get big pretty fast. The habit of creating the sections using commenting and collapsing the sections, that you currently don’t work with, can save you a lot of time navigating the code even in relatively small prototypes.
+Prototypes get big pretty fast. The habits of creating the sections using commenting and collapsing the sections that you currently don’t work with, can save you a lot of time navigating the code even in relatively small prototypes.
 
 ## Practice
 
@@ -88,9 +88,9 @@ Your result will not have styles so it should look more like an example below. T
 </iframe>
 
 1. Create a `div` container for the first item on a list.
-2. Create three child containers: one for a photo, second for a name and a date stamp, and the third for a message.
-3. Create two children containers in the second container that you have just created: one for a user name, and another for a time stamp.
+2. Create three child `div` containers: one for a photo, second for a name and a date stamp, and the third for a message.
+3. Create two children containers in the second container that you have created on step 2: one for a user name, and another for a time stamp.
 4. Fill the containers with content.
-5. Create two more copies of the list item with a different content, so you have three items in total, as in the example above.
+5. Create two more copies of the list item and populate them with different content. You should have three items in total, as in the example above.
 
 If the reasoning behind the grouping of the containers one way or another is not particularly clear to you now, it’s totally fine. Later in the course you will learn to apply styles to containers to position them properly in relation to each other, and the grouping should become more clear then.
