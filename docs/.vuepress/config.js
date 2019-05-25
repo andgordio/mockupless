@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Mockupless',
-  description: 'Design testable prototypes with code',
+  description: 'Learn to design testable prototypes with code',
   plugins: ['@vuepress/google-analytics'],
   markdown: {
     lineNumbers: false
