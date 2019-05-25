@@ -1,10 +1,10 @@
 # Colors
 
-There are four ways to specify color in CSS: by color name, as a hex value, as an RGB or as an HSL value.
+There are four ways to specify color in CSS: by a color name, as a hex value, as an RGB or an HSL value.
 
 ## Named colors
 
-CSS has a total of 140 named colors like `crimson` and `steelblue` that you can use anywhere a color value is expected. For example, these colors can be used for the `background-color` property:
+CSS has a number of named colors like `crimson` and `steelblue` that you can use anywhere a color value is expected. For example, these colors can be used for the `background-color` property:
 
 ```html {1,4,7}
 <div style="background-color: crimson;">
@@ -84,7 +84,7 @@ An extended version of RGB allows you to specify opacity too. It’s called RGBa
 </div>
 ```
 
-Unlike red, green and blue values, the opacity value goes from `0` to `1`. So `0.1` is barely visible and `0.5` is half-transparent.
+Unlike red, green and blue, the opacity scale goes from `0` to `1`. So `0.1` is barely visible and `0.5` is half-transparent.
 
 ## HSL & HSLa
 
@@ -96,7 +96,7 @@ Lastly, you can specify color using the HSL color model. **Hue** is set on a sca
 </div>
 ```
 
-HSL also has a version with alfa channel that allows you to specify opacity:
+HSL also has a version with an alfa channel that allows you to specify opacity:
 
 ```html
 <div style="background-color: hsla(0, 100%, 50%, 0.3);">
@@ -116,7 +116,7 @@ Change colors of the boxes from the Units article:
 </iframe>
 
 1. Fork your result of the task in the [Units article](./units.md#practice). You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/NVvoPb).
-2. Design a color palette or find one online. [ColorHunt](https://colorhunt.co) is a nice tool with a lot of inspiration.
+2. Design a color palette or find one online. [ColorHunt](https://colorhunt.co/palettes/trendy) is a nice tool with a lot of inspiration.
 3. Replace named color values in the `background-color` attributes with hex values.
 
 ### Texts
@@ -128,7 +128,7 @@ Add colors to texts from the Intro to CSS article:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Fork your result of the task in the [Intro to CSS article](./intro-to-css.md#practice). You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/GavYzr).
+1. Fork your result of the task in the [Intro to CSS](./intro-to-css.md#practice) article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/GavYzr).
 2. Set the text color of the user names to `#319795` using the `color` property.
 3. Set the text color of the time stamps to `#718096`.
 4. Set the color of the “photo” labels to `#ED8936`.

@@ -1,6 +1,6 @@
 # Intro to CSS
 
-CSS is a styling language. With CSS, you define how the content of a prototype is positioned and how it looks. If HTML is like the Layers panel in Figma or Sketch, then CSS is like the Inspector that allows you to set width, height, fill, text styles and effects for the selected layer.
+CSS is a styling language. With CSS, you define how the content of a prototype is positioned and how it looks. If HTML is like the Layers panel in Figma or Sketch, then CSS is like Inspector that allows you to set width, height, fill, text styles and effects for the selected layer.
 
 The easiest way to apply CSS to a container is by using the `style` attribute:
 
@@ -126,11 +126,11 @@ This piece of CSS changes the border color for all inputs, text areas and dropdo
 
 You can hide parts of your CSS code from preview similarly to the way you hide HTML code. Commenting CSS serves the same purposes as it does in the HTML section:
 
-- To hide the code you don’t want to be applied, but don’t want to delete it either.
+- To temporary hide the code that you don’t want to be applied.
 - To visually separate your code into sections.
 - To leave comments for yourself and other designers.
 
-The syntax is different from the one you use in HTML though. To comment code you enclose it in a pair of forward slashes and asterisks:
+The syntax is different from the one you use in HTML though. To comment CSS code, you enclose it in a pair of forward slashes and asterisks:
 
 ```css
 /* .something {
@@ -144,13 +144,13 @@ button {
 }
 ```
 
-The keyboard shortcut is the same as in HTML too: `⌘`+`/` (`ctrl`+`/` on Windows).
+The keyboard shortcut is the same as in HTML too: `⌘`+`/` on macOS, `ctrl`+`/` on Windows.
 
 ## Choosing the styling approach
 
-We recommend to use a mix of inline and tag styling during this course. Classes are highly reusable and make the HTML code cleaner, but creating a system of well-designed classes takes a lot of time and effort. Also, flexibility is an important part of the prototyping process: you need to be able to pivot quickly, try different layouts, and create freely—all without spending too much time on maintaining a system to incorporate the changes.  
+We recommend to use a mix of inline and tag styling during this course. Classes are highly reusable and make the HTML code cleaner, but creating a system of well-designed classes takes a lot of time and effort. Also, flexibility is an important part of the prototyping process: you need to be able to pivot quickly, try different layouts, and create freely—all without spending too much time on maintaining a design system.  
 
-Eventually, you *will* switch to classes, but you will not have to create them. In the Frameworks and libraries section of this course you are introduced to [Tailwind](./../Frameworks/tailwind.md), a CSS framework that provides you with a collection of classes that come as a natural upgrade from inline styling. They rovide a similar level of convenience, but with less code and many presets. 
+Eventually, you *will* switch to classes, but you will not have to create them. In the *Frameworks and libraries* section of this course you will be introduced to [Tailwind](./../Frameworks/tailwind.md), a CSS framework that provides you with a collection of classes that come as a natural upgrade from inline styling.
 
 ## Practice
 
@@ -164,7 +164,7 @@ Add some styles to the prototype from the Nesting article:
 1. Fork your result of the task in the [Nesting article](./../Core/nesting.md#practice). You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/yWXZwZ).
 2. Add the `style` attribute with `padding-bottom: 24px` to the three main parent containers. This should add vertical spacing between items on the list.
 3. Add `style` with `font-weight: bold` and `font-size: 18px` to the containers with the user names.
-4. Add `style` with `font-size: 13px` to the containers with time stamps.
-5. Go to CSS section add specify `font-family: sans-serif` for the `div` tag. This should apply a sans-serif font to all elements on the page.
+4. Add `style` with `font-size: 13px` to the containers with the time stamps.
+5. Go to the CSS section add specify `font-family: sans-serif` for the `div` tag. This should apply a sans-serif font to all elements on the page.
 
 Don’t hesitate to look at the code of the prototype above if you encounter problems with the task. All styles from this task will be explored in more detail in the articles that follow.

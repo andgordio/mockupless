@@ -22,7 +22,7 @@ With the `font-family` property you can specify the font for a container:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-You can list multiple fonts separated by commas to provide a browser with alternatives if it fails to load the first one on your list. In the example above, Helvetica will be applied to the first container by default. If Helvetica is not installed on the operating system of a user, which is common for Windows PCs, Arial will be applied. If Arial is absent too, the system's default sans-serif font will be applied.
+You can list multiple fonts separated by commas to give a browser the alternatives if it fails to load the first one on your list. In the example above, Helvetica will be applied to the first container by default. If Helvetica is not installed on the operating system of a user, which is common for Windows PCs, Arial will be applied. If Arial is absent too, the system's default sans-serif font will be applied.
 
 It is common to put one of the three generic font families—`serif`, `sans-serif` or `monospace`—in the end of your list. This way, when all the fonts you specified fail to load, a system’s default font family is applied.
 
@@ -43,7 +43,7 @@ When you apply the `font-family` property to a container, its children inherit t
 
 Note that a font name must be enclosed in single quotes if it consists of two or more words, like this: `'Courier New'`.
 
-When prototyping, you are not limited to the fonts that are built into the operating systems. In the Frameworks and libraries section of this course you will learn to use fonts from a nice collection of typefaces in the Google Fonts library.
+When prototyping, you are not limited to the fonts that are built into the operating systems. In the Frameworks and libraries section of this course you will learn to use fonts from a nice collection of typefaces in the [Google Fonts](./../Frameworks/google-fonts.html) library.
 
 ## font-size
 
@@ -63,7 +63,7 @@ The `font-size` property allows you to set the size of the text inside a contain
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Using pixels for font sizes is perfectly fine for prototyping. However, you should know that most design systems and frameworks have text sizes defined in `em` or `rem`. These units allow you to specify font sizes relatively to a default value. For example, if `1rem` is `16px` by default, so if you set the font size of a container to be `1.5rem` it will render to `24px`. 
+Using pixels for font sizes is perfectly fine for prototyping. However, you should know that most design systems and frameworks have text sizes defined in `em` or `rem`. These units allow you to specify font sizes relatively to a default value. For example, if `1rem` is `16px` by default, and you set the font size of a container to be `1.5rem` it will render to `24px`. 
 
 ```html {1,4}
 <div style="font-size: 1rem;">
@@ -104,11 +104,11 @@ The `font-weight` property allows you to use different weight variations of a fo
 You can specify font weight in 2 ways: with the numeric values, or with the named ones:
 
 - Numeric values are: `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`, where 100 is the lightest and 900 is the boldest.
-- Named values include `normal` (equivalent of 400) and `bold` (equivalent of 700).
+- Named values include `normal` and `bold`.
 
-Note that most fonts don’t have all 9 weight variations. If you set font weight to 300, for example, and the font you are using doesn’t have this variation, it will be replaced with another weight variation by a browser using [Fallback weights](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Fallback_weights) system.
+Note that most fonts don’t have all 9 weight variations. If you set font weight to 300, for example, and the font you are using doesn’t have this variation, a browser will replace it with another weight variation using [Fallback weights system](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Fallback_weights).
 
-When the `font-weight` property gets inherited by the children of a container:
+The `font-weight` property gets inherited by the children of a container:
 
 ```html
 <div style="font-weight: 900;">
@@ -146,7 +146,7 @@ When the `font-weight` property gets inherited by the children of a container:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Notice that this property—unlike family, size and weight—starts with `text-`, not `font-`. There seems to be [a justification](https://stackoverflow.com/questions/21075127/font-vs-text-in-css-property-names) of  having different prefixes for different font properties, but in reality, you just need to remember the full names of the properties to use them effectively.
+Notice that this property—unlike family, size and weight—starts with `text-`, not `font-`. There seems to be [a justification](https://stackoverflow.com/questions/21075127/font-vs-text-in-css-property-names) for having different prefixes for different font properties, but in reality you should remember the full names of the properties, and not the justification, to prototype effectively.
 
 ## color
 
@@ -186,7 +186,7 @@ Add text styles to an article design:
 </iframe>
 
 1. Fork the [starting prototype](https://codepen.io/andgordy/pen/mYMNXo?editors=1000). It includes the required content and some necessary styles.
-2. Change the font family of the title, the subtitle and the intro paragraph to sans-serif.
+2. Change the font family of the title, the subtitle and the intro paragraph to `sans-serif`.
 3. Change the size of the title to 30px, the intro paragraph to 19px and the body of the article to 18px.
 4. Make the title bold.
 5. Change the color of the subtitle to #718096.

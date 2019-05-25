@@ -27,7 +27,7 @@ You can also use a shorthand property `border`, that allows you to specify all t
 border: 2px solid #000;
 ```
 
-The order is important: width goes first, then style, then color. Also, the `border` property has variations that allow you to specify which side of a container you want to apply a border to:
+The order is important—width goes first, then style, then color. Also, the `border` property has variations that allow you to specify which side of a container you want to apply a border to:
 
 ```html
 <div style="border-top: 1px solid silver;
@@ -43,7 +43,7 @@ The order is important: width goes first, then style, then color. Also, the `bor
 
 The available suffixes are `-top`, `-bottom`, `-left` and `-right`. As you can see in the example above, you can apply different borders to different sides of a container.
 
-To remove a border from the element, apply `border: none` to the element.
+To remove a border from a container, apply `border: none`.
 
 ## Radius
 
@@ -63,7 +63,7 @@ The `border-radius` property rounds the corners of a container:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-You don’t have to apply a border to see the effect of the `border-radius` property. If a container has a background color you will be able to see that it is rounded too:
+You don’t have to apply a border to see the effect of the `border-radius` property. If a container has a background color you will be able to see the round corners too:
 
 ```html {1,2}
 <div style="background-color: teal;

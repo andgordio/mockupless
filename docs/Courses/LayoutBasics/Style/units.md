@@ -4,7 +4,7 @@
 
 The variety of ways to measure distance and size in CSS can surprise you. However, it all starts with the unit that you should be pretty familiar with: **a pixel**. Pixels are used everywhere from measurements in graphic design tools to screen resolutions, and they are popular on the web too.
 
-As you probably know, the size of a pixel is different on different screens. High-density screens, like Retina display on iPhones and MacBooks, fit multiple physical pixels into one pixel unit. Google calls these pixel units [density-independent pixels](https://material.io/design/layout/density-resolution.html#density-independence), and Apple calls them [points](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/). But no matter how complex the technical part of the pixel rendering gets, remember that in CSS, pixels mean the same thing they do in Figma or other graphic design tools.
+As you probably know, the size of a pixel is different on different screens. High-density screens, like Retina display on iPhones and MacBooks, fit multiple physical pixels into one pixel unit. Google calls these pixel units [density-independent pixels](https://material.io/design/layout/density-resolution.html#density-independence), and Apple calls them [points](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/). But no matter how complex the technical part of the pixel rendering gets, remember that in CSS pixels mean the same thing they do in Figma or other graphic design tools.
 
 Pixels are written as `px` in CSS:
 
@@ -19,7 +19,7 @@ Pixels are written as `px` in CSS:
 
 ## %
 
-**Percentages** is another popular way to measure size and distance on the web. A container that has width set to 50 percent will be half the size of its **parent container**. It’s very important to understand that percents are a relative value: two containers with width set to 25%, for example, can have different size depending on the size of their parent containers.
+**Percentages** is another popular way to measure size and distance on the web. A container that has width set to 50 percent will be half the size of its **parent container**. It’s very important to understand that percents are a relative value, for example: two containers with the width set to 25% can have different size depending on the size of their parent containers.
 
 Percents are written as `%` in CSS:
 
@@ -39,14 +39,14 @@ When you preview the code above, you see that the child container is indeed half
 
 ## vw, vh
 
-Another way to measure size and distance on the web is with the use of the **viewport units**. Viewport is the area where your prototype is rendered. On CodePen, the Preview panel is the viewport by default. If you switch to *Debug mode* in CodePen (found in the *Change View* menu), the browser tab becomes your viewport.
+Another way to measure size and distance on the web is with the use of the **viewport units**. Viewport is the area where your prototype is rendered. On CodePen, the Preview panel is the viewport. If you switch to *Debug mode* in CodePen (found in the *Change View* menu), the browser tab becomes your viewport.
 
 Two main viewport units are `vw` and `vh`:
 
 - `vw` stands for “percentage of viewport width”.
 - `vh` stands for “percentage of viewport height”.
 
-These units are used to define the width and the height of containers most frequently:
+Most often these units are used to define the width and the height of a container:
 
 ```html
 <div style="width: 50vw; height: 50vh; background-color: teal;"></div>

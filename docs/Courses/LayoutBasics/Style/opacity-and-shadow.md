@@ -1,6 +1,6 @@
 # Opacity and shadow
 
-The final pair of decorative properties explored in this section of the course are `opacity` and `box-shadow`. The first property adds transparency to a container, and the second one adds an outer shadow.
+The final pair of decorative properties that are explored in this section of the course are `opacity` and `box-shadow`. The first property adds transparency to a container, and the second one adds an outer shadow.
 
 ## Opacity
 

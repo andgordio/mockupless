@@ -17,7 +17,7 @@ You can apply a color to a container’s background with the `background-color` 
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-As mentioned in the Color article, there’s a variety of ways to define colors in CSS: 
+As mentioned in the [Colors](./colors.md) article, there’s a variety of ways to define colors in CSS: 
 
 ```css
 background-color: tomato;                   /* named value */
@@ -29,7 +29,7 @@ background-color: transparent;              /* no background */
 
 ## Image
 
-You can fill the background of a container with an image using the `background-image` property and URL of an image: 
+You can fill the background of a container with an image using the `background-image` property and a URL of an image: 
 
 ```html
 <div style="height: 400px;
@@ -89,7 +89,7 @@ You can specify the vertical and the horizontal alignment of a background image 
 
 ### Repeat
 
-You can also define whether you want the background image to be repeated when it’s smaller than the container:
+You can also define whether you want the background image to be repeated when it’s smaller than the container using `background-repeat`:
 
 ```html {2}
 <div style="background-image: url('http://website.com/picture.jpg');
@@ -105,10 +105,10 @@ You can also define whether you want the background image to be repeated when it
 
 The available values are:
 
-- `repeat` is the default value that repeats an image both vertically and horizontally. This value is useful for filling a container’s background with a pattern.
+- `repeat` repeats a background image both vertically and horizontally. This value is useful for filling a container’s background with a pattern. It’s the default value.
 - `repeat-x` repeats an image horizontally.
 - `repeat-y` repeats an image vertically.
-- `no-repeat` prevents the image from being repeated.
+- `no-repeat` prevents a background image from being repeated.
 
 As you can see in the example above, if the background image is smaller than the container, the background color becomes visible. You will also be able to see the color through the background images with transparency.
 
@@ -123,7 +123,7 @@ You can specify the size of a background image with the `background-size` proper
 </div>
 ```
 
-This is particularly useful when you export images for high-resolution displays in @2x or @3x, and you need to set their original dimensions to use as a background. If you are reading this article on a Retina or a similar display, you should notice how sharp the image below is compared to the images in previous examples:
+This is particularly useful when you export images for high-resolution displays in @2x or @3x, and you need to set their original dimensions to use as a background. If you are reading this article on a Retina display or a similar one, you should notice how sharp the image below is compared to the images in the previous examples:
 
 <iframe height="563" style="width: 100%;" scrolling="no" title="Style—Background—image, size" src="//codepen.io/andgordy/embed/arbZmY/?height=563&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/arbZmY/'>Style—Background—image, size</a> by And Gordy
@@ -145,7 +145,7 @@ This value, when combined with `background-position`, provides you with freedom 
 
 ## Practice
 
-Create a small photo gallery using background images:
+Create a small photo gallery using the `background-image` property:
 
 <iframe height="627" style="width: 100%;" scrolling="no" title="Style—Background—Task" src="//codepen.io/andgordy/embed/wbqVbK/?height=627&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/wbqVbK/'>Style—Background—Task</a> by And Gordy
@@ -153,7 +153,7 @@ Create a small photo gallery using background images:
 </iframe>
 
 1. Fork your result of the task in the [Colors article](./colors.md#boxes). You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/JqyVWM).
-2. Add background-images to all three containers. Here are the URLs of the images used in the prototype above:
+2. Add background images to all of the three containers. Here are the URLs of the images used in the prototype above:
 
 ```html
 https://images.unsplash.com/photo-1529114901968-3b83794634b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60
@@ -169,7 +169,7 @@ The images in this prototype are found on [Unsplash](https://unsplash.com). This
 https://images.unsplash.com/...w=1600&q=60
 ```
 
-Notice that the URL ends with `w=`, which stands for width, and `q=`, which stands for quality. You can change the values that follow these letters to request a different size of an image (in pixels) and a different quality (from 0 to 100). For example, request a smaller size of the example above with better quality:
+Notice that the URL ends with `w=`, which stands for width, and `q=`, which stands for quality. You can change the values that follow these letters to request a different size of an image (in pixels) and a different quality (from 0 to 100). For example, here’s a URL that requests the version of an image that is 1280 pixels wide and is of maximum quality:
 
 ```html
 https://images.unsplash.com/...w=1280&q=100
