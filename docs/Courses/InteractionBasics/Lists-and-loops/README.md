@@ -183,7 +183,7 @@ Create a three-by-three grid using a template-container with the `v-for` attribu
 </iframe>
 
 1. Create an array with 9 items.
-2. Create a flex container to hold the grid, and don’t forget to [wrap content](./../../LayoutBasics/Flex/direction-and-wrap.html#flex-wrap).
+2. Create a flex container to hold the grid, and don’t forget to [wrap content](./../../LayoutBasics/Positioning/direction-and-wrap.html#flex-wrap).
 3. Using Tailwind’s class `w-1/3`, create a child template-container with width 33%.
 4. Apply the `v-for` attribute to the template. Connect it to the array you created in step 1.
 5. Render the value from the array using a temporary name inside the template. 

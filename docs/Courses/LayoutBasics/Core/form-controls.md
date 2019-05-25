@@ -1,6 +1,6 @@
 # Form Controls
 
-This article provides an overview of the basic form controls: text inputs, checkboxes, dropdown menus, buttons and other elements that allow for basic user interactions in HTML. All controls have default styles that can be changed using CSS, which is explored in the next section of this course. The [Interaction basics](./../../InteractionBasics/) course explores how you can use form controls to save user input using JavaScript and Vue.js.
+This article provides an overview of the basic form controls: text inputs, checkboxes, dropdown menus, buttons and other elements that allow for the basic user interactions in HTML. All controls have default styles that can be changed using CSS which is explored in the next section of this course. The [Interaction basics](./../../InteractionBasics/) course explores how you can use form controls to save user input using JavaScript and Vue.js.
 
 ## Button
 
@@ -33,9 +33,9 @@ The `input` tag with `type="text"` attribute allows users to enter text in a sin
 
 Note that the `input` element does not have a closing tag.
 
-`placeholder` is an optional attribute that specifies what text must be shown when the input is  empty.
+`placeholder` is an optional attribute that specifies what text must be shown when the input is empty.
 
-There are other types of input—like `email` and `password`—that work similarly to `text` and also provide additional features:
+There are other types of input—like `email` and `password`—that work similarly to `text` and provide additional features:
 
 - `email` enables email-friendly keyboard on mobile devices.
 - `password` hides user input behind black circles.
@@ -65,7 +65,7 @@ Unlike `input`, the `textarea` element has a closing tag.
 
 ## Checkbox
 
-To add a checkbox control to a prototype, you need the `input` tag with `type="checkbox"` attribute and the `label` container:
+To add a checkbox control to a prototype, you need the `input` tag with the `type="checkbox"` attribute and the `label` container:
 
 ```html
 <input type="checkbox">
@@ -89,14 +89,14 @@ To add a checkbox control to a prototype, you need the `input` tag with `type="c
 - You add the `id` attribute to the `input` tag with a value of your choice.
 - You add the `for` attribute to the `label` tag with the same value.
 
-When the label is clicked, user’s browser looks for an input with the `id` that matches the value in the `for` attribute, and if it finds one, it acts like the checkbox was clicked:
+When the label is clicked, the browser looks for an input with the `id` that matches the value in the `for` attribute, and if it finds one, it acts like the checkbox was clicked:
 
 <iframe height="210" style="width: 100%;" scrolling="no" title="Core—Form—checkbox, clickable" src="//codepen.io/andgordy/embed/joVZdq/?height=210&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/joVZdq/'>Core—Form—checkbox, clickable</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-The syntax is a little complex, but implementing this interaction is considered a good practice. Most users expect to be able to click the text, because it works this way in most applications. Also, text has a larger area than a checkbox control, which makes it an easier target.
+The syntax is a little complex, but implementing this feature is usually a necessary step. Most users expect the text to be clickable, because it is clickable in most applications. Also, text has a larger area than a checkbox control, which makes it an easier target.
 
 You can also add the `checked` attribute to the input tag if you want the control to be checked by default:
 
@@ -142,7 +142,7 @@ Radio buttons require the `name` attribute. The radio buttons with the same valu
 
 One of the radio buttons can be selected by default with the `checked` attribute.
 
-You can make labels clickable with pairs of `id` and `for` attributes, the same way it works for checkboxes.
+You can make labels clickable with pairs of the `id` and the `for` attributes, as described the *Checkboxes* section above.
 
 ## **Dropdown**
 
@@ -197,4 +197,4 @@ Design a form:
 
 1. Create a new pen, and use this article as a reference to add form controls to the prototype.
 2. Wrap controls in `div` containers to create line breaks.
-3. Instead of manually typing tags, like `<textarea></textarea>`, enter the name of the tag, like `textarea` and press *tab* on the keyboard. Sometimes this shortcut will add attributes that were not covered in this article. Feel free to either ignore those attributes, or delete them, or find information about them online and try using them.
+3. Instead of manually typing in tags, like `<textarea></textarea>`, enter the name of the tag, like `textarea` and press *tab* on the keyboard. Sometimes this shortcut will add attributes that were not covered in this article. Feel free to either ignore those attributes, or delete them, or find information about them online and try using them.

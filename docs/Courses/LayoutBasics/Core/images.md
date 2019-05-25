@@ -16,9 +16,9 @@ You can add images to your prototypes with a special tag:
 The image file has to be stored online for you to be able to enter its URL in the `src` attribute.
 
 :::tip Attributes
-`src` is an attribute. Attributes are always placed in the opening tag. They consist of the name of the attribute, followed by an equal sign, followed by a pair of parentheses. The value of an attribute is placed within the parentheses. For example, the `src` attribute expects a URL, so its syntax is `src="https://website.com/image.png"`. 
+`src` is an attribute. Attributes are always placed in the opening tag. They consist of the name of the attribute, followed by an equal sign, followed by a pair of double quotes. The value of an attribute is placed within the parentheses. For example, the `src` attribute expects a URL, so the syntax is `src="https://website.com/image.png"`. 
 
-Attributes extend the functionality of the HTML elements and control their behavior. In this course, you will learn about attributes that change style, specify types of elements, provide placeholder texts, and more.
+Attributes extend the functionality of an HTML element and control its behavior. In this course, you will learn about attributes that change style, specify types of elements, provide placeholder texts, and more.
 :::
 
 To get the URL of an image you either find an image online or upload a file yourself:
@@ -37,7 +37,7 @@ Add photos to the prototype from the previous article:
 </iframe>
 
 1. Open the prototype you created in the [previous article](./nesting.md#practice) and press Fork in the top right of the CodePen’s UI. Rename the prototype. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/JqJxQG).
-2. Delete `<div>photo</div>` from the first item on the list. Type `img` and press *tab* on the keyboard. The editor should autofill with an image tag:
+2. Delete `<div>photo</div>` from the first item on the list. Type `img` and press *tab* on the keyboard. The editor should convert `img` into the image tag:
 
 ```html
 <img src="" alt="">
@@ -47,6 +47,6 @@ Add photos to the prototype from the previous article:
 
 4. Go back to your prototype and paste the URL into the `src` property. You should be able to see the photo in the preview.
 
-5. Replace `<div>photo</div>` with images in other two items on the list.
+5. Replace `<div>photo</div>` with the `img` tag in the other two items on the list.
 
 `alt` is an attribute the allows you to provide text value for the image. This value is shown when the image fails to load. This attribute is also used by screen readers, so it is considered mandatory in web development for accessibility reasons. When prototyping, providing values for `alt` is optional, unless you need to test your design with a screen reader.

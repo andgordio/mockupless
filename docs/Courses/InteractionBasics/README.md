@@ -26,7 +26,7 @@ This course teaches you the basic concepts of creating prototypes with JavaScrip
 This course doesn't require prior knowledge of JavaScript or other programming languages. If you have experience with coding, some concepts will be familiar to you, and you may learn at a faster pace. Nevertheless, going through all the articles of the course is recommended for understanding the Mockupless approach, which sometimes differs from the way programming is usually taught.
 <!-- todo: link: maybe to About section where approach is described and reasoning is provided -->
 
-Knowledge of the [Layout basics](./../LayoutBasics/) is required to understand the HTML and CSS code used in the examples. With this knowledge, you will be able to focus solely on interactivity.
+Knowledge of the [Layout basics](./../LayoutBasics/Intro/about.md) is required to understand the HTML and CSS code used in the examples. With this knowledge, you will be able to focus solely on interactivity.
 
 [CodePen](https://codepen.io) is used in this course for creating and previewing prototypes. Create an account if you haven’t already—it’s free.
 
