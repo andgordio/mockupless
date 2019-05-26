@@ -180,6 +180,7 @@ module.exports = {
       ],
       '/Showcase/': [
         'course-project',
+        'more',
       ]
     }
   }

@@ -2,7 +2,7 @@
 
 ## Top nav
 
-In terms of style, the top navigation bar is just a selection of paddings, some icons and an imported font:
+In terms of style, the top navigation bar is just a set of paddings, some icons and an imported font:
 
 <iframe height="743" style="width: 100%;" scrolling="no" title="Layout basics—Course project—Insta, step 5" src="//codepen.io/andgordy/embed/RmVNOG/?height=743&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/RmVNOG/'>Layout basics—Course project—Insta, step 5</a> by And Gordy
@@ -62,7 +62,7 @@ To create a round image, you need a flex container, with fixed height and width,
 
 The URLs for images are taken from [https://uifaces.co](https://uifaces.co/).
 
-To create a round photo with a pink outline, you need two containers. First, a rounded container with a pink border and a fixed size. Second, a flex container with an image (as shown in code sample above), this time with white border to create the space between the photo and the pink border:
+To create a round photo with a pink outline, you need two containers. First, a rounded container with a pink border and a fixed size. Second, a flex container with an image (similar to the one in the code sample above), this one with a white border to create the space between the photo and the pink border:
 
 ```html
 <div class="border-2 border-pink-500 w-12 h-12 rounded-full">
@@ -74,11 +74,11 @@ To create a round photo with a pink outline, you need two containers. First, a r
 
 Notice, that the inner container uses `w-full` and `h-full` instead of fixed values, because its parent has the dimensions fixed already.
 
-The uppercase for subtitles like “1 HOUR AGO” and “FOLLOWS YOU” are achieved by applying `uppercase` class that transforms text into capital letters.
+The uppercase for subtitles like “1 HOUR AGO” and “FOLLOWS YOU” is achieved by applying `uppercase` class that transforms text into capital letters.
 
 ## Feed
 
-A post in the feed is a complex component, but it shouldn’t introduce new challenges. The images are created using the pattern from the Sidebar section above, the Ionicons are used for buttons, and consistent text styles are applied:
+A post in the feed is a complex component, but it doesn’t introduce new challenges. The images are created using the pattern from the Sidebar section above, the Ionicons are used for buttons, and consistent text styles are applied:
 
 <iframe height="748" style="width: 100%;" scrolling="no" title="Layout basics—Course project—Insta, step 7" src="//codepen.io/andgordy/embed/dEWMQR/?height=748&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/dEWMQR/'>Layout basics—Course project—Insta, step 7</a> by And Gordy

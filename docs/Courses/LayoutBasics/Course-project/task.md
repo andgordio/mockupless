@@ -17,7 +17,7 @@ Create a page layout for a clone of the web version of a popular social app:
 
 The page has a header, a feed and a sidebar. The feed and the stories list in the sidebar are scrollable areas. The sidebar has a fixed width, and the feed takes the rest of the horizontal space.
 
-Open the prototype in a new tab, try scrolling and resizing it to learn more about the layout. Spend some time planning your work, think how you can break the implementation in steps. 
+Open the prototype in a new tab, try scrolling and resizing it to learn more about the layout. Spend some time planning your work, think how you can break the implementation into steps. 
 
 If you decide that the proposed design has room for improvement, don't hesitate to try different layouts and styles!
 

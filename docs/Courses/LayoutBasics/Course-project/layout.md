@@ -6,9 +6,6 @@ Create a new pen on CodePen. Add Tailwind and Ionicons to the CSS settings:
 
 ```html
 https://cdn.jsdelivr.net/npm/tailwindcss@next/dist/tailwind.min.css
-```
-
-```html
 https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css
 ```
 
@@ -34,7 +31,7 @@ It all starts with a full-screen flex container with column direction. It has tw
 </div>
 ```
 
-The content area container is a flex parent itself, with two children: the `flex-1` feed area and fixed-width sidebar:
+The content area container is a flex parent itself, with two children: the `flex-1` feed area and the sidebar a fixed width:
 
 ```html
 <div class="h-screen flex flex-col">
@@ -164,7 +161,7 @@ To complete the core layout, create the feed area:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-The area is a regular container with overflow-scroll:
+The area is a regular container with the `overflow-scroll` class:
 
 ```html
 <div class="flex-1 bg-gray-100 pt-6 px-6 text-blue-500 overflow-scroll h-full">
