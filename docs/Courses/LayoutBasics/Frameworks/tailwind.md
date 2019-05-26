@@ -4,7 +4,7 @@
 
 Writing inline styles is quite time-consuming. So is creating your own design systems using classes. Fortunately, a number of CSS frameworks exist to save you some time.
 
-A CSS framework is essentially a CSS file with a lot of classes, accompanied by a website that explains where and how to use these classes. You import the file to a prototype, study the website, and instead of writing your own CSS, you use classes provided by the framework.
+A CSS framework is essentially a CSS file with a lot of classes, accompanied by a website that explains where and how to use these classes. You import a framework to a prototype, study its website, and instead of writing your own CSS, you use classes provided by the framework.
 
 Most of the CSS frameworks are basically UI kits. They come packed with classes that turn your containers into fully-styled UI components like headers, cards, sidebars etc. You can save a lot of time with a framework of UI kit type. Just take a look at how many styles are applied when you add the `btn` class to a button in **Bootstrap**—the most popular UI kit framework:
 
@@ -29,11 +29,11 @@ Most of the CSS frameworks are basically UI kits. They come packed with classes 
 }
 ```
 
-However, there’s one major downside to using UI kit frameworks for prototyping. By adopting a framework of this type you are limited to the way components and layouts are designed in the framework, whereas the prototyping workflow should inspire creativity, freedom to experiment and change things on the go. You always have an option to override the styles a framework provides, or even create your own classes on top of the existing ones. But this defeats the purpose of using frameworks, which is to save time by not writing CSS and not creating your own classes.
+However, there’s one major downside to using UI kit frameworks for prototyping. By adopting a framework of this type you are limited to the way components and layouts are designed in the framework, whereas the prototyping workflow should inspire creativity, freedom to experiment and change things on the go. You always have an option to override the styles that are provided by a framework, or even create your own classes on top of the existing ones. But this defeats the purpose of using frameworks in prototyping, which is to save time by not writing CSS and not creating your own classes.
 
 ## Enter Tailwind
 
-Tailwind is a CSS framework that takes a different approach. It provides you with a set of utility classes, which means that a class in Tailwind usually consists of a single CSS property with a specific value. Here are, for example, some flexbox styles that Tailwind has wrapped in classes:
+Tailwind is a CSS framework that takes a different approach. It provides you with a set of utility classes, which means that a class in Tailwind usually consists of a single CSS property with a specific value. Here are, for example, some flexbox properties that Tailwind has wrapped in classes:
 
 ```css
 .flex {
@@ -60,7 +60,7 @@ Using these classes is very similar to writing CSS in the `style` attribute. Thi
 
 ### Demo
 
-Creating a prototype often starts with designing the core layout. For example, you want to begin with a three-column layout with the third column broken down into three areas:
+Creating a prototype often starts with designing the core layout. For example, you want to begin with a Slack-alike three-column layout with the third column broken down into three areas:
 
 <iframe height="532" style="width: 100%;" scrolling="no" title="WBGLzL" src="//codepen.io/andgordy/embed/WBGLzL/?height=532&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/WBGLzL/'>WBGLzL</a> by And Gordy
@@ -84,7 +84,7 @@ Here’s what it takes to create this layout with Tailwind:
 </div>
 ```
 
-The properties that are required to build this layout are applied using classes, with takes much less code compared to inline styles:
+The properties that are required to build this layout are applied using classes, which takes much less code compared to inline styles:
 
 - The main container is a full-screen flex container.
 - The first two columns have fixed width.

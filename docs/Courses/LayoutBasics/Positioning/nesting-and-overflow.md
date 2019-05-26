@@ -164,7 +164,7 @@ Design a list of recent conversations:
 </iframe>
 
 1. Create a new pen. In CSS, apply `margin: 0` to the `body` tag.
-2. Start by designing a single card. Create a flex parent container with two children, one with a fixed width for a photo, and another with `flex: 1` to take the rest of the space (apply a blue background color to make to effect visible):
+2. Start by designing a single card. Create a flex parent container with two children: one with a fixed width for a photo, and another with `flex: 1` to take the rest of the space (apply a blue background color to make to effect visible):
 
 ```html
 <div style="display: flex;">
@@ -173,14 +173,14 @@ Design a list of recent conversations:
 </div>
 ```
 
-3. To add a round photo, turn the first child into a flex container, apply `overflow: hidden` and big border radius, and center the content:
+3. To add a round photo, turn the first child into a flex container, apply `overflow: hidden` and a big border radius, and center the content:
 
 ```html {3-6}
 <div style="width: 64px;
             height: 64px;
             display: flex;
             align-items: center;
-            border-radius: 999px;
+            border-radius: 9999px;
             overflow: hidden;">
   <img src="https://...jpg" style="width: 64px;">
 </div>
@@ -204,9 +204,7 @@ Design a list of recent conversations:
 ```
 
 5. Apply proper alignments and text styles to the elements.
-
 6. Duplicate the card twice to create two more cards.
-
 7. To center the cards, wrap everything in a centered container:
 
 ```html
@@ -217,7 +215,7 @@ Design a list of recent conversations:
 </div>
 ```
 
-8. Don’t forget to collapse the containers that you don’t work with to make navigating the code easier.
+Don’t forget to collapse the containers that you don’t work with to make navigating the code easier.
 
 ### Article
 
@@ -231,7 +229,7 @@ Create a low-fidelity design of an article page:
 1. Create a new pen. In CSS, apply `margin: 0` to the `body` tag.
 2. In HTML, create a flex parent container. Make it full-screen using `height: 100vh`.
 3. Paste the result of the task in the [flex: 1 article](./flex-1.md#centered-title) as the first child of the flex container. You can also use the code from [prototype from the article](https://codepen.io/andgordy/pen/XweGaL?editors=1000).
-4. Create another child container with blue background. Apply `flex: 1` to it. You should be able to see in the Preview that this container takes all the available space:
+4. Create another child container with a blue background. Apply `flex: 1` to it. You should be able to see in the Preview that this container takes all the available space:
 
 <iframe height="383" style="width: 100%;" scrolling="no" title="Flex—overflow—Task 1.1, step 1" src="//codepen.io/andgordy/embed/PvOqQP/?height=383&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/PvOqQP/'>Flex—overflow—Task 1.1, step 1</a> by And Gordy

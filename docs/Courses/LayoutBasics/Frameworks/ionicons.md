@@ -1,12 +1,12 @@
 # Ionicons
 
-There’s a number of ways to import icons into your prototypes. You can create an icon font, store icons as images online, import an existing pack of icons, etc. Each option has it advantages, and your choice may depend on your ecosystem, for example, if a client or a product has its own set of icons, that you are obliged to use. For most cases, however, using a publicly available icon pack is the quickest and the most convenient option.
+There’s a number of ways to import icons into your prototypes: you can create an icon font, store icons as images online, import an existing pack of icons, etc. Each option has it advantages, and your choice may depend on your ecosystem if a client or a product has its own set of icons that you are obliged to use. For most cases, however, using a publicly available icon pack is the quickest and the most convenient option for prototyping.
 
 [Ionicons](https://ionicons.com) is a free icon pack that comes with a Material and an iOS version of each icon. This article provides a simple usage guide, and the detailed instructions can be found on the [Usage](https://ionicons.com/usage) page of Ionicons’ website.
 
 ### Import
 
-First, you need to import the icon set into your prototype. Create a new pen or open an existing one, and go to CSS settings by clicking the gear icon in the header of the CSS section. Paste this link into a list of external stylesheets/pens below the search:
+First, you need to import the icon set into your prototype. Create a new pen or open an existing one, and go to the CSS settings by clicking the gear icon in the header of the CSS section. Paste this link into a list of external stylesheets/pens below the search:
 
 ```html
 https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css
@@ -52,7 +52,7 @@ The Ionicons are imported as text, which means that you can stylize them with Ta
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Notice that the icon is imported with a class name name only, and the container doesn’t have any content.
+Notice that the icon is imported with just a class name name, and the container doesn’t have any content.
 
 ## Practice
 
