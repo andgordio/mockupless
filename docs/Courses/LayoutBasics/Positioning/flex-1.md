@@ -23,9 +23,7 @@ Turning the toolbar into a flex parent container stacks the items horizontally a
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-There are multiple ways to achieve something in CSS, and every solution has its advantages. Iterating is at the core of the prototyping workflow, so the best solution is the one that allows you to change layouts quicker.
-
-There’s a property, `flex: 1`, that tells a child container to take **all space inside the parent container that is not taken by other children**. You will be surprised by how many applications this property has, but first, let’s apply it to the first child container from the example above:
+There’s always a number of ways to achieve something in CSS, and every solution has its advantages. Since iterative design is at the core of the prototyping workflow, the best solution is the one that allows you to change layouts quicker. There’s a property, `flex: 1`, that tells a child container to take **all space inside the parent container that is not taken by other children**. You will be surprised by how many applications this property has, but first, let’s apply it to the first child container from the example above:
 
 ```html
 <div style="display: flex;">
@@ -41,16 +39,16 @@ There’s a property, `flex: 1`, that tells a child container to take **all spac
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-With `flex: 1`, the first container pushes other items to the right by taking all available horizontal space. The effect is easier to see if you add with a background color applied to the container:
+With `flex: 1`, the first container pushes other items to the right by taking all available horizontal space. The effect is easier to see if you add a background color to the container:
 
 <iframe height="225" style="width: 100%;" scrolling="no" title="Flex—flex-1 with highlights, alternative" src="//codepen.io/andgordy/embed/gJYBgB/?height=225&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/gJYBgB/'>Flex—flex-1 with highlights, alternative</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-[Open the prototype](https://codepen.io/andgordy/live/gJYBgB) and try resizing the browser window. You should see that the containers automatically adjusts its size, always taking as much space as it can.
+[Open the prototype](https://codepen.io/andgordy/live/gJYBgB) and try resizing the browser window. You should see that the container automatically adjusts its width and always takes as much space as it can.
 
-An even more flexible approach would be to create a separate empty container with `flex: 1`, instead of applying the property to the first container: 
+An even more flexible approach is to create a separate empty container with `flex: 1`, instead of applying the property to the first container: 
 
 ```html
 <div style="display: flex;">
@@ -102,7 +100,7 @@ If you apply `flex: 1` and `text-align: center` to the middle container, the lab
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Instead, you can place the controls in two `flex: 1` containers and they will center the label by sharing the space evenly:
+Instead, you can put the controls in two `flex: 1` containers and they will center the label by sharing the space evenly:
 
 ```html {2,8}
 <div style="display: flex;">
@@ -131,7 +129,7 @@ The `flex: 1` containers are highlighted with a background color:
 
 ### 3 columns
 
-Create a wireframe of a three-column layout with the third column having a flexible width:
+Create a wireframe of a three-column layout, where the third column has flexible width:
 
 <iframe height="548" style="width: 100%;" scrolling="no" title="Flex—flex-1—Task 1" src="//codepen.io/andgordy/embed/MdExaP/?height=548&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/MdExaP/'>Flex—flex-1—Task 1</a> by And Gordy
@@ -143,7 +141,7 @@ Create a wireframe of a three-column layout with the third column having a flexi
 3. Make it full-screen using `height: 100vh`.
 4. Add three child containers with different backgrounds.
 5. Apply fixed widths to the first two children.
-6. Apply flex: 1 to the third column.
+6. Apply `flex: 1` to the third column.
 7. Try resizing the Preview. The first two columns should always stay the same, and the third must adjust to the width of the viewport.
 
 ### Centered title

@@ -2,7 +2,7 @@
 
 ## Nesting
 
-As explored in the Core/Nesting article, the parent-child relations between containers are relative. A child of one container can be a parent to others. This is true for flexbox containers too: children of a flex container can be flex parents to their own children. This allows you to create complex layouts like the one below:
+As explored in the [Nesting](./../Core/nesting.md) article of the Core section, the parent-child relations between containers are relative. A child of one container can be a parent to others. This is true for flexbox containers too: children of a flex container can be flex parents themselves. This allows you to create complex layouts like the one below:
 
 <iframe height="465" style="width: 100%;" scrolling="no" title="Flex—Nesting" src="//codepen.io/andgordy/embed/mgNmdz/?height=465&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/mgNmdz/'>Flex—Nesting</a> by And Gordy
@@ -49,7 +49,7 @@ Flexbox allows you to organize items in one direction and to control their align
 
 The `overflow` property isn’t directly related to flexbox, but it is required for most layouts created with flex. `overflow` specifies the behavior of child containers when they don’t fit into the container. 
 
-By default, when a child container is larger than its parent, it remains visible, and with backgrounds applied you can see how it goes outside the parent’s boundaries:
+By default, when a child container is larger than its parent, it remains visible.Wwith backgrounds applied, you can see how the child goes beyond the parent’s boundaries:
 
 ```html {2,6}
 <div style="width: 80px;
@@ -99,7 +99,7 @@ You are going to use `overflow: scroll` often in prototyping to create scrollabl
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-The example above is created with a full-screen flex container with two children. `overflow: scroll` is added to both children, which enables two individual scrolls: 
+The example above is created using a full-screen flex container with two children. `overflow: scroll` is added to both children, which enables two individual scrolls: 
 
 ```html
 <div style="display: flex; height: 100vh;">
@@ -133,7 +133,7 @@ When the `overflow` property is set to `hidden`, the content of the container is
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-A common application of the `hidden` value is to crop an image so it stays within the boundaries of a container. Below, an image is placed in a flex container with rounded corners, and it is centered vertically and horizontally with the `align-items` and `justify-content` properties:
+A common application of the `hidden` value is to crop an image so it stays within the boundaries of a container. Below, an image is placed in a flex container with rounded corners, and it is centered vertically and horizontally with the `align-items` and the `justify-content` properties:
 
 ```html
 <div style="width: 160px;

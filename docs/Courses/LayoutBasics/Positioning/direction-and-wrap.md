@@ -34,7 +34,7 @@ The available values are:
 
 ## **flex-wrap**
 
-By default, all containers inside a flex container will do whatever it takes to fit into one stack, and the will never create a new one:
+By default, all containers inside a flex container will do whatever it takes to fit into one stack and the will never create a new one:
 
 <iframe height="236" style="width: 100%;" scrolling="no" title="Flex—Flex-no wrap" src="//codepen.io/andgordy/embed/yWOjpe/?height=236&theme-id=36403&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/andgordy/pen/yWOjpe/'>Flex—Flex-no wrap</a> by And Gordy
@@ -67,13 +67,13 @@ You can allow the containers to create new lines with the `flex-wrap` property:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-All child containers have width set to 25%, so only four of them can fit into one line. With `flex-wrap: wrap` applied to the flex parent container, the fifth item is allowed to create a new a line to satisfy its `width` property.
+All child containers have width set to 25%, so only four of them can fit into one line. With `flex-wrap: wrap` applied to the flex parent container, the fifth item is allowed to create a new a line.
 
 The `flex-wrap` property can have one of three values:
 
 - `nowrap`, the default value, prevents child containers from creating new lines by forcing them to fit into a single one.
 - `wrap` allows child containers to create new lines when it is required by their styles.
-- `wrap-reverse` takes the behavior of `wrap`, but a new line is created on above the existing ones.
+- `wrap-reverse` takes the behavior of `wrap`, but the new lines are created above the existing ones.
 
 ## Practice
 
@@ -90,7 +90,7 @@ Align the buttons vertically:
 2. Wrap all buttons in a single flex parent container.
 3. Apply vertical direction to the flex container.
 
-In the next article, you will learn why the buttons take full width in a flex container with vertical direction by default.
+You will learn why the buttons take full width in a flex container with vertical direction by default in the next article.
 
 ### Gallery
 
@@ -101,7 +101,7 @@ Create a two-column image gallery:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Fork the [starting prototype](https://codepen.io/andgordy/pen/vweZpZ?editors=1000). It includes the containers with image and some necessary styles.
+1. Fork the [starting prototype](https://codepen.io/andgordy/pen/vweZpZ?editors=1000). It includes the containers with the images and some necessary styles.
 2. Wrap all containers in a single flex parent container.
 3. Allow items in the flex container to create new lines using the `flex-wrap` property.
 4. Set the width of all child `div` containers to take half of the parent’s width using percentages.
