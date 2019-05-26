@@ -22,7 +22,13 @@ The statement *is* busy with punctuation, but it should be easier to get used to
 - The class name and condition are surrounded by curly braces.
 - As with other attributes (like regular `class` or `:img` for [dynamic images](./../Data/display.md#images)), the value of the attribute is wrapped in double quotation marks.
 
-<!-- todo: write: say it can live together with regular class attribute and show and example -->
+Note that a container can have both, the regular `class` attribute and the conditional `:class` attribute:
+
+```html
+<div class="font-bold" :class="{'text-teal-500': currentTab === 'Newsfeed'}">
+  Newsfeed
+</div>
+```
 
 ### Many classes, one condition
 

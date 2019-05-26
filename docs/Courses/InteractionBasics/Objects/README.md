@@ -111,8 +111,6 @@ And the list is rendered:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-<!-- todo: write: summary -->
-
 ## Practice
 
 ### Cars catalog
@@ -185,8 +183,6 @@ Create a prototype that has a list of selectable channels and the number of unre
 4. Create a variable to store the index of the selected channel.
 5. Add a `@click` event listener to the template-container that assigns the index of the selected channel to the variable. 
 6. In the right column, use the variable to access the name of the selected channel. 
-
-<!-- todo: each tab is an object with a name and number of new items, this can be used in the next article to add “if 0 don't show” logic behind it -->
 
 <!-- todo: make sure the second task is more complex and includes adding/deleting -->
 

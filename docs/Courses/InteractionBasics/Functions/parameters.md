@@ -40,7 +40,7 @@ methods: {
 
 To address this issue the event listener must not only call a function but also provide the required values a function needs to work properly. This is called passing parameters to a function:
 
-```html{3}
+```html {3}
 <div v-for="(task, i) in tasks">
   <div>{{task}}</div>
   <button @click="removeItem(i)">
@@ -48,7 +48,7 @@ To address this issue the event listener must not only call a function but also 
   </button>
 </div>
 ```
-```js{2,3}
+```js {2,3}
 methods: {
   removeItem (i) {
     this.tasks.splice(i, 1)
@@ -66,7 +66,7 @@ When you are passing something to a function, you are not actually passing a var
 
 This means that you can give any name to a parameter and use that name inside the function. The following code works the same as the code shown above:
 
-```html{3}
+```html {3}
 <div v-for="(task, i) in tasks">
   <div>{{task}}</div>
   <button @click="removeItem(i)">
@@ -74,7 +74,7 @@ This means that you can give any name to a parameter and use that name inside th
   </button>
 </div>
 ```
-```js{2,3}
+```js {2,3}
 methods: {
   removeItem (index) {
     this.tasks.splice(index, 1)
@@ -86,7 +86,21 @@ When the function is called, the value of `i` (not `i` itself) is passed into a 
 
 This is an important feature even though its value is not obvious in this simple example. In complex prototypes a function may be called from multiple places, each one using different names to pass a value. The ability of functions to accept values that you can name as you wish makes them a truly universal tool. 
 
-<!-- todo: write: functions are separated with commas -->
+Multiple functions in the methods section are separated by commas:
+
+```js {4,7}
+methods: {
+  functionOne () {
+    /* ... */
+  },
+  functionTwo () {
+    /* ... */
+  },
+  functionThree () {
+    /* ... */
+  },
+}
+```
 
 ## Practice
 

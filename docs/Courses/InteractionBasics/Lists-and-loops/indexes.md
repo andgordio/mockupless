@@ -9,7 +9,7 @@ Let's extend the prototype from the previous article so that users have the abil
 
 The solution should be fairly simple: you need a variable to store the name of the selected item, and you need to display the value of this variable in the details view. The question is: how do you store a reference to the selected item if the items in the arrays don’t have names (they are just values separated by commas)?
 
-<!-- 🤔 maybe a different paragraph above: more straight to the point of accessing items in the array -->
+<!-- todo: maybe a different paragraph above: more straight to the point of accessing items in the array -->
 
 ```js
 data: {
@@ -83,8 +83,6 @@ The value of the `v-for` attribute now has two names in parentheses, separated b
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-<!--  todo: replace with local code block -->
-
 :::tip Naming
 As with naming the [value of an item](./#v-for), you can use any name to access an item’s index. For example, `v-for="(contact, index) in contacts"` works too. Basically, whatever you place after the comma will be considered a temporary name for the item’s index. Don’t forget about the [rules and recommendations](./../Data/variables.md#naming-variables) for naming variables.
 :::
@@ -119,8 +117,6 @@ As a result, when an item is selected from a list, its value is shown on the rig
   See the Pen <a href='https://codepen.io/andgordy/pen/moLrQx/'>Lists—Contacts—Complete</a> by And Gordy
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
-<!-- todo: summary -->
 
 ## Practice
 

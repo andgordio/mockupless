@@ -68,7 +68,7 @@ data: {
 }
 ```
 
-A colon in front of `src` means that the content of this attribute should not be treated as a URL, as it is with the regular `src` attribute. <!-- todo: link: to Layout basics about images and src --> Instead, you place a variable name there, and the variable’s value will be taken for a URL. 
+A colon in front of `src` means that the content of this attribute should not be treated as a URL, as it is with the regular `src` [attribute](./../../../Courses/LayoutBasics/Core/images.md). Instead, you place a variable name there, and the variable’s value will be taken for a URL. 
 
 The next section—[Events](./../Events/)—explains how variable values can be changed with interactions so that rendered text and images change too. But first, another way to connect the layout and data is explored in the next article: [Forms](./forms.md). 
 

@@ -140,7 +140,6 @@ Another way to manage different text colors for a message and a date stamp is to
 
 Keep in mind that colors are defined in a particular order. The way colors are presented in [Tailwind's official docs](https://tailwindcss.com/docs/customizing-colors/#default-color-palette) represents their precedence with black having the lowest precedence and pink having the hightest.
 :::
-<!-- todo: fix the link when Tailwind 1.0 is officially released -->
 
 ## Practice
 

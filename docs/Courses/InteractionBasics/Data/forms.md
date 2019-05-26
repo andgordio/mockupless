@@ -32,9 +32,6 @@ Everything a user enters into these controls will be stored in the variables `ti
 
 Note that `placeholder` is a *stylistic* attribute, which means that its value is not connected to a variable.
 
-<!-- todo: ! In variables article: say that names are case sensitive -->
-
-
 ## Checkbox
 
 The value of a checkbox control is binary—it’s either on or off—so it makes sense to connect the checkbox to a variable with a boolean value.

@@ -28,9 +28,9 @@ The full list includes 140 colors: [https://www.w3schools.com/colors/colors_name
 
 Remembering *all* the names can be a burden, but knowing a couple of them is useful for rapid prototyping. When you don’t need an exact color, it’s easier to quickly type `crimson` or `tomato`, than to look for a hex on an RGB value for a shade of red.
 
-<!-- todo:  Add `transparent` -->
+One particularly useful named value for the background is `transparent`. It removes the background from the container.
 
-Also, the last section of this course introduces you to the CSS framework called Tailwind, which comes with its own palette of named colors. You will be encouraged to use them in your prototypes, so starting to specify colors by their names now can create a good habit by the time you get to the last section.
+The last section of this course introduces you to the CSS framework called Tailwind, which comes with its own palette of named colors. You will be encouraged to use them in your prototypes, so starting to specify colors by their names now can create a good habit by the time you get to the last section.
 
 ## hex
 

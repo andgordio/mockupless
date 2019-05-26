@@ -1,8 +1,5 @@
 # Storing data
 
-<!-- ![illustration for variables and data](./media/il-data.png) -->
-<!-- todo: illustration: storing in containers. Idea: instead of using old-fashioned analogies like construction site, design something more futuristic.  -->
-
 When prototyping interactive experiences, you have to decide whether you should place some of your content directly in the layout or store it separately as **data**. To make this decision quickly and efficiently, you need to understand *why* you should store some content separately from the layout in the first place. Two main reasons—making content dynamic and saving user input—are explored in this article.
 
 ### Dynamic content
@@ -22,8 +19,7 @@ To enable all these transformations, you will store selected content and informa
 
 ### User input
 
-With all kinds of form controls available to you in HTML, you may want to save user input and use it somewhere in the prototype. For example, an Events list populated with events created by a user:
-<!-- todo: link: to Layout basics with form controls -->
+With all kinds of [form controls](./../../../Courses/LayoutBasics/Core/form-controls.md) available to you in HTML, you may want to save user input and use it somewhere in the prototype. For example, an Events list populated with events created by a user:
 
 ![wireframes of event creation view and events list populated with created event](./media/user-input.png)
 

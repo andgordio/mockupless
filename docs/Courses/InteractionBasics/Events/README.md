@@ -1,7 +1,5 @@
 # Click
 
-<!-- ![clicks illustration](./media/il-click.png) -->
-
 Click (or tap, depending on the device) is the mother of interactivity. With clicks, components are added and removed, data is saved and deleted, pages are opened, and animations are played.
 <!-- todo: write: maybe a better variety of examples -->
 

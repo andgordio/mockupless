@@ -32,6 +32,8 @@ data: {
 }
 ```
 
+Also, note that name are case sensitive. This means that `newItems` and `newitems` are two different names in JavaScript.
+
 ## Data types
 
 There are different types of data that variables can store, and each type has unique abilities and behavior. This article covers a group of types called **primitives**, which include strings, numbers, booleans and null.

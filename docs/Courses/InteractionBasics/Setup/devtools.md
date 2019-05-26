@@ -1,6 +1,6 @@
 # Dev tools
 
-In Layout basics you’ve learnt how to inspect your HTML and CSS code in Chrome developer tools. Vue.js has its own dev tools, that allow you to see changes in your prototype’s code live when interacting with it. Below is a step-by-step manual for installing and using the tools:
+In Layout basics you’ve learned how to inspect your HTML and CSS code in Chrome developer tools. Vue.js has its own dev tools, that allow you to see changes in your prototype’s code live when interacting with it. Below is a step-by-step manual for installing and using the tools:
 <!-- todo: link: to inspecting html/css in Layout basics. -->
 
 ## Install
