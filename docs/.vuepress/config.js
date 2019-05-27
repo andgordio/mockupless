@@ -6,25 +6,17 @@ module.exports = {
     lineNumbers: false
   },
   head: [
-    ['link', { rel: "icon", href: "favicon.png" }], // note: https://forestry.io/blog/using-json-configuration-with-vuepress/
+    ['link', { rel: "icon", href: "favicon.png" }], 
   ],
   ga: 'UA-131076924-1',
   themeConfig: {
     nav: [
       { text: 'About', link: '/About/' },
       { text: 'Courses', items: [
-        { text: 'Layout basics', link: '/Courses/LayoutBasics/Intro/about' },
+        { text: 'Layout basics', link: '/Courses/LayoutBasics/' },
         { text: 'Interaction basics', link: '/Courses/InteractionBasics/' },
-        // responsive
-        // advanced positioning: fixed, absolute
-        // animations
-        // functions pro: multiple parameters, etc
-        // complex conditions (and in functions)
-        // loops in functions
-        // git
       ]},
       // { text: 'Cookbook', link: '/Cookbook/' },
-      // { text: 'Slack', link: 'https://join.slack.com/t/mockupless/shared_invite/enQtNDg2NzE0MDc2MDk2LTY4YTFmM2ZlMjUxMjk2ZDYzZmQ4MTQzMjgzNDhmMjY3NTVjYTBhODYzZDI3MTllNDliZmNmZmQ2NTMxMmMyNzg' },
       { text: 'Showcase', link: '/Showcase/course-project.md' },
       { text: 'Forum', link: 'https://spectrum.chat/mockupless' },
       { text: 'GitHub', link: 'https://github.com/andgordio/mockupless' },
@@ -36,16 +28,16 @@ module.exports = {
           title: 'Layout basics',
           collapsable: false,
           children: [
-            'Intro/about',
-            'Intro/codepen',
-            'Intro/practice'
+            '',
+            'Setup/',
+            'Setup/practice'
           ]
         },
         {
           title: 'Core',
           collapsable: false,
           children: [
-            'Core/intro-to-html',
+            'Core/',
             'Core/nesting',
             'Core/images',
             'Core/form-controls',
@@ -56,7 +48,7 @@ module.exports = {
           title: 'Style',
           collapsable: false,
           children: [
-            'Style/intro-to-css',
+            'Style/',
             'Style/units',
             'Style/colors',
             'Style/text',
@@ -69,7 +61,7 @@ module.exports = {
           title: 'Positioning',
           collapsable: false,
           children: [
-            'Positioning/box-model',
+            'Positioning/',
             'Positioning/intro-to-flex',
             'Positioning/direction-and-wrap',
             'Positioning/alignment',
@@ -81,7 +73,7 @@ module.exports = {
           title: 'Frameworks and Libraries',
           collapsable: false,
           children: [
-            'Frameworks/tailwind',
+            'Frameworks/',
             'Frameworks/ionicons',
             'Frameworks/google-fonts'
           ]
@@ -90,7 +82,7 @@ module.exports = {
           title: 'Course project',
           collapsable: false,
           children: [
-            'Course-project/task',
+            'Course-project/',
             'Course-project/layout',
             'Course-project/decoration'
           ]

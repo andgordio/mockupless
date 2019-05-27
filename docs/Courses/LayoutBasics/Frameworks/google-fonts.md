@@ -90,7 +90,7 @@ Add multiple fonts to a prototype:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Fork your result of the Article task from the [Tailwind article](./tailwind.md#article). You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/pmdWqd).
+1. Fork your result of the Article task from the [Tailwind article](./#article). You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/pmdWqd).
 2. Go to Google Fonts and pick three fonts: two serif and one sans-serif.
 3. Import them into your pen.
 4. In the CSS section, apply the sans-serif font to the `body` tag. You should be able to see that the default font is changed in the preview.

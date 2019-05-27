@@ -65,7 +65,7 @@ A centered container that doesn’t expand beyond a fixed width is a very popula
 3. Make it full-screen using `height: 100vh`.
 4. Center the content horizontally using `justify-content: center`. 
 5. Create a child container with white background, and subtle borders on the sides.
-6. As described in the max-width section of the [Box model](./box-model.md#max-width-and-max-height) article, you can prevent the container from expanding beyond a particular size by applying `width: 100%` and `max-width: 560px`. Do it and try resizing the Preview now: you should see a centered container that takes the full screen width on smaller screens, and has a fixed width on larger screens.
+6. As described in the max-width section of the [Box model](./#max-width-and-max-height) article, you can prevent the container from expanding beyond a particular size by applying `width: 100%` and `max-width: 560px`. Do it and try resizing the Preview now: you should see a centered container that takes the full screen width on smaller screens, and has a fixed width on larger screens.
 
 There’s a number of ways to center containers horizontally, but using a flex parent with the `justify-content: center` property is particularly useful for prototyping. If you decide that you want a sidebar next to the main area, you will only need to add another child container and they will be both centered:
 

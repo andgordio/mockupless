@@ -1,6 +1,6 @@
 # Prototyping template
 
-In Layout basics you learned how to use [CodePen](https://codepen.io), create new pens, and fork existing ones. In the [Tailwind](./../../LayoutBasics/Frameworks/tailwind.md) and [Ionicons](./../../LayoutBasics/Frameworks/ionicons.md) sections you learned to import libraries into your pens. However, creating a new pen, importing frameworks, and setting up the contents for every new prototype is not the most time-efficient workflow.
+In Layout basics you learned how to use [CodePen](https://codepen.io), create new pens, and fork existing ones. In the [Tailwind](./../../LayoutBasics/Frameworks/) and [Ionicons](./../../LayoutBasics/Frameworks/ionicons.md) sections you learned to import libraries into your pens. However, creating a new pen, importing frameworks, and setting up the contents for every new prototype is not the most time-efficient workflow.
 
 After prototyping for a while, you’ll be able to define your default set of tools and create **templates**—files that have a particular setup with little to no content. You can use templates to kick off new prototypes without having to set up everything from scratch. 
 

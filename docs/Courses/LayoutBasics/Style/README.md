@@ -150,7 +150,7 @@ The keyboard shortcut is the same as in HTML too: `⌘`+`/` on macOS, `ctrl`+`/`
 
 We recommend to use a mix of inline and tag styling during this course. Classes are highly reusable and make the HTML code cleaner, but creating a system of well-designed classes takes a lot of time and effort. Also, flexibility is an important part of the prototyping process: you need to be able to pivot quickly, try different layouts, and create freely—all without spending too much time on maintaining a design system.  
 
-Eventually, you *will* switch to classes, but you will not have to create them. In the *Frameworks and libraries* section of this course you will be introduced to [Tailwind](./../Frameworks/tailwind.md), a CSS framework that provides you with a collection of classes that come as a natural upgrade from inline styling.
+Eventually, you *will* switch to classes, but you will not have to create them. In the *Frameworks and libraries* section of this course you will be introduced to [Tailwind](./../Frameworks/), a CSS framework that provides you with a collection of classes that come as a natural upgrade from inline styling.
 
 ## Practice
 

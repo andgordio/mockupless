@@ -128,7 +128,7 @@ Add colors to texts from the Intro to CSS article:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Fork your result of the task in the [Intro to CSS](./intro-to-css.md#practice) article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/GavYzr).
+1. Fork your result of the task in the [Intro to CSS](./#practice) article. You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/GavYzr).
 2. Set the text color of the user names to `#319795` using the `color` property.
 3. Set the text color of the time stamps to `#718096`.
 4. Set the color of the “photo” labels to `#ED8936`.

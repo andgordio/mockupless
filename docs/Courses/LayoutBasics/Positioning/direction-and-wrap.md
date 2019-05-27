@@ -86,7 +86,7 @@ Align the buttons vertically:
   (<a href='https://codepen.io/andgordy'>@andgordy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. Fork your result of the Buttons task in the [Box model article](./box-model.md#buttons). You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/YbrNOx).
+1. Fork your result of the Buttons task in the [Box model article](./#buttons). You can also fork the [prototype from the article](https://codepen.io/andgordy/pen/YbrNOx).
 2. Wrap all buttons in a single flex parent container.
 3. Apply vertical direction to the flex container.
 

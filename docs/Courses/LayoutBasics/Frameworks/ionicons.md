@@ -64,7 +64,7 @@ Notice that the icon is imported with just a class name name, and the container 
 </iframe>
 
 1. Create a new pen.
-2. Import Ionicons, as explained in the [Import section](#import) above. Import Tailwind as explained in the [previous article](./tailwind.md#importing).
+2. Import Ionicons, as explained in the [Import section](#import) above. Import Tailwind as explained in the [previous article](./#importing).
 3. Create five tabs using the flex container. Distribute the child containers evenly using the Tailwind’s `justify-around` class.
 4. Create five child containers with Ionicons. Don’t forget to change the size and the color using text classes:
 

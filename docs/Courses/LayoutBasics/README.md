@@ -1,6 +1,6 @@
 # About the course
 
-Welcome to Layout basics! In this course you will learn to create layouts and stylize content with HTML and CSS. Provided techniques will allow you to rapidly create prototypes that can be altered easily. You will start with the very basic concepts of markup and styling, and finish the course by creating a high-fidelity, responsive page layout for a web app. You will be prepared then to proceed with [Interaction basics](./../../InteractionBasics/) to create dynamic designs.
+Welcome to Layout basics! In this course you will learn to create layouts and stylize content with HTML and CSS. Provided techniques will allow you to rapidly create prototypes that can be altered easily. You will start with the very basic concepts of markup and styling, and finish the course by creating a high-fidelity, responsive page layout for a web app. You will be prepared then to proceed with [Interaction basics](./../InteractionBasics/) to create dynamic designs.
 
 The goal of this course is to teach you to prototype so efficiently that coding becomes your favorite design tool. 
 
