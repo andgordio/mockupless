@@ -6,7 +6,7 @@ Any kind of prototyping brings thoughtfulness to the design workflow by enabling
 
 Currently, two introductory courses are available. They teach the basics of coding and the Mockupless approach to prototyping:
 
-[Layout basics →](./../Courses/LayoutBasics/Intro/about.html)
+[Layout basics →](./../Courses/LayoutBasics/)
 
 [Interaction basics →](./../Courses/InteractionBasics/)
 
